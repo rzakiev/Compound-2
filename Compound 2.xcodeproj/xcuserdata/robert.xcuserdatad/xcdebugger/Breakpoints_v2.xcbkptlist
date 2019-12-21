@@ -1131,7 +1131,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "84"
             endingLineNumber = "84"
-            landmarkName = "grossGrowthRateForAllCompanies(for:)"
+            landmarkName = "grossGrowthRate(for:for:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1666,22 +1666,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A62336FA-D12F-4CFD-B9AD-BE17AF0C098D"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Compound 2/TabBarController/Tabs/MultipliersAndYields/EVEBITDA.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "populateEVEBITDA()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "6DD96548-C9ED-47DB-9B0B-48A285F0E0C0"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -1689,8 +1673,8 @@
             filePath = "Compound 2/TabBarController/Tabs/MultipliersAndYields/EVEBITDA.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>

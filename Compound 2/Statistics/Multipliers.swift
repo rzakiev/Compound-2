@@ -28,8 +28,10 @@ struct Multipliers {
     }
     
     
+    //P/E
     public static func priceToEarningsRatioForAllCompanies() -> [PriceToEarnings] {
         guard let allPublicCompanies = try? FinancialDataManager.getSmartlabLinks().map({$0.key}) else {
+            Logger.log(error: "Unable to get the list of public companies")
             return []
         }
         
@@ -51,7 +53,7 @@ extension Multipliers {
         return nil
     }
     
-    private static func evEBITDAForMultipleCompanies(_ companies: [String]) -> [(company: String, evEBITDAAdjustedForCAGR: Double)] {
+    static func evEBITDAForMultipleCompanies(_ companies: [String]) -> [(company: String, evEBITDAAdjustedForCAGR: Double)] {
         
         var companiesCAGR = [(String, Double)]()
         for company in companies {
@@ -65,7 +67,7 @@ extension Multipliers {
 
 //MARK: - P/E
 extension Multipliers {
-    private static func priceToEarnings(for company: String) -> Double? {
+    static func priceToEarnings(for company: String) -> Double? {
         
         guard let netIncome = FinancialDataManager.getNetIncome(for: company)?.last?.value else {
             return nil
