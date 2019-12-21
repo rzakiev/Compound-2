@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Revenue</key>
+	<array>
+		<string>2014,646</string>
+		<string>2015,679</string>
+		<string>2016,698</string>
+		<string>2017,704</string>
+		<string>2018,777</string>
+	</array>
+	<key>Dividends</key>
+	<array>
+		<string>2014,19.88</string>
+		<string>2015,4.5</string>
+		<string>2016,10.1</string>
+		<string>2017,14.4</string>
+		<string>2018,1.06</string>
+	</array>
+	<key>QuoteSource</key>
+	<string>https://smart-lab.ru/forum/AFKS</string>
+	<key>Ordinary Shares</key>
+	<integer>9650000000</integer>
+	<key>Dividend Policy</key>
+	<string>Не менее 6% от стоимости акций, но не менее 1.19 р. на акцию.</string>
+	<key>Annual Reports</key>
+	<dict>
+		<key>2018</key>
+		<string>http://www.sistema.ru/fileadmin/user_upload/results_disclosure/2018/afk_sistema_ifrs_cons_fs_18-r.pdf</string>
+	</dict>
+	<key>Presentations</key>
+	<dict>
+		<key>2018</key>
+		<string>http://www.sistema.ru/fileadmin/user_upload/results_disclosure/2018/presentation_4q18__rus.pdf</string>
+	</dict>
+</dict>
+</plist>

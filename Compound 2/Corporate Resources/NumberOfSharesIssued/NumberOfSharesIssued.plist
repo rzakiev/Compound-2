@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ОАК</key>
+	<integer>310891000000</integer>
+	<key>Tinkoff</key>
+	<integer>199000000</integer>
+	<key>Алроса</key>
+	<integer>7365000000</integer>
+	<key>Русгидро</key>
+	<integer>426288000000</integer>
+	<key>Газпром</key>
+	<integer>23673000000</integer>
+	<key>Яндекс</key>
+	<integer>330000000</integer>
+	<key>АФК Система</key>
+	<integer>9650000000</integer>
+	<key>Новатэк</key>
+	<integer>3036000000</integer>
+	<key>ВТБ</key>
+	<integer>12960541000000</integer>
+	<key>Полюс Золото</key>
+	<integer>134000000</integer>
+	<key>Сбербанк</key>
+	<integer>21586948000</integer>
+	<key>Сбербанк-п</key>
+	<integer>1000000000</integer>
+	<key>Московская Биржа</key>
+	<integer>2276401458</integer>
+	<key>Северсталь</key>
+	<integer>838000000</integer>
+	<key>МТС</key>
+	<integer>1998000000</integer>
+	<key>Лукойл</key>
+	<integer>750000000</integer>
+	<key>ММК</key>
+	<integer>11174000000</integer>
+	<key>НЛМК</key>
+	<integer>5993000000</integer>
+	<key>Татнефть</key>
+	<integer>2179000000</integer>
+	<key>Татнефть-п</key>
+	<integer>147500000</integer>
+	<key>Газпромнефть</key>
+	<integer>4741299639</integer>
+	<key>Детский Мир</key>
+	<integer>739000000</integer>
+	<key>ФСК ЕЭС</key>
+	<integer>1274665000000</integer>
+	<key>Аэрофлот</key>
+	<integer>1111000000</integer>
+	<key>Магнит</key>
+	<integer>102000000</integer>
+	<key>Ростелеком</key>
+	<integer>2574914954</integer>
+	<key>Ростелеком-п</key>
+	<integer>209565147</integer>
+	<key>Россети</key>
+	<integer>198827865141</integer>
+	<key>Россети-п</key>
+	<integer>2075149384</integer>
+	<key>Норильский Никель</key>
+	<integer>158000000</integer>
+	<key>Русал</key>
+	<integer>15193000000</integer>
+	<key>Акрон</key>
+	<integer>40534000</integer>
+	<key>Русагро</key>
+	<integer>136700000</integer>
+	<key>Фосагро</key>
+	<integer>130000000</integer>
+	<key>Группа ЛСР</key>
+	<integer>103000000</integer>
+	<key>X5 Retail Group</key>
+	<integer>272000000</integer>
+	<key>ВСМПО-Ависма</key>
+	<integer>11529538</integer>
+	<key>НМТП</key>
+	<integer>19260000000</integer>
+</dict>
+</plist>

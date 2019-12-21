@@ -7,6 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E122847E2320727900010805 /* QuoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E122847D2320727900010805 /* QuoteService.swift */; };
+		E1228480232078E300010805 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E122847F232078E300010805 /* StatisticsView.swift */; };
+		E12C4E73239D39D30082936A /* ConstantStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12C4E72239D39D30082936A /* ConstantStrings.swift */; };
+		E12C4E76239D432D0082936A /* SegmentedCompanyInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12C4E75239D432D0082936A /* SegmentedCompanyInfoView.swift */; };
+		E13060FB2376F15900BB7B72 /* InvestmentTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13060FA2376F15900BB7B72 /* InvestmentTest.swift */; };
+		E13060FF237C2EE500BB7B72 /* StatisticsSpeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13060FE237C2EE500BB7B72 /* StatisticsSpeedTests.swift */; };
+		E13AC274233ABE0F009AAFC7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13AC273233ABE0F009AAFC7 /* Constants.swift */; };
+		E13AC276233ABE5B009AAFC7 /* PlistDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13AC275233ABE5B009AAFC7 /* PlistDataTests.swift */; };
+		E13C02BF231C19F300CA06F4 /* ChartList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13C02BE231C19F300CA06F4 /* ChartList.swift */; };
+		E13C02C0231F21FB00CA06F4 /* Corporate Resources in Resources */ = {isa = PBXBuildFile; fileRef = E1F440A1231A9017008A40E4 /* Corporate Resources */; };
+		E14640B5238AC0D70092852A /* CompanyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14640B4238AC0D70092852A /* CompanyTests.swift */; };
+		E14640B8238B364F0092852A /* PlistDataThrowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14640B7238B364F0092852A /* PlistDataThrowTests.swift */; };
+		E14640BA2390082B0092852A /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14640B92390082B0092852A /* Alerts.swift */; };
+		E14F1E99239D740A003CF3F8 /* CompanyListSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14F1E98239D740A003CF3F8 /* CompanyListSearchBar.swift */; };
+		E15BB4332353CFE5009C2C58 /* EVEBITDA.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15BB4322353CFE5009C2C58 /* EVEBITDA.swift */; };
+		E167AD55235A35C000C88A9C /* DividendGrowthAllCompanies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E167AD54235A35C000C88A9C /* DividendGrowthAllCompanies.swift */; };
+		E167AD57235B28E100C88A9C /* String Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = E167AD56235B28E100C88A9C /* String Methods.swift */; };
+		E167AD59235BCBFC00C88A9C /* GrossRevenueGrowthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E167AD58235BCBFC00C88A9C /* GrossRevenueGrowthView.swift */; };
+		E167AD5B235BCCE000C88A9C /* GrossProfitGrowthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E167AD5A235BCCE000C88A9C /* GrossProfitGrowthView.swift */; };
+		E167D6FD2306222E00CAF357 /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E167D6FC2306222E00CAF357 /* RootTabBarController.swift */; };
+		E178703A234410B3006EDED0 /* QuoteServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1787039234410B3006EDED0 /* QuoteServiceTests.swift */; };
+		E1859441234FDA3300EDB876 /* MultilpliersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1859440234FDA3300EDB876 /* MultilpliersView.swift */; };
+		E1867D0523A114840008201E /* System Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1867D0423A114840008201E /* System Extensions.swift */; };
+		E18CB67723552285005DA8F6 /* Multipliers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18CB67623552285005DA8F6 /* Multipliers.swift */; };
+		E18CB679235522C2005DA8F6 /* MultipliersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18CB678235522C2005DA8F6 /* MultipliersTests.swift */; };
+		E1965DAC2347F6F70055891C /* StatisticsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1965DAB2347F6F70055891C /* StatisticsTests.swift */; };
 		E1A5ADE322E334720049A837 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A5ADE222E334720049A837 /* AppDelegate.swift */; };
 		E1A5ADE522E334720049A837 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A5ADE422E334720049A837 /* SceneDelegate.swift */; };
 		E1A5ADE822E334720049A837 /* Compound_2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1A5ADE622E334720049A837 /* Compound_2.xcdatamodeld */; };
@@ -14,8 +40,27 @@
 		E1A5ADEC22E334730049A837 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1A5ADEB22E334730049A837 /* Assets.xcassets */; };
 		E1A5ADEF22E334730049A837 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1A5ADEE22E334730049A837 /* Preview Assets.xcassets */; };
 		E1A5ADF222E334730049A837 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1A5ADF022E334730049A837 /* LaunchScreen.storyboard */; };
-		E1A5ADFD22E334740049A837 /* Compound_2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A5ADFC22E334740049A837 /* Compound_2Tests.swift */; };
 		E1A5AE0822E334740049A837 /* Compound_2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A5AE0722E334740049A837 /* Compound_2UITests.swift */; };
+		E1B301DA231FB7BD0067E06D /* Corporate Resources in Resources */ = {isa = PBXBuildFile; fileRef = E1F440A1231A9017008A40E4 /* Corporate Resources */; };
+		E1B98E23237089030057D3B5 /* Investment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B98E22237089030057D3B5 /* Investment.swift */; };
+		E1C0A6AD22F7188D003854DB /* FinancialData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C0A6AC22F7188D003854DB /* FinancialData.swift */; };
+		E1C114F123ABC0C100C249E4 /* EcosystemMindMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C114F023ABC0C100C249E4 /* EcosystemMindMapView.swift */; };
+		E1D88F092312C14C004173AB /* StockListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D88F082312C14C004173AB /* StockListCell.swift */; };
+		E1E8DDBC23115941009D8BEB /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8DDBB23115941009D8BEB /* Chart.swift */; };
+		E1E8DDBE2312AF30009D8BEB /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8DDBD2312AF30009D8BEB /* Company.swift */; };
+		E1E8DDC02312BB9C009D8BEB /* StockListAndDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8DDBF2312BB9C009D8BEB /* StockListAndDetailsView.swift */; };
+		E1E8DDC32312BC0F009D8BEB /* DeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8DDC22312BC0F009D8BEB /* DeviceType.swift */; };
+		E1EAE9A32336638B00C6C139 /* User Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EAE9A22336638B00C6C139 /* User Preferences.swift */; };
+		E1F158D9231B2E54008FE847 /* ChartHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F158D8231B2E54008FE847 /* ChartHStack.swift */; };
+		E1F1C853230359AF00828915 /* Basic Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F1C852230359AF00828915 /* Basic Types.swift */; };
+		E1F1C85623035D2D00828915 /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F1C85523035D2D00828915 /* Statistics.swift */; };
+		E1F1C8592304CBB400828915 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F1C8582304CBB400828915 /* Logger.swift */; };
+		E1F1C85B2304CC9600828915 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F1C85A2304CC9600828915 /* Enums.swift */; };
+		E1F1C85D2305FE2000828915 /* ConvenientMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F1C85C2305FE2000828915 /* ConvenientMethods.swift */; };
+		E1F1C85F23061B6600828915 /* Speed Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F1C85E23061B6600828915 /* Speed Tests.swift */; };
+		E1F3811923AE4427006362CC /* Company Speed Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F3811823AE4427006362CC /* Company Speed Tests.swift */; };
+		E1F440A2231A9017008A40E4 /* Corporate Resources in Resources */ = {isa = PBXBuildFile; fileRef = E1F440A1231A9017008A40E4 /* Corporate Resources */; };
+		E1F63820230E0BC800AE92F6 /* Chart Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6381F230E0BC800AE92F6 /* Chart Bar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +81,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E122847D2320727900010805 /* QuoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteService.swift; sourceTree = "<group>"; };
+		E122847F232078E300010805 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		E12C4E72239D39D30082936A /* ConstantStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantStrings.swift; sourceTree = "<group>"; };
+		E12C4E75239D432D0082936A /* SegmentedCompanyInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedCompanyInfoView.swift; sourceTree = "<group>"; };
+		E13060FA2376F15900BB7B72 /* InvestmentTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentTest.swift; sourceTree = "<group>"; };
+		E13060FE237C2EE500BB7B72 /* StatisticsSpeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsSpeedTests.swift; sourceTree = "<group>"; };
+		E13AC273233ABE0F009AAFC7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E13AC275233ABE5B009AAFC7 /* PlistDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistDataTests.swift; sourceTree = "<group>"; };
+		E13C02BE231C19F300CA06F4 /* ChartList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartList.swift; sourceTree = "<group>"; };
+		E14640B4238AC0D70092852A /* CompanyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTests.swift; sourceTree = "<group>"; };
+		E14640B7238B364F0092852A /* PlistDataThrowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistDataThrowTests.swift; sourceTree = "<group>"; };
+		E14640B92390082B0092852A /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		E14F1E98239D740A003CF3F8 /* CompanyListSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyListSearchBar.swift; sourceTree = "<group>"; };
+		E15BB4322353CFE5009C2C58 /* EVEBITDA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EVEBITDA.swift; sourceTree = "<group>"; };
+		E167AD54235A35C000C88A9C /* DividendGrowthAllCompanies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividendGrowthAllCompanies.swift; sourceTree = "<group>"; };
+		E167AD56235B28E100C88A9C /* String Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String Methods.swift"; sourceTree = "<group>"; };
+		E167AD58235BCBFC00C88A9C /* GrossRevenueGrowthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrossRevenueGrowthView.swift; sourceTree = "<group>"; };
+		E167AD5A235BCCE000C88A9C /* GrossProfitGrowthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrossProfitGrowthView.swift; sourceTree = "<group>"; };
+		E167D6FC2306222E00CAF357 /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
+		E176372622FB0966003352BA /* Compound 2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Compound 2.entitlements"; sourceTree = "<group>"; };
+		E1787039234410B3006EDED0 /* QuoteServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteServiceTests.swift; sourceTree = "<group>"; };
+		E1859440234FDA3300EDB876 /* MultilpliersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilpliersView.swift; sourceTree = "<group>"; };
+		E1867D0423A114840008201E /* System Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "System Extensions.swift"; sourceTree = "<group>"; };
+		E18CB67623552285005DA8F6 /* Multipliers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multipliers.swift; sourceTree = "<group>"; };
+		E18CB678235522C2005DA8F6 /* MultipliersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipliersTests.swift; sourceTree = "<group>"; };
+		E1965DAB2347F6F70055891C /* StatisticsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTests.swift; sourceTree = "<group>"; };
 		E1A5ADDF22E334720049A837 /* Compound 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Compound 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A5ADE222E334720049A837 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1A5ADE422E334720049A837 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,11 +117,29 @@
 		E1A5ADF122E334730049A837 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1A5ADF322E334730049A837 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1A5ADF822E334740049A837 /* Compound 2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Compound 2Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1A5ADFC22E334740049A837 /* Compound_2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compound_2Tests.swift; sourceTree = "<group>"; };
 		E1A5ADFE22E334740049A837 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1A5AE0322E334740049A837 /* Compound 2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Compound 2UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A5AE0722E334740049A837 /* Compound_2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compound_2UITests.swift; sourceTree = "<group>"; };
 		E1A5AE0922E334740049A837 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1B98E22237089030057D3B5 /* Investment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Investment.swift; sourceTree = "<group>"; };
+		E1C0A6AC22F7188D003854DB /* FinancialData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinancialData.swift; sourceTree = "<group>"; };
+		E1C114F023ABC0C100C249E4 /* EcosystemMindMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcosystemMindMapView.swift; sourceTree = "<group>"; };
+		E1D88F082312C14C004173AB /* StockListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListCell.swift; sourceTree = "<group>"; };
+		E1E8DDBB23115941009D8BEB /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
+		E1E8DDBD2312AF30009D8BEB /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		E1E8DDBF2312BB9C009D8BEB /* StockListAndDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListAndDetailsView.swift; sourceTree = "<group>"; };
+		E1E8DDC22312BC0F009D8BEB /* DeviceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceType.swift; sourceTree = "<group>"; };
+		E1EAE9A22336638B00C6C139 /* User Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User Preferences.swift"; sourceTree = "<group>"; };
+		E1F158D8231B2E54008FE847 /* ChartHStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartHStack.swift; sourceTree = "<group>"; };
+		E1F1C852230359AF00828915 /* Basic Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Basic Types.swift"; sourceTree = "<group>"; };
+		E1F1C85523035D2D00828915 /* Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
+		E1F1C8582304CBB400828915 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		E1F1C85A2304CC9600828915 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		E1F1C85C2305FE2000828915 /* ConvenientMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvenientMethods.swift; sourceTree = "<group>"; };
+		E1F1C85E23061B6600828915 /* Speed Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Speed Tests.swift"; sourceTree = "<group>"; };
+		E1F3811823AE4427006362CC /* Company Speed Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Company Speed Tests.swift"; sourceTree = "<group>"; };
+		E1F440A1231A9017008A40E4 /* Corporate Resources */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Corporate Resources"; path = "Compound 2/Corporate Resources"; sourceTree = SOURCE_ROOT; };
+		E1F6381F230E0BC800AE92F6 /* Chart Bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chart Bar.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +167,142 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E122847C232071A900010805 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E122847D2320727900010805 /* QuoteService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		E12C4E74239D43110082936A /* SegmentedCompanyInfoView */ = {
+			isa = PBXGroup;
+			children = (
+				E12C4E75239D432D0082936A /* SegmentedCompanyInfoView.swift */,
+				E1F6381E230E0B9600AE92F6 /* Chart View */,
+				E1C114EF23ABC0A000C249E4 /* Ecosystem View */,
+			);
+			path = SegmentedCompanyInfoView;
+			sourceTree = "<group>";
+		};
+		E13060F42376E55D00BB7B72 /* Speed Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E1F1C85E23061B6600828915 /* Speed Tests.swift */,
+			);
+			path = "Speed Tests";
+			sourceTree = "<group>";
+		};
+		E13060F52376E57D00BB7B72 /* Data Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E13AC275233ABE5B009AAFC7 /* PlistDataTests.swift */,
+				E14640B7238B364F0092852A /* PlistDataThrowTests.swift */,
+			);
+			path = "Data Tests";
+			sourceTree = "<group>";
+		};
+		E13060F62376E5EF00BB7B72 /* Quote Service Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E1787039234410B3006EDED0 /* QuoteServiceTests.swift */,
+			);
+			path = "Quote Service Tests";
+			sourceTree = "<group>";
+		};
+		E13060F72376E5FF00BB7B72 /* Statistics Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E1965DAB2347F6F70055891C /* StatisticsTests.swift */,
+				E13060FE237C2EE500BB7B72 /* StatisticsSpeedTests.swift */,
+			);
+			path = "Statistics Tests";
+			sourceTree = "<group>";
+		};
+		E13060F82376E61100BB7B72 /* Multipliers Calculation Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E18CB678235522C2005DA8F6 /* MultipliersTests.swift */,
+			);
+			path = "Multipliers Calculation Tests";
+			sourceTree = "<group>";
+		};
+		E13060F92376F13E00BB7B72 /* Investment Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E13060FA2376F15900BB7B72 /* InvestmentTest.swift */,
+			);
+			path = "Investment Tests";
+			sourceTree = "<group>";
+		};
+		E13B211423318DE60055285E /* Structs and Enums */ = {
+			isa = PBXGroup;
+			children = (
+				E1F1C852230359AF00828915 /* Basic Types.swift */,
+				E1E8DDC22312BC0F009D8BEB /* DeviceType.swift */,
+				E1F1C85A2304CC9600828915 /* Enums.swift */,
+			);
+			path = "Structs and Enums";
+			sourceTree = "<group>";
+		};
+		E13B211523318E160055285E /* Company */ = {
+			isa = PBXGroup;
+			children = (
+				E1E8DDBD2312AF30009D8BEB /* Company.swift */,
+				E1B98E22237089030057D3B5 /* Investment.swift */,
+			);
+			path = Company;
+			sourceTree = "<group>";
+		};
+		E142413D239D357B00F4EF25 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				E13AC273233ABE0F009AAFC7 /* Constants.swift */,
+				E12C4E72239D39D30082936A /* ConstantStrings.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		E14640B6238AC0DC0092852A /* Company Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E14640B4238AC0D70092852A /* CompanyTests.swift */,
+				E1F3811823AE4427006362CC /* Company Speed Tests.swift */,
+			);
+			path = "Company Tests";
+			sourceTree = "<group>";
+		};
+		E167D6FB230621BD00CAF357 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				E167D6FC2306222E00CAF357 /* RootTabBarController.swift */,
+				E1E8DDC12312BBA7009D8BEB /* Tabs */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		E185943E234FD9B000EDB876 /* Stock List */ = {
+			isa = PBXGroup;
+			children = (
+				E1E8DDBF2312BB9C009D8BEB /* StockListAndDetailsView.swift */,
+				E14F1E98239D740A003CF3F8 /* CompanyListSearchBar.swift */,
+				E1D88F072312C136004173AB /* Views */,
+				E12C4E74239D43110082936A /* SegmentedCompanyInfoView */,
+			);
+			path = "Stock List";
+			sourceTree = "<group>";
+		};
+		E185943F234FD9DC00EDB876 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				E122847F232078E300010805 /* StatisticsView.swift */,
+				E167AD54235A35C000C88A9C /* DividendGrowthAllCompanies.swift */,
+				E167AD58235BCBFC00C88A9C /* GrossRevenueGrowthView.swift */,
+				E167AD5A235BCCE000C88A9C /* GrossProfitGrowthView.swift */,
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
 		E1A5ADD622E334720049A837 = {
 			isa = PBXGroup;
 			children = (
@@ -101,9 +326,18 @@
 		E1A5ADE122E334720049A837 /* Compound 2 */ = {
 			isa = PBXGroup;
 			children = (
+				E176372622FB0966003352BA /* Compound 2.entitlements */,
 				E1A5ADE222E334720049A837 /* AppDelegate.swift */,
 				E1A5ADE422E334720049A837 /* SceneDelegate.swift */,
 				E1A5ADE922E334720049A837 /* ContentView.swift */,
+				E167D6FB230621BD00CAF357 /* TabBarController */,
+				E1F1C85423035AC200828915 /* Statistics */,
+				E1F1C851230358B200828915 /* Models */,
+				E1C0A6AB22F7185B003854DB /* Data Managers */,
+				E122847C232071A900010805 /* Networking */,
+				E1EAE9A12336637200C6C139 /* Preferences */,
+				E1F1C8572304CB9300828915 /* Utility Classes */,
+				E1F440A1231A9017008A40E4 /* Corporate Resources */,
 				E1A5ADEB22E334730049A837 /* Assets.xcassets */,
 				E1A5ADF022E334730049A837 /* LaunchScreen.storyboard */,
 				E1A5ADF322E334730049A837 /* Info.plist */,
@@ -124,7 +358,13 @@
 		E1A5ADFB22E334740049A837 /* Compound 2Tests */ = {
 			isa = PBXGroup;
 			children = (
-				E1A5ADFC22E334740049A837 /* Compound_2Tests.swift */,
+				E13060F52376E57D00BB7B72 /* Data Tests */,
+				E14640B6238AC0DC0092852A /* Company Tests */,
+				E13060F92376F13E00BB7B72 /* Investment Tests */,
+				E13060F82376E61100BB7B72 /* Multipliers Calculation Tests */,
+				E13060F72376E5FF00BB7B72 /* Statistics Tests */,
+				E13060F62376E5EF00BB7B72 /* Quote Service Tests */,
+				E13060F42376E55D00BB7B72 /* Speed Tests */,
 				E1A5ADFE22E334740049A837 /* Info.plist */,
 			);
 			path = "Compound 2Tests";
@@ -137,6 +377,99 @@
 				E1A5AE0922E334740049A837 /* Info.plist */,
 			);
 			path = "Compound 2UITests";
+			sourceTree = "<group>";
+		};
+		E1C0A6AB22F7185B003854DB /* Data Managers */ = {
+			isa = PBXGroup;
+			children = (
+				E1C0A6AC22F7188D003854DB /* FinancialData.swift */,
+			);
+			path = "Data Managers";
+			sourceTree = "<group>";
+		};
+		E1C114EF23ABC0A000C249E4 /* Ecosystem View */ = {
+			isa = PBXGroup;
+			children = (
+				E1C114F023ABC0C100C249E4 /* EcosystemMindMapView.swift */,
+			);
+			path = "Ecosystem View";
+			sourceTree = "<group>";
+		};
+		E1D88F072312C136004173AB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E1D88F082312C14C004173AB /* StockListCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E1E8DDC12312BBA7009D8BEB /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				E185943E234FD9B000EDB876 /* Stock List */,
+				E185943F234FD9DC00EDB876 /* Statistics */,
+				E1E930B62368485800785CA7 /* MultipliersAndYields */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		E1E930B62368485800785CA7 /* MultipliersAndYields */ = {
+			isa = PBXGroup;
+			children = (
+				E15BB4322353CFE5009C2C58 /* EVEBITDA.swift */,
+				E1859440234FDA3300EDB876 /* MultilpliersView.swift */,
+			);
+			path = MultipliersAndYields;
+			sourceTree = "<group>";
+		};
+		E1EAE9A12336637200C6C139 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				E1EAE9A22336638B00C6C139 /* User Preferences.swift */,
+			);
+			path = Preferences;
+			sourceTree = "<group>";
+		};
+		E1F1C851230358B200828915 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E13B211523318E160055285E /* Company */,
+				E13B211423318DE60055285E /* Structs and Enums */,
+				E142413D239D357B00F4EF25 /* Constants */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E1F1C85423035AC200828915 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				E1F1C85523035D2D00828915 /* Statistics.swift */,
+				E18CB67623552285005DA8F6 /* Multipliers.swift */,
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
+		E1F1C8572304CB9300828915 /* Utility Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E1F1C8582304CBB400828915 /* Logger.swift */,
+				E1F1C85C2305FE2000828915 /* ConvenientMethods.swift */,
+				E167AD56235B28E100C88A9C /* String Methods.swift */,
+				E1867D0423A114840008201E /* System Extensions.swift */,
+			);
+			path = "Utility Classes";
+			sourceTree = "<group>";
+		};
+		E1F6381E230E0B9600AE92F6 /* Chart View */ = {
+			isa = PBXGroup;
+			children = (
+				E13C02BE231C19F300CA06F4 /* ChartList.swift */,
+				E1E8DDBB23115941009D8BEB /* Chart.swift */,
+				E1F158D8231B2E54008FE847 /* ChartHStack.swift */,
+				E1F6381F230E0BC800AE92F6 /* Chart Bar.swift */,
+				E14640B92390082B0092852A /* Alerts.swift */,
+			);
+			path = "Chart View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +577,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1A5ADF222E334730049A837 /* LaunchScreen.storyboard in Resources */,
+				E1F440A2231A9017008A40E4 /* Corporate Resources in Resources */,
 				E1A5ADEF22E334730049A837 /* Preview Assets.xcassets in Resources */,
 				E1A5ADEC22E334730049A837 /* Assets.xcassets in Resources */,
 			);
@@ -253,6 +587,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E13C02C0231F21FB00CA06F4 /* Corporate Resources in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +595,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1B301DA231FB7BD0067E06D /* Corporate Resources in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,10 +606,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1F1C85623035D2D00828915 /* Statistics.swift in Sources */,
+				E14F1E99239D740A003CF3F8 /* CompanyListSearchBar.swift in Sources */,
+				E1F1C85D2305FE2000828915 /* ConvenientMethods.swift in Sources */,
+				E167AD55235A35C000C88A9C /* DividendGrowthAllCompanies.swift in Sources */,
 				E1A5ADE822E334720049A837 /* Compound_2.xcdatamodeld in Sources */,
 				E1A5ADE322E334720049A837 /* AppDelegate.swift in Sources */,
+				E1C0A6AD22F7188D003854DB /* FinancialData.swift in Sources */,
+				E167AD57235B28E100C88A9C /* String Methods.swift in Sources */,
 				E1A5ADEA22E334720049A837 /* ContentView.swift in Sources */,
+				E12C4E73239D39D30082936A /* ConstantStrings.swift in Sources */,
+				E13AC274233ABE0F009AAFC7 /* Constants.swift in Sources */,
 				E1A5ADE522E334720049A837 /* SceneDelegate.swift in Sources */,
+				E1E8DDBC23115941009D8BEB /* Chart.swift in Sources */,
+				E1F1C853230359AF00828915 /* Basic Types.swift in Sources */,
+				E1859441234FDA3300EDB876 /* MultilpliersView.swift in Sources */,
+				E1F1C85B2304CC9600828915 /* Enums.swift in Sources */,
+				E167AD5B235BCCE000C88A9C /* GrossProfitGrowthView.swift in Sources */,
+				E1228480232078E300010805 /* StatisticsView.swift in Sources */,
+				E1B98E23237089030057D3B5 /* Investment.swift in Sources */,
+				E1867D0523A114840008201E /* System Extensions.swift in Sources */,
+				E167AD59235BCBFC00C88A9C /* GrossRevenueGrowthView.swift in Sources */,
+				E1C114F123ABC0C100C249E4 /* EcosystemMindMapView.swift in Sources */,
+				E14640BA2390082B0092852A /* Alerts.swift in Sources */,
+				E1F63820230E0BC800AE92F6 /* Chart Bar.swift in Sources */,
+				E15BB4332353CFE5009C2C58 /* EVEBITDA.swift in Sources */,
+				E1E8DDBE2312AF30009D8BEB /* Company.swift in Sources */,
+				E122847E2320727900010805 /* QuoteService.swift in Sources */,
+				E13C02BF231C19F300CA06F4 /* ChartList.swift in Sources */,
+				E1E8DDC02312BB9C009D8BEB /* StockListAndDetailsView.swift in Sources */,
+				E1EAE9A32336638B00C6C139 /* User Preferences.swift in Sources */,
+				E12C4E76239D432D0082936A /* SegmentedCompanyInfoView.swift in Sources */,
+				E1E8DDC32312BC0F009D8BEB /* DeviceType.swift in Sources */,
+				E1D88F092312C14C004173AB /* StockListCell.swift in Sources */,
+				E18CB67723552285005DA8F6 /* Multipliers.swift in Sources */,
+				E1F1C8592304CBB400828915 /* Logger.swift in Sources */,
+				E1F158D9231B2E54008FE847 /* ChartHStack.swift in Sources */,
+				E167D6FD2306222E00CAF357 /* RootTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +650,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1A5ADFD22E334740049A837 /* Compound_2Tests.swift in Sources */,
+				E18CB679235522C2005DA8F6 /* MultipliersTests.swift in Sources */,
+				E13060FF237C2EE500BB7B72 /* StatisticsSpeedTests.swift in Sources */,
+				E1965DAC2347F6F70055891C /* StatisticsTests.swift in Sources */,
+				E178703A234410B3006EDED0 /* QuoteServiceTests.swift in Sources */,
+				E1F1C85F23061B6600828915 /* Speed Tests.swift in Sources */,
+				E13060FB2376F15900BB7B72 /* InvestmentTest.swift in Sources */,
+				E13AC276233ABE5B009AAFC7 /* PlistDataTests.swift in Sources */,
+				E14640B8238B364F0092852A /* PlistDataThrowTests.swift in Sources */,
+				E14640B5238AC0D70092852A /* CompanyTests.swift in Sources */,
+				E1F3811923AE4427006362CC /* Company Speed Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,8 +816,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Compound 2/Compound 2.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Compound 2\"/Preview\\ Content";
+				DEVELOPMENT_TEAM = 4PFP54TQFP;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Compound 2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -448,6 +831,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "robert.Compound-2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -457,8 +843,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Compound 2/Compound 2.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Compound 2\"/Preview\\ Content";
+				DEVELOPMENT_TEAM = 4PFP54TQFP;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Compound 2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -467,6 +858,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "robert.Compound-2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -478,6 +872,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4PFP54TQFP;
 				INFOPLIST_FILE = "Compound 2Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -498,6 +893,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4PFP54TQFP;
 				INFOPLIST_FILE = "Compound 2Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -517,6 +913,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4PFP54TQFP;
 				INFOPLIST_FILE = "Compound 2UITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -536,6 +933,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4PFP54TQFP;
 				INFOPLIST_FILE = "Compound 2UITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

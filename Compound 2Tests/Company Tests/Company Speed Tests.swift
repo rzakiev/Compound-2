@@ -1,15 +1,15 @@
 //
-//  Compound_2Tests.swift
+//  Company Speed Test.swift
 //  Compound 2Tests
 //
-//  Created by Robert Zakiev on 20/07/2019.
+//  Created by Robert Zakiev on 21.12.2019.
 //  Copyright © 2019 Robert Zakiev. All rights reserved.
 //
 
 import XCTest
 @testable import Compound_2
 
-class Compound_2Tests: XCTestCase {
+class Company_Speed_Test: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -27,8 +27,25 @@ class Compound_2Tests: XCTestCase {
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
-            // Put the code you want to measure the time of here.
+            
         }
     }
-
+    
+    
+    func test_Company_InitializationTime() {
+        self.measure {
+            for company in FinancialDataManager.listOfAllCompanies() {
+                let _ = Company(name: company).netIncome
+            }
+        }
+    }
+    
+    func test_FinancialDataManager_FetchingCompaniesProfitFiguresTime() {
+        self.measure {
+            for company in FinancialDataManager.listOfAllCompanies() {
+                let _ = FinancialDataManager.getNetIncome(for: company)
+            }
+        }
+    }
+    
 }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "Chart.body.getter:Chart.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in StockList.body.getter:StockListAndDetailsView.swift">
+      </ContextState>
+      <ContextState
+         contextName = "StockList.body.getter:StockListAndDetailsView.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
