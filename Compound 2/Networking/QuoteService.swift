@@ -16,7 +16,7 @@ struct QuoteService {
         Logger.log(operation: "Initializing the shared instance of the Quote Service")
     }
     
-    //Use this method to fetch a quote synchronously
+    ///Synchronously fetch a quote for a specific company
     public func getQuote(for company: String) -> (ordinarySharePrice: Double?, preferredSharePrice: Double?) {
         
         guard let smartlabLink = try? FinancialDataManager.getSmartlabLinks()[company] else {
@@ -27,7 +27,8 @@ struct QuoteService {
         return getQuoteFromSmartlabPage(link: smartlabLink)
     }
     
-    public func asynchronouslyGetQuote(for company: String, completion: ((Double?, Double?) -> Void)?) {
+    ///Asynchronously fetch a quote for a specific company
+    public func getQuoteAsync(for company: String, completion: ((Double?, Double?) -> Void)?) {
         
         DispatchQueue.main.async {
         

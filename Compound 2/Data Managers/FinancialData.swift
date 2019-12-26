@@ -43,7 +43,7 @@ struct FinancialDataManager {
     }
 }
 
-//MARK: - Get Custom Indiactors
+//MARK: - Get Custom Indiacators
 extension FinancialDataManager {
     static func getOperatingIncome(for company: String) -> (type: OperatingIncomeType, values: [(year: Int, value: Double)])? {
         
@@ -299,7 +299,9 @@ extension FinancialDataManager {
 //    }
 }
 
+//MARK: - Constants
 extension FinancialDataManager {
+    ///The folder that contains all documents and images related to companies
     static let financialDataDirectory = "Corporate Resources"
     
     static let quoteLinksSubdirectory = financialDataDirectory + "/QuoteLinks"

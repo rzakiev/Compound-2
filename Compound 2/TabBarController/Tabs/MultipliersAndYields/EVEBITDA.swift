@@ -28,30 +28,32 @@ struct EV_EBITDA: View {
                     
                     Spacer()
                     
-                    Text(String(format: "%.1f", self.tableData[index].multiplier))
+                    Text(String(format: "%.2f", self.tableData[index].multiplier))
                 }
                 
-            }.onAppear(perform: populateEVEBITDA)
+            }//.onAppear(perform: populateEVEBITDA)
                 .navigationBarTitle(Text("EV/EBITDA"))
                 .navigationBarItems(
                     leading: Button(action: {
                         self.adjustForRevenueCAGR.toggle()
                         self.adjustTableData()
                     }) { Text("Button") }
+                        
             )
-        }
+//            .navigationViewStyle(DoubleColumnNavigationViewStyle())
+        }.navigationViewStyle(StackNavigationViewStyle())
     }
     
     func populateEVEBITDA() {
-        
+        tableData = priceToEarningsRatioForAllCompanies.map({ ($0.name, $0.ratio) })
     }
     
     func adjustTableData() {
-        
+
 //        let adjustedForCagrString = String(format: "%.1f", company.ratio / self.revenueCAGRforAllCompanies.first(where: {$0.company == company.name})!.revenueCAGR)
-        
+
 //        let regularPriceToEarningsString = String(format: "%.1f", company.ratio)
-        
+
         if adjustForRevenueCAGR {
             tableData = priceToEarningsRatioForAllCompanies.map({ (peRatio) -> (company: String, multiplier: Double) in
                 return (peRatio.name, peRatio.ratio / 100 / self.revenueCAGRforAllCompanies.first(where: {$0.company == peRatio.name})!.revenueCAGR)

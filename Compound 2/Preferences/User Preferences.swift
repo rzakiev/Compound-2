@@ -46,12 +46,14 @@ struct Preferences {
                                                                                      ofType: ".png")
         if productionFiguresAreAvailable { requiredSegments.append(.production) }
         
-        let tradingViewLinkIsAvailable = FinancialDataManager.resourceIsAvailable(at: FinancialDataManager.tradingViewLinksSubdirectory,
-                                                                                  named: "TradingViewLinks",
-                                                                                  ofType: "plist")
-        if tradingViewLinkIsAvailable { requiredSegments.append(.tradingView) }
+        //let tradingViewLinkIsAvailable = FinancialDataManager.resourceIsAvailable(at: FinancialDataManager.tradingViewLinksSubdirectory,
+                                                                                  //named: "TradingViewLinks",
+                                                                                  //ofType: "plist")
+        //if tradingViewLinkIsAvailable { requiredSegments.append(.tradingView) }
         
-        return requiredSegments
+        
+        
+        return requiredSegments.count == 1 ? [] : requiredSegments //if there's only 1 section, no need to display the Picker in SegmentedCompanyInfoView
     }
 }
 
@@ -65,6 +67,7 @@ extension Preferences {
     static func setDefaultPreferencesOnFirstLaunch() {
         if UserDefaults.isFirstLaunch() {
             let sharedInstanceOfUserDefaults = UserDefaults.standard
+            
             sharedInstanceOfUserDefaults.setValue(sortingByIndustryIsPreferred, forKey: preferredCompanySortingCriterionKey)
         }
     }

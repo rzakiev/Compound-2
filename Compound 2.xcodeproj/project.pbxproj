@@ -331,7 +331,6 @@
 				E1A5ADE422E334720049A837 /* SceneDelegate.swift */,
 				E1A5ADE922E334720049A837 /* ContentView.swift */,
 				E167D6FB230621BD00CAF357 /* TabBarController */,
-				E1F1C85423035AC200828915 /* Statistics */,
 				E1F1C851230358B200828915 /* Models */,
 				E1C0A6AB22F7185B003854DB /* Data Managers */,
 				E122847C232071A900010805 /* Networking */,
@@ -434,6 +433,7 @@
 			isa = PBXGroup;
 			children = (
 				E13B211523318E160055285E /* Company */,
+				E1F1C85423035AC200828915 /* Statistics */,
 				E13B211423318DE60055285E /* Structs and Enums */,
 				E142413D239D357B00F4EF25 /* Constants */,
 			);

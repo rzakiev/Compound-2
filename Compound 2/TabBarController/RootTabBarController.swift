@@ -20,7 +20,9 @@ struct RootTabBarController: View {
             StatisticsTab()
                 .modifier(RootTabBarControllerModifier(tabNumber: 2, tabName: "Статистика"))
             EV_EBITDA().modifier(RootTabBarControllerModifier(tabNumber: 2, tabName: "EV/EBITDA"))
-            Alerts().modifier(RootTabBarControllerModifier(tabNumber: 2, tabName: "Tests"))
+            #if DEBUG
+            Alerts().modifier(RootTabBarControllerModifier(tabNumber: 2, tabName: "Tests")) //test tab
+            #endif
         }
     }
     

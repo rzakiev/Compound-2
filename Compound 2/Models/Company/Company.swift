@@ -23,13 +23,13 @@ struct Company {
     
     let dividends: [(year: Int, value: Double)]?
     
-    private let netDebt: [(year: Int, value: Double)]? //Users shouldn't access net debt; rather, they should use the computed var debtToEBITDA
+    private let netDebt: [(year: Int, value: Double)]? //Don't use net debt; rather, use the computed var debtToEBITDA
     
     let customIndicators: [String: [(year: Int, value: Double)]]? //Non-standard indicators like commission income, interest income, etc.
     
     let quoteLink: String?
     var isPublic: Bool {
-        return quoteLink == nil ? false : true
+        return quoteLink != nil
     }
     
     let numberOfOrdinaryShares: Int?
@@ -96,7 +96,7 @@ extension Company {
 //MARK: - Financial Indicators and Multipliers
 extension Company {
     func availableIndicators() -> [Indicator] {
-        var availableIndicators: [Indicator] = [] //all companies have revenue by default
+        var availableIndicators = [Indicator]()
         
         if revenue != nil { availableIndicators.append(.revenue) }
         
@@ -161,15 +161,15 @@ extension Company {
     }
     
     func availableMultipliers() -> [Multiplier]? {
-        if isPublic {
-            var availableIndicators: [Multiplier] = [.priceToEarnings, .dividendYield]
-            
-            if operatingIncome != nil { availableIndicators.append(.EVtoEBITDA) }
-            
-            return availableIndicators
-        } else {
+        guard isPublic else {
             return nil
         }
+        
+        var availableIndicators: [Multiplier] = [.priceToEarnings, .dividendYield]
+        
+        if operatingIncome != nil { availableIndicators.append(.EVtoEBITDA) }
+        
+        return availableIndicators
     }
 }
 
@@ -230,7 +230,7 @@ extension Company {
     func grossGrowthRate (for indicator: Indicator) -> Int? {
         
         //the financial indicator for which the growth rates are calculated
-        let sourceIndicator: [(year: Int, value: Double)]
+        var sourceIndicator: [(year: Int, value: Double)]
         switch indicator {
         case .revenue:
             if revenue == nil { return nil }
@@ -254,6 +254,9 @@ extension Company {
             return nil
         }
         
+        let numberOfValuesToDrop = ChartConstants.numberOfChartsAllowedOnThisDevice() > sourceIndicator.count ? 0 : sourceIndicator.count - ChartConstants.numberOfChartsAllowedOnThisDevice()
+        sourceIndicator = Array(sourceIndicator.suffix(from: numberOfValuesToDrop))
+        
         let firstNonNegativeFigure = sourceIndicator.first(where: {$0.value > 0})?.value
                    
         if firstNonNegativeFigure != nil {
@@ -267,12 +270,12 @@ extension Company {
 //    }
 }
 
-//MARK: - Market Capitalization
+//MARK: - Market Capitalization and multipliers
 extension Company {
     
     func fetchMarketCapitalization(completion: @escaping (Double) -> Void) {
         if isPublic {
-            QuoteService.shared.asynchronouslyGetQuote(for: name) { (ordinaryQuote, preferredQuote) in
+            QuoteService.shared.getQuoteAsync(for: name) { (ordinaryQuote, preferredQuote) in
                 
                 if let ordinaryShares = self.numberOfOrdinaryShares, let ordinaryQuote = ordinaryQuote {
                     
@@ -287,5 +290,10 @@ extension Company {
                 }
             }
         }
+    }
+    
+    /// Synchronous request
+    func priceToEarningsRatio() -> Double? {
+        return Multipliers.priceToEarnings(for: name)
     }
 }

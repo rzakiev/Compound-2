@@ -24,29 +24,33 @@ struct SegmentedCompanyInfoView: View {
     
     var body: some View {
         VStack {
-            
-            Picker(selection: $selectedSegment, label: Text("")) {
-                ForEach(segments.indices, id:\.self) { index in
-                    Text( self.segments[index].rawValue).tag(index)
-                }
-            }.pickerStyle(SegmentedPickerStyle())
-            
-            Divider()
-            
-            if segments[selectedSegment] == .finances {
+            if segments.isEmpty { //do not display the picker view if the selection of securities
                 financialChartsView
-            } else if segments[selectedSegment] == .ecosystem {
-                ecosystemView
             } else {
-                Text("Still working on it, please wait")
+                Picker(selection: $selectedSegment, label: Text("")) {
+                    ForEach(segments.indices, id:\.self) { index in
+                        Text( self.segments[index].rawValue).tag(index)
+                    }
+                }.pickerStyle(SegmentedPickerStyle())
+                
+                //            Divider()
+                
+                if segments[selectedSegment] == .finances {
+                    financialChartsView
+                } else if segments[selectedSegment] == .ecosystem {
+                    ecosystemView
+                } else {
+                    Text("Still working on it, please wait")
+                }
             }
+            
         }.navigationBarTitle(Text(company), displayMode: .inline)
     }
 }
 
 extension SegmentedCompanyInfoView {
     var financialChartsView: some View {
-        return ChartList(company: Company(name: self.company))
+        return FinancialChartList(company: Company(name: self.company))
              
     }
     
@@ -66,9 +70,7 @@ struct SegmentedCompanyInfoViewPreview: PreviewProvider {
             
             
             SegmentedCompanyInfoView(company: "МТС")
-                .previewLayout(.device)
-            
-            
+                .previewLayout(.device)            
         }
     }
 }

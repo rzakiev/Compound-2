@@ -71,9 +71,9 @@ struct ChartConstants {
 //MARK: - Macro
 struct MacroConstants {
     static let inflationRate = 4.0
-    static let respectableGrowthRate = MacroConstants.inflationRate * 3
+    static let respectableGrowthRate = inflationRate * 3
 }
 
 struct MonopolyConstants {
-    let companies: [String] = ["ФСК ЕЭС", "Газпром", "НМТП", "Яндекс", "Татнефть"]
+    let companies: [String] = ["ФСК ЕЭС", "Газпром", "НМТП", "Яндекс"]
 }

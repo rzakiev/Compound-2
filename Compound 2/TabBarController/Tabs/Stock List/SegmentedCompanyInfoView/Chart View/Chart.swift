@@ -22,8 +22,9 @@ struct Chart: View {
     var body: some View {
         return VStack(alignment: .center) {
             Text(indicator.rawValue + " (" + (grossGrowth == nil ? "" : String.beautifulGrossGrowthRateString(from: grossGrowth!)) + ")")
-            ChartHStack(chartValues: chartValues)
-                .padding(.horizontal, 5.0)
+            ChartHStack(for: indicator,
+                        chartValues: chartValues)
+//                .padding(.horizontal, 5.0)
         }
         .frame(height: ChartConstants.maxChartHeight, alignment: .bottomTrailing)
     }

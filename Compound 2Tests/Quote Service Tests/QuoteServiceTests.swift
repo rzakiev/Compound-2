@@ -39,7 +39,7 @@ class QuoteServiceTests: XCTestCase {
         
         for companyName in companies {
             let company = Company(name: companyName)
-            QuoteService.shared.asynchronouslyGetQuote(for: company.name) { (ordinary, preferred) in
+            QuoteService.shared.getQuoteAsync(for: company.name) { (ordinary, preferred) in
                 XCTAssertNotNil(ordinary, "Ordinary price for \(companyName): \(ordinary ?? -1)")
             }
         }
@@ -53,7 +53,7 @@ class QuoteServiceTests: XCTestCase {
         
         //When
         for company in companiesWithPreferredShares {
-            QuoteService.shared.asynchronouslyGetQuote(for: company) { (ordinary, preferred) in
+            QuoteService.shared.getQuoteAsync(for: company) { (ordinary, preferred) in
                 //Then
                 XCTAssertNotNil(ordinary)
                 XCTAssertNotNil(preferred)
@@ -73,7 +73,7 @@ class QuoteServiceTests: XCTestCase {
         
         //When
         for company in companiesWithoutPreferredShares {
-            QuoteService.shared.asynchronouslyGetQuote(for: company) { (ordinary, preferred) in
+            QuoteService.shared.getQuoteAsync(for: company) { (ordinary, preferred) in
                 //Then
                 XCTAssertNotNil(ordinary, "Did not fetch ordinary price for: \(company)")
                 XCTAssertNil(preferred, "Did fetch preferred price for: \(company)")

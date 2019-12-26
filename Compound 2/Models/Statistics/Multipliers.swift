@@ -27,15 +27,24 @@ struct Multipliers {
         return evEBITDAForMultipleCompanies(allPublicCompanies).map({ EVEBITDA(name: $0.company, evEBITDA: $0.evEBITDAAdjustedForCAGR) })
     }
     
-    
-    //P/E
+    //Synchronously fetch price to earnings ratios for all companies
     public static func priceToEarningsRatioForAllCompanies() -> [PriceToEarnings] {
         guard let allPublicCompanies = try? FinancialDataManager.getSmartlabLinks().map({$0.key}) else {
             Logger.log(error: "Unable to get the list of public companies")
             return []
         }
         
+        // TODO: Make an asynchronous version of this method
+        
         return priceToEarningsForMultipleCompanies(allPublicCompanies)
+    }
+    
+    //Asynchronously fetch price to earnings ratios for all companies
+    public static func getPriceToEarningsRatioForAllCompaniesAsync(completion: @escaping ([PriceToEarnings]) -> Void) {
+        DispatchQueue.main.async {
+            let priceToEarningsRatios = priceToEarningsRatioForAllCompanies()
+            completion(priceToEarningsRatios)
+        }
     }
 }
 

@@ -8,33 +8,48 @@
 
 import SwiftUI
 
-struct ChartList: View {
+struct FinancialChartList: View {
     
     let company: Company
     
-    @State private var marketCap: Double?
+    @State private var marketCap: Double? //Displayed in the multipliersView and also used for calculating varios ratios
     
     var body: some View {
         
-         List {
-            chartList
+        List {
+            
+            financialChartList
+            
+            if company.isPublic {
+                multipliersView
+            }
          }
          //.navigationBarTitle(Text(company.name + ("(₽ \(String(marketCap?.simplify() ?? "N/A")))")), displayMode: .inline)
          .onAppear(perform: fetchQuote)
-         .modifier(ChartListModifier())
+         //.modifier(ChartListModifier())
     }
     
-    var chartList: some View {
-        ForEach(company.availableIndicators(), id: \.self) { indicator in
-            Chart(for: indicator,
-                  grossGrowth: self.company.grossGrowthRate(for: indicator),
-                  values: self.company.growthRate(for: indicator)!)
+    var financialChartList: some View {
+        Section(header: Text("Финансовые индикаторы")) {
+            ForEach(company.availableIndicators(), id: \.self) { indicator in
+                Chart(for: indicator,
+                      grossGrowth: self.company.grossGrowthRate(for: indicator),
+                      values: self.company.growthRate(for: indicator)!)
+            }
+        }
+    }
+    
+    var multipliersView: some View {
+        HStack {
+            Text("Капитализация:")
+            Spacer()
+            Text(marketCap != nil ? marketCap!.simplify() : "N/A")
         }
     }
 }
 
 //MARK: - Managing Quotes
-extension ChartList {
+extension FinancialChartList {
     func fetchQuote() {
         
         let marketCapUpdater: (Double) -> Void = { marketCapitalization in
@@ -51,16 +66,16 @@ extension ChartList {
 
 //MARK: - SwiftUI Previews
 #if DEBUG
-struct ChartListModifier: ViewModifier {
-    
-    func body(content: Content) -> some View {
-        return content.padding(-10)
-    }
-}
+//struct ChartListModifier: ViewModifier {
+//
+//    func body(content: Content) -> some View {
+//        return content.padding(-10)
+//    }
+//}
 
 struct ChartList_Previews: PreviewProvider {
     static var previews: some View {
-        ChartList(company: Company(name: "Сбербанк")).modifier(ChartListModifier())
+        FinancialChartList(company: Company(name: "Сбербанк"))//.modifier(ChartListModifier())
     }
 }
 #endif

@@ -23,6 +23,8 @@ struct ChartHStack: View {
     let chartValues: [(year: Int, value: Double, growth: Int?)] //= [(2018, 200, 10), (2019, 250, 25), (2020, 400, 78)]
     let biggestChartValue: (year: Int, value: Double, growth: Int?)
     
+    let indicator: Indicator
+    
     var body: some View {
         GeometryReader { geometry  in
             HStack(alignment: .bottom) {
@@ -31,11 +33,12 @@ struct ChartHStack: View {
                           width: CGFloat(self.chartHeightAndWidth(geometry, chartValue: (chartValue.year, chartValue.value)).width),
                           financialIndicator: chartValue.value,
                           growth: chartValue.growth ?? 0,
-                          year: chartValue.year)
+                          year: chartValue.year,
+                          biggerIsBetter: self.indicator == .debtToEBITDA ? false: true )
                 }
             }
             .frame(width: geometry.size.width, height: geometry.size.height, alignment: .leading)
-            .scaledToFill()
+//            .scaledToFit()
 //            .background(Color.purple)
         }
     }
@@ -72,9 +75,11 @@ struct ChartHStack: View {
 
 //MARK: - Initializers
 extension ChartHStack {
-    init(chartValues: [(year: Int, value: Double, growth: Int?)]) {
+    init(for indicator: Indicator,
+         chartValues: [(year: Int, value: Double, growth: Int?)]) {
         self.chartValues = chartValues
         self.biggestChartValue = chartValues.max { $0.value < $1.value }!
+        self.indicator = indicator
     }
 }
 
@@ -86,7 +91,8 @@ extension ChartHStack {
 #if DEBUG
 struct ChartHStack_Previews: PreviewProvider {
     static var previews: some View {
-        ChartHStack(chartValues: [(2013, 2, 40), (2014, 5, 30), (2016, 10, 0), (2017, 20, 0), (2018, 30, 90)])
+        ChartHStack(for: .revenue,
+                    chartValues: [(2013, 2, 40), (2014, 5, 30), (2016, 10, 0), (2017, 20, 0), (2018, 30, 90)])
             .previewLayout(.sizeThatFits)
 //        ChartHStack(chartValues: [(2016, 17.8, 10), (2017, -5, 0), (2018, 39.9, 90)])
     }

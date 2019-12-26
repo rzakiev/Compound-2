@@ -36,9 +36,9 @@ class Speed_Tests: XCTestCase {
         }
     }
     
-    func test_ChartList_InitializationTime() {
+    func test_FinancialChartList_InitializationTime() {
         self.measure {
-            let _ = ChartList(company: Company(name: "Московская Биржа"))
+            let _ = FinancialChartList(company: Company(name: "Московская Биржа"))
         }
     }
 
@@ -59,7 +59,7 @@ class Speed_Tests: XCTestCase {
             //When
             for companyName in companies {
                 DispatchQueue.global().async {
-                    QuoteService.shared.asynchronouslyGetQuote(for: companyName) { (ordinary, preferred) in
+                    QuoteService.shared.getQuoteAsync(for: companyName) { (ordinary, preferred) in
                         XCTAssertNotNil(ordinary)
                         print("Ordinary share price: \(ordinary ?? -1)")
                     }

@@ -58,7 +58,7 @@ struct ChartBarText: View {
     let growthIndicator: Int
     
     var body: some View {
-        let indicatorText = String(financialIndicator)
+        let indicatorText = String(format:"%.1f", financialIndicator)
         
         let growthText = properGrowthText()
         
