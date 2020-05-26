@@ -32,7 +32,7 @@ class InvestmentTest: XCTestCase {
     func test_Investment_AllCompaniesAreCheckableAsDividendStory() {
         
         for company in allCompanies {
-            let sut = Investment(company: company, type: .dividendPlay)
+            let sut = InvestmentCase(company: company, type: .dividendPlay)
             let verdict = sut.checkInvestmentThesis()
             print(verdict.analysis)
         }
@@ -41,20 +41,20 @@ class InvestmentTest: XCTestCase {
     func test_Investment_AllCompaniesAreCheckableAsGrowthStories() {
         
         for company in allCompanies {
-            let sut = Investment(company: company, type: .growthPlay)
+            let sut = InvestmentCase(company: company, type: .growthPlay)
             let verdict = sut.checkInvestmentThesis()
             print(verdict.analysis)
         }
     }
 
     func test_Investment_YandexIsNotDividendStory() {
-        let sut = Investment(company: "Яндекс", type: .dividendPlay)
+        let sut = InvestmentCase(company: "Яндекс", type: .dividendPlay)
         let investmentVerdict = sut.checkInvestmentThesis()
         XCTAssertFalse(investmentVerdict.isGoodInvestment)
     }
     
     func test_Investment_MtsIsDividendStory() {
-        let sut = Investment(company: "МТС", type: .dividendPlay)
+        let sut = InvestmentCase(company: "МТС", type: .dividendPlay)
         let investmentVerdict = sut.checkInvestmentThesis()
         XCTAssertTrue(investmentVerdict.isGoodInvestment)
     }

@@ -17,7 +17,7 @@ extension String {
         case 1...99:
             return String("+ \(growthRate)%")
         case 100...:
-            return String("x\(Double(growthRate)/100.0)")
+            return "x" + String(format: "%.2f", Double(growthRate)/100.0 + 1)
         case -100..<0:
             return String(" \(growthRate)%")
         default:

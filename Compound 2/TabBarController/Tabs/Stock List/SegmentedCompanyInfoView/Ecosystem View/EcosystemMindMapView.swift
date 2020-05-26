@@ -16,36 +16,37 @@ struct EcosystemMindMapView: View {
     private let ecosystemImagePath: String?
     
     var body: some View {
-        //
-        //        let imageURL = URL(fileURLWithPath: FinancialDataManager.ecosystemImagesSubdirectory).appendingPathComponent(companyName + ".png")
-        //        print(imageURL)
-        let alternativeImageURL = Bundle.main.url(forResource: companyName, withExtension: ".png", subdirectory: FinancialDataManager.ecosystemImagesSubdirectory)
-        //        print(alternativeImageURL ?? "NO URL")
-        //        print(alternativeImageURL!.path)
-        //        print(FinancialDataManager.resourceIsAvailable(at: alternativeImageURL!.path, named: companyName, ofType: ".png"))
-        let image = UIImage(contentsOfFile: alternativeImageURL!.path)
-        return
-            Group {
+        
+        let ecosystemImageURL = Bundle.main.url(forResource: companyName,
+                                                withExtension: ".png",
+                                                subdirectory: FinancialDataManager.ecosystemImagesSubdirectory)
+        let image = UIImage(contentsOfFile: ecosystemImageURL!.path)
+        
+        return VStack {
             Spacer()
             Image(uiImage: image!)
                 .resizable()
+                //.rotationEffect(Angle(degrees: 90))
                 .aspectRatio(contentMode: .fit)
-                .rotationEffect(Angle(degrees: 90))
-                //.scaleEffect(0.8)
+            //.edgesIgnoringSafeArea([.horizontal])
         }
+        
+        
+        //return Text("Unable to load the ecosystem image for \(companyName)")
     }
     
     init(company: String) {
         self.companyName = company
         
-        let ecosystemImagesBundle = Bundle(path: FinancialDataManager.financialDataDirectory + FinancialDataManager.ecosystemImagesSubdirectory)
-//
+        let ecosystemImagesBundle = Bundle(path: FinancialDataManager.corporateDataDirectory + FinancialDataManager.ecosystemImagesSubdirectory)
+        //
         self.ecosystemImagePath = ecosystemImagesBundle?.path(forResource: companyName, ofType: "png")
+//        Logger.log(operation: "Initializing the ecosystem view")
     }
 }
 
 struct EcosystemMindMapView_Previews: PreviewProvider {
     static var previews: some View {
-        EcosystemMindMapView(company: "Сбербанк")
+        EcosystemMindMapView(company: "Сбербанк").previewLayout(.device)
     }
 }

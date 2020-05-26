@@ -1,1 +1,41 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE plist PUBLIC"-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"><plist version="1.0"><dict><key>Revenue</key><array><string>2014,319.8</string><string>2015,415.2</string><string>2016,495.9</string><string>2017,532.9</string><string>2018,611.6</string></array><key>EBITDA</key><array><string>2014,24.8</string><string>2015,58.7</string><string>2016,78.0</string><string>2017,56.0</string><string>2018,33.6</string></array><key>Net Income</key><array><string>2014,-17.1</string><string>2015,-6.5</string><string>2016,38.8</string><string>2017,23.1</string><string>2018,5.7</string></array><key>Dividends</key><array><string>2014,0.0</string><string>2015,0.0</string><string>2016,19.4</string><string>2017,14.2</string><string>2018,2.86</string></array><key>Net Debt</key><array><string>2014,146.8</string><string>2015,197.1</string><string>2016,106.1</string><string>2017,49.9</string><string>2018,67.5</string></array></dict></plist>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EBITDA</key>
+	<array>
+		<string>2014,24.8</string>
+		<string>2015,58.7</string>
+		<string>2016,78.0</string>
+		<string>2017,56.0</string>
+		<string>2018,33.6</string>
+		<string>2019,168.9</string>
+	</array>
+	<key>Dividends</key>
+	<array>
+		<string>2014,0.0</string>
+		<string>2015,0.0</string>
+		<string>2016,19.4</string>
+		<string>2017,14.2</string>
+		<string>2018,2.86</string>
+	</array>
+	<key>Revenue</key>
+	<array>
+		<string>2014,319.8</string>
+		<string>2015,415.2</string>
+		<string>2016,495.9</string>
+		<string>2017,532.9</string>
+		<string>2018,611.6</string>
+		<string>2019,678</string>
+	</array>
+	<key>Net Income</key>
+	<array>
+		<string>2014,-17.1</string>
+		<string>2015,-6.5</string>
+		<string>2016,38.8</string>
+		<string>2017,23.1</string>
+		<string>2018,5.7</string>
+		<string>2019,13.5</string>
+	</array>
+</dict>
+</plist>

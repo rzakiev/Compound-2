@@ -14,7 +14,7 @@ struct CompanyListSearchBar: UIViewRepresentable {
     @Binding var text: String
     var onSearchButtonClicked: (() -> Void)? = nil
 
-    class Coordinator: NSObject, UISearchBarDelegate {
+    final class Coordinator: NSObject, UISearchBarDelegate {
 
         let control: CompanyListSearchBar
 

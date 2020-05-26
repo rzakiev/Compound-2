@@ -21,17 +21,35 @@ enum CompetitionType {
     case monopoly
 }
 
-enum Indicator: String {
+enum Indicator: Equatable, Hashable {
+    
     case undefined
-    case revenue = "Выручка"
-    case OIBDA = "OIBDA"
-    case EBITDA = "EBITDA"
-    case netProfit = "Чистая прибыль"
-    case freeCashFlow = "Свободный денежный поток"
-    case debtToEBITDA = "Долг / EBITDA"
-    case dividend = "Дивиденды"
-    case commissionIncome = "Комиссионные Доходы"
-    case interestIncome = "Процентные Доходы"
+    case revenue
+    case OIBDA
+    case EBITDA
+    case netProfit
+    case freeCashFlow
+    case debtToEBITDA
+    case dividend
+    case commissionIncome
+    case interestIncome
+    case production(produceName: String, unitOfMeasurement: String?)
+    
+    var title: String {
+        switch self {
+        case .revenue: return "Выручка"
+        case .OIBDA: return "OIBDA"
+        case .EBITDA: return "EBITDA"
+        case .netProfit: return "Чистая прибыль"
+        case .freeCashFlow: return "Свободный денежный поток"
+        case .debtToEBITDA: return "Долг / EBITDA"
+        case .dividend: return "Дивиденды"
+        case .commissionIncome: return "Комиссионные Доходы"
+        case .interestIncome: return "Процентные Доходы"
+        case .production(let produceName, let unitOfMeasurement): return produceName + " " + (unitOfMeasurement ?? "")
+        default: return "Unknow Indicator"
+        }
+    }
 }
 
 //
@@ -52,10 +70,30 @@ enum PlistParsingError: Error, Equatable {
     case unableToFindNumberOfSharesIssued
 }
 
-enum Multiplier {
+enum PortfolioSaveError: Error {
+    case unableToSavePortfolio(reason: String)
+    case tryingToSaveEmptyPortfolio
+}
+
+//MARK: - Multipliers
+enum Multiplier: CaseIterable {
+    
     case priceToEarnings
     case EVtoEBITDA
     case dividendYield
+    
+    var title: String {
+        switch self {
+        case .priceToEarnings: return "P/E"
+        case .EVtoEBITDA: return "EV/EBITDA"
+        case .dividendYield: return "Див. Доходность"
+        }
+    }
+}
+
+enum MultiplierAdjustment {
+    case forCAGR
+    case forPayoutRatio
 }
 
 //MARK: - Invesments
@@ -65,14 +103,35 @@ enum InvestmentType: String { //: CaseIterable
     case growthPlay = "Считаю, что компания будет расти" //Investment case in which an investor expects the company to appreciably grow
     //case ecosystemPlay //Investment case in which an investor expects the company to leverage its ecosystems to acheive above-average growth
     //case monopoly //Investment case that rests on the company's moat that will enable it to preserver its market share and maintains its income and dividends
-    case technicalAnalysis = "Хочу купить акции исходя из технического анализа"
 }
 
-enum ReasonToInvest: String {
+enum InvestmentRisk {
+    case horrificManagement
+    case unlikelyToGrow
+    case cyclicalIndustry
+    case sensitiveToCrises
+    case maySuspendDividends
+    
+    var riskValue: Int {
+        switch self {
+        case .horrificManagement: return 100
+        case .unlikelyToGrow: return 50
+        case .cyclicalIndustry: return 40
+        case .sensitiveToCrises: return 30
+        case .maySuspendDividends: return 20
+//        default:
+//            return 10
+        }
+    }
+}
+
+enum CompetitiveAdvantage: String {
     case undefined
     case businessIsOperatingInGrowingIndustry
     case businessIsCAPEXLight
-    case managementIsLoyalToShareholders
+    case businessProducePricesAreStable
+    case qualityManagement
+    case stableDividends
 }
 
 //MARK: - Preferences
@@ -86,9 +145,17 @@ enum CompanyInfoSegment: String, CaseIterable {
 
 
 
+//MARK: - File System
+enum FileSystemError: Error {
+    case failedToCreateFile(named: String, atPath: String, reason: String)
+    case failedToReadFile(named: String, atPath: String, reason: String)
+}
 
 
-
-
-
-
+//MARK: - Time
+enum TimePeriod {
+    case second
+    case minute
+    case hour
+    case day
+}

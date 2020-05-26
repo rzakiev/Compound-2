@@ -1,1 +1,38 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE plist PUBLIC"-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"><plist version="1.0"><dict><key>Revenue</key><array><string>2015,2.1</string><string>2016,8.4</string><string>2017,10.2</string><string>2018,24.0</string></array><key>OIBDA</key><array><string>2015,0.7</string><string>2016,2.9</string><string>2017,4.0</string><string>2018,4.9</string></array><key>Net Income</key><array><string>2015,0.1</string><string>2016,0.9</string><string>2017,1.1</string><string>2018,1.1</string></array><key>Net Debt</key><array><string>2015,1.5</string><string>2016,8.4</string><string>2017,11.8</string><string>2018,17.3</string></array></dict></plist>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Revenue</key>
+	<array>
+		<string>2015,2.1</string>
+		<string>2016,8.4</string>
+		<string>2017,10.2</string>
+		<string>2018,24.0</string>
+		<string>2019,31.0</string>
+	</array>
+	<key>Net Income</key>
+	<array>
+		<string>2015,0.1</string>
+		<string>2016,0.9</string>
+		<string>2017,1.1</string>
+		<string>2018,1.1</string>
+		<string>2019,-0.6</string>
+	</array>
+	<key>Net Debt</key>
+	<array>
+		<string>2015,1.5</string>
+		<string>2016,8.4</string>
+		<string>2017,11.8</string>
+		<string>2018,17.3</string>
+		<string>2019,21.1</string>
+	</array>
+	<key>OIBDA</key>
+	<array>
+		<string>2015,0.7</string>
+		<string>2016,2.9</string>
+		<string>2017,4.0</string>
+		<string>2018,4.9</string>
+		<string>2019,4.1</string>
+	</array>
+</dict>
+</plist>

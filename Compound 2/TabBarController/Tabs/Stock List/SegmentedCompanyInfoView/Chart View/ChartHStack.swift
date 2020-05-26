@@ -20,24 +20,31 @@ struct ChartHStack: View {
 
 //    fileprivate(set) var chartValues = [ChartValue]()//the values that populate the chart
     
-    let chartValues: [(year: Int, value: Double, growth: Int?)] //= [(2018, 200, 10), (2019, 250, 25), (2020, 400, 78)]
-    let biggestChartValue: (year: Int, value: Double, growth: Int?)
+    let chartValues: [ChartValueWithGrowth] //= [(2018, 200, 10), (2019, 250, 25), (2020, 400, 78)]
+    let biggestChartValue: ChartValueWithGrowth
     
     let indicator: Indicator
     
     var body: some View {
         GeometryReader { geometry  in
-            HStack(alignment: .bottom) {
-                ForEach(self.chartValues, id: \.year) { chartValue in
-                 ChartBar(height: CGFloat(self.chartHeightAndWidth(geometry, chartValue: (chartValue.year, chartValue.value)).height),
-                          width: CGFloat(self.chartHeightAndWidth(geometry, chartValue: (chartValue.year, chartValue.value)).width),
-                          financialIndicator: chartValue.value,
-                          growth: chartValue.growth ?? 0,
-                          year: chartValue.year,
-                          biggerIsBetter: self.indicator == .debtToEBITDA ? false: true )
-                }
+            ScrollView(.horizontal, showsIndicators: false) {
+                Spacer()
+                HStack(alignment: .bottom) {
+                    ForEach(self.chartValues, id: \.year) { chartValue in
+                        ChartBar(height: CGFloat(self.chartHeightAndWidth(geometry, chartValue: (chartValue.year, chartValue.value)).height),
+                                 width: CGFloat(self.chartHeightAndWidth(geometry, chartValue: (chartValue.year, chartValue.value)).width),
+                                 financialIndicator: chartValue.value,
+                                 growth: chartValue.growth ?? 0,
+                                 year: chartValue.year,
+                                 biggerIsBetter: self.indicator == .debtToEBITDA ? false: true )
+                    }
+                }.padding(.horizontal, 20)
             }
-            .frame(width: geometry.size.width, height: geometry.size.height, alignment: .leading)
+            
+//            .background(Color.blue)
+//            .padding([.horizontal], 0)
+//            .frame(width: geometry.size.width, height: geometry.size.height, alignment: .leading)
+            //.edgesIgnoringSafeArea([.horizontal])
 //            .scaledToFit()
 //            .background(Color.purple)
         }
@@ -47,6 +54,8 @@ struct ChartHStack: View {
         
         let cellHeight = geometry.size.height
         let cellWidth = geometry.size.width
+//        print("Cell width: \(cellWidth)")
+//        print("Cell height: \(cellHeight)")
         
         let isBiggestChart = chartValue.year == biggestChartValue.year
 //        print("Biggest value: \(biggestChartValue.year), \(biggestChartValue.value)")
@@ -75,25 +84,25 @@ struct ChartHStack: View {
 
 //MARK: - Initializers
 extension ChartHStack {
-    init(for indicator: Indicator,
-         chartValues: [(year: Int, value: Double, growth: Int?)]) {
+    init(for indicator: Indicator, chartValues: [ChartValueWithGrowth]) {
         self.chartValues = chartValues
         self.biggestChartValue = chartValues.max { $0.value < $1.value }!
         self.indicator = indicator
     }
 }
 
-
-
-
-
 //MARK: - SwiftUI Previews
 #if DEBUG
 struct ChartHStack_Previews: PreviewProvider {
     static var previews: some View {
-        ChartHStack(for: .revenue,
-                    chartValues: [(2013, 2, 40), (2014, 5, 30), (2016, 10, 0), (2017, 20, 0), (2018, 30, 90)])
-            .previewLayout(.sizeThatFits)
+        ForEach([ColorScheme.light, .dark], id: \.self) { scheme in
+            ChartHStack(for: .revenue,
+                        chartValues: [.init(year: 2013, value: 2, growth: 40), .init(year: 2014, value: 5, growth: 30), .init(year: 2016, value: 10, growth: 0), .init(year: 2017, value: 20, growth: 0), .init(year: 2018, value: 30, growth: 90)])
+            
+                .colorScheme(scheme)
+                .previewLayout(.sizeThatFits)
+        }
+        
 //        ChartHStack(chartValues: [(2016, 17.8, 10), (2017, -5, 0), (2018, 39.9, 90)])
     }
 }

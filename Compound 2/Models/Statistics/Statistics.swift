@@ -12,6 +12,10 @@ import Foundation
 //MARK: - Sorting comapnies by various criteria
 struct Statistics {
     
+    ///This struct contains only static methods, no need to initialize anything
+    @available (*, unavailable)
+    fileprivate init() { }
+    
     static func companiesSortedByRevenueCAGR() -> [(company: String, revenueCAGR: Double)] {
         
         var revenueCAGRLastFiveYears = [(company: String, revenueCAGR: Double)]()
@@ -24,6 +28,7 @@ struct Statistics {
         revenueCAGRLastFiveYears.sort(by: {$0.revenueCAGR > $1.revenueCAGR})
         return revenueCAGRLastFiveYears
     }
+    
     
     static func companiesSortedByIndustryAndRevenueCAGR() -> [IndustryWithCompaniesCAGR] {
         
@@ -59,7 +64,7 @@ extension Statistics {
     }
     
     //calculating the compounded annual growth rate
-    
+    ///Returns the revenue cagr for the company provided as the parameter
     static func getRevenueCAGR(for company: String) -> Double {
         guard let revenue = FinancialDataManager.getRevenue(for: company) else {
             return -1
@@ -78,9 +83,9 @@ extension Statistics {
 //MARK: - Calculating growth rates for financial indicators
 extension Statistics {
     
-    static func grossGrowthRate(for company: String, for indicator: Indicator) -> Int? {
+    static func grossGrowthRate(for company: String, for indicator: Indicator, numberOfYears: Int = 5) -> Int? {
         let company = Company(name: company)
-        return company.grossGrowthRate(for: indicator)
+        return company.grossGrowthRate(for: indicator, numberOfYears: numberOfYears)
     }
     
     static func grossGrowthRateForAllCompanies(for indicator: Indicator) -> [(company: String, grossGrowthRate: Int)] {
@@ -92,6 +97,8 @@ extension Statistics {
                 companiesWithTheirGrossGrowthRate.append((company, grossGrowthRate))
             }
         }
+        
+        
         return companiesWithTheirGrossGrowthRate.sorted(by: {$0.grossGrowthRate > $1.grossGrowthRate})
     }
 }

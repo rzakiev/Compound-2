@@ -12,11 +12,22 @@ extension UserDefaults {
     static func isFirstLaunch() -> Bool {
         let alreadyLaunchedBefore = UserDefaults.standard.bool(forKey: "alreadyLaunchedBefore")
         
-        if alreadyLaunchedBefore == true {
+        if alreadyLaunchedBefore {
             return false //The key is set to true -> therefore it is not first launch
         } else { //The first launch
             UserDefaults.standard.set(true, forKey: "alreadyLaunchedBefore") //setting the key to true during the first launch
             return true
         }
+    }
+}
+
+
+
+extension Array {
+    subscript(safe index: Index) -> Element? {
+        guard index >= 0 && index < self.count else {
+            return nil
+        }
+        return self[index]
     }
 }

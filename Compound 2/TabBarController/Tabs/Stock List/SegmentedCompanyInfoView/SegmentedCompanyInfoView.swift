@@ -13,50 +13,55 @@ struct SegmentedCompanyInfoView: View {
     
     let company: String
     
-    @State var selectedSegment = 0
+    @State private var selectedSegment = 0
     
     private let segments: [CompanyInfoSegment]
+    
+    let financialChartsView: FinancialChartList
+    
+    let ecosystemView: EcosystemMindMapView
+    
+    let productionChartView: ProductionChartList
     
     init(company: String) {
         self.company = company
         self.segments = Preferences.requiredSegmentsInSegmentedCompanyView(for: company)
+        self.financialChartsView = FinancialChartList(company: Company(name: self.company))
+        self.ecosystemView = EcosystemMindMapView(company: self.company)
+        self.productionChartView = ProductionChartList(company: company)
     }
     
     var body: some View {
         VStack {
-            if segments.isEmpty { //do not display the picker view if the selection of securities
+            if segments.isEmpty { //do not display the picker view if only financial charts are available
                 financialChartsView
             } else {
                 Picker(selection: $selectedSegment, label: Text("")) {
                     ForEach(segments.indices, id:\.self) { index in
                         Text( self.segments[index].rawValue).tag(index)
+                            .position()
                     }
                 }.pickerStyle(SegmentedPickerStyle())
-                
-                //            Divider()
                 
                 if segments[selectedSegment] == .finances {
                     financialChartsView
                 } else if segments[selectedSegment] == .ecosystem {
                     ecosystemView
-                } else {
+                } else if segments[selectedSegment] == .production {
+                    productionChartView
+                }
+                else {
                     Text("Still working on it, please wait")
                 }
             }
-            
-        }.navigationBarTitle(Text(company), displayMode: .inline)
+        }
+        .navigationBarTitle(Text(company), displayMode: .inline)
     }
+    
 }
 
 extension SegmentedCompanyInfoView {
-    var financialChartsView: some View {
-        return FinancialChartList(company: Company(name: self.company))
-             
-    }
-    
-    var ecosystemView: some View {
-        return EcosystemMindMapView(company: self.company)
-    }
+    //some cool methods here
 }
 
 

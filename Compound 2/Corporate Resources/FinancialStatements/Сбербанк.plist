@@ -9,6 +9,7 @@
 		<string>2016,1698</string>
 		<string>2017,1903</string>
 		<string>2018,1936</string>
+		<string>2019,2013</string>
 	</array>
 	<key>Net Income</key>
 	<array>
@@ -17,6 +18,7 @@
 		<string>2016,541.9</string>
 		<string>2017,748.7</string>
 		<string>2018,831.7</string>
+		<string>2019,845</string>
 	</array>
 	<key>Dividends</key>
 	<array>
@@ -25,6 +27,7 @@
 		<string>2016,135.5</string>
 		<string>2017,271</string>
 		<string>2018,361.4</string>
+		<string>2019,422.38</string>
 	</array>
 	<key>QuoteSource</key>
 	<string>https://smart-lab.ru/forum/SBER</string>

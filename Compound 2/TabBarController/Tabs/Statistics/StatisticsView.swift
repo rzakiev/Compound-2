@@ -11,28 +11,26 @@ import SwiftUI
 
 struct StatisticsTab: View {
     
-    @State var selectedTab: Int = 0
+    @State private var selectedTab: String = "revenue"
     
     var body: some View {
         NavigationView {
             VStack(alignment: .center) {
                 Picker(selection: $selectedTab, label: Text("")) {
-                    Text("Revenue").tag(0)
-                    Text("Profit").tag(1)
-                    Text("Dividends").tag(2)
+                    Text("Revenue").tag("revenue")
+                    Text("Profit").tag("profit")
+                    Text("Dividends").tag("dividends")
                 }.pickerStyle(SegmentedPickerStyle())
-                //                .frame(alignment: .trailing)
-                //                .background(Color.green)
-                if selectedTab == 0 {
+                
+                if selectedTab == "revenue" {
                     GrossRevenueGrowthView()
-                } else if selectedTab == 1 {
+                } else if selectedTab == "profit" {
                     GrossProfitGrowthView()
                 } else {
                     DividendGrowthForAllCompaniesView()
                 }
                 Spacer()
             }.navigationBarTitle("Статистика", displayMode: .inline)
-            
         }
     }
 }

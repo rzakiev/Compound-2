@@ -10,6 +10,7 @@
 		<string>2016,374.1</string>
 		<string>2017,348.1</string>
 		<string>2018,358.77</string>
+		<string>2019,366.6</string>
 	</array>
 	<key>EBITDA</key>
 	<array>
@@ -19,6 +20,7 @@
 		<string>2016,100.3</string>
 		<string>2017,104</string>
 		<string>2018,109.7</string>
+		<string>2019,97.5</string>
 	</array>
 	<key>Net Income</key>
 	<array>
@@ -28,6 +30,7 @@
 		<string>2016,39.8</string>
 		<string>2017,24.8</string>
 		<string>2018,31.8</string>
+		<string>2019,0.643</string>
 	</array>
 	<key>Dividends</key>
 	<array>
@@ -46,6 +49,7 @@
 		<string>2016,132.4</string>
 		<string>2017,120</string>
 		<string>2018,163.3</string>
+		<string>2019,160.9</string>
 	</array>
 	<key>QuoteSource</key>
 	<string>https://smart-lab.ru/forum/HYDR</string>

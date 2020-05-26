@@ -10,6 +10,7 @@
 		<string>2016,43.6</string>
 		<string>2017,38.5</string>
 		<string>2018,39.9</string>
+		<string>2019,43.2</string>
 	</array>
 	<key>EBITDA</key>
 	<array>
@@ -19,6 +20,7 @@
 		<string>2016,33.6</string>
 		<string>2017,28.1</string>
 		<string>2018,27.7</string>
+		<string>2019,28.7</string>
 	</array>
 	<key>Dividends</key>
 	<array>
@@ -28,6 +30,7 @@
 		<string>2016,17.5</string>
 		<string>2017,18.1</string>
 		<string>2018,17.52</string>
+		<string>2019,18.049</string>
 	</array>
 	<key>Net Debt</key>
 	<array>
@@ -37,6 +40,7 @@
 		<string>2016,-85.3</string>
 		<string>2017,-82.7</string>
 		<string>2018,-89.7</string>
+		<string>2019,-93</string>
 	</array>
 	<key>Комиссионные Доходы</key>
 	<array>
@@ -46,6 +50,7 @@
 		<string>2016,19.8</string>
 		<string>2017,21.2</string>
 		<string>2018,23.6</string>
+		<string>2019,26.2</string>
 	</array>
 	<key>Процентные Доходы</key>
 	<array>
@@ -55,6 +60,7 @@
 		<string>2016,23.7</string>
 		<string>2017,17.3</string>
 		<string>2018,16.0</string>
+		<string>2019,16.7</string>
 	</array>
 	<key>Net Income</key>
 	<array>
@@ -64,6 +70,7 @@
 		<string>2016,25.2</string>
 		<string>2017,20.3</string>
 		<string>2018,20.7</string>
+		<string>2019,22.1</string>
 	</array>
 </dict>
 </plist>

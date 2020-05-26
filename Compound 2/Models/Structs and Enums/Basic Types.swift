@@ -26,7 +26,7 @@ struct FinancialIndicators: Equatable {
     let quoteURL: String?
     let customIndicators: [String: [(year: Int, value: Double)]]?
     
-    static func == (lhs: FinancialIndicators, rhs: FinancialIndicators) -> Bool {
+    public static func == (lhs: FinancialIndicators, rhs: FinancialIndicators) -> Bool {
         
         var equalityBooleans = [Bool]()
         for i in 0..<2 {
@@ -42,17 +42,45 @@ struct FinancialIndicators: Equatable {
 }
 
 //MARK: - Multipliers
-
-struct EVEBITDA: Identifiable {
-    var id = UUID()
-    let name: String
-    var evEBITDA: Double
+public struct EVEBITDA: Identifiable {
+    public var id = UUID()
+    public let name: String
+    public var evEBITDA: Double
 }
 
-struct PriceToEarnings: Identifiable {
-    var id = UUID()
-    let name: String
-    let ratio: Double
+public struct PriceToEarnings: Identifiable {
+    public var id = UUID()
+    public let name: String
+    public let ratio: Double //name of the company for which the P/E ratio was calculated
+}
+
+//MARK: - Dividend Yield
+public struct DividendYield: Identifiable {
+    public var id = UUID()
+    public let name: String
+    public let yield: Double //name of the company for which the dividend yield was calculated
+    public let isFixed: Bool
+    
+}
+
+//MARK: - Quotes
+public struct Quote: Identifiable, CustomStringConvertible {
+    
+    public var description: String {
+        return "Company: \(companyName); Ordinary: \(String(describing: ordinaryShareQuote)) ; Preferred: \(String(describing: preferredShareQuote))"
+    }
+    
+    public var id = UUID()
+    let companyName: String //name of the company for which the quote was fetched
+    let ordinaryShareQuote: Double?
+    let preferredShareQuote: Double?
+}
+
+public struct SimpleQuote: Identifiable, Hashable {
+    public var id = UUID()
+    let ticker: String //name of the company for which the quote was fetched
+    let quote: Double
+    var companyName: String? { ConstantTickerSymbols.company(for: self.ticker) }
 }
 
 //MARK: - Statistics
@@ -63,7 +91,6 @@ struct CompanyWithCAGR: Identifiable {
 }
 
 struct IndustryWithCompaniesCAGR: Identifiable {
-    
     var id = UUID()
     let name: String
     let companiesSortedByIndustryAndCAGR: [CompanyWithCAGR]
@@ -73,6 +100,18 @@ struct IndustryWithCompaniesCAGR: Identifiable {
 struct InvestmentVerdict {
     let isGoodInvestment: Bool
     let analysis: String
+}
+
+struct InvestmentComparison {
+    let canBeCompared: Bool
+    let analysis: String
+}
+
+//MARK: - Investment Return
+struct InvestmentReturn {
+    let companyName: String
+    
+    let returns:[(year: Int, return: Double)]
 }
 
 //MARK: - SwiftUI Extensions
@@ -109,4 +148,59 @@ extension RandomAccessCollection {
     }
 }
 
-//MARK: 
+// MARK: - MoexQuote for parsing a single quote
+struct MoexQuote: Codable {
+    let marketdata: QuoteData
+}
+
+struct QuoteData: Codable {
+    let columns: [String]
+    let data: [[Double]]
+}
+
+ // MARK: - MoexQuotes for parsing multiple quotes
+ struct MoexQuotes: Codable {
+     let marketdata: Marketdata
+ }
+
+ // MARK: - Marketdata
+ struct Marketdata: Codable {
+     let columns: [String]
+     let data: [[SingleMoexQuote]]
+ }
+
+ enum SingleMoexQuote: Codable {
+     case double(Double)
+     case string(String)
+     case null
+
+     init(from decoder: Decoder) throws {
+         let container = try decoder.singleValueContainer()
+         if let x = try? container.decode(Double.self) {
+             self = .double(x)
+             return
+         }
+         if let x = try? container.decode(String.self) {
+             self = .string(x)
+             return
+         }
+         if container.decodeNil() {
+             self = .null
+             return
+         }
+         throw DecodingError.typeMismatch(SingleMoexQuote.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for Datum"))
+     }
+
+     func encode(to encoder: Encoder) throws {
+         var container = encoder.singleValueContainer()
+         switch self {
+         case .double(let x):
+             try container.encode(x)
+         case .string(let x):
+             try container.encode(x)
+         case .null:
+             try container.encodeNil()
+         }
+     }
+ }
+

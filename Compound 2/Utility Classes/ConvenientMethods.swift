@@ -24,7 +24,10 @@ extension Double {
             simplifiedString = String(format: "%.1f",self)
         }
         
-        if simplifiedString.contains(".0") { simplifiedString.removeSubrange(simplifiedString.range(of: ".0")!) }
+        if simplifiedString.suffix(2) == ".0" {
+            simplifiedString = String(simplifiedString.dropLast(2))
+        }
+        
         return simplifiedString
     }
 }
@@ -40,7 +43,9 @@ extension Int {
             simplifiedString = String(format: "%.1f",self)
         }
         
-        if simplifiedString.contains(".0") { simplifiedString.removeSubrange(simplifiedString.range(of: ".0")!) }
+        if simplifiedString.suffix(2) == ".0" {
+            simplifiedString = String(simplifiedString.dropLast(2))
+        }
         return simplifiedString
     }
 }
@@ -72,15 +77,13 @@ extension Color {
     }
 }
 
-//Converts numbers like 25 and -38 into "+25" and "-38"
-func numberWithSign (number: Int) -> String {
+//Converts numbers like 25 and -38 into "+25%" and "-38%"
+func numberWithSignAndPercentage (number: Double) -> String {
     if number > 0 {
-        return "+" + String(number) + "%"
+        return String(format: "%.2f", number) + "%"
     } else if number == 0 {
         return ""
     } else { //number <=0
-        return "-" + String(number) + "%"
+        return String(format: "%.2f", number) + "%"
     }
 }
-
-

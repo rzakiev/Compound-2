@@ -16,12 +16,11 @@ import XCTest
 
 class QuoteServiceTests: XCTestCase {
     
-    private let companiesWithPreferredShares = ["Сбербанк", "Ростелеком", "Россети", "Татнефть"]
+    private let companiesWithPreferredShares = ConstantTickerSymbols.companiesWithPreferredShares
     
     func testPublicCompaniesHaveLinksForQuoteSource() {
         //Given
         let companies = FinancialDataManager.listOfAllCompanies()
-        
         //When
         for companyName in companies {
             let company = Company(name: companyName)
@@ -39,8 +38,9 @@ class QuoteServiceTests: XCTestCase {
         
         for companyName in companies {
             let company = Company(name: companyName)
-            QuoteService.shared.getQuoteAsync(for: company.name) { (ordinary, preferred) in
-                XCTAssertNotNil(ordinary, "Ordinary price for \(companyName): \(ordinary ?? -1)")
+            QuoteService.shared.getQuoteAsync(for: company.name) { quote in
+//                print("Company: \(quote.companyName), quote: \(quote.ordinaryShareQuote)")
+                XCTAssertNotNil(quote?.ordinaryShareQuote, "Ordinary price for \(companyName): \(quote?.ordinaryShareQuote ?? -1)")
             }
         }
         quoteExpectation.fulfill()
@@ -53,11 +53,11 @@ class QuoteServiceTests: XCTestCase {
         
         //When
         for company in companiesWithPreferredShares {
-            QuoteService.shared.getQuoteAsync(for: company) { (ordinary, preferred) in
+            QuoteService.shared.getQuoteAsync(for: company) { quote in
                 //Then
-                XCTAssertNotNil(ordinary)
-                XCTAssertNotNil(preferred)
-                print("\(company): ordinary share price:\(ordinary ?? -1); preferred share price:\(preferred ?? -1)")
+                XCTAssertNotNil(quote?.ordinaryShareQuote)
+                XCTAssertNotNil(quote?.preferredShareQuote)
+                print("\(company): ordinary share price:\(quote?.ordinaryShareQuote ?? -1); preferred share price:\(quote?.preferredShareQuote ?? -1)")
             }
         }
         
@@ -73,10 +73,10 @@ class QuoteServiceTests: XCTestCase {
         
         //When
         for company in companiesWithoutPreferredShares {
-            QuoteService.shared.getQuoteAsync(for: company) { (ordinary, preferred) in
+            QuoteService.shared.getQuoteAsync(for: company) { quote in
                 //Then
-                XCTAssertNotNil(ordinary, "Did not fetch ordinary price for: \(company)")
-                XCTAssertNil(preferred, "Did fetch preferred price for: \(company)")
+                XCTAssertNotNil(quote?.ordinaryShareQuote, "Did not fetch ordinary price for: \(company)")
+                XCTAssertNil(quote?.preferredShareQuote, "Did fetch preferred price for: \(company)")
             }
         }
         
@@ -90,12 +90,11 @@ class QuoteServiceTests: XCTestCase {
         
         for companyName in ["Сбербанк", "Яндекс", "МТС", "АФК Система"] {
             let company = Company(name: companyName)
-            let marketCap2 = QuoteService.shared.fetchMarketCapitalization(for: companyName)
+            let marketCap2 = MarketCapitalization.calculateMarketCapitalization(for: companyName)
             
             company.fetchMarketCapitalization { marketCap in
                 print("\(companyName) market cap1: \(marketCap), 2: \(marketCap2 ?? -1)")
                 XCTAssert(marketCap == marketCap2, "Market Cap 1: \(marketCap), 2: \(marketCap2 ?? -1)")
-                
             }
         }
         
@@ -103,6 +102,23 @@ class QuoteServiceTests: XCTestCase {
         waitForExpectations(timeout: 20, handler: nil)
     }
     
+    func test_QuoteService_OrdinaryQuoteFetchingSpeed() {
+        self.measure {
+            let _ = QuoteService.shared.getQuote(for: "МТС")
+        }
+    }
+    
+    func test_QuoteService_OrdinaryAndPreferredQuoteFetchingSpeed() {
+        self.measure {
+            let _ = QuoteService.shared.getQuote(for: "Сбербанк")
+        }
+    }
+    
+    func test_QuoteService_FetchingAllQuotes() {
+        self.measure {
+            let _ = QuoteService.shared.getAllMoexQuotes()
+        }
+    }
 }
 
 

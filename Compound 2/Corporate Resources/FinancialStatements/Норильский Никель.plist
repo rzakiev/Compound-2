@@ -1,1 +1,56 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE plist PUBLIC"-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"><plist version="1.0"><dict><key>Revenue</key><array><string>2013,366.2</string><string>2014,456.0</string><string>2015,506.1</string><string>2016,548.8</string><string>2017,536.8</string><string>2018,728.9</string></array><key>EBITDA</key><array><string>2013,133.7</string><string>2014,218.2</string><string>2015,247.3</string><string>2016,257.3</string><string>2017,236.4</string><string>2018,389.2</string></array><key>Net Income</key><array><string>2013,24.4</string><string>2014,112.4</string><string>2015,146.2</string><string>2016,149.3</string><string>2017,127.8</string><string>2018,189.5</string></array><key>Dividends</key><array><string>2013,77.2</string><string>2014,226.7</string><string>2015,135.6</string><string>2016,140.9</string><string>2017,131.7</string><string>2018,248.2</string></array><key>Net Debt</key><array><string>2013,146.0</string><string>2014,135.9</string><string>2015,256.8</string><string>2016,276.0</string><string>2017,472.4</string><string>2018,489.8</string></array></dict></plist>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EBITDA</key>
+	<array>
+		<string>2013,133.7</string>
+		<string>2014,218.2</string>
+		<string>2015,247.3</string>
+		<string>2016,257.3</string>
+		<string>2017,236.4</string>
+		<string>2018,389.2</string>
+		<string>2019,513.7</string>
+	</array>
+	<key>Dividends</key>
+	<array>
+		<string>2013,77.2</string>
+		<string>2014,226.7</string>
+		<string>2015,135.6</string>
+		<string>2016,140.9</string>
+		<string>2017,131.7</string>
+		<string>2018,248.2</string>
+		<string>2019,360.78</string>
+	</array>
+	<key>Revenue</key>
+	<array>
+		<string>2013,366.2</string>
+		<string>2014,456.0</string>
+		<string>2015,506.1</string>
+		<string>2016,548.8</string>
+		<string>2017,536.8</string>
+		<string>2018,728.9</string>
+		<string>2019,877.8</string>
+	</array>
+	<key>Net Income</key>
+	<array>
+		<string>2013,24.4</string>
+		<string>2014,112.4</string>
+		<string>2015,146.2</string>
+		<string>2016,149.3</string>
+		<string>2017,127.8</string>
+		<string>2018,189.5</string>
+		<string>2019,375.6</string>
+	</array>
+	<key>Net Debt</key>
+	<array>
+		<string>2013,146.0</string>
+		<string>2014,135.9</string>
+		<string>2015,256.8</string>
+		<string>2016,276.0</string>
+		<string>2017,472.4</string>
+		<string>2018,489.8</string>
+		<string>2019,423.2</string>
+	</array>
+</dict>
+</plist>

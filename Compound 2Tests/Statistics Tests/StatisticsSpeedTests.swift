@@ -24,11 +24,19 @@ class StatisticsSpeedTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
-    func testPerformanceExample() {
+    func test_Statistics_CompaniesSortedByIndustryAndRevenueCAGRInitializationime() {
         // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.
             let _ = Statistics.companiesSortedByIndustryAndRevenueCAGR()
+        }
+    }
+    
+    func test_Statistics_CompaniesSortedByCAGRInitializationime() {
+        // This is an example of a performance test case.
+        self.measure {
+            // Put the code you want to measure the time of here.
+            let _ = Statistics.companiesSortedByRevenueCAGR()
         }
     }
 }

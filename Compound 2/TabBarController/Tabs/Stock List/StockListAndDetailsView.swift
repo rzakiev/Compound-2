@@ -34,16 +34,17 @@ struct StockListAndDetailNavigationView: View {
     
     private let companyCagrValues = Statistics.companiesSortedByRevenueCAGR()
     
-    @State var companyList = FinancialDataManager.listOfAllCompanies().sorted(by: { $0 < $1 })
+    @State private var companyList = FinancialDataManager.listOfAllCompanies().sorted(by: { $0 < $1 })
     
-    @State var userSearchInput = ""
+    @State private var userSearchInput = ""
     
     var body: some View {
         return NavigationView {
             VStack {
                 CompanyListSearchBar(text: $userSearchInput, onSearchButtonClicked: endEditing)
                 List {
-                    if preferredCompanySortingCriteria == .byIndustry {
+                    if !userSearchInput.isEmpty { companyListForSearchMode }
+                    else if preferredCompanySortingCriteria == .byIndustry {
                         companiesSortedByIndustryList
                     }
                     else if preferredCompanySortingCriteria == .byName {
@@ -53,12 +54,10 @@ struct StockListAndDetailNavigationView: View {
                         companiesSortedByCAGRList
                     }
                 }.navigationBarTitle("Компании", displayMode: .inline)
-                .listStyle(GroupedListStyle())
-
+                    .listStyle(GroupedListStyle())
             }
-            
         }.navigationViewStyle(DoubleColumnNavigationViewStyle())
-        .edgesIgnoringSafeArea([.top])
+        //.edgesIgnoringSafeArea([.top])
     }
     
     //Three types of lists that might be displayed depending on the user's preferences
@@ -73,7 +72,7 @@ struct StockListAndDetailNavigationView: View {
                 NavigationLink(destination: SegmentedCompanyInfoView(company: company)) {
                     StockListCell(companyName: company, cagr: nil)
                 }
-            }
+        }
     }
     
     var companiesSortedByCAGRList: some View {
@@ -83,46 +82,47 @@ struct StockListAndDetailNavigationView: View {
         return ForEach(companyCagrValues.indices, id: \.self) { index in
             NavigationLink(destination: SegmentedCompanyInfoView(company: self.companyCagrValues[index].company)) {
                 return StockListCell(companyName: self.companyCagrValues[index].company, cagr: self.companyCagrValues[index].revenueCAGR) //self.companyCagrValues.first(where: {$0.company == name})!.revenueCAGR
-                }
-            }
-    }
-    
-    var companiesSortedByIndustryList: some View  {
-        //If the user chose to sort companies by industry
-//        let industryIndices = Array(companiesSortedByIndustries.indices)
-        return ForEach(companiesSortedByIndustries, id: \.id) { industry in
-            return Section(header: Text(industry.name.uppercased())) { //(header: Text("Hello"))
-
-//                let indices = Array(self.companiesSortedByIndustries[industryIndex].companies.indices)
-                return ForEach(industry.companiesSortedByIndustryAndCAGR.filter({
-                    self.userSearchInput.isEmpty ? true : $0.name.localizedCaseInsensitiveContains(self.userSearchInput)
-                }), id: \.id) { company in //if companies are sorted by industry, return a list with sections
-//                        let companyName = self.companiesSortedByIndustries[industryIndex].companies[companyIndex].name
-                    return NavigationLink(destination: SegmentedCompanyInfoView(company: company.name)) {// SegmentedCompanyInfoView(company: company.name)
-
-//                            let companyName = self.companiesSortedByIndustries[industryIndex].companies[companyIndex]
-//                            let companyCagr = self.companiesSortedByIndustries[industryIndex].companies[companyIndex].revenueCAGR
-                        return StockListCell(companyName: company.name,
-                                             cagr: company.revenueCAGR)
-
-                    }
-                }
             }
         }
     }
     
+    var companiesSortedByIndustryList: some View  {
+        
+        return ForEach(companiesSortedByIndustries) { industry in
+            return Section(header: Text(industry.name.uppercased())) { //(header: Text("Hello"))
+                return ForEach(industry.companiesSortedByIndustryAndCAGR) { company in //if companies are sorted by industry, return a list with sections
+                    return NavigationLink(destination: SegmentedCompanyInfoView(company: company.name)) {// SegmentedCompanyInfoView(company: company.name)
+                        return StockListCell(companyName: company.name,
+                                             cagr: company.revenueCAGR)
+                        
+                    }
+                }
+            }
+        }
+        
+    }
     
+    var companyListForSearchMode: some View {
+        Section(header: Text("Найденные компании")) {
+            ForEach(companyList.filter({self.userSearchInput.isEmpty ? true : $0.localizedCaseInsensitiveContains(self.userSearchInput)}) , id: \.self) { company in
+                NavigationLink(destination: SegmentedCompanyInfoView(company: company)) {// SegmentedCompanyInfoView(company: company.name)
+                    StockListCell(companyName: company)
+                }
+            }
+        }
+    }
 }
-    
+
 extension StockListAndDetailNavigationView {
     
     func endEditing() {
+        
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil)
     }
 }
-   
- 
-    
+
+
+
 
 
 #if DEBUG
@@ -133,4 +133,4 @@ struct StockListPreview: PreviewProvider {
     }
 }
 #endif
-   
+

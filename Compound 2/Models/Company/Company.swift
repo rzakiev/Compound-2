@@ -34,13 +34,33 @@ struct Company {
     
     let numberOfOrdinaryShares: Int?
     let numberOfPreferredShares: Int?
+    
+    //Declaring a lazy property cointaining production figures
+    lazy var productionFigures = ProductionDataManager.getProductionFigures(for: name)
+    
+    //Local Moex Dividends
+    var moexDividends: Dividends?
 }
 
 //MARK: - Initializers
 extension Company {
      init(name: String) {
         //Loading the company's financial data from the company's respective plist file
-        let companyPlistData = try! FinancialDataManager.getCompanyData(for: name)
+        guard let companyPlistData = try? FinancialDataManager.getCompanyData(for: name) else {
+            self.name = "No Data"
+            revenue = nil
+            operatingIncome = nil
+            operatingIncomeType = nil
+            netIncome = nil
+            freeCashFlow = nil
+            dividends = nil
+            netDebt = nil
+            customIndicators = nil
+            quoteLink = nil
+            numberOfOrdinaryShares = nil
+            numberOfPreferredShares = nil
+            return
+        }
         
         self.name = name
         
@@ -56,21 +76,40 @@ extension Company {
             operatingIncome = nil
             operatingIncomeType = nil
         }
-        netIncome = companyPlistData.netIncome ?? nil
-        freeCashFlow = companyPlistData.freeCashFlow ?? nil
-        dividends = companyPlistData.dividends ?? nil
+        
+        netIncome = companyPlistData.netIncome
+        
+        freeCashFlow = companyPlistData.freeCashFlow
+        
+        if companyPlistData.dividends != nil {
+            if name == "АФК Система" {
+                dividends = companyPlistData.dividends!
+            } else { //Adjusting the dividends for the dividend tax
+                dividends = companyPlistData.dividends!.map({($0.year, $0.value * 0.87)})
+            }
+        } else {
+            dividends = nil
+        }
+        
         netDebt = companyPlistData.netDebt ?? nil
+        
         customIndicators = companyPlistData.customIndicators ?? nil
         
         //assigning the smartlab quote links
-        if let smartLabLinks = try? FinancialDataManager.getSmartlabLinks() {
-            quoteLink = smartLabLinks[self.name]
-            let shares = try? FinancialDataManager.numberOfSharesFor(company: name)
-            (numberOfOrdinaryShares, numberOfPreferredShares) = (shares?.numberOfOrdinaryShares, shares?.numberOfPreferredShares)
-        } else {
-            quoteLink = nil
-            (numberOfOrdinaryShares, numberOfPreferredShares) = (nil, nil)
+        guard let smartLabLinks = try? FinancialDataManager.getSmartlabLinks(),
+              let quoteLink = smartLabLinks[self.name],
+              let shares = try? FinancialDataManager.numberOfSharesFor(company: name) else {
+                
+                self.quoteLink = nil
+                (numberOfOrdinaryShares, numberOfPreferredShares) = (nil, nil)
+                return
         }
+        
+        self.quoteLink = quoteLink
+        (numberOfOrdinaryShares, numberOfPreferredShares) = (shares.numberOfOrdinaryShares, shares.numberOfPreferredShares)
+        
+        guard let ticker = ConstantTickerSymbols.ticker(for: name) else { return }
+        self.moexDividends = MoexDataManager.getDividendDataLocally(forTicker: ticker)
     }
 }
 
@@ -90,12 +129,12 @@ extension Company {
             return nil
         }
     }
-    
 }
 
-//MARK: - Financial Indicators and Multipliers
+//MARK: - Financial Indicators
 extension Company {
     func availableIndicators() -> [Indicator] {
+        
         var availableIndicators = [Indicator]()
         
         if revenue != nil { availableIndicators.append(.revenue) }
@@ -119,48 +158,51 @@ extension Company {
         if customIndicators != nil {
             for (indicator, _) in customIndicators! {
                 switch indicator {
-                case Indicator.commissionIncome.rawValue: availableIndicators.append(.commissionIncome)
-                case Indicator.interestIncome.rawValue : availableIndicators.append(.interestIncome)
+                case Indicator.commissionIncome.title: availableIndicators.append(.commissionIncome)
+                case Indicator.interestIncome.title: availableIndicators.append(.interestIncome)
                 default:
                     Logger.log(error: "Attempting to add a non-existent custom indicator: \(indicator)")
                 }
             }
         }
-                
         return availableIndicators
     }
     
-    func values(for indicator: Indicator) -> [(year: Int, value: Double)]? {
-        switch indicator {
-        case .revenue:
-            return revenue
-        case .OIBDA, .EBITDA:
-            if operatingIncome != nil { return operatingIncome }
-            else { return nil}
-        case .netProfit:
-            if netIncome != nil { return netIncome }
-            else { return nil }
-        case .freeCashFlow:
-            if freeCashFlow != nil { return freeCashFlow }
-            else { return nil }
-        case .dividend:
-            if dividends != nil { return dividends }
-            else { return nil }
-        case .debtToEBITDA:
-            if let debtToOperatingIncome = debtToEBITDA  { return debtToOperatingIncome }
-            else { return nil }
-        case .commissionIncome:
-            if let commissionIncome = customIndicators?[Indicator.commissionIncome.rawValue] { return commissionIncome }
-            else { return nil }
-        case .interestIncome:
-            if let interestIncome = customIndicators?[Indicator.interestIncome.rawValue] { return interestIncome }
-            else { return nil }
-        default:
-            return nil
-        }
-    }
-    
+//    func values(for indicator: Indicator) -> [(year: Int, value: Double)]? {
+//        switch indicator {
+//        case .revenue:
+//            return revenue
+//        case .OIBDA, .EBITDA:
+//            if operatingIncome != nil { return operatingIncome }
+//            else { return nil}
+//        case .netProfit:
+//            if netIncome != nil { return netIncome }
+//            else { return nil }
+//        case .freeCashFlow:
+//            if freeCashFlow != nil { return freeCashFlow }
+//            else { return nil }
+//        case .dividend:
+//            if dividends != nil { return dividends }
+//            else { return nil }
+//        case .debtToEBITDA:
+//            if let debtToOperatingIncome = debtToEBITDA  { return debtToOperatingIncome }
+//            else { return nil }
+//        case .commissionIncome:
+//            if let commissionIncome = customIndicators?[Indicator.commissionIncome.asString()] { return commissionIncome }
+//            else { return nil }
+//        case .interestIncome:
+//            if let interestIncome = customIndicators?[Indicator.interestIncome.asString()] { return interestIncome }
+//            else { return nil }
+//        default:
+//            return nil
+//        }
+//    }
+}
+
+//MARK: -  Multipliers
+extension Company {
     func availableMultipliers() -> [Multiplier]? {
+        
         guard isPublic else {
             return nil
         }
@@ -171,13 +213,24 @@ extension Company {
         
         return availableIndicators
     }
+    /// Synchronous request
+    func getpriceToEarningsRatioAsync(completion: @escaping (Double?) -> Void) {
+        DispatchQueue.main.async {
+            completion(Multipliers.priceToEarnings(for: self.name))
+        }
+    }
+    /// Synchronous request
+    func getEVEBITDA() -> Double? {
+        return Multipliers.evEBITDA(for: self.name)
+    }
+    
 }
 
 //MARK: - Growth indicators
 extension Company {
-    func growthRate (for indicator: Indicator) -> [(year: Int, value: Double, growth: Int?)]? {
+    func chartValues (for indicator: Indicator) -> [ChartValueWithGrowth]? {
         
-        var growthRate = [(year: Int, value: Double, growth: Int?)]()
+        var growthRate = [ChartValueWithGrowth]()
         
         //the financial indicator for which the growth rates are calculated
         let sourceIndicator: [(year: Int, value: Double)]
@@ -187,7 +240,7 @@ extension Company {
             else { sourceIndicator = revenue! }
         case .OIBDA, .EBITDA:
             if operatingIncome == nil { return nil }
-            else { sourceIndicator = operatingIncome!}
+            else { sourceIndicator = operatingIncome! }
         case .netProfit:
             if netIncome == nil { return nil }
             else { sourceIndicator = netIncome!}
@@ -201,16 +254,16 @@ extension Company {
             if let debtToOperatingIncome = debtToEBITDA  { sourceIndicator = debtToOperatingIncome }
             else { return nil }
         case .interestIncome:
-            if let interestIncome = customIndicators?[Indicator.interestIncome.rawValue] { sourceIndicator = interestIncome }
+            if let interestIncome = customIndicators?[Indicator.interestIncome.title] { sourceIndicator = interestIncome }
             else { return nil }
         case .commissionIncome:
-            if let commissionIncome = customIndicators?[Indicator.commissionIncome.rawValue] { sourceIndicator = commissionIncome }
+            if let commissionIncome = customIndicators?[Indicator.commissionIncome.title] { sourceIndicator = commissionIncome }
             else { return nil }
         default:
             return nil
         }
         
-        growthRate.append((sourceIndicator[0].year, sourceIndicator[0].value, nil)) // the first chart does not have the growth indicator
+        growthRate.append(.init(year: sourceIndicator[0].year, value: sourceIndicator[0].value, growth: nil)) // the first chart does not have the growth indicator
         for i in 1..<sourceIndicator.count {
             
             let growth: Int?
@@ -222,12 +275,12 @@ extension Company {
                 growth = Int((numerator / denominator - 1) * 100)
             }
             
-            growthRate.append((sourceIndicator[i].year, sourceIndicator[i].value, growth))
+            growthRate.append(.init(year: sourceIndicator[i].year, value: sourceIndicator[i].value, growth: growth))
         }
         return growthRate
     }
     
-    func grossGrowthRate (for indicator: Indicator) -> Int? {
+    func grossGrowthRate (for indicator: Indicator, numberOfYears: Int? = nil) -> Int? {
         
         //the financial indicator for which the growth rates are calculated
         var sourceIndicator: [(year: Int, value: Double)]
@@ -254,8 +307,10 @@ extension Company {
             return nil
         }
         
-        let numberOfValuesToDrop = ChartConstants.numberOfChartsAllowedOnThisDevice() > sourceIndicator.count ? 0 : sourceIndicator.count - ChartConstants.numberOfChartsAllowedOnThisDevice()
-        sourceIndicator = Array(sourceIndicator.suffix(from: numberOfValuesToDrop))
+        if numberOfYears != nil { sourceIndicator = sourceIndicator.suffix(numberOfYears!) }
+        
+//        let numberOfValuesToDrop = ChartConstants.numberOfChartsAllowedOnThisDevice() > sourceIndicator.count ? 0 : sourceIndicator.count - ChartConstants.numberOfChartsAllowedOnThisDevice()
+//        sourceIndicator = Array(sourceIndicator.suffix(from: numberOfValuesToDrop))
         
         let firstNonNegativeFigure = sourceIndicator.first(where: {$0.value > 0})?.value
                    
@@ -275,12 +330,12 @@ extension Company {
     
     func fetchMarketCapitalization(completion: @escaping (Double) -> Void) {
         if isPublic {
-            QuoteService.shared.getQuoteAsync(for: name) { (ordinaryQuote, preferredQuote) in
+            QuoteService.shared.getQuoteAsyncFor(companyName: name) { quotes in
                 
-                if let ordinaryShares = self.numberOfOrdinaryShares, let ordinaryQuote = ordinaryQuote {
+                if let ordinaryShares = self.numberOfOrdinaryShares, let ordinaryQuote = quotes?.ordinaryShareQuote {
                     
                     //if the company has both ordinary and preferred shares
-                    if let preferredShares = self.numberOfPreferredShares, let preferredQuote = preferredQuote {
+                    if let preferredShares = self.numberOfPreferredShares, let preferredQuote = quotes?.preferredShareQuote {
                         let marketCap = Double(ordinaryShares) * ordinaryQuote + Double (preferredShares) * preferredQuote
                         completion(marketCap) //returing the fetched market cap back to the closure
                     } else { //If the company has only oridnary shares
@@ -291,9 +346,6 @@ extension Company {
             }
         }
     }
-    
-    /// Synchronous request
-    func priceToEarningsRatio() -> Double? {
-        return Multipliers.priceToEarnings(for: name)
-    }
 }
+
+

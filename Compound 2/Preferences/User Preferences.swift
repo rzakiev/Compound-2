@@ -10,8 +10,6 @@ import Foundation
 
 struct Preferences {
     
-    static let preferredStatisticsTabs = ["revenueGrowth", "dividendGrowth", "profitGrowth"]
-    
     static func requiredFinancialIndicators() -> Set<Indicator> {
         let requiredIndicators: Set<Indicator> = [.revenue, .OIBDA, .EBITDA, .netProfit, .freeCashFlow, .dividend, .debtToEBITDA]
         
@@ -19,7 +17,7 @@ struct Preferences {
     }
     
     static var preferredCompanySortingCriterion: PreferredCompanySortingCriterion {
-//        return .byName
+        
         switch getUserPreference(forKey: preferredCompanySortingCriterionKey) {
             
         case sortingByIndustryIsPreferred:
@@ -33,6 +31,11 @@ struct Preferences {
         }
     }
     
+    //MARK: - Picker view preferences
+    static let requiredStatisticsTabs = ["revenueGrowth", "dividendGrowth", "profitGrowth"]
+    
+    static let requiredMultupliersAndYieldsTabs = ["priceToEarnings", "evEBITDA", "dividendYield"]
+    
     static func requiredSegmentsInSegmentedCompanyView(for company: String) -> [CompanyInfoSegment] {
         var requiredSegments: [CompanyInfoSegment] = [.finances]
         
@@ -41,9 +44,7 @@ struct Preferences {
                                                                             ofType: ".png")
         if ecosystemIsAvailable { requiredSegments.append(.ecosystem) }
         
-        let productionFiguresAreAvailable = FinancialDataManager.resourceIsAvailable(at: FinancialDataManager.productionFiguresSubdirectory,
-                                                                                     named: company,
-                                                                                     ofType: ".png")
+        let productionFiguresAreAvailable = ProductionDataManager.productionFiguresAreAvailable(for: company)
         if productionFiguresAreAvailable { requiredSegments.append(.production) }
         
         //let tradingViewLinkIsAvailable = FinancialDataManager.resourceIsAvailable(at: FinancialDataManager.tradingViewLinksSubdirectory,

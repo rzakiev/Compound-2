@@ -5,23 +5,15 @@
 	<key>ОАК</key>
 	<string>https://smart-lab.ru/forum/%D0%9E%D0%90%D0%9A</string>
 	<key>Tinkoff</key>
-	<string>https://smart-lab.ru/forum/TCS</string>
-	<key>Алроса</key>
-	<string>https://smart-lab.ru/forum/ALRS</string>
+	<string>https://smart-lab.ru/forum/TCSG</string>
 	<key>Русгидро</key>
 	<string>https://smart-lab.ru/forum/HYDR</string>
-	<key>Газпром</key>
-	<string>https://smart-lab.ru/forum/GAZP</string>
 	<key>Яндекс</key>
 	<string>https://smart-lab.ru/forum/YNDX</string>
 	<key>АФК Система</key>
 	<string>https://smart-lab.ru/forum/AFKS</string>
-	<key>Новатэк</key>
-	<string>https://smart-lab.ru/forum/NVTK</string>
 	<key>ВТБ</key>
 	<string>https://smart-lab.ru/forum/VTBR</string>
-	<key>Полюс Золото</key>
-	<string>https://smart-lab.ru/forum/PLZL</string>
 	<key>Сбербанк</key>
 	<string>https://smart-lab.ru/forum/SBER</string>
 	<key>Московская Биржа</key>
@@ -30,16 +22,10 @@
 	<string>https://smart-lab.ru/forum/CHMF</string>
 	<key>МТС</key>
 	<string>https://smart-lab.ru/forum/MTSS</string>
-	<key>Лукойл</key>
-	<string>https://smart-lab.ru/forum/LKOH</string>
 	<key>ММК</key>
 	<string>https://smart-lab.ru/forum/MAGN</string>
 	<key>НЛМК</key>
 	<string>https://smart-lab.ru/forum/NLMK</string>
-	<key>Татнефть</key>
-	<string>https://smart-lab.ru/forum/TATN</string>
-	<key>Газпромнефть</key>
-	<string>https://smart-lab.ru/forum/SIBN</string>
 	<key>Детский Мир</key>
 	<string>https://smart-lab.ru/forum/DSKY</string>
 	<key>ФСК ЕЭС</key>
@@ -54,12 +40,8 @@
 	<string>https://smart-lab.ru/forum/GMKN</string>
 	<key>Русал</key>
 	<string>https://smart-lab.ru/forum/RUAL</string>
-	<key>Акрон</key>
-	<string>https://smart-lab.ru/forum/AKRN</string>
 	<key>Русагро</key>
 	<string>https://smart-lab.ru/forum/AGRO</string>
-	<key>Фосагро</key>
-	<string>https://smart-lab.ru/forum/PHOR</string>
 	<key>Группа ЛСР</key>
 	<string>https://smart-lab.ru/forum/LSRG</string>
 	<key>X5 Retail Group</key>
@@ -70,5 +52,9 @@
 	<string>https://smart-lab.ru/forum/RSTI</string>
 	<key>НМТП</key>
 	<string>https://smart-lab.ru/forum/NMTP</string>
+	<key>Эталон</key>
+	<string>https://smart-lab.ru/forum/ETLN</string>
+	<key>Энел</key>
+	<string>https://smart-lab.ru/forum/ENRU</string>
 </dict>
 </plist>

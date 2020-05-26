@@ -17,6 +17,11 @@ struct StockListCell: View {
     let companyName: String
     let cagr: Double?
     
+    init(companyName: String, cagr: Double? = nil) {
+        self.companyName = companyName
+        self.cagr = cagr
+    }
+    
     var body: some View {
         HStack {
             Text(companyName)

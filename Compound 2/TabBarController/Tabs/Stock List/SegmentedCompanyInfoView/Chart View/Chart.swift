@@ -14,27 +14,37 @@ struct Chart: View {
     let indicator: Indicator // Financial indicator displayed at the top, like "Revenue" or "Net Profit"
     let grossGrowth: Int? //gross growth of a financial indicator, like "+26%"
     
-    var chartValues: [(year: Int, value: Double, growth: Int?)] //the values that populate the chart
-//    var chartBars: [ChartBar] //the collection of ChartBar views
-    
-//    let bounds = Anchor<CGRect>.Source.bounds
+    var chartValues: [ChartValueWithGrowth] //the values that populate the chart
     
     var body: some View {
         return VStack(alignment: .center) {
-            Text(indicator.rawValue + " (" + (grossGrowth == nil ? "" : String.beautifulGrossGrowthRateString(from: grossGrowth!)) + ")")
+            Text(indicator.title + " (" + (grossGrowth == nil ? "" : String.beautifulGrossGrowthRateString(from: grossGrowth!)) + ")")
+                .padding(.top, 10)
+            
             ChartHStack(for: indicator,
                         chartValues: chartValues)
-//                .padding(.horizontal, 5.0)
-        }
-        .frame(height: ChartConstants.maxChartHeight, alignment: .bottomTrailing)
+            Divider()
+            
+            //                .padding(.horizontal, 5.0)
+        }.frame(height: ChartConstants.maxChartHeight, alignment: .bottomTrailing)
+        .listRowInsets(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
     }
     
-    init(for indicator: Indicator, grossGrowth: Int?, values: [(year: Int, value: Double, growth: Int?)]) {
+    init(for indicator: Indicator, grossGrowth: Int?, values: [ChartValueWithGrowth]) {
         self.indicator = indicator
         self.grossGrowth = grossGrowth
         
         let numberOfValuesToDrop = ChartConstants.numberOfChartsAllowedOnThisDevice() > values.count ? 0 : values.count - ChartConstants.numberOfChartsAllowedOnThisDevice()
         self.chartValues = Array(values.suffix(from: numberOfValuesToDrop))
+    }
+}
+
+//MARK: - Initializers for production
+extension Chart {
+    init(produce: Indicator, grossGrowth: Int?, values: [ChartValueWithGrowth]) {
+        self.indicator = produce
+        self.grossGrowth = grossGrowth
+        self.chartValues = values
     }
 }
 
@@ -45,19 +55,19 @@ struct ChartPreview: PreviewProvider {
         Group {
             Chart(for: .interestIncome,
                   grossGrowth: 20,
-                  values: [(2014, 10, nil), (2015, 20, 4), (2016, 20, 5), (2017, 30, 5), (2018, 40, 5)])
+                  values: [.init(year: 2014, value: 10, growth: nil), .init(year: 2015, value: 20, growth: 4), .init(year: 2016, value: 20, growth: 5), .init(year: 2017, value: 30, growth: 5), .init(year: 2018, value: 40, growth: 5)])
                 .previewLayout(.sizeThatFits)
             
             Chart(for: .revenue,
                   grossGrowth: 22,
-                  values: [(2014, 10, nil), (2015, 20, 4), (2016, 20, 5), (2017, 30, 5), (2018, 40, -5)])
+                  values: [.init(year: 2014, value: 10, growth: nil), .init(year: 2015, value: 20, growth: 4), .init(year: 2016, value: 20, growth: 5), .init(year: 2017, value: 30, growth: 5), .init(year: 2018, value: 40, growth: -5)])
                 .previewLayout(.sizeThatFits)
-//                .background(Color.purple)
+                .background(Color.purple)
             
             Chart(for: .revenue,
-              grossGrowth: 20,
-              values: [(2014, 10, nil), (2015, 20, 4), (2016, 20, 5), (2017, 30, 5), (2018, 40, -5)])
-                .previewLayout(.device)
+                  grossGrowth: 20,
+                  values: [.init(year: 2014, value: 10, growth: nil), .init(year: 2015, value: 20, growth: 4), .init(year: 2016, value: 20, growth: 5), .init(year: 2017, value: 30, growth: 5), .init(year: 2018, value: 40, growth: -5)])
+                    .previewLayout(.device)
         }
     }
 }

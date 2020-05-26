@@ -59,9 +59,9 @@ class Speed_Tests: XCTestCase {
             //When
             for companyName in companies {
                 DispatchQueue.global().async {
-                    QuoteService.shared.getQuoteAsync(for: companyName) { (ordinary, preferred) in
-                        XCTAssertNotNil(ordinary)
-                        print("Ordinary share price: \(ordinary ?? -1)")
+                    QuoteService.shared.getQuoteAsync(for: companyName) { quote in
+                        XCTAssertNotNil(quote?.ordinaryShareQuote)
+                        print("Ordinary share price: \(quote?.ordinaryShareQuote ?? -1)")
                     }
                 }
             }

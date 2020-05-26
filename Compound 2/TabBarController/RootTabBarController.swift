@@ -9,36 +9,48 @@
 import Foundation
 import SwiftUI
 
+
 struct RootTabBarController: View {
     
-    let quotes = (try? FinancialDataManager.getSmartlabLinks()) ?? ["No quotes" : "Coudn't fetch quotes"]
+//    let quotes = (try? FinancialDataManager.getSmartlabLinks()) ?? ["No quotes" : "Coudn't fetch quotes"]
     
     var body: some View {
         return TabView {
             StockListAndDetailNavigationView()
-                .modifier(RootTabBarControllerModifier(tabNumber: 1, tabName: "Компании"))
+                .modifier(RootTabBarControllerModifier(backgroundImage: "Stocks Tab Bar Icons", tabName: "Компании"))
             StatisticsTab()
-                .modifier(RootTabBarControllerModifier(tabNumber: 2, tabName: "Статистика"))
-            EV_EBITDA().modifier(RootTabBarControllerModifier(tabNumber: 2, tabName: "EV/EBITDA"))
+                .modifier(RootTabBarControllerModifier(backgroundImage: "Stocks Tab Bar Icons", tabName: "Статистика"))
+            MultipliersAndYieldsView()
+                .modifier(RootTabBarControllerModifier(backgroundImage: "Stocks Tab Bar Icons", tabName: "Мультики"))
+            
+            PortfolioView()
+                .modifier(RootTabBarControllerModifier(backgroundImage: "Portfolio  Tab Bar Icons", tabName: "Портфолио")) //test tab
             #if DEBUG
-            Alerts().modifier(RootTabBarControllerModifier(tabNumber: 2, tabName: "Tests")) //test tab
+            TestsView()
+                .modifier(RootTabBarControllerModifier(backgroundImage: "Stocks Tab Bar Icons", tabName: "Тесты")) //test tab
             #endif
         }
     }
     
     init() {
         Preferences.setDefaultPreferencesOnFirstLaunch()
+        QuoteService.shared.getAllQuotesAsync()
     }
 }
 
 struct RootTabBarControllerModifier: ViewModifier {
     
-    @State var tabNumber: Int
-    @State var tabName: String
+    @State private var backgroundImage: String
+    @State private var tabName: String
+    
+    init(backgroundImage: String, tabName: String) {
+        _backgroundImage = State(initialValue: backgroundImage)
+        _tabName = State(initialValue: tabName)
+    }
     
     func body(content: Content) -> some View {
         return content.tabItem {
-            Image(systemName: String(tabNumber) + ".square.fill")
+            Image(backgroundImage)
             Text(tabName)
         }
     }

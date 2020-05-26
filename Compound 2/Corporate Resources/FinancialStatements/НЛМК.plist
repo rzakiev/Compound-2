@@ -1,1 +1,66 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE plist PUBLIC"-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"><plist version="1.0"><dict><key>Revenue</key><array><string>2013,347.4</string><string>2014,401.4</string><string>2015,487.5</string><string>2016,508.5</string><string>2017,586.9</string><string>2018,757.0</string></array><key>EBITDA</key><array><string>2013,48.0</string><string>2014,86.5</string><string>2015,118.7</string><string>2016,128.1</string><string>2017,154.8</string><string>2018,225.7</string></array><key>Net Income</key><array><string>2013,6.0</string><string>2014,19.9</string><string>2015,58.9</string><string>2016,60.8</string><string>2017,84.6</string><string>2018,140.7</string></array><key>Dividends</key><array><string>2013,4.0</string><string>2014,19.9</string><string>2015,41.7</string><string>2016,55.3</string><string>2017,84.1</string><string>2018,136.7</string></array><key>Net Debt</key><array><string>2013,101.5</string><string>2014,85.1</string><string>2015,66.5</string><string>2016,41.9</string><string>2017,53.8</string><string>2018,62.3</string></array><key>Free Cash Flow</key><array><string>2013,17.0</string><string>2014,76.0</string><string>2015,60.8</string><string>2016,11.5</string><string>2017,74.1</string><string>2018,127.1</string></array></dict></plist>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EBITDA</key>
+	<array>
+		<string>2013,48.0</string>
+		<string>2014,86.5</string>
+		<string>2015,118.7</string>
+		<string>2016,128.1</string>
+		<string>2017,154.8</string>
+		<string>2018,225.7</string>
+		<string>2019,165.8</string>
+	</array>
+	<key>Dividends</key>
+	<array>
+		<string>2013,4.0</string>
+		<string>2014,19.9</string>
+		<string>2015,41.7</string>
+		<string>2016,55.3</string>
+		<string>2017,84.1</string>
+		<string>2018,136.7</string>
+		<string>2019,116.3</string>
+	</array>
+	<key>Free Cash Flow</key>
+	<array>
+		<string>2013,17.0</string>
+		<string>2014,76.0</string>
+		<string>2015,60.8</string>
+		<string>2016,11.5</string>
+		<string>2017,74.1</string>
+		<string>2018,127.1</string>
+		<string>2019,98.5</string>
+	</array>
+	<key>Revenue</key>
+	<array>
+		<string>2013,347.4</string>
+		<string>2014,401.4</string>
+		<string>2015,487.5</string>
+		<string>2016,508.5</string>
+		<string>2017,586.9</string>
+		<string>2018,757.0</string>
+		<string>2019,682.5</string>
+	</array>
+	<key>Net Income</key>
+	<array>
+		<string>2013,6.0</string>
+		<string>2014,19.9</string>
+		<string>2015,58.9</string>
+		<string>2016,60.8</string>
+		<string>2017,84.6</string>
+		<string>2018,140.7</string>
+		<string>2019,86.6</string>
+	</array>
+	<key>Net Debt</key>
+	<array>
+		<string>2013,101.5</string>
+		<string>2014,85.1</string>
+		<string>2015,66.5</string>
+		<string>2016,41.9</string>
+		<string>2017,53.8</string>
+		<string>2018,62.3</string>
+		<string>2019,110.6</string>
+	</array>
+</dict>
+</plist>
