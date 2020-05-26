@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Объём торгов</key>
+	<dict>
+		<key>produce</key>
+		<array>
+			<string>2014,572.4</string>
+			<string>2015,685.3</string>
+			<string>2016,850.4</string>
+			<string>2017,887.6</string>
+			<string>2018,861.1</string>
+			<string>2019,798.3</string>
+		</array>
+		<key>unitOfMeasurement</key>
+		<string>трлн. руб.</string>
+	</dict>
+</dict>
+</plist>

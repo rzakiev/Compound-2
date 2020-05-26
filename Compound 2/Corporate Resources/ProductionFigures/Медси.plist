@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Предоставленные услуги</key>
+	<dict>
+		<key>produce</key>
+		<array>
+			<string>2015,11403.0</string>
+			<string>2016,11483.0</string>
+			<string>2017,12359.0</string>
+			<string>2018,14500.0</string>
+			<string>2019,17334.0</string>
+		</array>
+		<key>unitOfMeasurement</key>
+		<string>тыс.</string>
+	</dict>
+	<key>Визиты пациентов</key>
+	<dict>
+		<key>produce</key>
+		<array>
+			<string>2015,7266.0</string>
+			<string>2016,7314.0</string>
+			<string>2017,7901.0</string>
+			<string>2018,8495.0</string>
+			<string>2019,9593.0</string>
+		</array>
+		<key>unitOfMeasurement</key>
+		<string>тыс.</string>
+	</dict>
+</dict>
+</plist>

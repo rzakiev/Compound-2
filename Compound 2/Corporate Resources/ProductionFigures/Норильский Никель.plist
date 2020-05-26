@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Добыча меди</key>
+	<dict>
+		<key>produce</key>
+		<array>
+			<string>2015,369.4</string>
+			<string>2016,360.2</string>
+			<string>2017,401.1</string>
+			<string>2018,473.7</string>
+			<string>2019,499.0</string>
+			<string>2020,440.0</string>
+			<string>2021,420.0</string>
+			<string>2022,420.0</string>
+		</array>
+		<key>unitOfMeasurement</key>
+		<string>тыс. тонн</string>
+	</dict>
+	<key>Добыча платины</key>
+	<dict>
+		<key>produce</key>
+		<array>
+			<string>2015,656.0</string>
+			<string>2016,644.0</string>
+			<string>2017,670.0</string>
+			<string>2018,653.0</string>
+			<string>2019,700.0</string>
+		</array>
+		<key>unitOfMeasurement</key>
+		<string>тыс. тр. унц.</string>
+	</dict>
+	<key>Добыча никеля</key>
+	<dict>
+		<key>produce</key>
+		<array>
+			<string>2015,266.4</string>
+			<string>2016,235.7</string>
+			<string>2017,217.1</string>
+			<string>2018,218.8</string>
+			<string>2019,225.0</string>
+			<string>2020,235.0</string>
+			<string>2021,225.0</string>
+			<string>2022,225.0</string>
+		</array>
+		<key>unitOfMeasurement</key>
+		<string>тыс. тонн</string>
+	</dict>
+	<key>Добыча палладия</key>
+	<dict>
+		<key>produce</key>
+		<array>
+			<string>2015,2689.0</string>
+			<string>2016,2618.0</string>
+			<string>2017,2780.0</string>
+			<string>2018,2729.0</string>
+			<string>2019,2900.0</string>
+		</array>
+		<key>unitOfMeasurement</key>
+		<string>тыс. тр. унц.</string>
+	</dict>
+</dict>
+</plist>

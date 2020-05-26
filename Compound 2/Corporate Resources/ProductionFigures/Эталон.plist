@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Построено жилья</key>
+	<dict>
+		<key>produce</key>
+		<array>
+			<string>2014,580.0</string>
+			<string>2015,502.0</string>
+			<string>2016,420.0</string>
+			<string>2017,423.0</string>
+			<string>2018,479.0</string>
+			<string>2019,622.0</string>
+		</array>
+		<key>unitOfMeasurement</key>
+		<string>тыс. кв. м.</string>
+	</dict>
+</dict>
+</plist>

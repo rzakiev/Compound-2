@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EBITDA</key>
+	<array>
+		<string>2015,10.8</string>
+		<string>2016,13.4</string>
+		<string>2017,17.7</string>
+		<string>2018,17.2</string>
+		<string>2019,15.3</string>
+		<string>2020,11.2</string>
+		<string>2021,9.5</string>
+	</array>
+	<key>Dividends</key>
+	<array>
+		<string>2015,0.0</string>
+		<string>2016,2.41</string>
+		<string>2017,5.13</string>
+		<string>2018,5.0</string>
+		<string>2019,3.0</string>
+		<string>2020,3.0</string>
+		<string>2021,3.0</string>
+	</array>
+	<key>Revenue</key>
+	<array>
+		<string>2015,71.0</string>
+		<string>2016,72.2</string>
+		<string>2017,74.4</string>
+		<string>2018,73.3</string>
+		<string>2019,65.8</string>
+	</array>
+	<key>Net Income</key>
+	<array>
+		<string>2015,-48.6</string>
+		<string>2016,4.4</string>
+		<string>2017,8.6</string>
+		<string>2018,7.7</string>
+		<string>2019,0.895</string>
+		<string>2020,6.2</string>
+		<string>2021,3.6</string>
+		<string>2022,4.5</string>
+	</array>
+	<key>Net Debt</key>
+	<array>
+		<string>2015,24.5</string>
+		<string>2016,20.3</string>
+		<string>2017,17.9</string>
+		<string>2018,19.4</string>
+		<string>2019,9.7</string>
+		<string>2020,23.7</string>
+		<string>2021,31.8</string>
+		<string>2022,33.5</string>
+	</array>
+</dict>
+</plist>
