@@ -161,3 +161,9 @@ extension MoexDataManager {
         return tickerSymbols
     }
 }
+
+extension MoexDataManager {
+    static func fetchAllSecuritiesInfoAndSaveItLocally() {
+        
+    }
+}
