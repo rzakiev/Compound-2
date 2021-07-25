@@ -191,7 +191,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "C2EB1406-8D00-4F88-8F61-3F9DCEA0AFE4 - b4798ec9e7e2613"
+                  uuid = "C2EB1406-8D00-4F88-8F61-3F9DCEA0AFE4 - 673fba6a37787544"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -207,7 +207,7 @@
                   offsetFromSymbolStart = "7117">
                </Location>
                <Location
-                  uuid = "C2EB1406-8D00-4F88-8F61-3F9DCEA0AFE4 - b4798ec9e7e2613"
+                  uuid = "C2EB1406-8D00-4F88-8F61-3F9DCEA0AFE4 - 673fba6a37787544"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -223,7 +223,7 @@
                   offsetFromSymbolStart = "7220">
                </Location>
                <Location
-                  uuid = "C2EB1406-8D00-4F88-8F61-3F9DCEA0AFE4 - b4798ec9e7e2613"
+                  uuid = "C2EB1406-8D00-4F88-8F61-3F9DCEA0AFE4 - 673fba6a37787544"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -239,7 +239,7 @@
                   offsetFromSymbolStart = "7394">
                </Location>
                <Location
-                  uuid = "C2EB1406-8D00-4F88-8F61-3F9DCEA0AFE4 - b4798ec9e7e2613"
+                  uuid = "C2EB1406-8D00-4F88-8F61-3F9DCEA0AFE4 - 673fba6a37787544"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -255,7 +255,7 @@
                   offsetFromSymbolStart = "7545">
                </Location>
                <Location
-                  uuid = "C2EB1406-8D00-4F88-8F61-3F9DCEA0AFE4 - b4798ec9e7e2613"
+                  uuid = "C2EB1406-8D00-4F88-8F61-3F9DCEA0AFE4 - 673fba6a37787544"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -283,8 +283,8 @@
             filePath = "Compound 2/Utility Classes/ConvenientMethods.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "init(hexString:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -299,10 +299,10 @@
             filePath = "Compound 2/Utility Classes/ConvenientMethods.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "init(hexString:)"
-            landmarkType = "7">
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "UIColor"
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -315,9 +315,9 @@
             filePath = "Compound 2/TabBarController/RootTabBarController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
-            landmarkName = "RootTabBarController"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "CompoundRootTabBarController"
             landmarkType = "14">
          </BreakpointContent>
       </BreakpointProxy>
@@ -459,10 +459,10 @@
             filePath = "Compound 2/Models/Company/Company.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
-            landmarkName = "debtToEBITDA"
-            landmarkType = "24">
+            startingLineNumber = "149"
+            endingLineNumber = "149"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -475,10 +475,10 @@
             filePath = "Compound 2/Models/Company/Company.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
-            landmarkName = "debtToEBITDA"
-            landmarkType = "24">
+            startingLineNumber = "148"
+            endingLineNumber = "148"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -491,10 +491,10 @@
             filePath = "Compound 2/Models/Company/Company.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "199"
-            endingLineNumber = "199"
-            landmarkName = "Company"
-            landmarkType = "21">
+            startingLineNumber = "227"
+            endingLineNumber = "227"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -507,8 +507,8 @@
             filePath = "Compound 2/Models/Company/Company.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "235"
-            endingLineNumber = "235"
+            startingLineNumber = "259"
+            endingLineNumber = "259"
             landmarkName = "chartValues(for:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -523,8 +523,8 @@
             filePath = "Compound 2/Models/Company/Company.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "236"
-            endingLineNumber = "236"
+            startingLineNumber = "260"
+            endingLineNumber = "260"
             landmarkName = "chartValues(for:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -539,42 +539,10 @@
             filePath = "Compound 2/Models/Company/Company.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "233"
-            endingLineNumber = "233"
+            startingLineNumber = "257"
+            endingLineNumber = "257"
             landmarkName = "chartValues(for:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "144CB6A7-7CE9-4CF3-9859-E4C9D91A5DFA - 30bde20bdd072ec8"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Compound_2.Company.grossGrowthRate(for: Compound_2.Indicator) -&gt; Swift.Optional&lt;Swift.Int&gt;"
-                  moduleName = "Compound 2"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Experimental/Compound%202/Compound%202/Models/Company/Company.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "189"
-                  endingLineNumber = "189"
-                  offsetFromSymbolStart = "2142">
-               </Location>
-               <Location
-                  uuid = "144CB6A7-7CE9-4CF3-9859-E4C9D91A5DFA - c32ea220576e1df3"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 ((year: Swift.Int, value: Swift.Double)) -&gt; Swift.Bool in Compound_2.Company.grossGrowthRate(for: Compound_2.Indicator) -&gt; Swift.Optional&lt;Swift.Int&gt;"
-                  moduleName = "Compound 2"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Experimental/Compound%202/Compound%202/Models/Company/Company.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "189"
-                  endingLineNumber = "189"
-                  offsetFromSymbolStart = "23">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -587,10 +555,10 @@
             filePath = "Compound 2/Models/Company/Company.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
-            landmarkName = "availableIndicators()"
-            landmarkType = "7">
+            startingLineNumber = "188"
+            endingLineNumber = "188"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -660,22 +628,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FCD2FC09-7683-4818-83F7-91C9C8A64D1D"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Compound 2/TabBarController/RootTabBarController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "RootTabBarController"
-            landmarkType = "14">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "550994D6-FD3D-494F-8650-A52036E84FA4"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -689,7 +641,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "550994D6-FD3D-494F-8650-A52036E84FA4 - 250c311d2730b311"
+                  uuid = "550994D6-FD3D-494F-8650-A52036E84FA4 - a123af9130485692"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -704,7 +656,7 @@
                   offsetFromSymbolStart = "1171">
                </Location>
                <Location
-                  uuid = "550994D6-FD3D-494F-8650-A52036E84FA4 - 36abe3900257dbde"
+                  uuid = "550994D6-FD3D-494F-8650-A52036E84FA4 - b2847d1c152f3e5d"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -891,24 +843,8 @@
             filePath = "Compound 2/Models/Company/Company.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "285"
-            endingLineNumber = "285"
-            landmarkName = "grossGrowthRate(for:numberOfYears:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F3ED74ED-E3D9-4CEF-96E0-2E1EF20EAFBA"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Compound 2/Models/Company/Company.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "289"
-            endingLineNumber = "289"
+            startingLineNumber = "290"
+            endingLineNumber = "290"
             landmarkName = "grossGrowthRate(for:numberOfYears:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -925,11 +861,11 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "16"
             endingLineNumber = "16"
-            landmarkName = "simplify()"
+            landmarkName = "beautify()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "6B2FE017-1D10-4C3A-9A39-4ED3F954B8E5 - 47e0ba5f79c665da"
+                  uuid = "6B2FE017-1D10-4C3A-9A39-4ED3F954B8E5 - 129abf8f886bc0ab"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -944,7 +880,7 @@
                   offsetFromSymbolStart = "172">
                </Location>
                <Location
-                  uuid = "6B2FE017-1D10-4C3A-9A39-4ED3F954B8E5 - 47e0ba5f79c665da"
+                  uuid = "6B2FE017-1D10-4C3A-9A39-4ED3F954B8E5 - 129abf8f886bc0ab"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -959,7 +895,7 @@
                   offsetFromSymbolStart = "211">
                </Location>
                <Location
-                  uuid = "6B2FE017-1D10-4C3A-9A39-4ED3F954B8E5 - 47e0ba5f79c665da"
+                  uuid = "6B2FE017-1D10-4C3A-9A39-4ED3F954B8E5 - 129abf8f886bc0ab"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -974,7 +910,7 @@
                   offsetFromSymbolStart = "1055">
                </Location>
                <Location
-                  uuid = "6B2FE017-1D10-4C3A-9A39-4ED3F954B8E5 - 47e0ba5f79c665da"
+                  uuid = "6B2FE017-1D10-4C3A-9A39-4ED3F954B8E5 - 129abf8f886bc0ab"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -989,7 +925,7 @@
                   offsetFromSymbolStart = "1860">
                </Location>
                <Location
-                  uuid = "6B2FE017-1D10-4C3A-9A39-4ED3F954B8E5 - 47e0ba5f79c665da"
+                  uuid = "6B2FE017-1D10-4C3A-9A39-4ED3F954B8E5 - 129abf8f886bc0ab"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1018,7 +954,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "15"
             endingLineNumber = "15"
-            landmarkName = "simplify()"
+            landmarkName = "beautify()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1034,11 +970,11 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "17"
             endingLineNumber = "17"
-            landmarkName = "simplify()"
+            landmarkName = "beautify()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "885F4B40-4F18-4B63-BEC3-9A276BB36FAA - 47e0ba5f79c665da"
+                  uuid = "885F4B40-4F18-4B63-BEC3-9A276BB36FAA - 129abf8f886bc0ab"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1053,7 +989,7 @@
                   offsetFromSymbolStart = "168">
                </Location>
                <Location
-                  uuid = "885F4B40-4F18-4B63-BEC3-9A276BB36FAA - 47e0ba5f79c665da"
+                  uuid = "885F4B40-4F18-4B63-BEC3-9A276BB36FAA - 129abf8f886bc0ab"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1068,7 +1004,7 @@
                   offsetFromSymbolStart = "994">
                </Location>
                <Location
-                  uuid = "885F4B40-4F18-4B63-BEC3-9A276BB36FAA - 47e0ba5f79c665da"
+                  uuid = "885F4B40-4F18-4B63-BEC3-9A276BB36FAA - 129abf8f886bc0ab"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1117,7 +1053,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "DE5B7126-0FA9-45E4-BCC7-2385F6541376 - 3ab36fa3c64afe0"
+                  uuid = "DE5B7126-0FA9-45E4-BCC7-2385F6541376 - 8784a8762b1c72c6"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1132,7 +1068,7 @@
                   offsetFromSymbolStart = "592">
                </Location>
                <Location
-                  uuid = "DE5B7126-0FA9-45E4-BCC7-2385F6541376 - 3ab36fa3c64afe0"
+                  uuid = "DE5B7126-0FA9-45E4-BCC7-2385F6541376 - 8784a8762b1c72c6"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1165,7 +1101,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "9EA2F918-E472-4F51-8C55-CE312A2F3599 - befd7c6224a5fd4c"
+                  uuid = "9EA2F918-E472-4F51-8C55-CE312A2F3599 - 34c6e9c59844022b"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1180,7 +1116,7 @@
                   offsetFromSymbolStart = "440">
                </Location>
                <Location
-                  uuid = "9EA2F918-E472-4F51-8C55-CE312A2F3599 - 12a70121115ab908"
+                  uuid = "9EA2F918-E472-4F51-8C55-CE312A2F3599 - 989c9486adbb466f"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1213,7 +1149,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "B6E0516F-30E7-4D93-8AD8-0F75C7830659 - befd7c6224a5fd4c"
+                  uuid = "B6E0516F-30E7-4D93-8AD8-0F75C7830659 - 34c6e9c598440384"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1228,7 +1164,7 @@
                   offsetFromSymbolStart = "920">
                </Location>
                <Location
-                  uuid = "B6E0516F-30E7-4D93-8AD8-0F75C7830659 - 739bdb6358f1530f"
+                  uuid = "B6E0516F-30E7-4D93-8AD8-0F75C7830659 - f9a04ec4e410adc7"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1257,8 +1193,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
             endingLineNumber = "35"
-            landmarkName = "test_Investment_AllCompaniesAreCheckableAsDividendStory()"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1326,7 +1262,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "DE974855-A5C2-435A-86D7-882398217A2F - a6b09136d65f8771"
+                  uuid = "DE974855-A5C2-435A-86D7-882398217A2F - 2c8b04916abe45d5"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1341,7 +1277,7 @@
                   offsetFromSymbolStart = "156">
                </Location>
                <Location
-                  uuid = "DE974855-A5C2-435A-86D7-882398217A2F - e4bc2a674a4b5575"
+                  uuid = "DE974855-A5C2-435A-86D7-882398217A2F - 6e87bfc0f6aa97f0"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1356,22 +1292,6 @@
                   offsetFromSymbolStart = "81">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "047E61CE-BB5A-4AE8-8CD8-86F3444A22FE"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Compound 2/Models/Company/Company.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "239"
-            endingLineNumber = "239"
-            landmarkName = "chartValues(for:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1487,7 +1407,7 @@
             landmarkType = "21">
             <Locations>
                <Location
-                  uuid = "6B9C634C-0A88-4C18-B59A-3CA598505210 - 7f31ed31da591e13"
+                  uuid = "6B9C634C-0A88-4C18-B59A-3CA598505210 - f822c3a369f70a4d"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1502,7 +1422,7 @@
                   offsetFromSymbolStart = "288">
                </Location>
                <Location
-                  uuid = "6B9C634C-0A88-4C18-B59A-3CA598505210 - 7f31ed31da591e13"
+                  uuid = "6B9C634C-0A88-4C18-B59A-3CA598505210 - f822c3a369f70a4d"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1529,13 +1449,13 @@
             filePath = "Compound 2/Preferences/User Preferences.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "preferredCompanySortingCriterion"
             landmarkType = "24">
             <Locations>
                <Location
-                  uuid = "915FCF80-EA9E-4A01-BB0D-95DB21489EA5 - 7f6db4ad7f0198e8"
+                  uuid = "915FCF80-EA9E-4A01-BB0D-95DB21489EA5 - fa424b00b0ecd893"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1550,7 +1470,7 @@
                   offsetFromSymbolStart = "29">
                </Location>
                <Location
-                  uuid = "915FCF80-EA9E-4A01-BB0D-95DB21489EA5 - 7f6db4ad7f0198e8"
+                  uuid = "915FCF80-EA9E-4A01-BB0D-95DB21489EA5 - fa424b00b0ecd893"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1565,7 +1485,7 @@
                   offsetFromSymbolStart = "123">
                </Location>
                <Location
-                  uuid = "915FCF80-EA9E-4A01-BB0D-95DB21489EA5 - 7f6db4ad7f0198e8"
+                  uuid = "915FCF80-EA9E-4A01-BB0D-95DB21489EA5 - fa424b00b0ecd893"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1580,7 +1500,7 @@
                   offsetFromSymbolStart = "370">
                </Location>
                <Location
-                  uuid = "915FCF80-EA9E-4A01-BB0D-95DB21489EA5 - 7f6db4ad7f0198e8"
+                  uuid = "915FCF80-EA9E-4A01-BB0D-95DB21489EA5 - fa424b00b0ecd893"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1607,25 +1527,9 @@
             filePath = "Compound 2/Utility Classes/System Extensions.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "12"
-            endingLineNumber = "12"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
             landmarkName = "isFirstLaunch()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2D0087AE-AF1E-4CB8-9392-E70506C9EF96"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Compound 2/Models/Company/Company.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "293"
-            endingLineNumber = "293"
-            landmarkName = "grossGrowthRate(for:numberOfYears:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1706,38 +1610,6 @@
             startingLineNumber = "235"
             endingLineNumber = "235"
             landmarkName = "convertDictIntoFinancialIndicatorsStruct(financialIndicatorsDictionary:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "08554A31-A20A-4921-82BC-0B95207928EA"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Compound 2/Preferences/User Preferences.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "Preferences"
-            landmarkType = "14">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "106E8A8A-E58D-4E0C-A122-44874D1936CF"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Compound 2/Preferences/User Preferences.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "requiredSegmentsInSegmentedCompanyView(for:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1943,8 +1815,8 @@
             filePath = "Compound 2/Utility Classes/Date Methods.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
             landmarkName = "lastYear"
             landmarkType = "24">
          </BreakpointContent>
@@ -1993,8 +1865,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
             endingLineNumber = "27"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "body"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2009,8 +1881,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
             endingLineNumber = "25"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "body"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2025,11 +1897,11 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "24"
             endingLineNumber = "24"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "body"
+            landmarkType = "24">
             <Locations>
                <Location
-                  uuid = "F5FB12A9-88E5-4279-B114-DB092A0F79A1 - 710c37e8a38ad965"
+                  uuid = "F5FB12A9-88E5-4279-B114-DB092A0F79A1 - 4728b37717f9d872"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -2044,7 +1916,7 @@
                   offsetFromSymbolStart = "464">
                </Location>
                <Location
-                  uuid = "F5FB12A9-88E5-4279-B114-DB092A0F79A1 - 869699759ae8ea37"
+                  uuid = "F5FB12A9-88E5-4279-B114-DB092A0F79A1 - b0b21dea2e9beb20"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -2080,22 +1952,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "EB8951B8-5732-4E93-8B39-43280A58DD84"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Compound 2/Data Managers/ProductionDataManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "convertPlistDataIntoProductionStruct(_:for:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "E01CBA85-4367-4972-AD96-EEC2B8714ADF"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -2109,7 +1965,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "E01CBA85-4367-4972-AD96-EEC2B8714ADF - 8c58a82ba1a04368"
+                  uuid = "E01CBA85-4367-4972-AD96-EEC2B8714ADF - 806dca6e0578d87f"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -2124,7 +1980,7 @@
                   offsetFromSymbolStart = "60">
                </Location>
                <Location
-                  uuid = "E01CBA85-4367-4972-AD96-EEC2B8714ADF - f98841c7465aa4d6"
+                  uuid = "E01CBA85-4367-4972-AD96-EEC2B8714ADF - f5bd2382e2823fc1"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -2199,8 +2055,8 @@
             filePath = "Compound 2/Data Managers/PortfolioDataManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "savePortfolio(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2215,8 +2071,8 @@
             filePath = "Compound 2/Data Managers/PortfolioDataManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "getLocalPortfolio()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2247,9 +2103,9 @@
             filePath = "Compound 2/Models/Portfolio/Position.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
-            landmarkName = "==(_:_:)"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "==(lhs:rhs:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2263,8 +2119,8 @@
             filePath = "Compound 2/Models/Portfolio/Portfolio.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "Portfolio"
             landmarkType = "21">
          </BreakpointContent>
@@ -2282,22 +2138,6 @@
             startingLineNumber = "18"
             endingLineNumber = "18"
             landmarkName = "fixedDividend(for:numberOfShares:adjustForDividendTax:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2C36986F-F4E6-4A96-93FC-188817A0AE5B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Compound 2/Models/Portfolio/Portfolio.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "init(name:positions:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2359,8 +2199,8 @@
             filePath = "Compound 2/TabBarController/Tabs/MultipliersAndYields/MultipliersAndYieldsDataProvider.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
             landmarkName = "init()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2375,13 +2215,13 @@
             filePath = "Compound 2/TabBarController/Tabs/Portfolio Tab/PortfolioDataProvider.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
             landmarkName = "init()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "EE3E591B-BFF5-4786-BE27-0E6BBFE25D25 - 98a7c44e5c1d2914"
+                  uuid = "EE3E591B-BFF5-4786-BE27-0E6BBFE25D25 - e81e1f96eb27d9cd"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -2396,7 +2236,7 @@
                   offsetFromSymbolStart = "1176">
                </Location>
                <Location
-                  uuid = "EE3E591B-BFF5-4786-BE27-0E6BBFE25D25 - aa41239147e320fc"
+                  uuid = "EE3E591B-BFF5-4786-BE27-0E6BBFE25D25 - daf8f849f0d9d025"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -2416,38 +2256,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "134F404A-D002-4042-BE72-D7EA86EEC144"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Compound 2/TabBarController/Tabs/Portfolio Tab/PortfolioDataProvider.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "init()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D3CADCAD-257F-4EF6-8F8F-43E6C59DFF3D"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Compound 2/TabBarController/Tabs/Portfolio Tab/PortfolioDataProvider.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "init()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "E056F533-74E2-49DF-9878-7385694F9FEA"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -2455,8 +2263,8 @@
             filePath = "Compound 2/TabBarController/Tabs/Portfolio Tab/PortfolioDataProvider.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
             landmarkName = "init()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2471,8 +2279,8 @@
             filePath = "Compound 2Tests/Data Tests/ConstantsTest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
             landmarkName = "ConstantsTests"
             landmarkType = "3">
          </BreakpointContent>
@@ -2487,8 +2295,8 @@
             filePath = "Compound 2/Networking/Quote Service/QuoteService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "getQuote(for:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2599,8 +2407,8 @@
             filePath = "Compound 2/Networking/Data Parsers/MoexDataParser.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "parseMoexJSON(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2647,8 +2455,8 @@
             filePath = "Compound 2/Networking/Quote Service/QuoteService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "getAllQuotesAsync(completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2669,7 +2477,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "B171805E-F580-42D4-AB15-DA90AA25A4BC - 75da0d9ca2450d5f"
+                  uuid = "B171805E-F580-42D4-AB15-DA90AA25A4BC - 3815f5634be5b280"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -2684,7 +2492,7 @@
                   offsetFromSymbolStart = "674">
                </Location>
                <Location
-                  uuid = "B171805E-F580-42D4-AB15-DA90AA25A4BC - fa53bd1bb421f5c1"
+                  uuid = "B171805E-F580-42D4-AB15-DA90AA25A4BC - b79c45e45d814a1e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -2711,8 +2519,8 @@
             filePath = "Compound 2/Utility Classes/System Extensions.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "Array"
             landmarkType = "21">
          </BreakpointContent>
@@ -2727,41 +2535,9 @@
             filePath = "Compound 2/Models/Constants/ConstantTickerSymbols.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "allTickerSymbols()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "422B0A68-B303-4FC2-90AB-3F1E812F284D"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Compound 2/Networking/Quote Service/QuoteService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "getQuoteFor(companyName:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "FD23A3C1-DA99-4464-BA7E-7AA64746E875"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Compound 2/Networking/Quote Service/QuoteService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "getQuoteFor(companyName:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2775,8 +2551,8 @@
             filePath = "Compound 2/Networking/Dividend Service/DividendService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "fetchDividends(forTicker:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2791,8 +2567,8 @@
             filePath = "Compound 2/Networking/Dividend Service/DividendService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "fetchDividends(forTicker:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2807,8 +2583,8 @@
             filePath = "Compound 2/Networking/Dividend Service/DividendService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "fetchDividends(forTicker:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2823,8 +2599,8 @@
             filePath = "Compound 2/Networking/Data Parsers/MoexDataParser.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "parseDividendJSON(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2839,25 +2615,9 @@
             filePath = "Compound 2/Networking/Data Parsers/MoexDataParser.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "parseDividendJSON(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4BB5ADC9-8EEB-4E7A-B596-3D78781B1834"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Compound 2/TabBarController/Tests.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "init()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2871,8 +2631,8 @@
             filePath = "Compound 2/Networking/Data Parsers/MoexDataParser.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "parseDividendJSON(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2887,26 +2647,10 @@
             filePath = "Compound 2/TabBarController/RootTabBarController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "body"
             landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0536A189-CBE3-40B7-A065-027C69F3038B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Compound 2/TabBarController/Tests.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "init()"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2928,22 +2672,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "124D2824-7295-4B5F-8E1A-D4E9C662EAB4"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Compound 2/Data Managers/MoexDataManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "fetchDividendsForAllCompaniesAndSaveItLocally()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "F0BD13DE-46E1-4D1C-9E09-08A00A53FBA4"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -2960,22 +2688,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "77F94A11-518F-496C-A3D3-D470CD24F3BD"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Compound 2/Utility Classes/FileSystem/File System.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "listAllDividendFiles(inDirectory:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "BECFB781-98DD-48CE-82DF-AF6D51A58C13"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -2983,8 +2695,8 @@
             filePath = "Compound 2/Data Managers/MoexDataManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "MoexDataManager"
             landmarkType = "21">
          </BreakpointContent>
@@ -2999,8 +2711,8 @@
             filePath = "Compound 2/Data Managers/MoexDataManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "saveDividendDataLocally(_:forTicker:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3015,8 +2727,8 @@
             filePath = "Compound 2/Data Managers/MoexDataManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "saveDividendDataLocally(_:forTicker:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3031,10 +2743,10 @@
             filePath = "Compound 2/Models/Company/Company.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
-            landmarkName = "init(name:)"
-            landmarkType = "7">
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "Company"
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -3047,8 +2759,8 @@
             filePath = "Compound 2/Data Managers/MoexDataManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "saveTickerSymbolsToLocalStorage(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3056,32 +2768,1169 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9E2D2D08-9B9D-4CCD-9FC0-ABC72673EF00"
+            uuid = "219D21A5-F383-4B3D-AFF9-B3EA8FA7086F"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Compound 2/Models/Statistics/MarketCapitalization.swift"
+            filePath = "Compound 2/Data Managers/MoexDataManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "calculatePreferredShareCapitalization(for:quote:)"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
+            landmarkName = "saveSecuritiesInfoLocally(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "828CDB8F-4427-45F6-AC9C-63580E470FD3"
+            uuid = "7F9B71DE-07BC-40C3-A483-E75B02E56924"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Compound 2/Models/Statistics/MarketCapitalization.swift"
+            filePath = "Compound 2/Data Managers/MoexDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "getDividendDataLocally(forTicker:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A463AA53-285F-41F8-8937-974584AE35EE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Data Managers/MoexDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "getDividendDataLocally(forTicker:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5C1669A0-D5E6-446F-A543-1CF37C9EA11F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Data Managers/MoexDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "getDividendDataLocally(forTicker:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2B4276A0-D2F9-4772-AFEA-79782FAD0BB3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Data Managers/MoexDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "getDividendDataLocally(forTicker:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6BF667F7-B35C-4CC3-9F42-6C692FB89FD6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Data Managers/MoexDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "getDividendDataLocally(forTicker:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C3506CDA-31C5-4A18-A8B6-FD150A536C90"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/Stock List/StockListAndDetailsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "companiesSortedByNameList"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "016704C1-76ED-42A8-B317-BC02F0FF4A50"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Data Managers/MoexDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "fetchDividendsForAllCompaniesAndSaveItLocally()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "016704C1-76ED-42A8-B317-BC02F0FF4A50 - 71fe7b027040f46f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;(ticker: Swift.String, dividends: Swift.Array&lt;Compound_2.Dividend&gt;)&gt;) -&gt; () in static Compound_2.MoexDataManager.fetchDividendsForAllCompaniesAndSaveItLocally() -&gt; ()"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Experimental/Compound%202/Compound%202/Data%20Managers/MoexDataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "109">
+               </Location>
+               <Location
+                  uuid = "016704C1-76ED-42A8-B317-BC02F0FF4A50 - 5d8a6f6a0cc85936"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 ((ticker: Swift.String, dividends: Swift.Array&lt;Compound_2.Dividend&gt;)) -&gt; () in closure #1 (Swift.Array&lt;(ticker: Swift.String, dividends: Swift.Array&lt;Compound_2.Dividend&gt;)&gt;) -&gt; () in static Compound_2.MoexDataManager.fetchDividendsForAllCompaniesAndSaveItLocally() -&gt; ()"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Experimental/Compound%202/Compound%202/Data%20Managers/MoexDataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "35">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "55DBB602-F11D-414B-AA7D-5AA3693B3653"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Dividend Service/DividendService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
+            landmarkName = "dividendYieldForAllCompanies(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0C364E2D-292D-4C3F-B564-D522427C1FBA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Dividend Service/DividendService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
+            landmarkName = "getLastYearDividend(for:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0C364E2D-292D-4C3F-B564-D522427C1FBA - b66d8938eff991a4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Compound_2.DividendService.getLastYearDividend(for: Swift.String) -&gt; Swift.Optional&lt;Swift.Double&gt;"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Experimental/Compound%202/Compound%202/Networking/Dividend%20Service/DividendService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "114"
+                  endingLineNumber = "114"
+                  offsetFromSymbolStart = "507">
+               </Location>
+               <Location
+                  uuid = "0C364E2D-292D-4C3F-B564-D522427C1FBA - c9133dd50d11f180"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Compound_2.AnnualDividend) -&gt; Swift.Bool in static Compound_2.DividendService.getLastYearDividend(for: Swift.String) -&gt; Swift.Optional&lt;Swift.Double&gt;"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Experimental/Compound%202/Compound%202/Networking/Dividend%20Service/DividendService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "114"
+                  endingLineNumber = "114"
+                  offsetFromSymbolStart = "23">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F1F3C436-12A8-441C-8332-A6E2DBCB78FE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Dividend Service/DividendService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
+            landmarkName = "getLastYearDividend(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F22D58B2-EDE5-47B3-8A4D-7F7E5DE1085A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/Stock List/SegmentedCompanyInfoView/Dividend View/DividendListView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "init(dividends:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7DA57CD8-3AA8-48A2-8DE5-A8B48A669646"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Models/Constants/ConstantTickerSymbols.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "tickerFor(vtbName:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "169E97D4-969C-4763-B1EA-CBCA239E40CB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/Portfolio Tab/Subviews/PieChartView/PortfolioPieChartView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "754BC3D5-085D-4014-8A36-EA713237E15C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Models/Investment/CompoundGrowthCalculator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "compound(sum:numberOfYears:annualAdditionPercent:principalGrowthPercent:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "35C61AFF-23AF-4D14-B03D-7A2AD86ACADE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Models/Portfolio/Position.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "init(ticker:quantity:averageOpeningPrice:currency:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "52911A7B-301C-46AE-9661-58C424C720F4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Models/Constants/ConstantTickerSymbols.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "vtbNamesForTickers"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "52911A7B-301C-46AE-9661-58C424C720F4 - 951c9b45f8bb04c3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "globalinit_33_ADAD69DDFF7CDD31F5AC9928BA84A1EB_func2"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Experimental/Compound%202/Compound%202/Models/Constants/ConstantTickerSymbols.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "8">
+               </Location>
+               <Location
+                  uuid = "52911A7B-301C-46AE-9661-58C424C720F4 - 75a0cc81fe3e08a7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Compound_2.ConstantTickerSymbols.(vtbNamesForTickers in _ADAD69DDFF7CDD31F5AC9928BA84A1EB).unsafeMutableAddressor : Swift.Dictionary&lt;Swift.String, Swift.String&gt;"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Experimental/Compound%202/Compound%202/Models/Constants/ConstantTickerSymbols.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E5E5DC8F-DB14-4B1F-A642-95691F294B76"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Models/Portfolio/Portfolio.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "dividendFlow()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E5E5DC8F-DB14-4B1F-A642-95691F294B76 - dc1adab3097c0413"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Compound_2.Portfolio.calculateGrossDividendFlow() -&gt; Swift.Double"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Experimental/Compound%202/Compound%202/Models/Portfolio/Portfolio.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "57">
+               </Location>
+               <Location
+                  uuid = "E5E5DC8F-DB14-4B1F-A642-95691F294B76 - 4b2fb282d18589b5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #4 (Swift.Double, Swift.Double) -&gt; Swift.Double in implicit closure #3 (Swift.Double.Type) -&gt; (Swift.Double, Swift.Double) -&gt; Swift.Double in Compound_2.Portfolio.calculateGrossDividendFlow() -&gt; Swift.Double"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Experimental/Compound%202/Compound%202/Models/Portfolio/Portfolio.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "47">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "58DCE841-16E8-41F3-AEEF-145B46667465"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/Stock List/SegmentedCompanyInfoView/Chart View/Chart Types/ProductionChart.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "init(company:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B4B04995-8F0E-4C14-8DFA-77D02F3FBDD5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/Stock List/SegmentedCompanyInfoView/Chart View/Chart Types/ProductionChart.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "init(company:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A549B45A-BB55-436C-8BA6-8F2F9523621F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Data Managers/ProductionDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "getProductionFigures(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D0EBBB9E-9388-492B-BCC0-C68AD1821703"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Data Managers/ProductionDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "convertPlistDataIntoProductionStruct(_:for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "989BB99F-F783-476B-B40D-38D47A4CC476"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Data Managers/ProductionDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "convertPlistDataIntoProductionStruct(_:for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5C414670-DAD6-4A1C-84E0-FBCC31D5EC02"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Data Managers/ProductionDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "convertPlistDataIntoProductionStruct(_:for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "73CD5476-92E0-496E-ADD4-96838BCF9725"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Data Managers/ProductionDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "convertPlistDataIntoProductionStruct(_:for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "760C0187-FDA1-4C91-B413-714BE1F8B3D8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Data Managers/ProductionDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "productionFiguresAreAvailable(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E6297F83-22E0-43EB-89EE-4299FE3F33CD"
+            shouldBeEnabled = "No"
+            condition = "quote.ticker == ETLN"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Dividend Service/DividendService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "189"
+            endingLineNumber = "189"
+            landmarkName = "dividendYieldForAllCompanies(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "06EFA0E2-F9EC-441D-8F18-DFAB36953FD5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Dividend Service/DividendService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
+            landmarkName = "dividendYieldForAllCompanies(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E0095ECC-7CEE-40B0-8ED3-A2A03F70EF86"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Models/Investment/Dividends/DividendCalculator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "fixedDividendPerShare(for:adjustForDividendTax:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C305A26F-5AF1-4AC2-B791-733E42372CBE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Data Parsers/MoexDataParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "parseMoexJSON(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0DB12EF2-C958-4539-A685-485A8D34BD66"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Dividend Service/DividendService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
+            landmarkName = "getLastYearDividend(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F0A12AC7-388B-448F-8F21-EA913681C8A7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Models/Investment/CompoundGrowthCalculator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "compound(sum:numberOfYears:annualDeposit:principalGrowthPercent:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C075DA4B-5E64-4AD6-81B7-A5C38F1AEA7A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Quote Service/QuoteService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "getAllQuotesAsync(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E2520EA3-6DEC-49B4-819A-4D24050C1CD0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2Tests/Data Tests/ConstantsTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "test_ConstantTickerSymbols_TickerSymmbolsAraAvailableForAllCompanies()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8A50867F-6C64-41E1-8645-D02D1E48E52C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2Tests/Data Tests/ConstantsTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "test_ConstantTickerSymbols_TickerSymmbolsAraAvailableForAllCompanies()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2DDA17E4-7173-43E4-A36B-95443224DAA7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/RootTabBarController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "070D7E9E-D38C-4519-B316-FF66C23D6030"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2Tests/Data Tests/PlistDataTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
+            landmarkName = "test_NoPlistFilesWithIdenticalData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F8B045F8-7806-4FC3-9EA2-191853579F21"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2Tests/Data Tests/PlistDataTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
+            landmarkName = "test_NoPlistFilesWithIdenticalData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DCEF3398-CF1A-4506-A942-C262A97A59B0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/Portfolio Tab/Subviews/PieChartView/PieChartView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "init(portfolio:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "26E17430-4940-42DC-8396-27668F2E8C3C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/Portfolio Tab/Subviews/PieChartView/PieChartView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "init(portfolio:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1AE45986-E7CA-4640-B0D8-1BD595F46E29"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/Portfolio Tab/Subviews/PieChartView/PieChartView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "generateStrokeColor(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2007E340-75D1-4BAC-92F3-A618A40F5B4D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/Portfolio Tab/Subviews/PieChartView/PieChartColorGenerator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "generateColor(forTicker:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "74B65C11-5DAC-4C4D-AA06-8DC7CC38C234"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Quote Service/QuoteService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "updateQuotes(every:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F419BB84-C111-4BBF-B0CD-EF92AED3CE65"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Models/Investment/DepositoryReceiptFeeCalculator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "feeYieldsForAllDRs(quotes:exchangeRate:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "140C04A9-029D-432E-935E-81774DC6E2F5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Models/Company/Company.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "Company"
+            landmarkType = "21">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6DE22B55-4A1D-4C7D-BF40-7F4374A499AD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/Dividend Calendar/DividendCalendarDataProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "filterFutureDividendPayments(dividends:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7068E62B-4CB1-4DA8-8AB0-C4B4AF37EFC3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/Dividend Calendar/DividendCalendarDataProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "filterFutureDividendPayments(dividends:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "64C6EEC1-F24A-4E3D-A000-306217E2B5DA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/Dividend Calendar/DividendCalendarDataProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "filterFutureDividendPayments(dividends:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A6F4368A-42BF-4671-9F1F-F63AE02F88E7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/Dividend Calendar/DividendCalendarDataProvider.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "58"
             endingLineNumber = "58"
-            landmarkName = "calculatePreferredShareCapitalization(for:quote:)"
+            landmarkName = "filterFutureDividendPayments(dividends:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "99370B01-9F53-49AF-BAF9-48C4AEE6D693"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/Dividend Calendar/DividendCalendarDataProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "filterFutureDividendPayments(dividends:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8B4C450C-E2E3-4200-8E2E-F1E250698DF9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/Dividend Calendar/DividendCalendarDataProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "calculateYields()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "54E6DADE-0AB8-4C97-B040-A58A91EA1FA5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Utility Classes/Date Methods.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "asString(format:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F2DFF0C3-E468-4780-BD10-AA42859DD2BC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Models/Portfolio/Portfolio.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "dividendFlow()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DB069FE5-58FE-4146-8781-6F22C2C0A758"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Dividend Service/DividendService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "getLastYearDividend(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6EA36910-4C10-471E-9314-4E9D26980AA4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Models/Portfolio/Position.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "expectedDividend"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3ADD19CA-1A0F-4A92-BC7B-861FC8255A09"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Models/Portfolio/Portfolio.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "Portfolio"
+            landmarkType = "21">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "70DF7634-26B7-4E83-BA61-49C097505947"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/RootTabBarController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "someTestStuff()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4287DA38-9D98-4C9E-8F3A-25FFC157778B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Data Parsers/MoexDataParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "parseMoexJSON(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7E492017-8E62-4099-B67D-5924ECAA0D71"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Quote Service/QuoteService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "getAllQuotesAsync(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7E492017-8E62-4099-B67D-5924ECAA0D71 - 18dc3b8ab3cd040d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in Compound_2.QuoteService.getAllQuotesAsync(completion: Swift.Optional&lt;(Swift.Array&lt;Compound_2.SimpleQuote&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Experimental/Compound%202/Compound%202/Networking/Quote%20Service/QuoteService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "307">
+               </Location>
+               <Location
+                  uuid = "7E492017-8E62-4099-B67D-5924ECAA0D71 - 33dc438d22f7be02"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Compound_2.SimpleQuote, Compound_2.SimpleQuote) -&gt; Swift.Bool in closure #1 () -&gt; () in Compound_2.QuoteService.getAllQuotesAsync(completion: Swift.Optional&lt;(Swift.Array&lt;Compound_2.SimpleQuote&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Experimental/Compound%202/Compound%202/Networking/Quote%20Service/QuoteService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "90">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A4B6D042-DDE7-436E-83B9-1426B1F9668E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Models/Constants/Companies/Constants.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E1986926-C147-42B9-BCD9-22C961766228"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Models/Constants/Companies/Constants.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7D43D7F2-0905-4197-9881-2A17F6ACF825"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Models/Constants/Companies/Constants.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C3D850E1-D2C6-4E94-A423-2AA9E4D977A3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Data Managers/MoexDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "fetchDividendsForAllCompaniesAndSaveItLocally()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

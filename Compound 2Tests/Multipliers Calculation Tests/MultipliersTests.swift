@@ -23,18 +23,18 @@ class MultipliersTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    func testEVEBITDACalculation() {
-        let companies = ["Сбербанк", "Яндекс", "МТС", "АФК Система"]
-        
-        for company in companies {
-            if let evEBITDA = Multipliers.evEBITDA(for: company) {
-                print("\(company) EV/EBITDA: \(evEBITDA)")
-            } else {
-                print("Unable to fetch EV/EBITDA for \(company)")
-            }
-        }
-    }
-    
+//    func testEVEBITDACalculation() {
+//        let companies = ["Сбербанк", "Яндекс", "МТС", "АФК Система"]
+//        
+//        for company in companies {
+//            if let evEBITDA = Multipliers.evEBITDA(for: company) {
+//                print("\(company) EV/EBITDA: \(evEBITDA)")
+//            } else {
+//                print("Unable to fetch EV/EBITDA for \(company)")
+//            }
+//        }
+//    }
+//    
 //    func testAsyncEVEBITDACalculationSpeed() {
 //
 //

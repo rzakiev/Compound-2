@@ -10,17 +10,34 @@ import XCTest
 
 @testable import Compound_2
 
-final class ConstantsTests: XCTest {
+final class ConstantsTests: XCTestCase {
     
-    func test_ConstantTickerSymbols_CompaniesAreIdenticalToSmartlabCompanies() {
+//    override func setUp() {
+//        // Put setup code here. This method is called before the invocation of each test method in the class.
+//    }
+//
+//    override func tearDown() {
+//        // Put teardown code here. This method is called after the invocation of each test method in the class.
+//    }
+    
+    func test_ConstantTickerSymbols_TickerSymmbolsAraAvailableForAllCompanies() {
         //GIVEN
-        guard let publicCompanies = FinancialDataManager.getPublicCompanies() else { XCTFail(); return }
-        let companiesWithTickerSymbol = ConstantTickerSymbols.allCompaniesWithTicker()
+        let companiesInPlistFormat = FinancialDataManager.listOfAllCompanies().map(\.ticker)
+        
+        guard companiesInPlistFormat.count > 0 else {
+            XCTFail()
+            return
+        }
+        
+        let companiesWithTickerSymbols = ConstantTickerSymbols.allTickerSymbols()
         
         //When
-        let symmetricDifference = Set(publicCompanies).symmetricDifference(Set(companiesWithTickerSymbol))
+        let symmetricDifference = Set(companiesInPlistFormat).symmetricDifference(Set(companiesWithTickerSymbols))
         
         //Then
         XCTAssertTrue(symmetricDifference.count == 0, "Found discrepancy between the list of public companies and companies with a ticker symbol: \(symmetricDifference)")
     }
+    
+    
+    
 }

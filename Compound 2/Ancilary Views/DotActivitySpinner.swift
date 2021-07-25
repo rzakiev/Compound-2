@@ -22,9 +22,11 @@ extension DotActivitySpinner {
         @Published var text: String = "."
         
         init() {
-            let _ = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true, block: { _ in
-                if self.text == "....." { self.text = "" }
-                self.text += "."
+            let _ = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true, block: { [weak self] _ in
+//                if self != nil {
+                    if self?.text == "....." { self?.text = "" }
+                    self?.text += "."
+                
             })
         }
     }

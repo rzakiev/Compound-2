@@ -20,8 +20,8 @@ struct ChartHStack: View {
 
 //    fileprivate(set) var chartValues = [ChartValue]()//the values that populate the chart
     
-    let chartValues: [ChartValueWithGrowth] //= [(2018, 200, 10), (2019, 250, 25), (2020, 400, 78)]
-    let biggestChartValue: ChartValueWithGrowth
+    let chartValues: [ChartValue] //= [(2018, 200, 10), (2019, 250, 25), (2020, 400, 78)]
+    let biggestChartValue: ChartValue
     
     let indicator: Indicator
     
@@ -84,10 +84,11 @@ struct ChartHStack: View {
 
 //MARK: - Initializers
 extension ChartHStack {
-    init(for indicator: Indicator, chartValues: [ChartValueWithGrowth]) {
-        self.chartValues = chartValues
-        self.biggestChartValue = chartValues.max { $0.value < $1.value }!
+    init(for indicator: Indicator, chartValues: [ChartValue]) {
         self.indicator = indicator
+        self.chartValues = chartValues
+        
+        self.biggestChartValue = chartValues.max(by: <)!
     }
 }
 

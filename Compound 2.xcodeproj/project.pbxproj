@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,10 +12,11 @@
 		E113987B23E302A300715DB5 /* Position_Positive_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E113987A23E302A300715DB5 /* Position_Positive_Tests.swift */; };
 		E113987D23E3089C00715DB5 /* PortfolioDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E113987C23E3089C00715DB5 /* PortfolioDataManager.swift */; };
 		E113987F23E6FB9B00715DB5 /* DividendYield.swift in Sources */ = {isa = PBXBuildFile; fileRef = E113987E23E6FB9B00715DB5 /* DividendYield.swift */; };
-		E122847E2320727900010805 /* QuoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E122847D2320727900010805 /* QuoteService.swift */; };
+		E122847E2320727900010805 /* MoexQuoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E122847D2320727900010805 /* MoexQuoteService.swift */; };
 		E1228480232078E300010805 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E122847F232078E300010805 /* StatisticsView.swift */; };
+		E125210426501284005FBF25 /* CompoundGrowthCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E125210326501284005FBF25 /* CompoundGrowthCalculator.swift */; };
+		E12629342590F55E005BD5BE /* StartupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12629332590F55E005BD5BE /* StartupView.swift */; };
 		E12B57D9244DBAFC00562F0F /* PortfolioDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12B57D8244DBAFC00562F0F /* PortfolioDataProvider.swift */; };
-		E12C4E73239D39D30082936A /* ConstantStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12C4E72239D39D30082936A /* ConstantStrings.swift */; };
 		E12C4E76239D432D0082936A /* SegmentedCompanyInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12C4E75239D432D0082936A /* SegmentedCompanyInfoView.swift */; };
 		E13060FB2376F15900BB7B72 /* InvestmentTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13060FA2376F15900BB7B72 /* InvestmentTest.swift */; };
 		E13060FF237C2EE500BB7B72 /* StatisticsSpeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13060FE237C2EE500BB7B72 /* StatisticsSpeedTests.swift */; };
@@ -26,16 +27,21 @@
 		E1329DE123C6218100967927 /* File System.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1329DE023C6218100967927 /* File System.swift */; };
 		E1329DE623C6309700967927 /* ProductionDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1329DE523C6309700967927 /* ProductionDataTests.swift */; };
 		E1332714247AED0E00D4089D /* MoexDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1332713247AED0E00D4089D /* MoexDataManager.swift */; };
+		E13700D22557E827008A0BA3 /* DepositoryReceiptFeeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13700D12557E827008A0BA3 /* DepositoryReceiptFeeCalculator.swift */; };
 		E13944C42435F983009B9C85 /* LotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13944C32435F983009B9C85 /* LotsView.swift */; };
-		E13944C62438F654009B9C85 /* RiskAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13944C52438F654009B9C85 /* RiskAnalysis.swift */; };
 		E139D5CE23BB91E800C5F666 /* MultipliersAndYieldsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E139D5CD23BB91E800C5F666 /* MultipliersAndYieldsDataProvider.swift */; };
-		E13AC274233ABE0F009AAFC7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13AC273233ABE0F009AAFC7 /* Constants.swift */; };
 		E13AC276233ABE5B009AAFC7 /* PlistDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13AC275233ABE5B009AAFC7 /* PlistDataTests.swift */; };
 		E13C02BF231C19F300CA06F4 /* FinancialChartList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13C02BE231C19F300CA06F4 /* FinancialChartList.swift */; };
-		E13C02C0231F21FB00CA06F4 /* Corporate Resources in Resources */ = {isa = PBXBuildFile; fileRef = E1F440A1231A9017008A40E4 /* Corporate Resources */; };
+		E145483325892E3F007F9F21 /* SmartlabDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E145483225892E3F007F9F21 /* SmartlabDataService.swift */; };
+		E145483825892FCC007F9F21 /* SmartlabDataServiceEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E145483725892FCC007F9F21 /* SmartlabDataServiceEntities.swift */; };
+		E1454846258A37C3007F9F21 /* FileDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1454845258A37C3007F9F21 /* FileDownloader.swift */; };
 		E14640B5238AC0D70092852A /* CompanyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14640B4238AC0D70092852A /* CompanyTests.swift */; };
 		E14640B8238B364F0092852A /* PlistDataThrowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14640B7238B364F0092852A /* PlistDataThrowTests.swift */; };
 		E14640BA2390082B0092852A /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14640B92390082B0092852A /* Tests.swift */; };
+		E14D033F265912EF00B72265 /* CompoundGrowthChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14D033E265912EF00B72265 /* CompoundGrowthChart.swift */; };
+		E14EBA2D247F109E00E22027 /* MoexSecurityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14EBA2C247F109E00E22027 /* MoexSecurityInfo.swift */; };
+		E14EBA302481D08900E22027 /* DividendListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14EBA2F2481D08900E22027 /* DividendListView.swift */; };
+		E14EBA332481DEBD00E22027 /* DividendServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14EBA322481DEBD00E22027 /* DividendServiceTests.swift */; };
 		E14F1E99239D740A003CF3F8 /* CompanyListSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14F1E98239D740A003CF3F8 /* CompanyListSearchBar.swift */; };
 		E154D41F2470505D00EDF772 /* Ex-SmartlabParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E154D41E2470505D00EDF772 /* Ex-SmartlabParser.swift */; };
 		E15A14D8241D4BCB001AAE3D /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15A14D7241D4BCB001AAE3D /* PortfolioView.swift */; };
@@ -46,46 +52,54 @@
 		E15E27EB24549C6000FFC644 /* DividendPolicyVerifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15E27EA24549C6000FFC644 /* DividendPolicyVerifier.swift */; };
 		E15E5A3623CB514C00EA0046 /* ProductionSpeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15E5A3523CB514C00EA0046 /* ProductionSpeedTests.swift */; };
 		E15E5A3823CB5C9700EA0046 /* Aliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15E5A3723CB5C9600EA0046 /* Aliases.swift */; };
-		E160813523F0252900437CBC /* CompoundGrowthCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E160813423F0252900437CBC /* CompoundGrowthCalculator.swift */; };
-		E166D0C52474979100D1993B /* DividendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E166D0C42474979100D1993B /* DividendService.swift */; };
+		E16327D3262B64C5001EE5D9 /* IdeasUpsideDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16327D2262B64C5001EE5D9 /* IdeasUpsideDataProvider.swift */; };
+		E16327DE262B6B3F001EE5D9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16327DD262B6B3F001EE5D9 /* Constants.swift */; };
+		E16327F9262B7717001EE5D9 /* IdeasUpsideTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16327F8262B7717001EE5D9 /* IdeasUpsideTableView.swift */; };
+		E166D0C52474979100D1993B /* MoexDividendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E166D0C42474979100D1993B /* MoexDividendService.swift */; };
 		E167AD55235A35C000C88A9C /* DividendGrowthAllCompanies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E167AD54235A35C000C88A9C /* DividendGrowthAllCompanies.swift */; };
 		E167AD57235B28E100C88A9C /* String Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = E167AD56235B28E100C88A9C /* String Methods.swift */; };
 		E167AD59235BCBFC00C88A9C /* GrossRevenueGrowthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E167AD58235BCBFC00C88A9C /* GrossRevenueGrowthView.swift */; };
 		E167AD5B235BCCE000C88A9C /* GrossProfitGrowthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E167AD5A235BCCE000C88A9C /* GrossProfitGrowthView.swift */; };
-		E167D6FD2306222E00CAF357 /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E167D6FC2306222E00CAF357 /* RootTabBarController.swift */; };
+		E167D6FD2306222E00CAF357 /* CompoundRootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E167D6FC2306222E00CAF357 /* CompoundRootTabBarController.swift */; };
+		E16AFC5C2563BE1C0083FEF0 /* DividendCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16AFC5B2563BE1C0083FEF0 /* DividendCalendar.swift */; };
+		E16C46922644050300349BC0 /* YahooFinancialDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16C46912644050300349BC0 /* YahooFinancialDataService.swift */; };
+		E16F353A2552AECE0078A98D /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16F35392552AECE0078A98D /* PieChartView.swift */; };
+		E177FEA02649882B00B30946 /* IdeasUpsideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E177FE9F2649882B00B30946 /* IdeasUpsideView.swift */; };
+		E177FEA226498E5D00B30946 /* IdeasUpsideChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E177FEA126498E5D00B30946 /* IdeasUpsideChart.swift */; };
 		E178703A234410B3006EDED0 /* QuoteServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1787039234410B3006EDED0 /* QuoteServiceTests.swift */; };
+		E17EC93626AD73490029D117 /* PortfolioReturnCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17EC93526AD73490029D117 /* PortfolioReturnCalculator.swift */; };
+		E17FCEEF25E436DF0073AA05 /* Compound2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17FCEEE25E436DF0073AA05 /* Compound2App.swift */; };
+		E18178CF24A3B3A9004271B3 /* PortfolioPieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18178CE24A3B3A9004271B3 /* PortfolioPieChartView.swift */; };
 		E1867D0523A114840008201E /* System Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1867D0423A114840008201E /* System Extensions.swift */; };
-		E18A71CA245DB9E9008BB02C /* ConstantTickerSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18A71C9245DB9E9008BB02C /* ConstantTickerSymbols.swift */; };
 		E18A71CD245DBCAE008BB02C /* Ex-MoexQuoteFetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18A71CC245DBCAE008BB02C /* Ex-MoexQuoteFetching.swift */; };
 		E18A71D0245DC0D9008BB02C /* MoexDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18A71CF245DC0D9008BB02C /* MoexDataParser.swift */; };
 		E18A71D2245ED894008BB02C /* ConstantsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18A71D1245ED894008BB02C /* ConstantsTest.swift */; };
-		E18CAEF7244069A900E9D821 /* InvestingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18CAEF6244069A900E9D821 /* InvestingProtocols.swift */; };
 		E18CB67723552285005DA8F6 /* Multipliers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18CB67623552285005DA8F6 /* Multipliers.swift */; };
 		E18CB679235522C2005DA8F6 /* MultipliersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18CB678235522C2005DA8F6 /* MultipliersTests.swift */; };
 		E1965DAC2347F6F70055891C /* StatisticsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1965DAB2347F6F70055891C /* StatisticsTests.swift */; };
-		E1A5ADE322E334720049A837 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A5ADE222E334720049A837 /* AppDelegate.swift */; };
-		E1A5ADE522E334720049A837 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A5ADE422E334720049A837 /* SceneDelegate.swift */; };
 		E1A5ADE822E334720049A837 /* Compound_2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1A5ADE622E334720049A837 /* Compound_2.xcdatamodeld */; };
-		E1A5ADEA22E334720049A837 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A5ADE922E334720049A837 /* ContentView.swift */; };
 		E1A5ADEC22E334730049A837 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1A5ADEB22E334730049A837 /* Assets.xcassets */; };
 		E1A5ADEF22E334730049A837 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1A5ADEE22E334730049A837 /* Preview Assets.xcassets */; };
-		E1A5ADF222E334730049A837 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1A5ADF022E334730049A837 /* LaunchScreen.storyboard */; };
 		E1A5AE0822E334740049A837 /* Compound_2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A5AE0722E334740049A837 /* Compound_2UITests.swift */; };
-		E1B301DA231FB7BD0067E06D /* Corporate Resources in Resources */ = {isa = PBXBuildFile; fileRef = E1F440A1231A9017008A40E4 /* Corporate Resources */; };
-		E1B98E23237089030057D3B5 /* InvestmentCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B98E22237089030057D3B5 /* InvestmentCase.swift */; };
+		E1B00F8425604A9300E7A6DC /* DividendCalendarDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B00F8325604A9300E7A6DC /* DividendCalendarDataProvider.swift */; };
+		E1BE5D74249BDF5800F14547 /* User Resources in Resources */ = {isa = PBXBuildFile; fileRef = E1BE5D73249BDF5800F14547 /* User Resources */; };
+		E1C09FB926345E1F00F25363 /* YahooQuoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C09FB826345E1F00F25363 /* YahooQuoteService.swift */; };
+		E1C09FC12634648100F25363 /* YahooDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C09FC02634648100F25363 /* YahooDataParser.swift */; };
 		E1C0A6AD22F7188D003854DB /* FinancialDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C0A6AC22F7188D003854DB /* FinancialDataManager.swift */; };
 		E1C114F123ABC0C100C249E4 /* EcosystemMindMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C114F023ABC0C100C249E4 /* EcosystemMindMapView.swift */; };
 		E1C325AE2425877E0009EF55 /* NewPositionDataValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C325AD2425877E0009EF55 /* NewPositionDataValidator.swift */; };
 		E1C325B0242637D70009EF55 /* DividendCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C325AF242637D70009EF55 /* DividendCalculator.swift */; };
 		E1C325B32426496B0009EF55 /* ActivitySpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C325B22426496B0009EF55 /* ActivitySpinner.swift */; };
-		E1C4A61E243A8365004592E5 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C4A61D243A8365004592E5 /* MessageView.swift */; };
+		E1C39BBA26458DAB0048E7DE /* YahooDataServiceEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C39BB926458DAB0048E7DE /* YahooDataServiceEntities.swift */; };
 		E1C4A620243A843A004592E5 /* DotActivitySpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C4A61F243A843A004592E5 /* DotActivitySpinner.swift */; };
-		E1C4A622243A8808004592E5 /* MessageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C4A621243A8808004592E5 /* MessageList.swift */; };
 		E1C4A624243A882C004592E5 /* ConversationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C4A623243A882C004592E5 /* ConversationMessage.swift */; };
-		E1C4A626243A8A8C004592E5 /* ConversationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C4A625243A8A8C004592E5 /* ConversationManager.swift */; };
+		E1D2996C253C5FC5008553A5 /* DividendServiceEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D2996B253C5FC5008553A5 /* DividendServiceEntities.swift */; };
 		E1D88F092312C14C004173AB /* StockListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D88F082312C14C004173AB /* StockListCell.swift */; };
-		E1E597652441D8CA004E8718 /* StableInvestment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E597642441D8CA004E8718 /* StableInvestment.swift */; };
+		E1DAF45E2694E99300E8A6F9 /* PolygonAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DAF45D2694E99300E8A6F9 /* PolygonAPI.swift */; };
+		E1DEF7BD24A3BB0C00BA58EE /* PieChartColorGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DEF7BC24A3BB0C00BA58EE /* PieChartColorGenerator.swift */; };
 		E1E597672441E0D6004E8718 /* MarketCapitalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E597662441E0D6004E8718 /* MarketCapitalization.swift */; };
+		E1E7E9802667B5070049C2F7 /* IdeasUpsideNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E7E97F2667B5070049C2F7 /* IdeasUpsideNavigationView.swift */; };
+		E1E7E9832667C22D0049C2F7 /* OtherResources in Resources */ = {isa = PBXBuildFile; fileRef = E1E7E9822667C22D0049C2F7 /* OtherResources */; };
 		E1E8DDBC23115941009D8BEB /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8DDBB23115941009D8BEB /* Chart.swift */; };
 		E1E8DDBE2312AF30009D8BEB /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8DDBD2312AF30009D8BEB /* Company.swift */; };
 		E1E8DDC02312BB9C009D8BEB /* StockListAndDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8DDBF2312BB9C009D8BEB /* StockListAndDetailsView.swift */; };
@@ -99,12 +113,10 @@
 		E1F1C85D2305FE2000828915 /* ConvenientMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F1C85C2305FE2000828915 /* ConvenientMethods.swift */; };
 		E1F1C85F23061B6600828915 /* Speed Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F1C85E23061B6600828915 /* Speed Tests.swift */; };
 		E1F3811923AE4427006362CC /* Company Speed Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F3811823AE4427006362CC /* Company Speed Tests.swift */; };
-		E1F440A2231A9017008A40E4 /* Corporate Resources in Resources */ = {isa = PBXBuildFile; fileRef = E1F440A1231A9017008A40E4 /* Corporate Resources */; };
 		E1F63820230E0BC800AE92F6 /* Chart Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6381F230E0BC800AE92F6 /* Chart Bar.swift */; };
 		E1FB0C0E2479847F00372322 /* SecurityInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FB0C0D2479847F00372322 /* SecurityInfoService.swift */; };
 		E1FB0C10247AEB8400372322 /* Portfolio_Positive_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FB0C0F247AEB8400372322 /* Portfolio_Positive_Tests.swift */; };
 		E1FFE01C23BD82AD005E4062 /* UBI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FFE01B23BD82AD005E4062 /* UBI.swift */; };
-		E1FFE01E23BD837D005E4062 /* ConstantsMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FFE01D23BD837D005E4062 /* ConstantsMacro.swift */; };
 		E1FFE02023BE4628005E4062 /* ConstantsIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FFE01F23BE4628005E4062 /* ConstantsIndex.swift */; };
 		E1FFE02223BE46ED005E4062 /* IndexInvesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FFE02123BE46ED005E4062 /* IndexInvesting.swift */; };
 /* End PBXBuildFile section */
@@ -132,10 +144,11 @@
 		E113987A23E302A300715DB5 /* Position_Positive_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position_Positive_Tests.swift; sourceTree = "<group>"; };
 		E113987C23E3089C00715DB5 /* PortfolioDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDataManager.swift; sourceTree = "<group>"; };
 		E113987E23E6FB9B00715DB5 /* DividendYield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividendYield.swift; sourceTree = "<group>"; };
-		E122847D2320727900010805 /* QuoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteService.swift; sourceTree = "<group>"; };
+		E122847D2320727900010805 /* MoexQuoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoexQuoteService.swift; sourceTree = "<group>"; };
 		E122847F232078E300010805 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		E125210326501284005FBF25 /* CompoundGrowthCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompoundGrowthCalculator.swift; sourceTree = "<group>"; };
+		E12629332590F55E005BD5BE /* StartupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupView.swift; sourceTree = "<group>"; };
 		E12B57D8244DBAFC00562F0F /* PortfolioDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDataProvider.swift; sourceTree = "<group>"; };
-		E12C4E72239D39D30082936A /* ConstantStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantStrings.swift; sourceTree = "<group>"; };
 		E12C4E75239D432D0082936A /* SegmentedCompanyInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedCompanyInfoView.swift; sourceTree = "<group>"; };
 		E13060FA2376F15900BB7B72 /* InvestmentTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentTest.swift; sourceTree = "<group>"; };
 		E13060FE237C2EE500BB7B72 /* StatisticsSpeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsSpeedTests.swift; sourceTree = "<group>"; };
@@ -146,15 +159,21 @@
 		E1329DE023C6218100967927 /* File System.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "File System.swift"; sourceTree = "<group>"; };
 		E1329DE523C6309700967927 /* ProductionDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionDataTests.swift; sourceTree = "<group>"; };
 		E1332713247AED0E00D4089D /* MoexDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoexDataManager.swift; sourceTree = "<group>"; };
+		E13700D12557E827008A0BA3 /* DepositoryReceiptFeeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositoryReceiptFeeCalculator.swift; sourceTree = "<group>"; };
 		E13944C32435F983009B9C85 /* LotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotsView.swift; sourceTree = "<group>"; };
-		E13944C52438F654009B9C85 /* RiskAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiskAnalysis.swift; sourceTree = "<group>"; };
 		E139D5CD23BB91E800C5F666 /* MultipliersAndYieldsDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipliersAndYieldsDataProvider.swift; sourceTree = "<group>"; };
-		E13AC273233ABE0F009AAFC7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E13AC275233ABE5B009AAFC7 /* PlistDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistDataTests.swift; sourceTree = "<group>"; };
 		E13C02BE231C19F300CA06F4 /* FinancialChartList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinancialChartList.swift; sourceTree = "<group>"; };
+		E145483225892E3F007F9F21 /* SmartlabDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartlabDataService.swift; sourceTree = "<group>"; };
+		E145483725892FCC007F9F21 /* SmartlabDataServiceEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartlabDataServiceEntities.swift; sourceTree = "<group>"; };
+		E1454845258A37C3007F9F21 /* FileDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDownloader.swift; sourceTree = "<group>"; };
 		E14640B4238AC0D70092852A /* CompanyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTests.swift; sourceTree = "<group>"; };
 		E14640B7238B364F0092852A /* PlistDataThrowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistDataThrowTests.swift; sourceTree = "<group>"; };
 		E14640B92390082B0092852A /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		E14D033E265912EF00B72265 /* CompoundGrowthChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompoundGrowthChart.swift; sourceTree = "<group>"; };
+		E14EBA2C247F109E00E22027 /* MoexSecurityInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoexSecurityInfo.swift; sourceTree = "<group>"; };
+		E14EBA2F2481D08900E22027 /* DividendListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividendListView.swift; sourceTree = "<group>"; };
+		E14EBA322481DEBD00E22027 /* DividendServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividendServiceTests.swift; sourceTree = "<group>"; };
 		E14F1E98239D740A003CF3F8 /* CompanyListSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyListSearchBar.swift; sourceTree = "<group>"; };
 		E154D41E2470505D00EDF772 /* Ex-SmartlabParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex-SmartlabParser.swift"; sourceTree = "<group>"; };
 		E15A14D7241D4BCB001AAE3D /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
@@ -165,52 +184,73 @@
 		E15E27EA24549C6000FFC644 /* DividendPolicyVerifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividendPolicyVerifier.swift; sourceTree = "<group>"; };
 		E15E5A3523CB514C00EA0046 /* ProductionSpeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionSpeedTests.swift; sourceTree = "<group>"; };
 		E15E5A3723CB5C9600EA0046 /* Aliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aliases.swift; sourceTree = "<group>"; };
-		E160813423F0252900437CBC /* CompoundGrowthCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompoundGrowthCalculator.swift; sourceTree = "<group>"; };
-		E166D0C42474979100D1993B /* DividendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividendService.swift; sourceTree = "<group>"; };
+		E16327D2262B64C5001EE5D9 /* IdeasUpsideDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeasUpsideDataProvider.swift; sourceTree = "<group>"; };
+		E16327DD262B6B3F001EE5D9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E16327F8262B7717001EE5D9 /* IdeasUpsideTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeasUpsideTableView.swift; sourceTree = "<group>"; };
+		E166D0C42474979100D1993B /* MoexDividendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoexDividendService.swift; sourceTree = "<group>"; };
 		E167AD54235A35C000C88A9C /* DividendGrowthAllCompanies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividendGrowthAllCompanies.swift; sourceTree = "<group>"; };
 		E167AD56235B28E100C88A9C /* String Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String Methods.swift"; sourceTree = "<group>"; };
 		E167AD58235BCBFC00C88A9C /* GrossRevenueGrowthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrossRevenueGrowthView.swift; sourceTree = "<group>"; };
 		E167AD5A235BCCE000C88A9C /* GrossProfitGrowthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrossProfitGrowthView.swift; sourceTree = "<group>"; };
-		E167D6FC2306222E00CAF357 /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
+		E167D6FC2306222E00CAF357 /* CompoundRootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompoundRootTabBarController.swift; sourceTree = "<group>"; };
+		E16AFC5B2563BE1C0083FEF0 /* DividendCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividendCalendar.swift; sourceTree = "<group>"; };
+		E16C46912644050300349BC0 /* YahooFinancialDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YahooFinancialDataService.swift; sourceTree = "<group>"; };
+		E16F35392552AECE0078A98D /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
+		E17341E225CED4B000E63F29 /* Медси.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Медси.plist"; sourceTree = "<group>"; };
+		E17341E325CED4B000E63F29 /* Эталон.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Эталон.plist"; sourceTree = "<group>"; };
+		E17341E425CED4B000E63F29 /* Северсталь.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Северсталь.plist"; sourceTree = "<group>"; };
+		E17341E525CED4B000E63F29 /* Русгидро.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Русгидро.plist"; sourceTree = "<group>"; };
+		E17341E625CED4B000E63F29 /* Норильский Никель.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Норильский Никель.plist"; sourceTree = "<group>"; };
+		E17341E725CED4B000E63F29 /* Московская Биржа.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Московская Биржа.plist"; sourceTree = "<group>"; };
+		E17341E825CED4B000E63F29 /* Степь.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Степь.plist"; sourceTree = "<group>"; };
+		E17341E925CED4B000E63F29 /* НЛМК.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "НЛМК.plist"; sourceTree = "<group>"; };
+		E17341EA25CED4B000E63F29 /* Русал.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Русал.plist"; sourceTree = "<group>"; };
+		E17341EB25CED4B000E63F29 /* Сегежа.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Сегежа.plist"; sourceTree = "<group>"; };
+		E17341EC25CED4B000E63F29 /* LSRG.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LSRG.plist; sourceTree = "<group>"; };
+		E17341ED25CED4B000E63F29 /* ММК.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ММК.plist"; sourceTree = "<group>"; };
 		E176372622FB0966003352BA /* Compound 2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Compound 2.entitlements"; sourceTree = "<group>"; };
+		E177FE9F2649882B00B30946 /* IdeasUpsideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeasUpsideView.swift; sourceTree = "<group>"; };
+		E177FEA126498E5D00B30946 /* IdeasUpsideChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeasUpsideChart.swift; sourceTree = "<group>"; };
 		E1787039234410B3006EDED0 /* QuoteServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteServiceTests.swift; sourceTree = "<group>"; };
+		E17EC93526AD73490029D117 /* PortfolioReturnCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioReturnCalculator.swift; sourceTree = "<group>"; };
+		E17FCEEE25E436DF0073AA05 /* Compound2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compound2App.swift; sourceTree = "<group>"; };
+		E18178CE24A3B3A9004271B3 /* PortfolioPieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioPieChartView.swift; sourceTree = "<group>"; };
 		E1867D0423A114840008201E /* System Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "System Extensions.swift"; sourceTree = "<group>"; };
-		E18A71C9245DB9E9008BB02C /* ConstantTickerSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantTickerSymbols.swift; sourceTree = "<group>"; };
 		E18A71CC245DBCAE008BB02C /* Ex-MoexQuoteFetching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex-MoexQuoteFetching.swift"; sourceTree = "<group>"; };
 		E18A71CF245DC0D9008BB02C /* MoexDataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoexDataParser.swift; sourceTree = "<group>"; };
 		E18A71D1245ED894008BB02C /* ConstantsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsTest.swift; sourceTree = "<group>"; };
-		E18CAEF6244069A900E9D821 /* InvestingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestingProtocols.swift; sourceTree = "<group>"; };
 		E18CB67623552285005DA8F6 /* Multipliers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multipliers.swift; sourceTree = "<group>"; };
 		E18CB678235522C2005DA8F6 /* MultipliersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipliersTests.swift; sourceTree = "<group>"; };
 		E1965DAB2347F6F70055891C /* StatisticsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTests.swift; sourceTree = "<group>"; };
 		E1A5ADDF22E334720049A837 /* Compound 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Compound 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1A5ADE222E334720049A837 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E1A5ADE422E334720049A837 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E1A5ADE722E334720049A837 /* Compound_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Compound_2.xcdatamodel; sourceTree = "<group>"; };
-		E1A5ADE922E334720049A837 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E1A5ADEB22E334730049A837 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1A5ADEE22E334730049A837 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E1A5ADF122E334730049A837 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1A5ADF322E334730049A837 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1A5ADF822E334740049A837 /* Compound 2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Compound 2Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A5ADFE22E334740049A837 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1A5AE0322E334740049A837 /* Compound 2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Compound 2UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A5AE0722E334740049A837 /* Compound_2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compound_2UITests.swift; sourceTree = "<group>"; };
 		E1A5AE0922E334740049A837 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E1B98E22237089030057D3B5 /* InvestmentCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentCase.swift; sourceTree = "<group>"; };
+		E1B00F8325604A9300E7A6DC /* DividendCalendarDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividendCalendarDataProvider.swift; sourceTree = "<group>"; };
+		E1BE5D73249BDF5800F14547 /* User Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "User Resources"; sourceTree = "<group>"; };
+		E1C09FB826345E1F00F25363 /* YahooQuoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YahooQuoteService.swift; sourceTree = "<group>"; };
+		E1C09FC02634648100F25363 /* YahooDataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YahooDataParser.swift; sourceTree = "<group>"; };
 		E1C0A6AC22F7188D003854DB /* FinancialDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinancialDataManager.swift; sourceTree = "<group>"; };
 		E1C114F023ABC0C100C249E4 /* EcosystemMindMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcosystemMindMapView.swift; sourceTree = "<group>"; };
 		E1C325AD2425877E0009EF55 /* NewPositionDataValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPositionDataValidator.swift; sourceTree = "<group>"; };
 		E1C325AF242637D70009EF55 /* DividendCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividendCalculator.swift; sourceTree = "<group>"; };
 		E1C325B22426496B0009EF55 /* ActivitySpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySpinner.swift; sourceTree = "<group>"; };
-		E1C4A61D243A8365004592E5 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		E1C39BB926458DAB0048E7DE /* YahooDataServiceEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YahooDataServiceEntities.swift; sourceTree = "<group>"; };
 		E1C4A61F243A843A004592E5 /* DotActivitySpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotActivitySpinner.swift; sourceTree = "<group>"; };
-		E1C4A621243A8808004592E5 /* MessageList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageList.swift; sourceTree = "<group>"; };
 		E1C4A623243A882C004592E5 /* ConversationMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationMessage.swift; sourceTree = "<group>"; };
-		E1C4A625243A8A8C004592E5 /* ConversationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationManager.swift; sourceTree = "<group>"; };
+		E1D2996B253C5FC5008553A5 /* DividendServiceEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividendServiceEntities.swift; sourceTree = "<group>"; };
 		E1D88F082312C14C004173AB /* StockListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListCell.swift; sourceTree = "<group>"; };
-		E1E597642441D8CA004E8718 /* StableInvestment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StableInvestment.swift; sourceTree = "<group>"; };
+		E1DAF45D2694E99300E8A6F9 /* PolygonAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolygonAPI.swift; sourceTree = "<group>"; };
+		E1DEF7BC24A3BB0C00BA58EE /* PieChartColorGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartColorGenerator.swift; sourceTree = "<group>"; };
 		E1E597662441E0D6004E8718 /* MarketCapitalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketCapitalization.swift; sourceTree = "<group>"; };
+		E1E7E97F2667B5070049C2F7 /* IdeasUpsideNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeasUpsideNavigationView.swift; sourceTree = "<group>"; };
+		E1E7E9822667C22D0049C2F7 /* OtherResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = OtherResources; sourceTree = "<group>"; };
 		E1E8DDBB23115941009D8BEB /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
 		E1E8DDBD2312AF30009D8BEB /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		E1E8DDBF2312BB9C009D8BEB /* StockListAndDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListAndDetailsView.swift; sourceTree = "<group>"; };
@@ -224,12 +264,10 @@
 		E1F1C85C2305FE2000828915 /* ConvenientMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvenientMethods.swift; sourceTree = "<group>"; };
 		E1F1C85E23061B6600828915 /* Speed Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Speed Tests.swift"; sourceTree = "<group>"; };
 		E1F3811823AE4427006362CC /* Company Speed Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Company Speed Tests.swift"; sourceTree = "<group>"; };
-		E1F440A1231A9017008A40E4 /* Corporate Resources */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Corporate Resources"; path = "Compound 2/Corporate Resources"; sourceTree = SOURCE_ROOT; };
 		E1F6381F230E0BC800AE92F6 /* Chart Bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chart Bar.swift"; sourceTree = "<group>"; };
 		E1FB0C0D2479847F00372322 /* SecurityInfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityInfoService.swift; sourceTree = "<group>"; };
 		E1FB0C0F247AEB8400372322 /* Portfolio_Positive_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Portfolio_Positive_Tests.swift; sourceTree = "<group>"; };
 		E1FFE01B23BD82AD005E4062 /* UBI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBI.swift; sourceTree = "<group>"; };
-		E1FFE01D23BD837D005E4062 /* ConstantsMacro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsMacro.swift; sourceTree = "<group>"; };
 		E1FFE01F23BE4628005E4062 /* ConstantsIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsIndex.swift; sourceTree = "<group>"; };
 		E1FFE02123BE46ED005E4062 /* IndexInvesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexInvesting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -264,6 +302,7 @@
 			children = (
 				E113987523E3000500715DB5 /* Portfolio.swift */,
 				E113987723E3002B00715DB5 /* Position.swift */,
+				E17EC93526AD73490029D117 /* PortfolioReturnCalculator.swift */,
 			);
 			path = Portfolio;
 			sourceTree = "<group>";
@@ -280,12 +319,29 @@
 		E122847C232071A900010805 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				E18A71CB245DBC5D008BB02C /* Quote Service */,
-				E166D0C32474977B00D1993B /* Dividend Service */,
-				E1FB0C0C2479844B00372322 /* SecurityInfoService */,
-				E18A71CE245DC02E008BB02C /* Data Parsers */,
+				E1DAF45C2694E97000E8A6F9 /* Polygon API */,
+				E145483125892DF7007F9F21 /* MOEX API */,
+				E16327CA262B3754001EE5D9 /* Yahoo API */,
+				E145483025892DDA007F9F21 /* SmartlabDataService */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		E125210226501261005FBF25 /* CompoundGrowthView */ = {
+			isa = PBXGroup;
+			children = (
+				E14D033E265912EF00B72265 /* CompoundGrowthChart.swift */,
+				E125210326501284005FBF25 /* CompoundGrowthCalculator.swift */,
+			);
+			path = CompoundGrowthView;
+			sourceTree = "<group>";
+		};
+		E12629322590F544005BD5BE /* StartUpView */ = {
+			isa = PBXGroup;
+			children = (
+				E12629332590F55E005BD5BE /* StartupView.swift */,
+			);
+			path = StartUpView;
 			sourceTree = "<group>";
 		};
 		E12C4E74239D43110082936A /* SegmentedCompanyInfoView */ = {
@@ -293,6 +349,7 @@
 			children = (
 				E12C4E75239D432D0082936A /* SegmentedCompanyInfoView.swift */,
 				E1F6381E230E0B9600AE92F6 /* Chart View */,
+				E14EBA2E2481D06A00E22027 /* Dividend View */,
 				E1C114EF23ABC0A000C249E4 /* Ecosystem View */,
 			);
 			path = SegmentedCompanyInfoView;
@@ -379,13 +436,9 @@
 			isa = PBXGroup;
 			children = (
 				E15E27E824549C3100FFC644 /* Dividends */,
-				E1B98E22237089030057D3B5 /* InvestmentCase.swift */,
-				E1E597642441D8CA004E8718 /* StableInvestment.swift */,
 				E1FFE02123BE46ED005E4062 /* IndexInvesting.swift */,
-				E160813423F0252900437CBC /* CompoundGrowthCalculator.swift */,
-				E13944C52438F654009B9C85 /* RiskAnalysis.swift */,
 				E1C4A623243A882C004592E5 /* ConversationMessage.swift */,
-				E18CAEF6244069A900E9D821 /* InvestingProtocols.swift */,
+				E13700D12557E827008A0BA3 /* DepositoryReceiptFeeCalculator.swift */,
 			);
 			path = Investment;
 			sourceTree = "<group>";
@@ -413,13 +466,30 @@
 		E142413D239D357B00F4EF25 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				E13AC273233ABE0F009AAFC7 /* Constants.swift */,
-				E12C4E72239D39D30082936A /* ConstantStrings.swift */,
-				E1FFE01D23BD837D005E4062 /* ConstantsMacro.swift */,
+				E16327DD262B6B3F001EE5D9 /* Constants.swift */,
 				E1FFE01F23BE4628005E4062 /* ConstantsIndex.swift */,
-				E18A71C9245DB9E9008BB02C /* ConstantTickerSymbols.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		E145483025892DDA007F9F21 /* SmartlabDataService */ = {
+			isa = PBXGroup;
+			children = (
+				E145483225892E3F007F9F21 /* SmartlabDataService.swift */,
+				E145483725892FCC007F9F21 /* SmartlabDataServiceEntities.swift */,
+			);
+			path = SmartlabDataService;
+			sourceTree = "<group>";
+		};
+		E145483125892DF7007F9F21 /* MOEX API */ = {
+			isa = PBXGroup;
+			children = (
+				E18A71CB245DBC5D008BB02C /* Quote Service */,
+				E1FB0C0C2479844B00372322 /* SecurityInfoService */,
+				E166D0C32474977B00D1993B /* Dividend Service */,
+				E18A71CF245DC0D9008BB02C /* MoexDataParser.swift */,
+			);
+			path = "MOEX API";
 			sourceTree = "<group>";
 		};
 		E14640B6238AC0DC0092852A /* Company Tests */ = {
@@ -431,14 +501,36 @@
 			path = "Company Tests";
 			sourceTree = "<group>";
 		};
+		E14EBA2B247F108D00E22027 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				E14EBA2C247F109E00E22027 /* MoexSecurityInfo.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		E14EBA2E2481D06A00E22027 /* Dividend View */ = {
+			isa = PBXGroup;
+			children = (
+				E14EBA2F2481D08900E22027 /* DividendListView.swift */,
+			);
+			path = "Dividend View";
+			sourceTree = "<group>";
+		};
+		E14EBA312481DEA800E22027 /* DividendServiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				E14EBA322481DEBD00E22027 /* DividendServiceTests.swift */,
+			);
+			path = DividendServiceTests;
+			sourceTree = "<group>";
+		};
 		E15A14D6241D4BB5001AAE3D /* Portfolio Tab */ = {
 			isa = PBXGroup;
 			children = (
+				E18178D024A3B3AE004271B3 /* Subviews */,
 				E15A14D7241D4BCB001AAE3D /* PortfolioView.swift */,
 				E12B57D8244DBAFC00562F0F /* PortfolioDataProvider.swift */,
-				E15A14D9241D4D08001AAE3D /* PositionView.swift */,
-				E1C325AC242587550009EF55 /* AddNewPositionView */,
-				E13944C32435F983009B9C85 /* LotsView.swift */,
 			);
 			path = "Portfolio Tab";
 			sourceTree = "<group>";
@@ -469,10 +561,32 @@
 			path = Dividends;
 			sourceTree = "<group>";
 		};
+		E16327CA262B3754001EE5D9 /* Yahoo API */ = {
+			isa = PBXGroup;
+			children = (
+				E16C468F2644037300349BC0 /* Yahoo Quote Service */,
+				E16C46902644037E00349BC0 /* Yahoo Financial Data */,
+			);
+			path = "Yahoo API";
+			sourceTree = "<group>";
+		};
+		E16327D1262B6497001EE5D9 /* IdeasUpsideTab */ = {
+			isa = PBXGroup;
+			children = (
+				E1E7E97F2667B5070049C2F7 /* IdeasUpsideNavigationView.swift */,
+				E177FE9F2649882B00B30946 /* IdeasUpsideView.swift */,
+				E16327D2262B64C5001EE5D9 /* IdeasUpsideDataProvider.swift */,
+				E16327F8262B7717001EE5D9 /* IdeasUpsideTableView.swift */,
+				E177FEA126498E5D00B30946 /* IdeasUpsideChart.swift */,
+			);
+			path = IdeasUpsideTab;
+			sourceTree = "<group>";
+		};
 		E166D0C32474977B00D1993B /* Dividend Service */ = {
 			isa = PBXGroup;
 			children = (
-				E166D0C42474979100D1993B /* DividendService.swift */,
+				E166D0C42474979100D1993B /* MoexDividendService.swift */,
+				E1D2996B253C5FC5008553A5 /* DividendServiceEntities.swift */,
 			);
 			path = "Dividend Service";
 			sourceTree = "<group>";
@@ -480,11 +594,67 @@
 		E167D6FB230621BD00CAF357 /* TabBarController */ = {
 			isa = PBXGroup;
 			children = (
-				E167D6FC2306222E00CAF357 /* RootTabBarController.swift */,
+				E167D6FC2306222E00CAF357 /* CompoundRootTabBarController.swift */,
 				E14640B92390082B0092852A /* Tests.swift */,
 				E1E8DDC12312BBA7009D8BEB /* Tabs */,
 			);
 			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		E16C468F2644037300349BC0 /* Yahoo Quote Service */ = {
+			isa = PBXGroup;
+			children = (
+				E1C09FB826345E1F00F25363 /* YahooQuoteService.swift */,
+			);
+			path = "Yahoo Quote Service";
+			sourceTree = "<group>";
+		};
+		E16C46902644037E00349BC0 /* Yahoo Financial Data */ = {
+			isa = PBXGroup;
+			children = (
+				E16C469326440E3600349BC0 /* Entity */,
+				E16C46912644050300349BC0 /* YahooFinancialDataService.swift */,
+				E1C09FC02634648100F25363 /* YahooDataParser.swift */,
+			);
+			path = "Yahoo Financial Data";
+			sourceTree = "<group>";
+		};
+		E16C469326440E3600349BC0 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				E1C39BB926458DAB0048E7DE /* YahooDataServiceEntities.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		E17341E125CED4B000E63F29 /* ProductionFigures */ = {
+			isa = PBXGroup;
+			children = (
+				E17341E225CED4B000E63F29 /* Медси.plist */,
+				E17341E325CED4B000E63F29 /* Эталон.plist */,
+				E17341E425CED4B000E63F29 /* Северсталь.plist */,
+				E17341E525CED4B000E63F29 /* Русгидро.plist */,
+				E17341E625CED4B000E63F29 /* Норильский Никель.plist */,
+				E17341E725CED4B000E63F29 /* Московская Биржа.plist */,
+				E17341E825CED4B000E63F29 /* Степь.plist */,
+				E17341E925CED4B000E63F29 /* НЛМК.plist */,
+				E17341EA25CED4B000E63F29 /* Русал.plist */,
+				E17341EB25CED4B000E63F29 /* Сегежа.plist */,
+				E17341EC25CED4B000E63F29 /* LSRG.plist */,
+				E17341ED25CED4B000E63F29 /* ММК.plist */,
+			);
+			path = ProductionFigures;
+			sourceTree = "<group>";
+		};
+		E18178D024A3B3AE004271B3 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				E1DEF7BB24A3BAE900BA58EE /* PieChartView */,
+				E15A14D9241D4D08001AAE3D /* PositionView.swift */,
+				E13944C32435F983009B9C85 /* LotsView.swift */,
+				E1C325AC242587550009EF55 /* AddNewPositionView */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 		E185943E234FD9B000EDB876 /* Stock List */ = {
@@ -512,19 +682,11 @@
 		E18A71CB245DBC5D008BB02C /* Quote Service */ = {
 			isa = PBXGroup;
 			children = (
-				E122847D2320727900010805 /* QuoteService.swift */,
+				E122847D2320727900010805 /* MoexQuoteService.swift */,
 				E18A71CC245DBCAE008BB02C /* Ex-MoexQuoteFetching.swift */,
 				E154D41E2470505D00EDF772 /* Ex-SmartlabParser.swift */,
 			);
 			path = "Quote Service";
-			sourceTree = "<group>";
-		};
-		E18A71CE245DC02E008BB02C /* Data Parsers */ = {
-			isa = PBXGroup;
-			children = (
-				E18A71CF245DC0D9008BB02C /* MoexDataParser.swift */,
-			);
-			path = "Data Parsers";
 			sourceTree = "<group>";
 		};
 		E1A5ADD622E334720049A837 = {
@@ -534,7 +696,6 @@
 				E1A5ADFB22E334740049A837 /* Compound 2Tests */,
 				E1A5AE0622E334740049A837 /* Compound 2UITests */,
 				E1A5ADE022E334720049A837 /* Products */,
-				F2E3227EF831F8A08CFD4EF4 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -552,19 +713,17 @@
 			isa = PBXGroup;
 			children = (
 				E176372622FB0966003352BA /* Compound 2.entitlements */,
-				E1A5ADE222E334720049A837 /* AppDelegate.swift */,
-				E1A5ADE422E334720049A837 /* SceneDelegate.swift */,
-				E1A5ADE922E334720049A837 /* ContentView.swift */,
+				E17FCEEE25E436DF0073AA05 /* Compound2App.swift */,
 				E167D6FB230621BD00CAF357 /* TabBarController */,
 				E1C325B1242649560009EF55 /* Ancilary Views */,
 				E1F1C851230358B200828915 /* Models */,
-				E1C0A6AB22F7185B003854DB /* Data Managers */,
+				E1C0A6AB22F7185B003854DB /* Local Data Managers */,
 				E122847C232071A900010805 /* Networking */,
 				E1EAE9A12336637200C6C139 /* Preferences */,
 				E1F1C8572304CB9300828915 /* Utility Classes */,
-				E1F440A1231A9017008A40E4 /* Corporate Resources */,
+				E1BE5D73249BDF5800F14547 /* User Resources */,
+				E1E7E9822667C22D0049C2F7 /* OtherResources */,
 				E1A5ADEB22E334730049A837 /* Assets.xcassets */,
-				E1A5ADF022E334730049A837 /* LaunchScreen.storyboard */,
 				E1A5ADF322E334730049A837 /* Info.plist */,
 				E1A5ADE622E334720049A837 /* Compound_2.xcdatamodeld */,
 				E1A5ADED22E334730049A837 /* Preview Content */,
@@ -575,6 +734,7 @@
 		E1A5ADED22E334730049A837 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				E17341E125CED4B000E63F29 /* ProductionFigures */,
 				E1A5ADEE22E334730049A837 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -583,6 +743,7 @@
 		E1A5ADFB22E334740049A837 /* Compound 2Tests */ = {
 			isa = PBXGroup;
 			children = (
+				E14EBA312481DEA800E22027 /* DividendServiceTests */,
 				E15E27E424548EF700FFC644 /* Portfolio Tests */,
 				E13060F52376E57D00BB7B72 /* Data Tests */,
 				E1329DE223C6304C00967927 /* Production Tests */,
@@ -606,15 +767,25 @@
 			path = "Compound 2UITests";
 			sourceTree = "<group>";
 		};
-		E1C0A6AB22F7185B003854DB /* Data Managers */ = {
+		E1B00F82256049D600E7A6DC /* Dividend Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				E1B00F8325604A9300E7A6DC /* DividendCalendarDataProvider.swift */,
+				E16AFC5B2563BE1C0083FEF0 /* DividendCalendar.swift */,
+			);
+			path = "Dividend Calendar";
+			sourceTree = "<group>";
+		};
+		E1C0A6AB22F7185B003854DB /* Local Data Managers */ = {
+			isa = PBXGroup;
+			children = (
+				E142413D239D357B00F4EF25 /* Constants */,
 				E1C0A6AC22F7188D003854DB /* FinancialDataManager.swift */,
 				E1329DCF23C00EDC00967927 /* ProductionDataManager.swift */,
 				E113987C23E3089C00715DB5 /* PortfolioDataManager.swift */,
 				E1332713247AED0E00D4089D /* MoexDataManager.swift */,
 			);
-			path = "Data Managers";
+			path = "Local Data Managers";
 			sourceTree = "<group>";
 		};
 		E1C114EF23ABC0A000C249E4 /* Ecosystem View */ = {
@@ -643,16 +814,6 @@
 			path = "Ancilary Views";
 			sourceTree = "<group>";
 		};
-		E1C4A61C243A8331004592E5 /* AI Invest Convo Tab */ = {
-			isa = PBXGroup;
-			children = (
-				E1C4A621243A8808004592E5 /* MessageList.swift */,
-				E1C4A61D243A8365004592E5 /* MessageView.swift */,
-				E1C4A625243A8A8C004592E5 /* ConversationManager.swift */,
-			);
-			path = "AI Invest Convo Tab";
-			sourceTree = "<group>";
-		};
 		E1D88F072312C136004173AB /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -661,14 +822,35 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		E1DAF45C2694E97000E8A6F9 /* Polygon API */ = {
+			isa = PBXGroup;
+			children = (
+				E1DAF45D2694E99300E8A6F9 /* PolygonAPI.swift */,
+			);
+			path = "Polygon API";
+			sourceTree = "<group>";
+		};
+		E1DEF7BB24A3BAE900BA58EE /* PieChartView */ = {
+			isa = PBXGroup;
+			children = (
+				E18178CE24A3B3A9004271B3 /* PortfolioPieChartView.swift */,
+				E16F35392552AECE0078A98D /* PieChartView.swift */,
+				E1DEF7BC24A3BB0C00BA58EE /* PieChartColorGenerator.swift */,
+			);
+			path = PieChartView;
+			sourceTree = "<group>";
+		};
 		E1E8DDC12312BBA7009D8BEB /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
+				E12629322590F544005BD5BE /* StartUpView */,
 				E185943E234FD9B000EDB876 /* Stock List */,
 				E185943F234FD9DC00EDB876 /* Statistics */,
 				E1E930B62368485800785CA7 /* MultipliersAndYields */,
 				E15A14D6241D4BB5001AAE3D /* Portfolio Tab */,
-				E1C4A61C243A8331004592E5 /* AI Invest Convo Tab */,
+				E16327D1262B6497001EE5D9 /* IdeasUpsideTab */,
+				E1B00F82256049D600E7A6DC /* Dividend Calendar */,
+				E125210226501261005FBF25 /* CompoundGrowthView */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -699,7 +881,6 @@
 				E1FFE01A23BD8258005E4062 /* Macroeconomics */,
 				E1F1C85423035AC200828915 /* Statistics */,
 				E13B211423318DE60055285E /* Structs and Enums */,
-				E142413D239D357B00F4EF25 /* Constants */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -724,6 +905,7 @@
 				E167AD56235B28E100C88A9C /* String Methods.swift */,
 				E1867D0423A114840008201E /* System Extensions.swift */,
 				E1329DDA23C398C200967927 /* Date Methods.swift */,
+				E1454845258A37C3007F9F21 /* FileDownloader.swift */,
 			);
 			path = "Utility Classes";
 			sourceTree = "<group>";
@@ -742,6 +924,7 @@
 		E1FB0C0C2479844B00372322 /* SecurityInfoService */ = {
 			isa = PBXGroup;
 			children = (
+				E14EBA2B247F108D00E22027 /* Entity */,
 				E1FB0C0D2479847F00372322 /* SecurityInfoService.swift */,
 			);
 			path = SecurityInfoService;
@@ -753,13 +936,6 @@
 				E1FFE01B23BD82AD005E4062 /* UBI.swift */,
 			);
 			path = Macroeconomics;
-			sourceTree = "<group>";
-		};
-		F2E3227EF831F8A08CFD4EF4 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -825,7 +1001,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Robert Zakiev";
 				TargetAttributes = {
 					E1A5ADDE22E334720049A837 = {
@@ -842,7 +1018,7 @@
 				};
 			};
 			buildConfigurationList = E1A5ADDA22E334720049A837 /* Build configuration list for PBXProject "Compound 2" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -866,10 +1042,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1A5ADF222E334730049A837 /* LaunchScreen.storyboard in Resources */,
-				E1F440A2231A9017008A40E4 /* Corporate Resources in Resources */,
 				E1A5ADEF22E334730049A837 /* Preview Assets.xcassets in Resources */,
+				E1BE5D74249BDF5800F14547 /* User Resources in Resources */,
 				E1A5ADEC22E334730049A837 /* Assets.xcassets in Resources */,
+				E1E7E9832667C22D0049C2F7 /* OtherResources in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -877,7 +1053,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E13C02C0231F21FB00CA06F4 /* Corporate Resources in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -885,7 +1060,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1B301DA231FB7BD0067E06D /* Corporate Resources in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -898,41 +1072,43 @@
 			files = (
 				E1F1C85623035D2D00828915 /* Statistics.swift in Sources */,
 				E14F1E99239D740A003CF3F8 /* CompanyListSearchBar.swift in Sources */,
+				E1D2996C253C5FC5008553A5 /* DividendServiceEntities.swift in Sources */,
 				E1F1C85D2305FE2000828915 /* ConvenientMethods.swift in Sources */,
-				E1FFE01E23BD837D005E4062 /* ConstantsMacro.swift in Sources */,
 				E167AD55235A35C000C88A9C /* DividendGrowthAllCompanies.swift in Sources */,
 				E1E597672441E0D6004E8718 /* MarketCapitalization.swift in Sources */,
-				E1C4A622243A8808004592E5 /* MessageList.swift in Sources */,
 				E1A5ADE822E334720049A837 /* Compound_2.xcdatamodeld in Sources */,
-				E1C4A61E243A8365004592E5 /* MessageView.swift in Sources */,
-				E1A5ADE322E334720049A837 /* AppDelegate.swift in Sources */,
+				E1C09FC12634648100F25363 /* YahooDataParser.swift in Sources */,
 				E113987823E3002B00715DB5 /* Position.swift in Sources */,
 				E1FFE01C23BD82AD005E4062 /* UBI.swift in Sources */,
 				E1C0A6AD22F7188D003854DB /* FinancialDataManager.swift in Sources */,
 				E167AD57235B28E100C88A9C /* String Methods.swift in Sources */,
-				E1A5ADEA22E334720049A837 /* ContentView.swift in Sources */,
-				E12C4E73239D39D30082936A /* ConstantStrings.swift in Sources */,
 				E139D5CE23BB91E800C5F666 /* MultipliersAndYieldsDataProvider.swift in Sources */,
-				E13AC274233ABE0F009AAFC7 /* Constants.swift in Sources */,
-				E1A5ADE522E334720049A837 /* SceneDelegate.swift in Sources */,
-				E1C4A626243A8A8C004592E5 /* ConversationManager.swift in Sources */,
+				E13700D22557E827008A0BA3 /* DepositoryReceiptFeeCalculator.swift in Sources */,
 				E15E27EB24549C6000FFC644 /* DividendPolicyVerifier.swift in Sources */,
+				E177FEA02649882B00B30946 /* IdeasUpsideView.swift in Sources */,
 				E1C325AE2425877E0009EF55 /* NewPositionDataValidator.swift in Sources */,
+				E14EBA2D247F109E00E22027 /* MoexSecurityInfo.swift in Sources */,
+				E16AFC5C2563BE1C0083FEF0 /* DividendCalendar.swift in Sources */,
 				E1C325B0242637D70009EF55 /* DividendCalculator.swift in Sources */,
+				E14D033F265912EF00B72265 /* CompoundGrowthChart.swift in Sources */,
+				E1DAF45E2694E99300E8A6F9 /* PolygonAPI.swift in Sources */,
 				E1E8DDBC23115941009D8BEB /* Chart.swift in Sources */,
 				E15A14DA241D4D08001AAE3D /* PositionView.swift in Sources */,
+				E12629342590F55E005BD5BE /* StartupView.swift in Sources */,
 				E1F1C853230359AF00828915 /* Basic Types.swift in Sources */,
+				E1DEF7BD24A3BB0C00BA58EE /* PieChartColorGenerator.swift in Sources */,
 				E1329DE123C6218100967927 /* File System.swift in Sources */,
 				E1F1C85B2304CC9600828915 /* Enums.swift in Sources */,
+				E145483325892E3F007F9F21 /* SmartlabDataService.swift in Sources */,
 				E167AD5B235BCCE000C88A9C /* GrossProfitGrowthView.swift in Sources */,
 				E1228480232078E300010805 /* StatisticsView.swift in Sources */,
 				E1C4A620243A843A004592E5 /* DotActivitySpinner.swift in Sources */,
-				E13944C62438F654009B9C85 /* RiskAnalysis.swift in Sources */,
 				E1FFE02023BE4628005E4062 /* ConstantsIndex.swift in Sources */,
+				E16327DE262B6B3F001EE5D9 /* Constants.swift in Sources */,
 				E1329DDB23C398C200967927 /* Date Methods.swift in Sources */,
-				E1B98E23237089030057D3B5 /* InvestmentCase.swift in Sources */,
-				E18A71CA245DB9E9008BB02C /* ConstantTickerSymbols.swift in Sources */,
+				E1454846258A37C3007F9F21 /* FileDownloader.swift in Sources */,
 				E113987623E3000500715DB5 /* Portfolio.swift in Sources */,
+				E1E7E9802667B5070049C2F7 /* IdeasUpsideNavigationView.swift in Sources */,
 				E1867D0523A114840008201E /* System Extensions.swift in Sources */,
 				E167AD59235BCBFC00C88A9C /* GrossRevenueGrowthView.swift in Sources */,
 				E15A14DC241E6FA9001AAE3D /* AddNewPositionView.swift in Sources */,
@@ -945,34 +1121,45 @@
 				E1FFE02223BE46ED005E4062 /* IndexInvesting.swift in Sources */,
 				E1E8DDBE2312AF30009D8BEB /* Company.swift in Sources */,
 				E15A14D8241D4BCB001AAE3D /* PortfolioView.swift in Sources */,
-				E122847E2320727900010805 /* QuoteService.swift in Sources */,
+				E122847E2320727900010805 /* MoexQuoteService.swift in Sources */,
 				E13944C42435F983009B9C85 /* LotsView.swift in Sources */,
 				E1C325B32426496B0009EF55 /* ActivitySpinner.swift in Sources */,
+				E1C09FB926345E1F00F25363 /* YahooQuoteService.swift in Sources */,
 				E15E5A3823CB5C9700EA0046 /* Aliases.swift in Sources */,
 				E154D41F2470505D00EDF772 /* Ex-SmartlabParser.swift in Sources */,
+				E16327F9262B7717001EE5D9 /* IdeasUpsideTableView.swift in Sources */,
 				E13C02BF231C19F300CA06F4 /* FinancialChartList.swift in Sources */,
+				E17FCEEF25E436DF0073AA05 /* Compound2App.swift in Sources */,
 				E1329DCE23C00DF100967927 /* Production.swift in Sources */,
+				E125210426501284005FBF25 /* CompoundGrowthCalculator.swift in Sources */,
+				E17EC93626AD73490029D117 /* PortfolioReturnCalculator.swift in Sources */,
+				E145483825892FCC007F9F21 /* SmartlabDataServiceEntities.swift in Sources */,
 				E1E8DDC02312BB9C009D8BEB /* StockListAndDetailsView.swift in Sources */,
+				E16C46922644050300349BC0 /* YahooFinancialDataService.swift in Sources */,
 				E1332714247AED0E00D4089D /* MoexDataManager.swift in Sources */,
 				E1EAE9A32336638B00C6C139 /* User Preferences.swift in Sources */,
 				E12C4E76239D432D0082936A /* SegmentedCompanyInfoView.swift in Sources */,
 				E1C4A624243A882C004592E5 /* ConversationMessage.swift in Sources */,
+				E177FEA226498E5D00B30946 /* IdeasUpsideChart.swift in Sources */,
+				E1B00F8425604A9300E7A6DC /* DividendCalendarDataProvider.swift in Sources */,
 				E1E8DDC32312BC0F009D8BEB /* DeviceType.swift in Sources */,
 				E1D88F092312C14C004173AB /* StockListCell.swift in Sources */,
-				E160813523F0252900437CBC /* CompoundGrowthCalculator.swift in Sources */,
-				E166D0C52474979100D1993B /* DividendService.swift in Sources */,
+				E166D0C52474979100D1993B /* MoexDividendService.swift in Sources */,
 				E18CB67723552285005DA8F6 /* Multipliers.swift in Sources */,
+				E16F353A2552AECE0078A98D /* PieChartView.swift in Sources */,
 				E1F1C8592304CBB400828915 /* Logger.swift in Sources */,
 				E1329DD023C00EDC00967927 /* ProductionDataManager.swift in Sources */,
+				E14EBA302481D08900E22027 /* DividendListView.swift in Sources */,
+				E16327D3262B64C5001EE5D9 /* IdeasUpsideDataProvider.swift in Sources */,
 				E113987D23E3089C00715DB5 /* PortfolioDataManager.swift in Sources */,
-				E18CAEF7244069A900E9D821 /* InvestingProtocols.swift in Sources */,
+				E18178CF24A3B3A9004271B3 /* PortfolioPieChartView.swift in Sources */,
 				E1FB0C0E2479847F00372322 /* SecurityInfoService.swift in Sources */,
 				E1329DD823C3846100967927 /* ProductionChart.swift in Sources */,
-				E1E597652441D8CA004E8718 /* StableInvestment.swift in Sources */,
+				E1C39BBA26458DAB0048E7DE /* YahooDataServiceEntities.swift in Sources */,
 				E113987F23E6FB9B00715DB5 /* DividendYield.swift in Sources */,
 				E1F158D9231B2E54008FE847 /* ChartHStack.swift in Sources */,
 				E18A71CD245DBCAE008BB02C /* Ex-MoexQuoteFetching.swift in Sources */,
-				E167D6FD2306222E00CAF357 /* RootTabBarController.swift in Sources */,
+				E167D6FD2306222E00CAF357 /* CompoundRootTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -988,6 +1175,7 @@
 				E1F1C85F23061B6600828915 /* Speed Tests.swift in Sources */,
 				E13060FB2376F15900BB7B72 /* InvestmentTest.swift in Sources */,
 				E13AC276233ABE5B009AAFC7 /* PlistDataTests.swift in Sources */,
+				E14EBA332481DEBD00E22027 /* DividendServiceTests.swift in Sources */,
 				E15E27E724548F5500FFC644 /* Position_Negative_Tests.swift in Sources */,
 				E14640B8238B364F0092852A /* PlistDataThrowTests.swift in Sources */,
 				E15E5A3623CB514C00EA0046 /* ProductionSpeedTests.swift in Sources */,
@@ -1022,17 +1210,6 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		E1A5ADF022E334730049A837 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E1A5ADF122E334730049A837 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		E1A5AE0A22E334740049A837 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1060,6 +1237,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1084,10 +1262,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CODE_SIGN_FLAGS = "--deep";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1120,6 +1299,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1138,9 +1318,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_CODE_SIGN_FLAGS = "--deep";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -1156,9 +1337,8 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Compound 2\"/Preview\\ Content";
-				DEVELOPMENT_TEAM = 4PFP54TQFP;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Compound 2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1170,6 +1350,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1183,9 +1364,8 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Compound 2\"/Preview\\ Content";
-				DEVELOPMENT_TEAM = 4PFP54TQFP;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Compound 2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1197,6 +1377,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

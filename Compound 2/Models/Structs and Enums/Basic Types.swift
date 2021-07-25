@@ -10,13 +10,13 @@ import Foundation
 
 //MARK: - Financial Indicators
 struct FinancialIndicators: Equatable {
-    let revenue: [(year: Int, value: Double)]?
-    let ebitda: [(year: Int, value: Double)]?
-    let oibda: [(year: Int, value: Double)]?
-    let netIncome: [(year: Int, value: Double)]?
-    let freeCashFlow: [(year: Int, value: Double)]?
-    let dividends: [(year: Int, value: Double)]?
-    let netDebt: [(year: Int, value: Double)]?
+    let revenue: [FinancialFigure]?
+    let ebitda: [FinancialFigure]?
+    let oibda: [FinancialFigure]?
+    let netIncome: [FinancialFigure]?
+    let freeCashFlow: [FinancialFigure]?
+    let dividends: [FinancialFigure]?
+    let netDebt: [FinancialFigure]?
     let numberOfOrdinaryShares: Int?
     let numberOfPreferredShares: Int?
     let dividendPolicy: String?
@@ -24,12 +24,15 @@ struct FinancialIndicators: Equatable {
     let presentations: [(year: Int, url: String)]?
     let competition: CompetitionType?
     let quoteURL: String?
-    let customIndicators: [String: [(year: Int, value: Double)]]?
+    let customIndicators: [String: [FinancialFigure]]?
     
     public static func == (lhs: FinancialIndicators, rhs: FinancialIndicators) -> Bool {
         
         var equalityBooleans = [Bool]()
         for i in 0..<2 {
+            
+            guard rhs.revenue != nil && lhs.revenue != nil else { return false }
+            
             if rhs.revenue![i].value == lhs.revenue![i].value {
                 equalityBooleans.append(true)
             } else {
@@ -50,37 +53,40 @@ public struct EVEBITDA: Identifiable {
 
 public struct PriceToEarnings: Identifiable {
     public var id = UUID()
-    public let name: String
+    public let ticker: String
     public let ratio: Double //name of the company for which the P/E ratio was calculated
 }
 
 //MARK: - Dividend Yield
 public struct DividendYield: Identifiable {
     public var id = UUID()
-    public let name: String
+    public let ticker: String
     public let yield: Double //name of the company for which the dividend yield was calculated
     public let isFixed: Bool
-    
 }
 
 //MARK: - Quotes
-public struct Quote: Identifiable, CustomStringConvertible {
-    
-    public var description: String {
-        return "Company: \(companyName); Ordinary: \(String(describing: ordinaryShareQuote)) ; Preferred: \(String(describing: preferredShareQuote))"
-    }
-    
-    public var id = UUID()
-    let companyName: String //name of the company for which the quote was fetched
-    let ordinaryShareQuote: Double?
-    let preferredShareQuote: Double?
-}
+//public struct Quote: Identifiable, CustomStringConvertible {
+//    
+//    public var description: String {
+//        return "Company: \(companyName); Ordinary: \(String(describing: currentQuote)) ; Preferred: \(String(describing: preferredShareQuote))"
+//    }
+//    
+//    public var id = UUID()
+//    let companyName: String //name of the company for which the quote was fetched
+//    let currentQuote: Double?
+////    let preferredShareQuote: Double?
+//}
 
-public struct SimpleQuote: Identifiable, Hashable {
+public struct SimpleQuote: Identifiable, Hashable, CustomStringConvertible {
+    
+    public var description: String { "\(ticker): \(quote). Market cap: \(String(describing: marketCap))" }
+    
     public var id = UUID()
     let ticker: String //name of the company for which the quote was fetched
     let quote: Double
-    var companyName: String? { ConstantTickerSymbols.company(for: self.ticker) }
+    var companyName: String? { C.Tickers.companyName(for: self.ticker) }
+    let marketCap: Double?
 }
 
 //MARK: - Statistics
@@ -94,24 +100,6 @@ struct IndustryWithCompaniesCAGR: Identifiable {
     var id = UUID()
     let name: String
     let companiesSortedByIndustryAndCAGR: [CompanyWithCAGR]
-}
-
-//MARK: - Investments
-struct InvestmentVerdict {
-    let isGoodInvestment: Bool
-    let analysis: String
-}
-
-struct InvestmentComparison {
-    let canBeCompared: Bool
-    let analysis: String
-}
-
-//MARK: - Investment Return
-struct InvestmentReturn {
-    let companyName: String
-    
-    let returns:[(year: Int, return: Double)]
 }
 
 //MARK: - SwiftUI Extensions
@@ -148,10 +136,7 @@ extension RandomAccessCollection {
     }
 }
 
-// MARK: - MoexQuote for parsing a single quote
-struct MoexQuote: Codable {
-    let marketdata: QuoteData
-}
+
 
 struct QuoteData: Codable {
     let columns: [String]
@@ -204,3 +189,51 @@ struct QuoteData: Codable {
      }
  }
 
+struct InvestmentIdeas: Codable {
+    let author: String
+    var values: [InvestmentIdea]
+}
+
+struct InvestmentIdea: Codable, Hashable {
+    let ticker: String
+    let currency: Currency
+    let targetPrice: Double
+    let risk: String
+    
+    var upside: Int?
+    
+    ///Returns the upside from the current quote as a percentage
+    mutating func updateUpside(currentQuote: SimpleQuote) {
+        
+        guard currentQuote.quote > 0 else { return }
+        
+        let upside = (targetPrice - currentQuote.quote) / currentQuote.quote
+        
+        guard upside > 0 else {
+            return  //If it's greater than 0, the upside is realized
+        }
+        
+        self.upside = Int(upside * 100)
+    }
+}
+
+extension InvestmentIdea: Comparable {
+
+    static func < (lhs: InvestmentIdea, rhs: InvestmentIdea) -> Bool {
+        if lhs.upside == nil { return true }
+        else if rhs.upside == nil { return false }
+        else { return lhs.upside! < rhs.upside! }
+    }
+}
+
+//MARK: - Dividends
+///Use this struct whenever a dividend is necessary
+struct Dividends {
+    let payouts: [Dividend]
+}
+
+struct Dividend: Codable {
+    let payment: Double //the dividend payment itself
+    let currency: Currency?
+    let date: Double //UNIX timestamp
+}

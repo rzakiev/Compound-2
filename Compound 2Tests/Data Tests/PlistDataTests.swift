@@ -27,7 +27,7 @@ class PlistDataTests: XCTestCase {
     //MARK: - Testing plist files content
     func testNumberOfCompaniesInPlistFormatIsEqualToCompaniesInConstantStruct() {
         //Given
-        let listOfPlistFiles = FinancialDataManager.listOfAllCompanies()
+        let listOfPlistFiles = FinancialDataManager.listOfAllCompanies().map(\.ticker)
         var companiesInIndustryConstant = [String]()
         
         //When
@@ -45,42 +45,52 @@ class PlistDataTests: XCTestCase {
     
     func testAllPlistsAreParseable() {
         //Given
-        let allCompanies = FinancialDataManager.listOfAllCompanies()
+        let allCompanies = FinancialDataManager.listOfAllCompanies().map(\.ticker)
         
         //When
         for company in allCompanies {
             let _ = Company(name: company)
             //Then
-            XCTAssertNotNil(try? FinancialDataManager.getCompanyData(for: company))
+            XCTAssertNotNil(try? FinancialDataManager.getCompanyData(for: company), "Unable to get company data for \(company)")
         }
     }
     
-    func testSmartlabLinksPlistIsParseable() {
+    func test_CompanyDataIsFetchable() {
+        //GIVEN
+        let allCompanies = FinancialDataManager.listOfAllCompanies().map(\.ticker)
+        
+        //WHEN
+        for ticker in allCompanies {
+            XCTAssertNotNil(try? FinancialDataManager.getCompanyData(for: ticker))
+        }
+    }
+    
+    func test_SmartlabLinksPlistIsParseable() {
         XCTAssertNoThrow(try FinancialDataManager.getSmartlabLinks())
     }
     
-    func testNumberOfOrdinarySharesIsAvailableForPublicCompanies() {
-        //Given
-        let allPublicCompanies = try! FinancialDataManager.getSmartlabLinks().map({ $0.key})
-        let companiesWithPreferredShares = ["Сбербанк", "Ростелеком", "Россети"]
-        
-        //When
-        for company in allPublicCompanies {
-            let shares = try! FinancialDataManager.numberOfSharesFor(company: company)
-            if companiesWithPreferredShares.contains(company) {
-                //Then
-                XCTAssertNotNil(shares.numberOfOrdinaryShares)
-                XCTAssertNotNil(shares.numberOfPreferredShares)
-            } else {
-                XCTAssertNotNil(shares.numberOfOrdinaryShares)
-                XCTAssertNil(shares.numberOfPreferredShares, "No preferred shares for \(company)")
-            }
-        }
-    }
+//    func test_NumberOfOrdinarySharesIsAvailableForPublicCompanies() {
+//        //Given
+//        let allPublicCompanies = try! FinancialDataManager.getSmartlabLinks().map({ $0.key})
+//        let companiesWithPreferredShares = ["Сбербанк", "Ростелеком"]
+//
+//        //When
+//        for company in allPublicCompanies {
+//            let shares = try! FinancialDataManager.numberOfSharesFor(ticker: company)
+//            if companiesWithPreferredShares.contains(company) {
+//                //Then
+//                XCTAssertNotNil(shares.numberOfOrdinaryShares)
+//                XCTAssertNotNil(shares.numberOfPreferredShares)
+//            } else {
+//                XCTAssertNotNil(shares.numberOfOrdinaryShares)
+//                XCTAssertNil(shares.numberOfPreferredShares, "No preferred shares for \(company)")
+//            }
+//        }
+//    }
     
     func testEachCompanyHasRevenueFigures() {
         //Given
-        let allCompanies = FinancialDataManager.listOfAllCompanies()
+        let allCompanies = FinancialDataManager.listOfAllCompanies().map(\.ticker)
         
         //When
         for company in allCompanies {
@@ -89,83 +99,92 @@ class PlistDataTests: XCTestCase {
         }
     }
     
-    func test_FinancialDataManager_NumberOfSmartlabLinksIsEqualToNumberOfCompaniesInSharesCount() {
-        guard let plistPath = Bundle.main.path(forResource: "NumberOfSharesIssued", ofType: "plist", inDirectory: "Corporate Resources/NumberOfSharesIssued") else {
-            Logger.log(error: "Unable to load the plist file containing the number of shares")
-            //            throw PlistParsingError.unableToLoadDataAt("Corporate Resources/NumberOfSharesIssued")
-            XCTFail()
-            return
-        }
-        
-        guard let plistData = FileManager.default.contents(atPath: plistPath) else {
-            Logger.log(error: "unableToLoadDataAt \(plistPath)")
-            //            throw PlistParsingError.unableToLoadDataAt(plistPath)
-            XCTFail()
-            return
-        }
-        
-        guard let plistObject = try? PropertyListSerialization.propertyList(from: plistData, options:PropertyListSerialization.ReadOptions(), format:nil) else {
-            Logger.log(error: "Couldn't serialize a plist file")
-            //            throw PlistParsingError.unableToSerializeObject
-            XCTFail()
-            return
-        }
-        
-        guard let sharesIssued = plistObject as? [String: NSNumber] else {
-            Logger.log(error: "couldn't downcast the plist object with shares count as [String: String]")
-            //            throw PlistParsingError.unableToDowncastObjectiveCObjectAsSwiftEntity
-            XCTFail()
-            return
-        }
-        
-        let publicCompanies = try! FinancialDataManager.getSmartlabLinks().map({$0.key})
-        let numberOfCompaniesWithSharesCount = sharesIssued.filter({$0.key.suffix(2) != "-п"}).count
-        
-        XCTAssertTrue(publicCompanies.count == numberOfCompaniesWithSharesCount, "Difference: \(Set(publicCompanies).symmetricDifference(sharesIssued.filter({$0.key.suffix(2) != "-п"}).map({$0.key} )))")
-    }
+//    func test_FinancialDataManager_NumberOfSmartlabLinksIsEqualToNumberOfCompaniesInSharesCount() {
+//        guard let plistPath = Bundle.main.path(forResource: "NumberOfSharesIssued", ofType: "plist", inDirectory: "Corporate Resources/NumberOfSharesIssued") else {
+//            Logger.log(error: "Unable to load the plist file containing the number of shares")
+//            //            throw PlistParsingError.unableToLoadDataAt("Corporate Resources/NumberOfSharesIssued")
+//            XCTFail()
+//            return
+//        }
+//
+//        guard let plistData = FileManager.default.contents(atPath: plistPath) else {
+//            Logger.log(error: "unableToLoadDataAt \(plistPath)")
+//            //            throw PlistParsingError.unableToLoadDataAt(plistPath)
+//            XCTFail()
+//            return
+//        }
+//
+//        guard let plistObject = try? PropertyListSerialization.propertyList(from: plistData, options:PropertyListSerialization.ReadOptions(), format:nil) else {
+//            Logger.log(error: "Couldn't serialize a plist file")
+//            //            throw PlistParsingError.unableToSerializeObject
+//            XCTFail()
+//            return
+//        }
+//
+//        guard let sharesIssued = plistObject as? [String: NSNumber] else {
+//            Logger.log(error: "couldn't downcast the plist object with shares count as [String: String]")
+//            //            throw PlistParsingError.unableToDowncastObjectiveCObjectAsSwiftEntity
+//            XCTFail()
+//            return
+//        }
+//
+//        let publicCompanies = try! FinancialDataManager.getSmartlabLinks().map({$0.key})
+//        let numberOfCompaniesWithSharesCount = sharesIssued.filter({$0.key.suffix(2) != "-п"}).count
+//
+//        XCTAssertTrue(publicCompanies.count == numberOfCompaniesWithSharesCount, "Difference: \(Set(publicCompanies).symmetricDifference(sharesIssued.filter({$0.key.suffix(2) != "-п"}).map({$0.key} )))")
+//    }
     
-    func testPublicCompaniesHaveQuoteSourceLinkAndSharesIssued() {
-        //Given
-        let publicCompanies = try! FinancialDataManager.getSmartlabLinks().map({$0.key})
-        
-        //Wheb
-        for company in publicCompanies {
-            //Then
-            XCTAssertNotNil(try? FinancialDataManager.numberOfSharesFor(company: company), "\(company) has no number of shares")
-            XCTAssertNotNil(try? FinancialDataManager.getSmartlabLinks()[company], "\(company) has no smartlab link")
-        }
-    }
+//    func testPublicCompaniesHaveQuoteSourceLinkAndSharesIssued() {
+//        //Given
+//        let publicCompanies = try! FinancialDataManager.getSmartlabLinks().map({$0.key})
+//
+//        //Wheb
+//        for company in publicCompanies {
+//            //Then
+//            XCTAssertNotNil(try? FinancialDataManager.numberOfSharesFor(ticker: company), "\(company) has no number of shares")
+//            XCTAssertNotNil(try? FinancialDataManager.getSmartlabLinks()[company], "\(company) has no smartlab link")
+//        }
+//    }
     
-    func testNumberOfSharesForAllCompaniesIsNotNil() {
+//    func testNumberOfSharesForAllCompaniesIsNotNil() {
+//        //Given
+//        let publicCompanies = try! FinancialDataManager.getSmartlabLinks().map({$0.key})
+//
+//        //When
+//        for company in publicCompanies {
+//            if let numberOfShares = try? FinancialDataManager.numberOfSharesFor(ticker: company) {
+//                //Then
+//                XCTAssert(numberOfShares.numberOfOrdinaryShares > 0)
+//                if numberOfShares.numberOfPreferredShares != nil { XCTAssert(numberOfShares.numberOfPreferredShares! > 0) }
+//            }
+//            else {
+//                XCTFail() //No shares for a company with a quote link should fail
+//            }
+//        }
+//    }
+    
+    func test_NoPlistFilesWithIdenticalData() {
         //Given
-        let publicCompanies = try! FinancialDataManager.getSmartlabLinks().map({$0.key})
+        let allTickers  = FinancialDataManager.listOfAllCompanies().map(\.ticker)
+        print(allTickers)
         
         //When
-        for company in publicCompanies {
-            if let numberOfShares = try? FinancialDataManager.numberOfSharesFor(company: company) {
-                //Then
-                XCTAssert(numberOfShares.numberOfOrdinaryShares > 0)
-                if numberOfShares.numberOfPreferredShares != nil { XCTAssert(numberOfShares.numberOfPreferredShares! > 0) }
-            }
-            else {
-                XCTFail() //No shares for a company with a quote link should fail
-            }
-        }
-    }
-    
-    func testNoPlistsWithIdenticalData() {
-        //Given
-        let companies  = FinancialDataManager.listOfAllCompanies()
-        
-        //When
-        for i in companies.indices {
-            let possibleDuplicate = companies[i]
-            for company in companies {
+        for i in allTickers.indices {
+            let possibleDuplicate = allTickers[i]
+            for company in allTickers {
                 if possibleDuplicate != company { // no need to compare same company to itself
                     //Then
-                    XCTAssertFalse ((try! FinancialDataManager.getCompanyData(for: company)) ==
-                        (try! FinancialDataManager.getCompanyData(for: possibleDuplicate)),
-                                    "Found diplicate data for \(company) and \(possibleDuplicate)")
+                    guard let dataA = try? FinancialDataManager.getCompanyData(for: company) else {
+                        XCTFail("No company data for \(company)")
+                        return
+                    }
+                    
+                    guard let dataB = try? FinancialDataManager.getCompanyData(for: possibleDuplicate) else {
+                        XCTFail("No company data for \(possibleDuplicate)")
+                        return
+                    }
+                    
+                    XCTAssertFalse ((dataA == dataB), "Found diplicate data for \(company) and \(possibleDuplicate)")
                 }
             }
         }
@@ -174,7 +193,7 @@ class PlistDataTests: XCTestCase {
     func test_AllSubDirectoriesAreAvailable() {
         XCTAssertTrue(FinancialDataManager.resourceIsAvailable(at: FinancialDataManager.quoteLinksSubdirectory, named: "SmartlabLinks", ofType: "plist"))
         XCTAssertTrue(FinancialDataManager.resourceIsAvailable(at: FinancialDataManager.numberOfSharesIssuedSubdirectory, named: "NumberOfSharesIssued", ofType: "plist"))
-        XCTAssertTrue(FinancialDataManager.resourceIsAvailable(at: FinancialDataManager.financialStatementsSubdirectory, named: "МТС", ofType: "plist"))
+        XCTAssertTrue(FinancialDataManager.resourceIsAvailable(at: FinancialDataManager.financialStatementsSubdirectory, named: "MTSS", ofType: "plist"))
         XCTAssertTrue(FinancialDataManager.resourceIsAvailable(at: FinancialDataManager.ecosystemImagesSubdirectory, named: "Сбербанк", ofType: "png"))
         XCTAssertTrue(FinancialDataManager.resourceIsAvailable(at: FinancialDataManager.productionFiguresSubdirectory, named: "Сегежа", ofType: "plist"))
         XCTAssertTrue(FinancialDataManager.resourceIsAvailable(at: FinancialDataManager.tradingViewLinksSubdirectory, named: "TradingViewLinks", ofType: "plist"))
@@ -182,7 +201,7 @@ class PlistDataTests: XCTestCase {
     
     func test_FinancialDataManager_AllFinancialIndicatorsAreAvailableForLastYear() {
         //Given
-        for company in FinancialDataManager.listOfAllCompanies() {
+        for company in FinancialDataManager.listOfAllCompanies().map(\.ticker) {
             //When
             let company = Company(name: company)
             
@@ -219,7 +238,7 @@ class PlistDataTests: XCTestCase {
     
     func test_FinancialDataManager_AllFinancialIndicatorsHaveIdenticalCount() {
         //Given
-        for company in FinancialDataManager.listOfAllCompanies() {
+        for company in FinancialDataManager.listOfAllCompanies().map(\.name) {
             let company = Company(name: company)
             
             //When
@@ -242,7 +261,7 @@ class PlistDataTests: XCTestCase {
     
     func test_FinancialDataManager_YearValuesAreInSuccessiveOrder() {
         //Given
-        for company in FinancialDataManager.listOfAllCompanies() {
+        for company in FinancialDataManager.listOfAllCompanies().map(\.name) {
             let company = Company(name: company)
             
             //When

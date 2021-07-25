@@ -38,7 +38,7 @@ class Speed_Tests: XCTestCase {
     
     func test_FinancialChartList_InitializationTime() {
         self.measure {
-            let _ = FinancialChartList(company: Company(name: "Московская Биржа"))
+            let _ = FinancialChartList(company: .init(name: "", ticker: ""))
         }
     }
 
@@ -54,14 +54,14 @@ class Speed_Tests: XCTestCase {
         self.measure {
             //Given
             
-            let companies = FinancialDataManager.listOfAllCompanies()
+            let companies = FinancialDataManager.listOfAllCompanies().map(\.name)
             
             //When
             for companyName in companies {
-                DispatchQueue.global().async {
-                    QuoteService.shared.getQuoteAsync(for: companyName) { quote in
-                        XCTAssertNotNil(quote?.ordinaryShareQuote)
-                        print("Ordinary share price: \(quote?.ordinaryShareQuote ?? -1)")
+                DispatchQueue.global(qos: .background).async {
+                    MoexQuoteService.shared.getQuoteAsync(for: companyName) { quote in
+                        XCTAssertNotNil(quote?.quote)
+                        print("Ordinary share price: \(quote?.quote ?? -1)")
                     }
                 }
             }
@@ -73,7 +73,7 @@ class Speed_Tests: XCTestCase {
     
     func testCompanyInitializationSpeed() {
         self.measure {
-            let allComapnies = FinancialDataManager.listOfAllCompanies()
+            let allComapnies = FinancialDataManager.listOfAllCompanies().map(\.name)
             
             for company in allComapnies {
                 let _ = Company(name: company)

@@ -11,25 +11,15 @@ import Combine
 
 final class PortfolioDataProvider: ObservableObject {
     
-    @Published var portfolio: Portfolio = Portfolio(fromLocalStorage: true) ?? Portfolio(name: "Портфолио", positions: [])
+    @Published var portfolio: Portfolio = Portfolio(fromLocalStorage: true) ?? Portfolio(positions: [])
     
     private var quoteSubscriber: AnyCancellable?
     
-    var myQuotes: [Quote] = []
-    
     init() {
-//        QuoteService.generateFakeQuotes()
-      
-        quoteSubscriber = QuoteService.shared.$allQuotes.receive(on: DispatchQueue.main).sink(receiveValue: { [unowned self] (quotes) in
+        quoteSubscriber = MoexQuoteService.shared.$allQuotes.receive(on: DispatchQueue.main).sink(receiveValue: { [unowned self] (_) in
             for i in 0..<self.portfolio.positions.count {
-                guard let _ = quotes.first(where: { $0.companyName == self.portfolio.positions[i].companyName || $0.companyName == self.portfolio.positions[i].companyName + "-п" }) else { continue }
-                if self.portfolio.positions[i].isPreferredShare {
-//                    self.portfolio.positions[i].updatePL(quote: newQuote.preferredShareQuote ?? 0.0)
-                } else {
-//                    self.portfolio.positions[i].updatePL(quote: newQuote.ordinaryShareQuote ?? 0.0)
-                }
+                guard let _ = MoexQuoteService.shared.allQuotes.first(where: { $0.ticker == self.portfolio.positions[i].ticker }) else { continue }
             }
         })
     }
-    
 }

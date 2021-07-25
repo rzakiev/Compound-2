@@ -12,11 +12,12 @@ import SwiftUI
 
 //Just a convenient method for converting garbage like "5221.234234234" into "5.2k"
 extension Double {
-    func simplify () -> String {
+    func beautify () -> String {
         var simplifiedString: String
         switch self {
+        case 0...1: simplifiedString = String(format: "%.2f", self)
         case 1_000..<1_000_000: simplifiedString = "\(String(format: "%.1f",self/1000))K"
-        case 1_000_000..<1_000_000_000: simplifiedString = "\(String(format: "%.3f",self/1000000))M"
+        case 1_000_000..<1_000_000_000: simplifiedString = "\(String(format: "%.2f",self/1000000))M"
         case 1_000_000_000..<1_000_000_000_000: simplifiedString = "\(String(format: "%.2f",self/1000000000))B"
         case 1_000_000_000_000...:
             simplifiedString = "\(String(format: "%.3f",self/1000000000000))T"
@@ -24,27 +25,33 @@ extension Double {
             simplifiedString = String(format: "%.1f",self)
         }
         
-        if simplifiedString.suffix(2) == ".0" {
+//        if simplifiedString.suffix(2) == ".0" {
+//            simplifiedString = String(simplifiedString.dropLast(2))
+//        }
+//
+//        return simplifiedString
+        if String(simplifiedString.suffix(2)) == ".0" {
             simplifiedString = String(simplifiedString.dropLast(2))
         }
-        
         return simplifiedString
     }
 }
 
 extension Int {
-    func simplify () -> String {
+    ///Transforms instances of Int into a beatuful 
+    func beautify () -> String {
         var simplifiedString: String
         switch self {
         case 1_000..<1_000_000: simplifiedString = "\(String(format: "%.1f",self/1000))K"
-        case 1_000_000..<1_000_000_000: simplifiedString = "\(String(format: "%.3f",self/1000000))M"
-        case 1_000_000_000..<1_000_000_000_000: simplifiedString = "\(String(format: "%.3f",self/1000000000))T"
+        case 1_000_000..<1_000_000_000: simplifiedString = "\(String(format: "%.2f",self/1000000))M"
+        case 1_000_000_000..<1_000_000_000_000: simplifiedString = "\(String(format: "%.2f",self/1000000000))T"
         default:
             simplifiedString = String(format: "%.1f",self)
         }
         
-        if simplifiedString.suffix(2) == ".0" {
-            simplifiedString = String(simplifiedString.dropLast(2))
+        if simplifiedString.suffix(3).contains(".0") {
+            let rangeToRemove = simplifiedString.index(simplifiedString.endIndex, offsetBy: -3)...simplifiedString.index(simplifiedString.endIndex, offsetBy: -2)
+            simplifiedString.removeSubrange(rangeToRemove)
         }
         return simplifiedString
     }
@@ -72,8 +79,13 @@ extension UIColor {
 }
 
 extension Color {
+    
     static var beautifulGreenColor: Color {
         return Color(red: 63, green: 220, blue: 84)
+    }
+    
+    static var randomColor: Color {
+        return Color(red: Double(Int.random(in: 0...255)), green: Double(Int.random(in: 0...255)), blue: Double(Int.random(in: 0...255)))
     }
 }
 

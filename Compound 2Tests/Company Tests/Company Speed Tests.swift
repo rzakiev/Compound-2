@@ -34,7 +34,7 @@ class Company_Speed_Test: XCTestCase {
     
     func test_Company_InitializationTime() {
         self.measure {
-            for company in FinancialDataManager.listOfAllCompanies() {
+            for company in FinancialDataManager.listOfAllCompanies().map(\.name) {
                 let _ = Company(name: company).netIncome
             }
         }
@@ -42,7 +42,7 @@ class Company_Speed_Test: XCTestCase {
     
     func test_FinancialDataManager_FetchingCompaniesProfitFiguresTime() {
         self.measure {
-            for company in FinancialDataManager.listOfAllCompanies() {
+            for company in FinancialDataManager.listOfAllCompanies().map(\.name) {
                 let _ = FinancialDataManager.getNetIncome(for: company)
             }
         }

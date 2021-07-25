@@ -7,40 +7,73 @@
 //
 
 import SwiftUI
+import Combine
+
+final class ChartListDataProvider: ObservableObject {
+    
+    @Published var marketCap: Double?
+    
+    let ticker: String
+    
+    private var quoteSubscriber: AnyCancellable?
+    
+    init(ticker: String) {
+        
+        self.ticker = ticker
+        
+        quoteSubscriber = MoexQuoteService.shared.$allQuotes.receive(on: DispatchQueue.main).sink(receiveValue: { [unowned self] (_) in
+            guard let newQuote = MoexQuoteService.shared.allQuotes.first(where: { $0.ticker == ticker }) else { return }
+            marketCap = calculateMarketCap(quote: newQuote)
+        })
+    }
+
+    func calculateMarketCap(quote: SimpleQuote?) -> Double? {
+//        guard quote != nil else { return nil }
+        return quote?.marketCap
+//        return MarketCapitalization.getMarketCapitalization(for: ticker, currentQuote: quote!)
+//        return self.marketCap == nil ? "N/A" : String(self.marketCap!)
+    }
+}
+
 
 struct FinancialChartList: View {
     
-    let company: Company
+    let company: CompanyName
+    
+    private let financialFigures: Company?
     
     @State private var marketCap: Double? //Displayed in the multipliersView and also used for calculating varios ratios
+    
+    private var dividends: [DividendElement]?
+    
+    @ObservedObject var dataProvider: ChartListDataProvider
+    
     
     var body: some View {
         
         List {
-            financialChartList
-            if company.isPublic { //If the company is public, display a block with the market capitalization, dividend yield, and so on
-                multipliersView
+            if financialFigures != nil {
+                financialChartList
             }
-            if company.moexDividends != nil {
+            
+            multipliersView
+            
+            if dividends != nil {
                 dividendsView
             }
         }
     }
-    
-    
-    
-    
+        
     var financialChartList: some View {
-        Section(header: Text("Финансовые индикаторы")) {
+        return Section(header: Text("Финансовые индикаторы")) {
             //            ScrollView(.vertical, showsIndicators: false) {
-            ForEach(company.availableIndicators(), id: \.self) { indicator in
+            ForEach(self.financialFigures!.availableIndicators(), id: \.self) { indicator in
                 Chart(for: indicator,
-                      grossGrowth: self.company.grossGrowthRate(for: indicator),
-                      values: self.company.chartValues(for: indicator)!)
+                      grossGrowth: financialFigures?.grossGrowthRate(for: indicator),
+                      values: self.financialFigures!.chartValues(for: indicator)!)
             }
-            //            }
         }.edgesIgnoringSafeArea([.horizontal])
-            .listRowInsets(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
+        .listRowInsets(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
     }
     
     var multipliersView: some View {
@@ -48,50 +81,67 @@ struct FinancialChartList: View {
             HStack {
                 Text("Капитализация:")
                 Spacer()
-                Text(marketCap?.simplify() ?? "N/A")
+                Text(dataProvider.marketCap == nil ? "N/A" : String(dataProvider.marketCap!.beautify()))
             }
         }.frame(width: nil, height: 20, alignment: .center)
             .onAppear(perform: fetchQuote)
     }
     
-    var analysisView: some View {
-        return Text(InvestmentCase.init(company: company.name, type: .dividendPlay).checkInvestmentThesis().analysis)
-            .frame(width: nil, height: 50, alignment: .center)
-    }
-    
+//    var analysisView: some View {
+//        return Text(InvestmentCase.init(company: company.name, type: .dividendPlay).checkInvestmentThesis().analysis)
+//            .frame(width: nil, height: 50, alignment: .center)
+//    }
+//
     var dividendsView: some View {
-        Section(header: Text("Дивиденды")) {
-            ForEach(company.moexDividends![1].dividends!.indices, id: \.self) { index in
+        return Section(header: Text("Дивиденды")) {
+            ForEach(dividends!.indices, id: \.self) { index in
                 HStack {
-                    Text(self.company.moexDividends![1].dividends![index].registryclosedate)
+                    Text(dividends![index].registryclosedate)
                     Spacer()
-                    Text(String(self.company.moexDividends![1].dividends![index].value))
+                    Text(String(dividends![index].value))
+                    Text(String(dividends![index].currencyid))
                 }
             }
         }
     }
     
     
-    init(company: Company) {
+}
+
+//MARK: - Initializers
+extension FinancialChartList {
+    init(company: CompanyName) {
         self.company = company
-        //        Logger.log(operation: "Initializing the Financial Chart List View FOR COMPANY: \(company.name)")
-        fetchQuote()
+//        if company.ticker != nil {
+        self.dividends = MoexDataManager.getDividendDataLocally(forTicker: company.ticker)?.dividends?.reversed()
+//        }
+        self.financialFigures = Company(name: company)
+        self.dataProvider = ChartListDataProvider(ticker: company.ticker)
+        
+//        quoteSubscriber = QuoteService.shared.$allQuotes.receive(on: DispatchQueue.main).sink(receiveValue: { (quotes) in
+//            guard let newQuote = quotes.first(where: { $0.ticker == company.ticker }) else { return }
+//            self.marketCap = MarketCapitalization.getMarketCapitalization(for: company.ticker, currentQuote: newQuote)
+//        })
+//        else { self.financialFigures = nil }
     }
+}
+
+extension FinancialChartList {
 }
 
 //MARK: - Managing Quotes
 extension FinancialChartList {
     func fetchQuote() {
         
-        let marketCapUpdater: (Double) -> Void = { marketCapitalization in
-            DispatchQueue.main.async {
-                self.marketCap = marketCapitalization
-            }
-        }
-        
-        if company.isPublic {
-            company.fetchMarketCapitalization(completion: marketCapUpdater)
-        }
+//        let marketCapUpdater: (Double) -> Void = { marketCapitalization in
+//            DispatchQueue.main.async {
+//                self.marketCap = marketCapitalization
+//            }
+//        }
+//
+//        if company.isPublic {
+//            company.fetchMarketCapitalization(completion: marketCapUpdater)
+//        }
     }
 }
 
@@ -101,7 +151,7 @@ extension FinancialChartList {
 struct ChartList_Previews: PreviewProvider {
     static var previews: some View {
         ForEach([ColorScheme.light, .dark], id: \.self) { scheme in
-            FinancialChartList(company: Company(name: "Сбербанк")).colorScheme(scheme)//.modifier(ChartListModifier())
+            FinancialChartList(company: .init(name: "Севка)", ticker: "CHMF")).colorScheme(scheme)//.modifier(ChartListModifier())
         }
     }
 }

@@ -10,36 +10,34 @@ import SwiftUI
 
 struct MultipliersAndYieldsView: View {
     
-    @State var selectedTab: Multiplier = .dividendYield
+//    @State var selectedTab: Multiplier = .dividendYield
     
-    @State var adjustData = false //indicates if multipliers must be adjusted
+//    @State var adjustData = false //indicates if multipliers must be adjusted
     
-    @ObservedObject var dataProvider = MultipliersAndYieldsDataProvider()
-    
-    init() {
-        
-    }
+    @StateObject var dataProvider = MultipliersAndYieldsDataProvider()
     
     var body: some View {
         NavigationView {
             VStack {
-                Picker(selection: $selectedTab, label: Text("")) {
-                    ForEach([Multiplier.dividendYield, .priceToEarnings], id: \.self) { multiplier in
-                        Text(multiplier.title)
-                    }
-                }.pickerStyle(SegmentedPickerStyle())
+//                Picker(selection: $selectedTab, label: Text("")) {
+//                    ForEach([Multiplier.dividendYield, .priceToEarnings], id: \.self) { multiplier in
+//                        Text(multiplier.title)
+//                    }
+//                }.pickerStyle(SegmentedPickerStyle())
                 List {
-                    if selectedTab == .priceToEarnings {
-                        priceToEarningsList
-                    } else if selectedTab == .dividendYield {
+//                    if selectedTab == .priceToEarnings {
+//                        priceToEarningsList
+//                    } else if selectedTab == .dividendYield {
                         dividendList
-                    } else {
+//                    } else {
                         
-                    }
+//                    }
                 }
+//                .listStyle(GroupedListStyle())
+                .navigationBarTitle("Dividend Yield", displayMode: .inline)
             }
-            .navigationBarTitle("P/E", displayMode: .inline)
-            .navigationBarItems(trailing: adjustForCAGRButton)
+            
+//            .navigationBarItems(trailing: adjustForCAGRButton)
         }
     }
     
@@ -49,21 +47,20 @@ struct MultipliersAndYieldsView: View {
             Section(header: Text("Фиксированный Дивиденд")) {
                 ForEach(dataProvider.dividendYields.fixedDividends) { yield in
                     HStack {
-                        Text(yield.name)
+                        Text(yield.ticker)
                         Spacer()
                         Text(String(format: "%.2f", yield.yield) + " %")
-                            .foregroundColor(yield.yield < ConstantsMacro.interestRateInRussia ? Color.red : .green)
+                            .foregroundColor(yield.yield < C.Macro.interestRateInRussia ? Color.red : .green)
                     }
                 }
-                
             }
             Section(header: Text("Переменный Дивиденд")) {
                 ForEach(dataProvider.dividendYields.variableDividends) { yield in
                     HStack {
-                        Text(yield.name)
+                        Text(yield.ticker)
                         Spacer()
                         Text(String(format: "%.2f", yield.yield) + " %")
-                            .foregroundColor(yield.yield < ConstantsMacro.interestRateInRussia ? Color.red : .green)
+                            .foregroundColor(yield.yield < C.Macro.interestRateInRussia ? Color.red : .green)
                     }
                 }
                 
@@ -71,32 +68,32 @@ struct MultipliersAndYieldsView: View {
         }
     }
     
-    var priceToEarningsList: some View {
-        return ForEach(dataProvider.getPERatios(adjusted: adjustData)) { multiplier in
-            HStack {
-                Text(multiplier.name)
-                Spacer()
-                Text(String(format: "%.2f", multiplier.ratio))
-                    .foregroundColor(multiplier.ratio < ConstantsMacro.interestRateYield ? Color.green : Color.red)
-            }
-        }
-    }
-    
-    //MARK: - Buttons
-    var adjustForCAGRButton: some View {
-        Toggle(isOn: $adjustData) {
-            Text("Adjust For Cagr")
-        }
-    }
-    
-    var adjustForPayoutRatioButton: some View {
-        Button(action: {self.adjustData.toggle()
-            
-        }) {
-            Text("Поправка На Рост")
-        }
-    }
-    
+//    var priceToEarningsList: some View {
+//        return ForEach(dataProvider.getPERatios(adjusted: adjustData)) { multiplier in
+//            HStack {
+//                Text(multiplier.ticker)
+//                Spacer()
+//                Text(String(format: "%.2f", multiplier.ratio))
+//                    .foregroundColor(multiplier.ratio < ConstantsMacro.interestRateYield ? Color.green : Color.red)
+//            }
+//        }
+//    }
+//
+//    //MARK: - Buttons
+//    var adjustForCAGRButton: some View {
+//        Toggle(isOn: $adjustData) {
+//            Text("Adjust For Cagr")
+//        }
+//    }
+//
+//    var adjustForPayoutRatioButton: some View {
+//        Button(action: {self.adjustData.toggle()
+//
+//        }) {
+//            Text("Поправка На Рост")
+//        }
+//    }
+//
     //    //MARK: - TableData
     //    var priceToEarningsData: some View {
     //        let priceToEarningsRatios = dataProvider.priceToEarningsRatios(adjustedForCAGR: self.adjustData)
@@ -116,11 +113,10 @@ struct MultipliersAndYieldsView: View {
 #if DEBUG
 struct EV_EBITDA_Previews: PreviewProvider {
     static var previews: some View {
-        ForEach([ColorScheme.light, .dark], id: \.self) { scheme in
             MultipliersAndYieldsView()
-                .colorScheme(scheme)
-                .previewLayout(.sizeThatFits)
-        }
+                .colorScheme(.dark)
+//                .previewLayout(.sizeThatFits)
+        
         
     }
 }

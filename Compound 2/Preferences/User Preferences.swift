@@ -8,10 +8,11 @@
 
 import Foundation
 
+///Contains methods for retrieving the user's local settings
 struct Preferences {
     
-    static func requiredFinancialIndicators() -> Set<Indicator> {
-        let requiredIndicators: Set<Indicator> = [.revenue, .OIBDA, .EBITDA, .netProfit, .freeCashFlow, .dividend, .debtToEBITDA]
+    static func requiredFinancialChartIndicators() -> [Indicator] {
+        let requiredIndicators: [Indicator] = [.revenue, .freeCashFlow, .dividend] // .OIBDA, .EBITDA, .netProfit, .freeCashFlow, .debtToEBITDA
         
         return requiredIndicators
     }
@@ -31,30 +32,12 @@ struct Preferences {
         }
     }
     
-    //MARK: - Picker view preferences
-    static let requiredStatisticsTabs = ["revenueGrowth", "dividendGrowth", "profitGrowth"]
-    
-    static let requiredMultupliersAndYieldsTabs = ["priceToEarnings", "evEBITDA", "dividendYield"]
-    
     static func requiredSegmentsInSegmentedCompanyView(for company: String) -> [CompanyInfoSegment] {
         var requiredSegments: [CompanyInfoSegment] = [.finances]
         
-        let ecosystemIsAvailable = FinancialDataManager.resourceIsAvailable(at: FinancialDataManager.ecosystemImagesSubdirectory,
-                                                                            named: company,
-                                                                            ofType: ".png")
-        if ecosystemIsAvailable { requiredSegments.append(.ecosystem) }
+        if ProductionDataManager.productionFiguresAreAvailable(for: company) { requiredSegments.append(.production) }
         
-        let productionFiguresAreAvailable = ProductionDataManager.productionFiguresAreAvailable(for: company)
-        if productionFiguresAreAvailable { requiredSegments.append(.production) }
-        
-        //let tradingViewLinkIsAvailable = FinancialDataManager.resourceIsAvailable(at: FinancialDataManager.tradingViewLinksSubdirectory,
-                                                                                  //named: "TradingViewLinks",
-                                                                                  //ofType: "plist")
-        //if tradingViewLinkIsAvailable { requiredSegments.append(.tradingView) }
-        
-        
-        
-        return requiredSegments.count == 1 ? [] : requiredSegments //if there's only 1 section, no need to display the Picker in SegmentedCompanyInfoView
+        return requiredSegments
     }
 }
 
@@ -65,17 +48,28 @@ extension Preferences {
         return UserDefaults.standard.value(forKey: forKey) as? String
     }
     
+    ///Checks if this is the very first launch of the app and sets all of the default settings
     static func setDefaultPreferencesOnFirstLaunch() {
-        if UserDefaults.isFirstLaunch() {
-            let sharedInstanceOfUserDefaults = UserDefaults.standard
-            
-            sharedInstanceOfUserDefaults.setValue(sortingByIndustryIsPreferred, forKey: preferredCompanySortingCriterionKey)
+        if isFirstLaunch {
+            let sharedUserDefaults = UserDefaults.standard
+            sharedUserDefaults.setValue(sortingByNameIsPreferred, forKey: preferredCompanySortingCriterionKey)
         }
     }
 }
 
+//MARK: - Convenience methods and properties
+extension Preferences {
+    static var isFirstLaunch: Bool { UserDefaults.isFirstLaunch() }
+}
+
 //MARK: - Constant Strings
 private extension Preferences {
+    
+    //MARK: - Picker view preferences
+    static let requiredStatisticsTabs = ["revenueGrowth", "dividendGrowth", "profitGrowth"]
+    
+    static let requiredMultupliersAndYieldsTabs = ["priceToEarnings", "evEBITDA", "dividendYield"]
+    
     static let preferredCompanySortingCriterionKey = "preferredCompanySortingcriterionKey"//Key
     static let sortingByIndustryIsPreferred = "sortingByIndustryIsPreferred"//Value 1
     static let sortingByNameIsPreferred = "sortingByNameIsPreferred"//Value 2

@@ -9,15 +9,15 @@
 import Foundation
 import UIKit
 
-enum DeviceType {
-    case iPhone
-    case iPad
-    case Mac
-    case Watch
-    
-    
-    static func currentDevice() {
-    }
-}
-
+//enum DeviceType {
+//    case iPhone
+//    case iPad
+//    case Mac
+//    case Watch
+//    
+//    
+//    static func currentDevice() {
+//    }
+//}
+//
 

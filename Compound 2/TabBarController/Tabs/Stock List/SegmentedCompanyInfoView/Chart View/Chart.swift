@@ -14,7 +14,7 @@ struct Chart: View {
     let indicator: Indicator // Financial indicator displayed at the top, like "Revenue" or "Net Profit"
     let grossGrowth: Int? //gross growth of a financial indicator, like "+26%"
     
-    var chartValues: [ChartValueWithGrowth] //the values that populate the chart
+    var chartValues: [ChartValue] //the values that populate the chart
     
     var body: some View {
         return VStack(alignment: .center) {
@@ -26,22 +26,22 @@ struct Chart: View {
             Divider()
             
             //                .padding(.horizontal, 5.0)
-        }.frame(height: ChartConstants.maxChartHeight, alignment: .bottomTrailing)
+        }.frame(height: C.Chart.maxChartHeight, alignment: .bottomTrailing)
         .listRowInsets(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
     }
     
-    init(for indicator: Indicator, grossGrowth: Int?, values: [ChartValueWithGrowth]) {
+    init(for indicator: Indicator, grossGrowth: Int?, values: [ChartValue]) {
         self.indicator = indicator
         self.grossGrowth = grossGrowth
         
-        let numberOfValuesToDrop = ChartConstants.numberOfChartsAllowedOnThisDevice() > values.count ? 0 : values.count - ChartConstants.numberOfChartsAllowedOnThisDevice()
+        let numberOfValuesToDrop = C.Chart.numberOfChartsAllowedOnThisDevice() > values.count ? 0 : values.count - C.Chart.numberOfChartsAllowedOnThisDevice()
         self.chartValues = Array(values.suffix(from: numberOfValuesToDrop))
     }
 }
 
 //MARK: - Initializers for production
 extension Chart {
-    init(produce: Indicator, grossGrowth: Int?, values: [ChartValueWithGrowth]) {
+    init(produce: Indicator, grossGrowth: Int?, values: [ChartValue]) {
         self.indicator = produce
         self.grossGrowth = grossGrowth
         self.chartValues = values
@@ -62,16 +62,19 @@ struct ChartPreview: PreviewProvider {
                   grossGrowth: 22,
                   values: [.init(year: 2014, value: 10, growth: nil), .init(year: 2015, value: 20, growth: 4), .init(year: 2016, value: 20, growth: 5), .init(year: 2017, value: 30, growth: 5), .init(year: 2018, value: 40, growth: -5)])
                 .previewLayout(.sizeThatFits)
-                .background(Color.purple)
+//                .background(Color.purple)
             
             Chart(for: .revenue,
                   grossGrowth: 20,
                   values: [.init(year: 2014, value: 10, growth: nil), .init(year: 2015, value: 20, growth: 4), .init(year: 2016, value: 20, growth: 5), .init(year: 2017, value: 30, growth: 5), .init(year: 2018, value: 40, growth: -5)])
-                    .previewLayout(.device)
+                    .previewLayout(.sizeThatFits)
         }
     }
 }
 #endif
+
+
+
 
 ////MARK: - Initializers
 //

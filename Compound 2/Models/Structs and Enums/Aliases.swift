@@ -10,13 +10,27 @@ import Foundation
 
 //MARK: Type Aliases
 
-struct ChartValueWithGrowth {
+struct ChartValue: Comparable {
+    static func < (lhs: ChartValue, rhs: ChartValue) -> Bool {
+        return lhs.value < rhs.value
+    }
+    
     let year: Int
     let value: Double
     let growth: Int?
 }
 
-typealias FinancialFigure = (year: Int, value: Double)
+struct FinancialFigure: Codable {
+    let year: Int
+    let value: Double
+    let currency: Currency?
+    
+    init(year: Int, value: Double, currency: Currency? = nil) {
+        self.year = year
+        self.value = value
+        self.currency = currency
+    }
+}
 
 typealias CompaniesWithMultipliersAdjustedForCAGR = [(name: String, multiplier: Double, cagr: Double)]
 

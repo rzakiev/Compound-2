@@ -20,7 +20,7 @@ class QuoteServiceTests: XCTestCase {
     
     func testPublicCompaniesHaveLinksForQuoteSource() {
         //Given
-        let companies = FinancialDataManager.listOfAllCompanies()
+        let companies = FinancialDataManager.listOfAllCompanies().map(\.name)
         //When
         for companyName in companies {
             let company = Company(name: companyName)
@@ -33,14 +33,14 @@ class QuoteServiceTests: XCTestCase {
     
     func testQuotesAreFetchableForAllPublicCompanies() {
         //Given
-        let companies = FinancialDataManager.listOfAllCompanies()
+        let companies = FinancialDataManager.listOfAllCompanies().map(\.name)
         let quoteExpectation = expectation(description: "Quote service is fetching a quote")
         
         for companyName in companies {
             let company = Company(name: companyName)
-            QuoteService.shared.getQuoteAsync(for: company.name) { quote in
+            MoexQuoteService.shared.getQuoteAsync(for: company.name) { quote in
 //                print("Company: \(quote.companyName), quote: \(quote.ordinaryShareQuote)")
-                XCTAssertNotNil(quote?.ordinaryShareQuote, "Ordinary price for \(companyName): \(quote?.ordinaryShareQuote ?? -1)")
+                XCTAssertNotNil(quote?.quote, "Ordinary price for \(companyName): \(quote?.quote ?? -1)")
             }
         }
         quoteExpectation.fulfill()
@@ -53,11 +53,10 @@ class QuoteServiceTests: XCTestCase {
         
         //When
         for company in companiesWithPreferredShares {
-            QuoteService.shared.getQuoteAsync(for: company) { quote in
+            MoexQuoteService.shared.getQuoteAsync(for: company) { quote in
                 //Then
-                XCTAssertNotNil(quote?.ordinaryShareQuote)
-                XCTAssertNotNil(quote?.preferredShareQuote)
-                print("\(company): ordinary share price:\(quote?.ordinaryShareQuote ?? -1); preferred share price:\(quote?.preferredShareQuote ?? -1)")
+                XCTAssertNotNil(quote?.quote)
+                print("\(company): ordinary share price:\(quote?.quote ?? -1)")
             }
         }
         
@@ -73,10 +72,10 @@ class QuoteServiceTests: XCTestCase {
         
         //When
         for company in companiesWithoutPreferredShares {
-            QuoteService.shared.getQuoteAsync(for: company) { quote in
+            MoexQuoteService.shared.getQuoteAsync(for: company) { quote in
                 //Then
-                XCTAssertNotNil(quote?.ordinaryShareQuote, "Did not fetch ordinary price for: \(company)")
-                XCTAssertNil(quote?.preferredShareQuote, "Did fetch preferred price for: \(company)")
+                XCTAssertNotNil(quote?.quote, "Did not fetch ordinary price for: \(company)")
+//                XCTAssertNil(quote?.preferredShareQuote, "Did fetch preferred price for: \(company)")
             }
         }
         
@@ -84,39 +83,39 @@ class QuoteServiceTests: XCTestCase {
         waitForExpectations(timeout: 20, handler: nil)
     }
     
-    func testMarketCapCalculationInCompanyAndInQuoteService() {
-        //Given
-        let quoteExpectation = expectation(description: "Quote service is fetching a quote")
-        
-        for companyName in ["Сбербанк", "Яндекс", "МТС", "АФК Система"] {
-            let company = Company(name: companyName)
-            let marketCap2 = MarketCapitalization.calculateMarketCapitalization(for: companyName)
-            
-            company.fetchMarketCapitalization { marketCap in
-                print("\(companyName) market cap1: \(marketCap), 2: \(marketCap2 ?? -1)")
-                XCTAssert(marketCap == marketCap2, "Market Cap 1: \(marketCap), 2: \(marketCap2 ?? -1)")
-            }
-        }
-        
-        quoteExpectation.fulfill()
-        waitForExpectations(timeout: 20, handler: nil)
-    }
+//    func testMarketCapCalculationInCompanyAndInQuoteService() {
+//        //Given
+//        let quoteExpectation = expectation(description: "Quote service is fetching a quote")
+//
+//        for companyName in ["Сбербанк", "Яндекс", "МТС", "АФК Система"] {
+//            let company = Company(name: companyName)
+//            let marketCap2 = MarketCapitalization.calculateMarketCapitalization(for: companyName)
+//
+//            company.fetchMarketCapitalization { marketCap in
+//                print("\(companyName) market cap1: \(marketCap), 2: \(marketCap2 ?? -1)")
+//                XCTAssert(marketCap == marketCap2, "Market Cap 1: \(marketCap), 2: \(marketCap2 ?? -1)")
+//            }
+//        }
+//
+//        quoteExpectation.fulfill()
+//        waitForExpectations(timeout: 20, handler: nil)
+//    }
     
     func test_QuoteService_OrdinaryQuoteFetchingSpeed() {
         self.measure {
-            let _ = QuoteService.shared.getQuote(for: "МТС")
+            let _ = MoexQuoteService.shared.getQuote(for: "МТС")
         }
     }
     
     func test_QuoteService_OrdinaryAndPreferredQuoteFetchingSpeed() {
         self.measure {
-            let _ = QuoteService.shared.getQuote(for: "Сбербанк")
+            let _ = MoexQuoteService.shared.getQuote(for: "Сбербанк")
         }
     }
     
     func test_QuoteService_FetchingAllQuotes() {
         self.measure {
-            let _ = QuoteService.shared.getAllMoexQuotes()
+            let _ = MoexQuoteService.shared.getAllMoexQuotes()
         }
     }
 }

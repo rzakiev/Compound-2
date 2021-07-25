@@ -22,9 +22,9 @@ struct Produce {
     let unitOfMeasurement: String?
     let values: [(year: Int, value: Double)]
     
-    func growthRateForChart() -> [ChartValueWithGrowth] {
+    func growthRateForChart() -> [ChartValue] {
         
-        var chartValues = [ChartValueWithGrowth]()
+        var chartValues = [ChartValue]()
         
         chartValues.append(.init(year: values[0].year, value: values[0].value, growth: nil)) // the first chart does not have the growth indicator
         for i in 1..<values.count {

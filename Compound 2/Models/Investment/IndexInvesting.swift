@@ -13,7 +13,7 @@ import Foundation
 struct IndexInvesting {
     
     @available (*, unavailable)
-    init() {  } 
+    init() {  }
     
     ///Returns an array of companies and the corresponding amount of money that must be invested in said company in order to mirror the index
     static func investInIndex(amountOfFunds availableFunds: Double) -> [(company: String, moneyToInvestInCompany: Double)] {

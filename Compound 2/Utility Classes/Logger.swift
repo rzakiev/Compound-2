@@ -10,15 +10,21 @@ import Foundation
 
 struct Logger {
     
+    private static let logOperations = false
+    
+    private static let logWarnings = false
+    
+    private static let logErrors = true
+    
     static func log(operation: String) {
-        print("@LoggerOPERATION: " + operation)
+        if logOperations { print("@LoggerOPERATION: " + operation) }
     }
     
     static func log(error: String) {
-        print("@LoggerERROR: " + error)
+        if logErrors { print("@LoggerERROR: " + error) }
     }
     
     static func log(warning: String) {
-        print("@LoggerWARNING: " + warning)
+        if logWarnings { print("@LoggerWARNING: " + warning) }
     }
 }

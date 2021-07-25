@@ -1,0 +1,270 @@
+{
+
+    "author": "NZT Rusfond",
+    "values": [
+    {
+        "ticker": "SBER",
+        "currency": "RUB",
+        "targetPrice": 350,
+        "risk": "low"
+    },
+    {
+        "ticker": "VTBR",
+        "currency": "RUB",
+        "targetPrice": 0.06,
+        "risk": "medium"
+    },
+    {
+        "ticker": "GAZP",
+        "currency": "RUB",
+        "targetPrice": 330,
+        "risk": "low"
+    },
+    {
+        "ticker": "ALRS",
+        "currency": "RUB",
+        "targetPrice": 130,
+        "risk": "low"
+    },
+    {
+        "ticker": "SIBN",
+        "currency": "RUB",
+        "targetPrice": 440,
+        "risk": "low"
+    },
+    {
+        "ticker": "LKOH",
+        "currency": "RUB",
+        "targetPrice": 7000,
+        "risk": "low"
+    },
+    {
+        "ticker": "OGKB",
+        "currency": "RUB",
+        "targetPrice": 0.9,
+        "risk": "low"
+    },
+    {
+        "ticker": "MTLRP",
+        "currency": "RUB",
+        "targetPrice": 150,
+        "risk": "high"
+    },
+    {
+        "ticker": "SLB",
+        "currency": "USD",
+        "targetPrice": 47,
+        "risk": "medium"
+    },
+    {
+        "ticker": "HAL",
+        "currency": "USD",
+        "targetPrice": 32,
+        "risk": "medium"
+    },
+    {
+        "ticker": "BKR",
+        "currency": "USD",
+        "targetPrice": 28,
+        "risk": "medium"
+    },
+    {
+        "ticker": "HP",
+        "currency": "USD",
+        "targetPrice": 45,
+        "risk": "medium"
+    },
+    {
+        "ticker": "NINE",
+        "currency": "USD",
+        "targetPrice": 6,
+        "risk": "high"
+    },
+    {
+        "ticker": "NOV",
+        "currency": "USD",
+        "targetPrice": 25,
+        "risk": "medium"
+    },
+    {
+        "ticker": "LBRT",
+        "currency": "USD",
+        "targetPrice": 20,
+        "risk": "medium"
+    },
+    {
+        "ticker": "KLXE",
+        "currency": "USD",
+        "targetPrice": 20,
+        "risk": "high"
+    },
+    {
+        "ticker": "FTI",
+        "currency": "USD",
+        "targetPrice": 13,
+        "risk": "medium"
+    },
+    {
+        "ticker": "HLX",
+        "currency": "USD",
+        "targetPrice": 9,
+        "risk": "medium"
+    },
+    {
+        "ticker": "HAL",
+        "currency": "USD",
+        "targetPrice": 32,
+        "risk": "medium"
+    },
+    {
+        "ticker": "OXY",
+        "currency": "USD",
+        "targetPrice": 43,
+        "risk": "medium"
+    },
+    {
+        "ticker": "AR",
+        "currency": "USD",
+        "targetPrice": 20,
+        "risk": "medium"
+    },
+    {
+        "ticker": "DK",
+        "currency": "USD",
+        "targetPrice": 35,
+        "risk": "medium"
+    },
+    {
+        "ticker": "COP",
+        "currency": "USD",
+        "targetPrice": 70,
+        "risk": "medium"
+    },
+    {
+        "ticker": "CLR",
+        "currency": "USD",
+        "targetPrice": 40,
+        "risk": "medium"
+    },
+    {
+        "ticker": "SU",
+        "currency": "USD",
+        "targetPrice": 35,
+        "risk": "medium"
+    },
+    {
+        "ticker": "PBF",
+        "currency": "USD",
+        "targetPrice": 30,
+        "risk": "medium"
+    },
+    {
+        "ticker": "HFC",
+        "currency": "USD",
+        "targetPrice": 51,
+        "risk": "medium"
+    },
+    {
+        "ticker": "PSX",
+        "currency": "USD",
+        "targetPrice": 110,
+        "risk": "medium"
+    },
+    {
+        "ticker": "OKE",
+        "currency": "USD",
+        "targetPrice": 75,
+        "risk": "medium"
+    },
+    {
+        "ticker": "AM",
+        "currency": "USD",
+        "targetPrice": 16,
+        "risk": "medium"
+    },
+    {
+        "ticker": "PAA",
+        "currency": "USD",
+        "targetPrice": 16,
+        "risk": "medium"
+    },
+    {
+        "ticker": "ET",
+        "currency": "USD",
+        "targetPrice": 12,
+        "risk": "medium"
+    },
+    {
+        "ticker": "NS",
+        "currency": "USD",
+        "targetPrice": 27.5,
+        "risk": "medium"
+    },
+    {
+        "ticker": "SABR",
+        "currency": "USD",
+        "targetPrice": 22,
+        "risk": "high"
+    },
+    {
+        "ticker": "SPR",
+        "currency": "USD",
+        "targetPrice": 60,
+        "risk": "medium"
+    },
+    {
+        "ticker": "LMT",
+        "currency": "USD",
+        "targetPrice": 500,
+        "risk": "medium"
+    },
+    {
+        "ticker": "NTNX",
+        "currency": "USD",
+        "targetPrice": 45,
+        "risk": "medium"
+    },
+    {
+        "ticker": "TWTR",
+        "currency": "USD",
+        "targetPrice": 75,
+        "risk": "medium"
+    },
+    {
+        "ticker": "BIDU",
+        "currency": "USD",
+        "targetPrice": 280,
+        "risk": "medium"
+    },
+    {
+        "ticker": "BABA",
+        "currency": "USD",
+        "targetPrice": 300,
+        "risk": "medium"
+    },
+    {
+        "ticker": "TME",
+        "currency": "USD",
+        "targetPrice": 26,
+        "risk": "medium"
+    },
+    {
+        "ticker": "WFC",
+        "currency": "USD",
+        "targetPrice": 60,
+        "risk": "medium"
+    },
+    {
+        "ticker": "NYMT",
+        "currency": "USD",
+        "targetPrice": 5,
+        "risk": "medium"
+    },
+    {
+        "ticker": "CVI",
+        "currency": "USD",
+        "targetPrice": 35,
+        "risk": "medium"
+    },
+    ]
+}

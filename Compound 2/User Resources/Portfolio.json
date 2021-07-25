@@ -1,0 +1,22 @@
+{
+    "positions": [
+    {
+        "ticker" : "ETLN",
+        "currency" : "RUB",
+        "quantity" : 19358,
+        "averageOpeningPrice" : 123.63
+    },
+    {
+        "ticker" : "GAZP",
+        "currency" : "RUB",
+        "quantity" : 4740,
+        "averageOpeningPrice" : 231.76
+    },
+    {
+        "ticker" : "PBF",
+        "currency" : "USD",
+        "quantity" : 4828,
+        "averageOpeningPrice" : 5.33
+    }
+    ]
+}

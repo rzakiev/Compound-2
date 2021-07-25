@@ -1,0 +1,2496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "FD5BE302-E09C-47A6-9388-E214A81E08E6"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9AA0251C-77AF-47C7-9854-CE674E362273"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/MOEX API/SecurityInfoService/SecurityInfoService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "fetchSecuritiesInfo()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C2CF5376-BBFD-4917-B2FF-6F1FAA21F3A8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/MOEX API/SecurityInfoService/SecurityInfoService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "fetchSecuritiesInfo()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3DE1BD62-0AE5-4E32-8C01-ECFE02AB506E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/MOEX API/SecurityInfoService/SecurityInfoService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "fetchSecuritiesInfo()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4BC2A4CB-0C9D-47BA-B714-DDDCCA0D8EE2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Models/Constants/Companies/ConstantTickerSymbols.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "585DFAC2-5560-48AE-B624-53943E4117F8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/MOEX API/Quote Service/QuoteService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7E15B967-963B-4951-A16C-50B009C4BBD5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/MOEX API/Quote Service/QuoteService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DD8FFA96-3087-456B-A615-A60C3B347E90"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/SmartlabDataService/SmartlabDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
+            landmarkName = "parseSmartlabCSV(string:ticker:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B9D7CC1A-9B0F-480B-BD21-32AF023577B0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/MOEX API/Dividend Service/DividendService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
+            landmarkName = "dividendYieldForAllCompanies(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "205CA22C-9D00-4C9A-8E93-54D4BA4CA017"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/MOEX API/Dividend Service/DividendService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "192"
+            endingLineNumber = "192"
+            landmarkName = "dividendYieldForAllCompanies(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9E7CB165-A92E-41FE-BE26-F0DE539FF6A8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/SmartlabDataService/SmartlabDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "227"
+            endingLineNumber = "227"
+            landmarkName = "SmartlabDataService"
+            landmarkType = "21">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1A3B00B4-9379-40ED-A62E-79FA8E350BC0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/SmartlabDataService/SmartlabDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "226"
+            endingLineNumber = "226"
+            landmarkName = "SmartlabDataService"
+            landmarkType = "21">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4A2E5A7F-2AD6-4960-982A-3B91EF47139B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/SmartlabDataService/SmartlabDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
+            landmarkName = "SmartlabDataService"
+            landmarkType = "21">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BA7B8E9F-946C-4EE5-9E6B-EF905A26F961"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/SmartlabDataService/SmartlabDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "209"
+            endingLineNumber = "209"
+            landmarkName = "SmartlabDataService"
+            landmarkType = "21">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B4882874-4918-4D6D-82FD-B581E3496EF7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/SmartlabDataService/SmartlabDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "211"
+            endingLineNumber = "211"
+            landmarkName = "SmartlabDataService"
+            landmarkType = "21">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D0C692CE-E2C9-4C29-83CA-82DB292F6081"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/MOEX API/Dividend Service/DividendService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
+            landmarkName = "dividendYieldForAllCompanies(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "20CB9EF4-9FA4-4D24-B7CE-AE50712B0F17"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/StartUpView/StartupView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9F27473F-14F5-42B2-9E73-6DD538799D00"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/StartUpView/StartupView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3C637AC1-FBED-4354-8E78-16C958B91150"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/Stock List/SegmentedCompanyInfoView/Chart View/ChartHStack.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "init(for:chartValues:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A54F4839-14D7-4865-9645-25818882D08F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/Stock List/SegmentedCompanyInfoView/Chart View/Chart Types/FinancialChartList.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "init(company:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A9CE40CF-19F3-4817-B6CC-945D244A150C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/MOEX API/Quote Service/QuoteService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "getAllQuotesAsync(completion:queue:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6CBB14DD-0FCA-4491-8841-4EDF42F77D26"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Data Managers/PortfolioDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "getManuallyAddedLocalPortfolio()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D436475C-33B4-455E-AAB7-8B57EC7DB444"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Data Managers/PortfolioDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "getManuallyAddedLocalPortfolio()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9E2F467B-9B21-4D7D-9AE9-B1D12B452A8D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Data Managers/PortfolioDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "getManuallyAddedLocalPortfolio()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D117AE40-9A41-496A-A703-7E3019046318"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Data Managers/PortfolioDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "getManuallyAddedLocalPortfolio()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CA0275FE-9BCB-4228-8D28-FAC726C11462"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/SmartlabDataService/SmartlabDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
+            landmarkName = "parseSmartlabCSV(string:ticker:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6BA6B211-90C9-454E-AA18-ECBE9DA5C4C7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/SmartlabDataService/SmartlabDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
+            landmarkName = "parseSmartlabCSV(string:ticker:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1E2A5AA0-CBFB-40B8-952F-B57C8D339CE8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/SmartlabDataService/SmartlabDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
+            landmarkName = "parseSmartlabCSV(string:ticker:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BF3CF0ED-1381-4FB5-8BDA-B92A743A47A7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/SmartlabDataService/SmartlabDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
+            landmarkName = "parseSmartlabCSV(string:ticker:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BF3CF0ED-1381-4FB5-8BDA-B92A743A47A7 - d1ed3e45aa12749d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Compound_2.SmartlabDataService.(parseSmartlabCSV in _7FE0CCB0586202BC3FB38BE47D8B4FF2)(string: Swift.String, ticker: Swift.String) -&gt; Swift.Optional&lt;Compound_2.SmartlabDataService.SmartlabData&gt;"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Production/Compound%202/Compound%202/Networking/SmartlabDataService/SmartlabDataService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "174"
+                  endingLineNumber = "174"
+                  offsetFromSymbolStart = "2367">
+               </Location>
+               <Location
+                  uuid = "BF3CF0ED-1381-4FB5-8BDA-B92A743A47A7 - 4bab9cbf1cdb4dea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Substring) -&gt; Swift.String in static Compound_2.SmartlabDataService.(parseSmartlabCSV in _7FE0CCB0586202BC3FB38BE47D8B4FF2)(string: Swift.String, ticker: Swift.String) -&gt; Swift.Optional&lt;Compound_2.SmartlabDataService.SmartlabData&gt;"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Production/Compound%202/Compound%202/Networking/SmartlabDataService/SmartlabDataService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "174"
+                  endingLineNumber = "174"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  uuid = "BF3CF0ED-1381-4FB5-8BDA-B92A743A47A7 - 2bf7c88b4983e7eb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (Swift.Substring) -&gt; Swift.String in static Compound_2.SmartlabDataService.(parseSmartlabCSV in _7FE0CCB0586202BC3FB38BE47D8B4FF2)(string: Swift.String, ticker: Swift.String) -&gt; Swift.Optional&lt;Compound_2.SmartlabDataService.SmartlabData&gt;"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Production/Compound%202/Compound%202/Networking/SmartlabDataService/SmartlabDataService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "174"
+                  endingLineNumber = "174"
+                  offsetFromSymbolStart = "35">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BC5B3B15-8B74-4D04-8462-722C69E67488"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/SmartlabDataService/SmartlabDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
+            landmarkName = "parse(row:years:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3F10CC8C-05E3-41CE-A43F-03F8583AA711"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/SmartlabDataService/SmartlabDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
+            landmarkName = "parse(row:years:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2F29B0F2-B835-4BB0-9018-6ED4A566528F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/SmartlabDataService/SmartlabDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
+            landmarkName = "parse(row:years:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6511F647-9447-4A5D-9077-404812E2D119"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/SmartlabDataService/SmartlabDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "202"
+            endingLineNumber = "202"
+            landmarkName = "parse(row:years:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "814E24E4-7149-413E-A59B-2822AF4235FB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/SmartlabDataService/SmartlabDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "fetchData(for:saveToLocalStorage:queue:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1EBFC353-0D84-459F-9E76-B11FC398DB80"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/SmartlabDataService/SmartlabDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
+            landmarkName = "parseSmartlabCSV(string:ticker:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "82F95476-93B5-4B18-89E3-ACB3B6F8DDD3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Models/Company/Company.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "init(name:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5AC4B97B-E074-4E2F-BF86-B186F99BE7F0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Models/Company/Company.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "init(name:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5AB38CAB-A1D2-4897-9C40-468F4F16D903"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/SmartlabDataService/SmartlabDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "getLocalSmartLabData(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0F2ECD69-7CA0-4340-8ECE-B4512A61791D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/SmartlabDataService/SmartlabDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "getLocalSmartLabData(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0ED1C3A7-DB07-4B1C-B4A2-9641E4229839"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/SmartlabDataService/SmartlabDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "getLocalSmartLabData(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "06CB319F-CD86-40BC-8362-8C5688C2D448"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/SmartlabDataService/SmartlabDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "getLocalSmartLabData(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5E32D18D-1034-4E24-A559-8F0811CB50E8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/SmartlabDataService/SmartlabDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "getLocalSmartLabData(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C9F8982E-3D01-4438-8D92-DDE3C156E11C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Models/Company/Company.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "init(name:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "424AB584-456B-45B8-B74D-E6D0F6525699"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/SmartlabDataService/SmartlabDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "getLocalSmartLabData(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7ABAC1CA-43F7-453E-8066-C7C24D5EFA12"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/SmartlabDataService/SmartlabDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
+            landmarkName = "parseSmartlabCSV(string:ticker:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D774AABB-FC1D-48E4-8FA2-3DE01215DDAB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/SmartlabDataService/SmartlabDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
+            landmarkName = "parseSmartlabCSV(string:ticker:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D07CE207-D4FF-44C3-ABD2-1034600ED343"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/SmartlabDataService/SmartlabDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
+            landmarkName = "parseSmartlabCSV(string:ticker:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "302C5DFA-BEF6-4799-9B3A-F96A19DE8A94"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/SmartlabDataService/SmartlabDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
+            landmarkName = "parseSmartlabCSV(string:ticker:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4478D22A-6264-43C6-81A1-8AB28333403B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Models/Company/Company.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "271"
+            endingLineNumber = "271"
+            landmarkName = "chartValues(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A0319DEA-638E-42A9-B45F-E47E4C4CAEA2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Models/Company/Company.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "285"
+            endingLineNumber = "285"
+            landmarkName = "chartValues(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2B4FD075-572E-430B-B5A1-2FE1F9A2542D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/MOEX API/Dividend Service/DividendService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "getLastYearDividend(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B76DC0CE-D1C0-4827-B89E-2CE1E73B7C5C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/MOEX API/Dividend Service/DividendService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "getLastYearDividend(for:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B76DC0CE-D1C0-4827-B89E-2CE1E73B7C5C - 327e9c588b596187"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Compound_2.DividendService.getLastYearDividend(for: Swift.String) -&gt; Swift.Optional&lt;Swift.Double&gt;"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Production/Compound%202/Compound%202/Networking/MOEX%20API/Dividend%20Service/DividendService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "1332">
+               </Location>
+               <Location
+                  uuid = "B76DC0CE-D1C0-4827-B89E-2CE1E73B7C5C - a6fb06f2c49913c2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Compound_2.FinancialFigure) -&gt; Swift.Bool in static Compound_2.DividendService.getLastYearDividend(for: Swift.String) -&gt; Swift.Optional&lt;Swift.Double&gt;"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Production/Compound%202/Compound%202/Networking/MOEX%20API/Dividend%20Service/DividendService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6A702DD5-C7E7-4894-9463-2C6A59D8F422"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/MOEX API/Dividend Service/DividendService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "getLastYearDividend(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5C650905-3298-4839-8539-BD073070841D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/MOEX API/Dividend Service/DividendService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "getLastYearDividend(for:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5C650905-3298-4839-8539-BD073070841D - 327e9c588b596187"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Compound_2.DividendService.getLastYearDividend(for: Swift.String) -&gt; Swift.Optional&lt;Swift.Double&gt;"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Production/Compound%202/Compound%202/Networking/MOEX%20API/Dividend%20Service/DividendService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "1332">
+               </Location>
+               <Location
+                  uuid = "5C650905-3298-4839-8539-BD073070841D - a6fb06f2c49913c2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Compound_2.FinancialFigure) -&gt; Swift.Bool in static Compound_2.DividendService.getLastYearDividend(for: Swift.String) -&gt; Swift.Optional&lt;Swift.Double&gt;"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Production/Compound%202/Compound%202/Networking/MOEX%20API/Dividend%20Service/DividendService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "58FC99A6-9049-4A0F-BBC9-B6C887D0E02A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/SmartlabDataService/SmartlabDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "fetchData(for:saveToLocalStorage:queue:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7EF32944-BFFB-4836-A10A-531F063834B2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/SmartlabDataService/SmartlabDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "fetchData(for:saveToLocalStorage:queue:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "49439197-8375-4AC5-B362-A2BDDABEEEC1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/SmartlabDataService/SmartlabDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
+            landmarkName = "parseSmartlabCSV(string:ticker:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D81837E5-11E2-450C-9DFF-0DF87E2F1861"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/MOEX API/Quote Service/QuoteService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "getQuoteAsync(for:completion:queue:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F3499E65-5627-42FC-9CFC-8AB3916F0963"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Models/Structs and Enums/Basic Types.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F1EDFD2C-5B7C-4745-B71A-A9356FA7D023"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Models/Structs and Enums/Basic Types.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "213"
+            endingLineNumber = "213"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CB814374-A71F-4841-9317-B5F6F9996542"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/MOEX API/Quote Service/MoexQuoteService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "getQuote(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A391DA5E-0A91-4F46-9EA8-319F83361E88"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Data Parsers/YahooDataParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "parseYahooJSON(_:for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "26C87A7B-D241-4D54-B070-2A1750671316"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Yahoo API/YahooQuoteService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "getYahooQuote(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9113AC41-5E22-4E2F-86B4-755E93DE02C9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Models/Structs and Enums/Basic Types.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F57FA1EE-A8E9-4568-9014-27C3A4AC6EBC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Local Data Managers/MoexDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "getDividendDataLocally(forTicker:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C871EE2C-CC39-4E47-BC31-F29F95CAACDE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Yahoo API/Yahoo Financial Data/YahooFinancialDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "fetchQuoteAndDividendHistorySync(for:startDate:endDate:interval:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "90970217-F962-46AB-AF53-1827E44A6950"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Yahoo API/Yahoo Financial Data/YahooFinancialDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "fetchQuoteAndDividendHistorySync(for:startDate:endDate:interval:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "624514AA-8E23-4A3C-A440-6F2C71BD0C51"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Yahoo API/Yahoo Financial Data/YahooFinancialDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "fetchQuoteAndDividendHistorySync(for:startDate:endDate:interval:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1BA56F50-775A-4DDD-B2A9-49FCB79E53CB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Yahoo API/Yahoo Financial Data/YahooDataParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "parseYahooQuoteAndDividendHistoryJSON(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9A8FC0B7-89BA-4C0F-BADE-1B514E4559BE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Yahoo API/Yahoo Financial Data/YahooDataParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "parseYahooQuoteAndDividendHistoryJSON(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EF0CF5CC-73A3-48A7-833F-14975E89D1BA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Yahoo API/Yahoo Financial Data/YahooDataParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "parseYahooQuoteAndDividendHistoryJSON(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7D349263-63DD-49E8-A2DA-FA6FD2A1282D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Yahoo API/Yahoo Financial Data/YahooDataParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "parseYahooQuoteJSON(_:for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1880CF32-8035-498B-9234-7A06B07DBC32"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Yahoo API/Yahoo Quote Service/YahooQuoteService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "updateQuotes(every:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9480BE83-B084-43C2-A95C-5860BB6047A6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Yahoo API/Yahoo Financial Data/YahooDataParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "parseYahooQuoteAndDividendHistoryJSON(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "411F6B0C-480C-4B22-8C98-8CE58058145A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Yahoo API/Yahoo Financial Data/YahooDataParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "parseYahooQuoteAndDividendHistoryJSON(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "62EF7671-294B-4830-B039-61A48EC39816"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Yahoo API/Yahoo Financial Data/YahooDataParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "parseYahooQuoteAndDividendHistoryJSON(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0FFD709F-9F3F-42F3-9E97-B213690EEB49"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Yahoo API/Yahoo Financial Data/YahooFinancialDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "fetchQuoteAndDividendHistorySync(for:startDate:endDate:interval:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "84A0A78C-54FE-4F83-8AD2-5156186D9E3D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Yahoo API/Yahoo Financial Data/YahooFinancialDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "fetchQuoteAndDividendHistorySync(for:startDate:endDate:interval:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D26F01AC-D615-4BB2-9A80-3E42181AFE8B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Yahoo API/Yahoo Financial Data/YahooFinancialDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "fetchQuoteAndDividendHistorySync(for:startDate:endDate:interval:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2FE45C5A-F985-4DA8-9960-02CFD8DD5216"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Yahoo API/Yahoo Financial Data/YahooFinancialDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "fetchQuoteAndDividendHistorySync(for:startDate:endDate:interval:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "47320C76-8FCC-4663-8221-EAA222032ADC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Yahoo API/Yahoo Financial Data/YahooDataParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "parseYahooQuoteAndDividendHistoryJSON(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E22DE9A9-EE96-43B9-AFA5-79BEA05E6509"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Yahoo API/Yahoo Financial Data/YahooFinancialDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "fetchQuoteAndDividendHistorySync(for:startDate:endDate:interval:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3666A93D-6C67-4227-8AE8-D51977AAE506"
+            shouldBeEnabled = "No"
+            condition = "ticker.contains(&quot;.ME&quot;)"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Yahoo API/Yahoo Financial Data/YahooFinancialDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "distillTicker(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "983DE668-A6CE-4964-8DD1-34E219C5B2A3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Yahoo API/Yahoo Financial Data/YahooFinancialDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "fetchQuoteAndDividendHistoryForAllCompaniesAsync()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C8EBF397-B0DA-4B96-8130-0F0C64FD376D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Yahoo API/Yahoo Financial Data/YahooFinancialDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "fetchQuoteAndDividendHistoryForAllCompaniesAsync()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C8EBF397-B0DA-4B96-8130-0F0C64FD376D - c4a7a9824e1680df"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (Swift.String) -&gt; () in static Compound_2.YahooFinancialDataService.fetchQuoteAndDividendHistoryForAllCompaniesAsync() -&gt; ()"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Production/Compound%202/Compound%202/Networking/Yahoo%20API/Yahoo%20Financial%20Data/YahooFinancialDataService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "C8EBF397-B0DA-4B96-8130-0F0C64FD376D - fae3c0396ed81df3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Compound_2.QuoteAndDividendHistory&gt;) -&gt; () in closure #3 (Swift.String) -&gt; () in static Compound_2.YahooFinancialDataService.fetchQuoteAndDividendHistoryForAllCompaniesAsync() -&gt; ()"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Production/Compound%202/Compound%202/Networking/Yahoo%20API/Yahoo%20Financial%20Data/YahooFinancialDataService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "803DCDC1-1617-420E-B190-19D360C490EF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/SmartlabDataService/SmartlabDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
+            landmarkName = "parse(row:years:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FF46DBE5-F93B-4444-9D80-3D84DE80C307"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideDataProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "init(fileName:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "42194587-5E96-4E18-B81E-A65F201BA6B7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideDataProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "init(fileName:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "97761F17-9F3D-419E-BE2C-78180E145A1C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/Stock List/SegmentedCompanyInfoView/Chart View/Chart Bar.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "chartBarColor(growth:biggerIsBetter:year:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "05E5D502-4CF2-4388-9627-5B12F6CCD041"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/Stock List/SegmentedCompanyInfoView/Chart View/Chart Bar.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "init(height:width:financialIndicator:growth:year:biggerIsBetter:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "87A38042-2AC8-46C3-B096-0A88E5AC54AE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/Stock List/SegmentedCompanyInfoView/Chart View/ChartHStack.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "init(for:chartValues:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "03F864FA-17A2-425E-84DD-1024E6CC4D86"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/Stock List/SegmentedCompanyInfoView/Chart View/Chart.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "init(for:grossGrowth:values:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2271AF49-0EBC-4230-BAD1-2AB93E585E8C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideNavigationView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "27AB0252-FBF6-41E4-9B15-E6B45A8DF823"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideNavigationView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DC49E3EB-E2B2-449C-A535-6A87CD053E0F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "init(fileName:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6467E4C9-2FA0-49F8-A789-C84F3EFD322A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideDataProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "init(fileName:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "080768F3-7145-444C-8A96-753AD46FABB0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideDataProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "init(fileName:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5B819880-E81F-444D-A8ED-EAB951154F28"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideChart.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "init(chartValues:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B65A732B-4255-4AF0-BBE2-5DDFF6A15311"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "init(fileName:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "75838AA9-6D48-4BA6-B83D-87DFF56CE944"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideDataProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "init(fileName:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CA48147B-0EA5-4428-97BF-BCFF3C251E70"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Yahoo API/Yahoo Quote Service/YahooQuoteService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
+            landmarkName = "getTickerList()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3F930A2B-61CE-4A15-825E-2AC79B42540C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Yahoo API/Yahoo Quote Service/YahooQuoteService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
+            landmarkName = "getTickerList()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BDEE63F6-A2AB-423F-B339-5E8B26341659"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Yahoo API/Yahoo Quote Service/YahooQuoteService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
+            landmarkName = "getTickerList()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E195C46D-D305-410F-82EF-692A304536DC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Yahoo API/Yahoo Quote Service/YahooQuoteService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
+            landmarkName = "getTickerList()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1E485E04-DF0C-4231-AA9D-F9ECF3EE51F5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Yahoo API/Yahoo Quote Service/YahooQuoteService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
+            landmarkName = "getTickerList()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "13172AEA-41EA-4C53-89FA-EE0CC8C17E98"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Yahoo API/Yahoo Quote Service/YahooQuoteService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
+            landmarkName = "getTickerList()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "76EC12A8-DEA8-4A65-803D-EED53B05E8C3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Utility Classes/ConvenientMethods.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "beautify()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "54FB1D21-15AC-4DC1-9C5D-61D645762343"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideDataProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "init(fileName:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "54FB1D21-15AC-4DC1-9C5D-61D645762343 - d3af7c4ee563afc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Compound_2.IdeasUpsideDataProvider.init(fileName: (name: Swift.String, format: Swift.String)) -&gt; Compound_2.IdeasUpsideDataProvider"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Production/Compound%202/Compound%202/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideDataProvider.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "3644">
+               </Location>
+               <Location
+                  uuid = "54FB1D21-15AC-4DC1-9C5D-61D645762343 - d3af7c4ee563afc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Compound_2.IdeasUpsideDataProvider.init(fileName: (name: Swift.String, format: Swift.String)) -&gt; Compound_2.IdeasUpsideDataProvider"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Production/Compound%202/Compound%202/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideDataProvider.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "3979">
+               </Location>
+               <Location
+                  uuid = "54FB1D21-15AC-4DC1-9C5D-61D645762343 - 4ef497fe74c16157"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Compound_2.SimpleQuote&gt;) -&gt; () in Compound_2.IdeasUpsideDataProvider.init(fileName: (name: Swift.String, format: Swift.String)) -&gt; Compound_2.IdeasUpsideDataProvider"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Production/Compound%202/Compound%202/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideDataProvider.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "178">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EEDE7B0F-4121-49F3-B478-7B7D33E9CF92"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Yahoo API/Yahoo Quote Service/YahooQuoteService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
+            landmarkName = "getTickerList()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EEDE7B0F-4121-49F3-B478-7B7D33E9CF92 - c8df0de2d356733c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Compound_2.YahooQuoteService.getTickerList() -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Production/Compound%202/Compound%202/Networking/Yahoo%20API/Yahoo%20Quote%20Service/YahooQuoteService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "176"
+                  endingLineNumber = "176"
+                  offsetFromSymbolStart = "5115">
+               </Location>
+               <Location
+                  uuid = "EEDE7B0F-4121-49F3-B478-7B7D33E9CF92 - 8e91c84a9d225930"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Compound_2.InvestmentIdea) -&gt; Swift.Bool in static Compound_2.YahooQuoteService.getTickerList() -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Production/Compound%202/Compound%202/Networking/Yahoo%20API/Yahoo%20Quote%20Service/YahooQuoteService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "176"
+                  endingLineNumber = "176"
+                  offsetFromSymbolStart = "18">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6CFA323E-5637-4628-952A-908DF62E37CC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Yahoo API/Yahoo Quote Service/YahooQuoteService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "getAllQuotesAsync(completion:queue:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "392F320D-E8BA-4CAC-886A-AF99659F53BF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Yahoo API/Yahoo Quote Service/YahooQuoteService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "getAllQuotesAsync(completion:queue:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "41A5BB89-9922-4C9C-B570-0BE196C2859C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Yahoo API/Yahoo Quote Service/YahooQuoteService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "getAllQuotesAsync(completion:queue:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "36979BFF-99C6-4419-B716-E7159105A1E2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "lowRiskAmericanStocks"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EB45F446-9DEC-4595-8A00-FCF09F10B880"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "lowRiskAmericanStocks"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "EB45F446-9DEC-4595-8A00-FCF09F10B880 - 276e92170f45c3cc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Compound_2.IdeasUpsideView.lowRiskAmericanStocks.getter : Swift.Array&lt;Compound_2.IdeasUpsideChart.UpsideChartValue&gt;"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Production/Compound%202/Compound%202/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "57">
+               </Location>
+               <Location
+                  uuid = "EB45F446-9DEC-4595-8A00-FCF09F10B880 - 9088d989b46fc040"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Compound_2.InvestmentIdea) -&gt; Swift.Bool in Compound_2.IdeasUpsideView.lowRiskAmericanStocks.getter : Swift.Array&lt;Compound_2.IdeasUpsideChart.UpsideChartValue&gt;"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Production/Compound%202/Compound%202/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "EB45F446-9DEC-4595-8A00-FCF09F10B880 - ef6c7332c10b469"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #2 (Compound_2.InvestmentIdea, Compound_2.InvestmentIdea) -&gt; Swift.Bool in implicit closure #1 (Compound_2.InvestmentIdea.Type) -&gt; (Compound_2.InvestmentIdea, Compound_2.InvestmentIdea) -&gt; Swift.Bool in Compound_2.IdeasUpsideView.lowRiskAmericanStocks.getter : Swift.Array&lt;Compound_2.IdeasUpsideChart.UpsideChartValue&gt;"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Production/Compound%202/Compound%202/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "185">
+               </Location>
+               <Location
+                  uuid = "EB45F446-9DEC-4595-8A00-FCF09F10B880 - 6a12998696bc4c56"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Compound_2.InvestmentIdea) -&gt; Compound_2.IdeasUpsideChart.UpsideChartValue in Compound_2.IdeasUpsideView.lowRiskAmericanStocks.getter : Swift.Array&lt;Compound_2.IdeasUpsideChart.UpsideChartValue&gt;"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Production/Compound%202/Compound%202/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "38">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A1FD931A-0E74-42DD-9D53-59C31AC86916"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "mediumRiskAmericanStocks"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "A1FD931A-0E74-42DD-9D53-59C31AC86916 - aab513fa0c3a148c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Compound_2.IdeasUpsideView.mediumRiskAmericanStocks.getter : Swift.Array&lt;Compound_2.IdeasUpsideChart.UpsideChartValue&gt;"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Production/Compound%202/Compound%202/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "57">
+               </Location>
+               <Location
+                  uuid = "A1FD931A-0E74-42DD-9D53-59C31AC86916 - ecf679269615150b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Compound_2.InvestmentIdea) -&gt; Swift.Bool in Compound_2.IdeasUpsideView.mediumRiskAmericanStocks.getter : Swift.Array&lt;Compound_2.IdeasUpsideChart.UpsideChartValue&gt;"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Production/Compound%202/Compound%202/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "A1FD931A-0E74-42DD-9D53-59C31AC86916 - ebd69000dbfbb9c4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #2 (Compound_2.InvestmentIdea, Compound_2.InvestmentIdea) -&gt; Swift.Bool in implicit closure #1 (Compound_2.InvestmentIdea.Type) -&gt; (Compound_2.InvestmentIdea, Compound_2.InvestmentIdea) -&gt; Swift.Bool in Compound_2.IdeasUpsideView.mediumRiskAmericanStocks.getter : Swift.Array&lt;Compound_2.IdeasUpsideChart.UpsideChartValue&gt;"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Production/Compound%202/Compound%202/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "185">
+               </Location>
+               <Location
+                  uuid = "A1FD931A-0E74-42DD-9D53-59C31AC86916 - e342fe56df56a6ac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Compound_2.InvestmentIdea) -&gt; Compound_2.IdeasUpsideChart.UpsideChartValue in Compound_2.IdeasUpsideView.mediumRiskAmericanStocks.getter : Swift.Array&lt;Compound_2.IdeasUpsideChart.UpsideChartValue&gt;"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Production/Compound%202/Compound%202/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "38">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0D6E7948-4A02-401A-964E-3D77D59AD539"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "highRiskAmericanStocks"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "0D6E7948-4A02-401A-964E-3D77D59AD539 - 7f94c6311635557e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Compound_2.IdeasUpsideView.highRiskAmericanStocks.getter : Swift.Array&lt;Compound_2.IdeasUpsideChart.UpsideChartValue&gt;"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Production/Compound%202/Compound%202/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "57">
+               </Location>
+               <Location
+                  uuid = "0D6E7948-4A02-401A-964E-3D77D59AD539 - 4e06d4e80a86dae6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Compound_2.InvestmentIdea) -&gt; Swift.Bool in Compound_2.IdeasUpsideView.highRiskAmericanStocks.getter : Swift.Array&lt;Compound_2.IdeasUpsideChart.UpsideChartValue&gt;"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Production/Compound%202/Compound%202/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "0D6E7948-4A02-401A-964E-3D77D59AD539 - 44f2d49680fd740d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #2 (Compound_2.InvestmentIdea, Compound_2.InvestmentIdea) -&gt; Swift.Bool in implicit closure #1 (Compound_2.InvestmentIdea.Type) -&gt; (Compound_2.InvestmentIdea, Compound_2.InvestmentIdea) -&gt; Swift.Bool in Compound_2.IdeasUpsideView.highRiskAmericanStocks.getter : Swift.Array&lt;Compound_2.IdeasUpsideChart.UpsideChartValue&gt;"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Production/Compound%202/Compound%202/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "185">
+               </Location>
+               <Location
+                  uuid = "0D6E7948-4A02-401A-964E-3D77D59AD539 - 742754182d17aa70"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Compound_2.InvestmentIdea) -&gt; Compound_2.IdeasUpsideChart.UpsideChartValue in Compound_2.IdeasUpsideView.highRiskAmericanStocks.getter : Swift.Array&lt;Compound_2.IdeasUpsideChart.UpsideChartValue&gt;"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Production/Compound%202/Compound%202/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "38">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E72E41E5-1071-477B-BEA4-22640AB77F29"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Yahoo API/Yahoo Quote Service/YahooQuoteService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "getYahooQuote(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9BF5568D-E47E-4BB1-B68F-71F5DD969A82"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/Yahoo API/Yahoo Quote Service/YahooQuoteService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "getYahooQuote(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3E03DDB8-E80C-4758-AE2E-45B7858F0274"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "americanStocksUpsideView"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8CF09D7A-0940-402C-9E9A-2D30AC8F3214"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "lowRiskAmericanStocks"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "8CF09D7A-0940-402C-9E9A-2D30AC8F3214 - 276e92170f45c20e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Compound_2.IdeasUpsideView.lowRiskAmericanStocks.getter : Swift.Array&lt;Compound_2.IdeasUpsideChart.UpsideChartValue&gt;"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Production/Compound%202/Compound%202/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "49">
+               </Location>
+               <Location
+                  uuid = "8CF09D7A-0940-402C-9E9A-2D30AC8F3214 - 9088d989b46fc182"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Compound_2.InvestmentIdea) -&gt; Swift.Bool in Compound_2.IdeasUpsideView.lowRiskAmericanStocks.getter : Swift.Array&lt;Compound_2.IdeasUpsideChart.UpsideChartValue&gt;"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Production/Compound%202/Compound%202/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "8CF09D7A-0940-402C-9E9A-2D30AC8F3214 - ef6c7332c10b5ab"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #2 (Compound_2.InvestmentIdea, Compound_2.InvestmentIdea) -&gt; Swift.Bool in implicit closure #1 (Compound_2.InvestmentIdea.Type) -&gt; (Compound_2.InvestmentIdea, Compound_2.InvestmentIdea) -&gt; Swift.Bool in Compound_2.IdeasUpsideView.lowRiskAmericanStocks.getter : Swift.Array&lt;Compound_2.IdeasUpsideChart.UpsideChartValue&gt;"
+                  moduleName = "Compound 2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robert/Library/Mobile%20Documents/com~apple~CloudDocs/Docs/Programming/Projects/Production/Compound%202/Compound%202/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "185">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F0BFB7CB-AC77-485A-AFDF-A8E458B3F862"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "mediumRiskAmericanStocks"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "85EA87DA-DF8A-41D9-B4EE-4825C52937AB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "highRiskAmericanStocks"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "888934C4-4943-4A12-9CF5-4FE3C494E6F0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideChart.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
+            landmarkName = "properUpsideText()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6D1AED0E-9CA7-452F-85C2-2D60B3F24EE4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/MOEX API/MoexDataParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "parseMoexJSON(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3ABAA8C8-6ECB-41AF-A37E-05E384A76F20"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/MOEX API/MoexDataParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "parseMoexJSON(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B2FE7ED8-801D-445B-B39F-590FFF22994E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/MOEX API/Quote Service/MoexQuoteService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "getAllQuotes(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3F82150E-6BEA-4F02-8253-53F6069CD817"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/MOEX API/Quote Service/Ex-MoexQuoteFetching.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "getAllMoexQuotes()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1127A82F-A60C-415C-B226-B27D92848D9C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Networking/MOEX API/Quote Service/Ex-MoexQuoteFetching.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "getAllMoexQuotes()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

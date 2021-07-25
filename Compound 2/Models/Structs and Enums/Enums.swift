@@ -23,14 +23,19 @@ enum CompetitionType {
 
 enum Indicator: Equatable, Hashable {
     
-    case undefined
+    
+    //MAIN ONES
     case revenue
+    case freeCashFlow
+    case dividend
+    
+    case custom(name: String)
+    
+    case debtToEBITDA
     case OIBDA
     case EBITDA
     case netProfit
-    case freeCashFlow
-    case debtToEBITDA
-    case dividend
+
     case commissionIncome
     case interestIncome
     case production(produceName: String, unitOfMeasurement: String?)
@@ -38,18 +43,28 @@ enum Indicator: Equatable, Hashable {
     var title: String {
         switch self {
         case .revenue: return "Выручка"
-        case .OIBDA: return "OIBDA"
-        case .EBITDA: return "EBITDA"
-        case .netProfit: return "Чистая прибыль"
-        case .freeCashFlow: return "Свободный денежный поток"
-        case .debtToEBITDA: return "Долг / EBITDA"
         case .dividend: return "Дивиденды"
-        case .commissionIncome: return "Комиссионные Доходы"
-        case .interestIncome: return "Процентные Доходы"
-        case .production(let produceName, let unitOfMeasurement): return produceName + " " + (unitOfMeasurement ?? "")
+        case .custom(let name): return name
         default: return "Unknow Indicator"
         }
     }
+    
+//    init(from smartlabIndicator: String) {
+//        
+//        for indicator in existingSmartlabIndicators {
+//            if smartlabIndicator.contains(indicator) {
+//                switch indicator {
+//                case "Див.выплата": self = .dividend
+//                case "Выручка": self = .revenue
+//                case "FCF, млрд руб": self = .freeCashFlow
+//                default:
+//                    self = .undefined
+//                }
+//            } else {
+//                self = .undefined
+//            }
+//        }
+//    }
 }
 
 //
@@ -158,4 +173,5 @@ enum TimePeriod {
     case minute
     case hour
     case day
+    case undefined
 }

@@ -7,36 +7,16 @@
 //
 
 import SwiftUI
-import Combine
 
 struct TestsView: View {
     
-//    private(set) var profits = [(company: String, profits: [FinancialFigure])]()
     
-    @State var dividends: Dividends = DividendService.fetchDividends(forTicker: "CHMF")!
+    
     
     var body: some View {
-        List {
-            ForEach(dividends[1].dividends!.indices, id: \.self) { index in
-                HStack {
-                    Text(self.dividends[1].dividends![index].registryclosedate)
-                    Spacer()
-                    Text(String(self.dividends[1].dividends![index].value))
-                }
-            }
-        }
-        //        Text("Hello")
+       Text("Cool stuff")
     }
     
-    init() {
-//        print(Date.currentDayOfTheWeek)
-//        print(Date.todayIsWeekend())
-        MoexDataManager.updateAllLocalDataFromMoex()
-    }
-    
-    func receivedQuotes(_ quotes: [Quote]) {
-        //        self.dividends = DividendCalculator.dividendsAsPartOfCapitalization(quotes: quotes)
-    }
 }
 
 #if DEBUG

@@ -34,10 +34,10 @@ class ProductionDataTests: XCTestCase {
     }
     
     func test_ProductionDataManager_companiesWithProductionFiguresAlsoHaveFinancialData() {
-        let companiesWithFinancialData = FinancialDataManager.listOfAllCompanies()
-        let companiesWithProductioData = ProductionDataManager.listOfAllCompanies()
+        let companiesWithFinancialData = FinancialDataManager.listOfAllCompanies().map(\.name)
+        let companiesWithProductionData = ProductionDataManager.listOfAllCompanies()
         
-        for company in companiesWithProductioData {
+        for company in companiesWithProductionData {
             XCTAssertNotNil(companiesWithFinancialData.first(where: {$0 == company}), "No financial data for company: \(company)")
         }
     }

@@ -18,13 +18,8 @@ struct DividendPayout {
 struct DividendPolicyVerifier {
     
     @available(*, unavailable)
-    init() {}
+    fileprivate init() {  }
     
-//    static func verifyDividendPayout(for company: String) -> [DividendPayout] {
-//        var payoutHistory = [DividendPayout]()
-//        guard var dividends = FinancialDataManager.getDividends(for: company) else { return [] }
-//        guard var dividendPerShare =
-//    }
 }
 
 

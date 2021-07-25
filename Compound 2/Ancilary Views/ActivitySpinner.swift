@@ -31,12 +31,17 @@ struct ActivitySpinner: View {
             .frame(width: width, height: height)
             .rotationEffect(Angle(degrees: rotateCircle ? 360 : 0))
             .animation(Animation.linear(duration: 1).repeatForever(autoreverses: false))
-            .onAppear(perform: { withAnimation { self.rotateCircle = true } })
+            .onAppear(perform: { startCircleSpin() })
+    }
+    
+    //MARK: - Closures
+    func startCircleSpin()  {
+        withAnimation { self.rotateCircle = true }
     }
 }
 
 #if DEBUG
-struct ActivitySpinnerPreview: PreviewProvider {
+private struct ActivitySpinnerPreview: PreviewProvider {
     static var previews: some View {
         ActivitySpinner(color: Color.orange)
     }

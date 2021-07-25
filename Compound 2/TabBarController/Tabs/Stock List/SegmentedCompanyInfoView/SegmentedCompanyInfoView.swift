@@ -11,7 +11,7 @@ import SwiftUI
 
 struct SegmentedCompanyInfoView: View {
     
-    let company: String
+    let company: CompanyName
     
     @State private var selectedSegment = 0
     
@@ -19,16 +19,19 @@ struct SegmentedCompanyInfoView: View {
     
     let financialChartsView: FinancialChartList
     
-    let ecosystemView: EcosystemMindMapView
+    let productionChartView: ProductionChartList?
     
-    let productionChartView: ProductionChartList
-    
-    init(company: String) {
+    init(company: CompanyName) {
         self.company = company
-        self.segments = Preferences.requiredSegmentsInSegmentedCompanyView(for: company)
-        self.financialChartsView = FinancialChartList(company: Company(name: self.company))
-        self.ecosystemView = EcosystemMindMapView(company: self.company)
-        self.productionChartView = ProductionChartList(company: company)
+        self.segments = Preferences.requiredSegmentsInSegmentedCompanyView(for: company.ticker)
+        self.financialChartsView = FinancialChartList(company: company)
+//        if let ticker = company.ticker {
+        self.productionChartView = ProductionChartList(company: company.ticker)
+//        } else {
+//            self.financialChartsView = nil
+//            self.productionChartView = nil
+//        }
+        
     }
     
     var body: some View {
@@ -46,7 +49,7 @@ struct SegmentedCompanyInfoView: View {
                 if segments[selectedSegment] == .finances {
                     financialChartsView
                 } else if segments[selectedSegment] == .ecosystem {
-                    ecosystemView
+//                    ecosystemView
                 } else if segments[selectedSegment] == .production {
                     productionChartView
                 }
@@ -55,9 +58,8 @@ struct SegmentedCompanyInfoView: View {
                 }
             }
         }
-        .navigationBarTitle(Text(company), displayMode: .inline)
+        .navigationBarTitle(Text(company.name), displayMode: .inline)
     }
-    
 }
 
 extension SegmentedCompanyInfoView {
@@ -70,11 +72,11 @@ extension SegmentedCompanyInfoView {
 struct SegmentedCompanyInfoViewPreview: PreviewProvider {
     static var previews: some View {
         Group {
-            SegmentedCompanyInfoView(company: "Сбербанк")
+            SegmentedCompanyInfoView(company: .init(name: "Сбербанк", ticker: "SBER"))
                 .previewLayout(.sizeThatFits)
             
             
-            SegmentedCompanyInfoView(company: "МТС")
+            SegmentedCompanyInfoView(company: .init(name: "МТС", ticker: "MTSS"))
                 .previewLayout(.device)            
         }
     }

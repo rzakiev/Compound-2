@@ -19,10 +19,10 @@ struct ChartBar: View {
     
     init(height: CGFloat, width: CGFloat, financialIndicator: Double, growth: Int, year: Int, biggerIsBetter: Bool = true) {
         self.height = height
-        self.width = width < ChartConstants.maxChartBarWidth ? width : ChartConstants.maxChartBarWidth //The width of the chart cannot exceed the maximum allowed chart width
+        self.width = width < C.Chart.maxChartBarWidth ? width : C.Chart.maxChartBarWidth //The width of the chart cannot exceed the maximum allowed chart width
         self.indicatorAndGrowthText = ChartBarText(financialIndicator: financialIndicator, growthIndicator: growth)
         self.year = year
-        self.backgroundColor = ChartBar.chartBarColor(growth: growth, biggerIsBetter: biggerIsBetter, year: year)
+        self.backgroundColor = ChartBar.chartBarColor(growth: growth, biggerIsBetter: biggerIsBetter, year: year )
     }
     
     //Mark: - View Body
@@ -31,7 +31,7 @@ struct ChartBar: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 10, style: .continuous)
                     .fill(backgroundColor)
-                    .frame(minWidth: 75, idealWidth: 80, maxWidth: ChartConstants.maxChartBarWidth, minHeight: nil, idealHeight: nil, maxHeight: height, alignment: .center)
+                    .frame(minWidth: 65, idealWidth: 70, maxWidth: C.Chart.maxChartBarWidth, minHeight: nil, idealHeight: nil, maxHeight: height, alignment: .center)
                 indicatorAndGrowthText
             }
             YearText(year: year)
@@ -40,9 +40,9 @@ struct ChartBar: View {
     
     static func chartBarColor(growth: Int, biggerIsBetter: Bool, year: Int) -> Color {
         
-        if year > Date.lastYear {
-            return Color.gray //Forecasts should be colored with the gray color
-        }
+//        if year > Date.lastYear {
+//            return Color.gray //Forecasts should be colored with the gray color
+//        }
         
         if biggerIsBetter {
             return growth >= 0 ? Color.green : Color.red
@@ -60,7 +60,9 @@ struct ChartBarText: View {
     let growthIndicator: Int
     
     var body: some View {
-        let indicatorText = String(format:"%.1f", financialIndicator)
+        let indicatorText: String
+        if financialIndicator > 1 { indicatorText = financialIndicator.beautify() }
+        else { indicatorText = String(financialIndicator) }
         
         let growthText = properGrowthText()
         
@@ -85,7 +87,8 @@ struct ChartBarText: View {
 struct YearText: View {
     let year: Int
     var body: Text {
-        Text(year > Date.lastYear ? String(year) + "П" : String(year))
+        Text(String(year))
+//        Text(year > Date.lastYear ? String(year) + "П" : String(year))
     }
     
 //    func makeProperStringForYearText() -> String {

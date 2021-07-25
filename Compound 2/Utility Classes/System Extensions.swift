@@ -7,9 +7,13 @@
 //
 
 import Foundation
+import SwiftUI
 
 extension UserDefaults {
+    
+    ///Checks if this is the very first launch of the app
     static func isFirstLaunch() -> Bool {
+        
         let alreadyLaunchedBefore = UserDefaults.standard.bool(forKey: "alreadyLaunchedBefore")
         
         if alreadyLaunchedBefore {
@@ -21,8 +25,6 @@ extension UserDefaults {
     }
 }
 
-
-
 extension Array {
     subscript(safe index: Index) -> Element? {
         guard index >= 0 && index < self.count else {
@@ -30,4 +32,10 @@ extension Array {
         }
         return self[index]
     }
+}
+
+
+
+extension Dictionary where Value: Equatable {
+    func someKey(forValue value: Value) -> Key? { first(where: { $1 == value })?.key }
 }
