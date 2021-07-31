@@ -70,6 +70,7 @@ struct Statistics {
 //extension Statistics {
 //}
 
+/*
 extension Statistics {
     
     static func grossGrowthRate(for company: String, for indicator: Indicator, numberOfYears: Int = 5) -> Int? {
@@ -91,3 +92,4 @@ extension Statistics {
         return companiesWithTheirGrossGrowthRate.sorted(by: {$0.grossGrowthRate > $1.grossGrowthRate})
     }
 }
+*/

@@ -12,12 +12,16 @@ import SwiftUI
 ///Houses all constants in the app
 struct C {
     //MARK: - Directory
-    static let userDataDirectory = "User Resources/"
+    static let userDataDirectory = "/User Resources/"
     static let corporateDataDirectory = "CorporateResources/"
     
     ///Variables related to the investment ideas upside view
     struct UpsidesVariables {
         static let upsidesDirectory = "/OtherResources/Upsides/"
+    }
+    
+    struct PortfolioReturnsVariables {
+        static let returnDirectory = C.userDataDirectory + "PortfolioReturns/"
     }
 }
 
@@ -51,7 +55,7 @@ extension C {
 
 extension C {
     struct Tickers {
-        private static let tickerSymbols: [String: String] = [
+        private static let russianTickerSymbols: [String: String] = [
             "GMKN" : "Норильский Никель",
             "YNDX" : "Яндекс",
             "RTKM" : "Ростелеком",
@@ -97,19 +101,19 @@ extension C {
         
         ///Returns a beautiful name of the company whose ticker symbol is provided
         static func companyName(for ticker: String) -> String? {
-            return tickerSymbols[ticker]
+            return russianTickerSymbols[ticker]
         }
         
         static func ticker(for company: String) -> String? {
-            return  tickerSymbols.someKey(forValue: company)
+            return  russianTickerSymbols.someKey(forValue: company)
         }
         
         static func allTickerSymbols() -> [String] {
-            return tickerSymbols.map(\.key)
+            return russianTickerSymbols.map(\.key)
         }
         
         static func allTickerSymbolsWithNames() -> [String:String] {
-            return tickerSymbols
+            return russianTickerSymbols
         }
         
         static func allTickerSymbolsWithNames() -> [CompanyName] {
@@ -164,5 +168,6 @@ extension C {
 extension C {
     struct PolygonAPI {
         static let key = "kATfwcnbHHRPIxQgOKRF0iFYT0hWx62i"
+        static let baseURL = "https://api.polygon.io/v2/"
     }
 }

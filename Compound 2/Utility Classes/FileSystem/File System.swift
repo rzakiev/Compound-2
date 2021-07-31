@@ -28,19 +28,19 @@ extension FileManager {
                 catch { Logger.log(error: "Unable to create a subdirectory \(subdirectory) \(error)") }
             }
         }
-
+        
         guard let url = try? FileManager.default.url(for: .applicationSupportDirectory,
-                                                     in: .userDomainMask,
-                                                     appropriateFor: nil,
-                                                     create: true).appendingPathComponent(subdirectory + "\(name)\(format)")
-            else {
-                Logger.log(error: "Unable to generate a URL to save a the file named \(name)")
-                return
+                                                        in: .userDomainMask,
+                                                        appropriateFor: nil,
+                                                        create: true).appendingPathComponent(subdirectory + "\(name)\(format)")
+        else {
+            Logger.log(error: "Unable to generate a URL to save a the file named \(name)")
+            return
         }
         
         do { try content.write(to: url) }
         catch { Logger.log(error: "Unable to save the data to the specified URL \(url)") }
-
+        
         
         Logger.log(operation: "Saved a file named \(name) with extension \(format) in directory: applicationSupport/\(subdirectory) ")
     }
@@ -52,9 +52,9 @@ extension FileManager {
     ///- Parameter extension: The extension of the file. The default value is `.json`
     static func getFileFromApplicationSupport(in subdirectory: String, name: String, format: String = ".json") -> Data? {
         guard let url = try? FileManager.default.url(for: .applicationSupportDirectory,
-                                                     in: .userDomainMask,
-                                                     appropriateFor: nil,
-                                                     create: true).appendingPathComponent(subdirectory + name + format ) else { return nil }
+                                                        in: .userDomainMask,
+                                                        appropriateFor: nil,
+                                                        create: true).appendingPathComponent(subdirectory + name + format ) else { return nil }
         
         guard (try? url.checkResourceIsReachable()) == true else { return nil }
         
@@ -68,24 +68,60 @@ extension FileManager {
 extension FileManager {
     ///Returns data stored in the User Resources folder of the main bundle
     static func getFileInUserDirectory(titled title: String, withExtension format: String) -> Data? {
-
+        
         guard let jsonPath = Bundle.main.path(forResource: title, ofType: format,
                                               inDirectory: C.userDataDirectory)
         else {
             Logger.log(error: "Couldn't load the file titled \(title) with extension \(format) from the user directory")
             return nil
         }
-
+        
         guard let jsonData = FileManager.default.contents(atPath: jsonPath) else {
             Logger.log(error: "Couldn't load the data from the path: \(jsonPath)")
             return nil
         }
-
+        
         return jsonData
     }
 }
 
-
+extension FileManager {
+    static func getFilesInMainBundle(inDirectory directory: String) -> [Data] {
+        
+        guard let files = try? FileManager.default.contentsOfDirectory(atPath:  Bundle.main.resourcePath! + directory) else {
+            Logger.log(error: "Unable to enumerate files in the following directory: \(directory)")
+            return []
+        }
+        
+        var fileNames: [(name: String, format: String)] = []
+        for fileName in files {
+            let splitName = fileName.split(separator: ".")
+            let name = String(splitName[0])
+            let format = String(splitName[1])
+            fileNames.append((name, format))
+        }
+        
+        var filesData = [Data]()
+        
+        for fileName in fileNames {
+            
+            guard let jsonPath = Bundle.main.path(forResource: fileName.name, ofType: fileName.format, inDirectory: directory) else {
+                Logger.log(error: "No path for \(fileName.name).\(fileName.format) in directory: \(directory)")
+                return []
+            }
+            
+            guard let fileData = FileManager.default.contents(atPath: jsonPath) else {
+                Logger.log(error: "Unable to get the contents of ")
+                return []
+            }
+            
+            filesData.append(fileData)
+            
+        }
+        
+        return filesData
+    }
+}
 
 extension FileManager {
     enum DataSavingError: Error {

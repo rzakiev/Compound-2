@@ -35,6 +35,7 @@ extension Date {
         return dateFormatter.string(from: Date())
     }
     
+    
     static func convertStringToDate(date: String, format: String = "yy-MM-dd") -> Date? {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = format
@@ -103,4 +104,8 @@ extension Date {
     static func convertTimestampsToDate(_ timestamp: Double) -> Date {
         return Date(timeIntervalSince1970: timestamp)
     }
+}
+
+struct DateFormats {
+    static let ddMMyyy = "dd/MM/yyyy"
 }

@@ -237,3 +237,4 @@ struct Dividend: Codable {
     let currency: Currency?
     let date: Double //UNIX timestamp
 }
+

@@ -111,7 +111,7 @@ enum Currency: String, Codable {
         }
     }
     
-    func sign() -> String {
+    var sign: String {
         switch self {
         case .Rouble: return "₽"
         case .USD: return "$"

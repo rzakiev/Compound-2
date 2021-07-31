@@ -27,17 +27,19 @@ struct Compound2App: App {
 extension Compound2App {
     ///Performs the required operation during every launch of the app
     func performNecessaryOperationsOnLaunch() {
+        
         performNecessaryOperationsOnFirstLaunch()
         
-        async { await MoexQuoteService.shared.getAllQuotes() }
+        Task { await MoexQuoteService.shared.getAllQuotes() }
         
-        async { await MoexQuoteService.shared.getAllQuotes() }
+        Task { await SmartlabDataService.fetchDataForAllTickers() }
         
         MoexDataManager.updateAllLocalDataFromMoex()
         YahooQuoteService.shared.getAllQuotesAsync()
 //        YahooFinancialDataService.fetchQuoteAndDividendHistoryForAllCompaniesAsync()
 //        YahooFinancialDataService.fetchQuoteAndDividendHistoryAsync(for: "PBF", startDate: "04/01/2010", endDate: "05/05/2021", interval: .oneMonth) {_ in }
     }
+    
     ///Performs the required operation only during the first launch of the app
     func performNecessaryOperationsOnFirstLaunch() {
         Preferences.setDefaultPreferencesOnFirstLaunch()
@@ -47,5 +49,6 @@ extension Compound2App {
 //MARK: - Just some test stuff
 extension Compound2App {
     func testStuff() {
+        print(PolygonDataService.TimeFrame.annual.rawValue)
     }
 }

@@ -25,8 +25,10 @@ struct CompoundRootTabBarController: View {
 //            #if DEBUG
             IdeasUpsideNavigationView()
                 .tabItem { Image(systemName: "arrow.up.right"); Text("Идеи") }
-            TestsView()
-                .tabItem { Image(systemName: "gearshape"); Text("Тесты") }
+            PortfolioReturnsView()
+                .modifier(RootTabBarControllerModifier(backgroundImage: "", tabName: "Доходность"))
+//            TestsView()
+//                .tabItem { Image(systemName: "gearshape"); Text("Тесты") }
 //                .modifier(RootTabBarControllerModifier(backgroundImage: "Stocks Tab Bar Icons", tabName: "Тесты")) //test tab
 //            #endif
         }//.fullScreenCover(isPresented: $displayStartUpView) { StartupView(displayStartupView: $displayStartUpView) }

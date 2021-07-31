@@ -150,7 +150,7 @@ struct UpsideChartCenterView: View {
     
     var body: some View {
         let indicatorText: String
-        indicatorText = currency.sign() + targetPrice.beautify()
+        indicatorText = currency.sign + targetPrice.beautify()
         
         let growthText = properUpsideText()
         

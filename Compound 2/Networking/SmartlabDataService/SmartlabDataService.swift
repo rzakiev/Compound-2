@@ -19,39 +19,52 @@ struct SmartlabDataService {@available (*, unavailable)
 //MARK: - Interface
 extension SmartlabDataService {
     
-    static func fetchDataForAllTickers() async {
+    ///Asynchronously fetches smartlab data for all Russian ticker symbols
+    @discardableResult
+    static func fetchDataForAllTickers() async -> [SmartlabData] {
         let allTickers = C.Tickers.allTickerSymbols()
-        await fetchData(for: allTickers)
+        return await fetchData(for: allTickers)
     }
     
-    ///Asynchronously fetch smartlab data for a collection of ticker symbols
-    static func fetchData(for tickers: [String], saveToLocalStorage: Bool = true) async {
+    ///Asynchronously fetches smartlab data for a collection of ticker symbols
+    @discardableResult
+    static func fetchData(for ticker: String, saveToLocalStorage: Bool = true) async -> SmartlabData? {
+        return await fetchData(for: [ticker]).first
+    }
+    
+    ///Asynchronously fetches smartlab data for a collection of ticker symbols
+    @discardableResult
+    static func fetchData(for tickers: [String], saveToLocalStorage: Bool = true) async -> [SmartlabData] {
+        
+        var fetchedData = [SmartlabData]()
         
         for ticker in tickers {
             
             guard let dataSourceURL = URL(string: dataDownloadURL(for: ticker)) else {
                 Logger.log(error: "Unable to instantiate an instance of URL using \(dataDownloadURL(for: ticker))")
-                return
+                continue
             }
             
             guard let (downloadedCSV, _) = try? await URLSession.shared.data(from: dataSourceURL) else {
                 Logger.log(error: "Unable to download the CSV file for \(ticker)")
-                return
+                continue
             }
             
             let csvDataAsString = String(decoding: downloadedCSV, as: UTF8.self)
             
             guard let parsedData = parseSmartlabCSV(string: csvDataAsString, ticker: ticker) else {
                 Logger.log(error: "\(Self.self) Couldn't parse the CSV file for \(ticker)")
-                return
+                continue
             }
             
             if saveToLocalStorage {
                 saveSmartLabDataLocally(parsedData, for: ticker)
             }
             
+            fetchedData.append(parsedData)
         }
         
+        return fetchedData
     }
 }
 
@@ -132,7 +145,7 @@ private extension SmartlabDataService {
     private static func parseSmartlabCSV(string: String, ticker: String) -> SmartlabData? {
         
         //Parsing the csv and splitting it into arrays
-        let csvRows = string.split(separator: "\n").map({ $0.split(separator: ";") })
+        let csvRows = string.split(separator: "\n").map({ $0.split(separator: ";", omittingEmptySubsequences: false) })
         
         guard let headers = csvRows[safe: 0], headers.count > 0 else {
             Logger.log(error: "No headers in the CSV file")
@@ -141,24 +154,17 @@ private extension SmartlabDataService {
         
         var values = [String: [FinancialFigure]]()
         
-        for row in csvRows {
+        for i in 1..<csvRows.count {
             
-            guard let uncastIndicator = row[safe: 0] else { continue }
+            guard let uncastIndicator = csvRows[i][safe: 0] else { continue } //Name of the indicator (e.g. FCF)
             let currentIndicator = String(uncastIndicator)
             
-            let indicatorIsRequired: Bool = ["\"Выручка, млрд руб\"", "\"Див.выплата, млрд руб\""].contains(currentIndicator)
-            
+            let indicatorIsRequired: Bool = indicatorIsRequired(currentIndicator)
             if indicatorIsRequired == false { continue }
             
+            let parsedRow = parse(row: csvRows[i].map({ String($0) }), years: headers.map({ String($0) }))
             
-            let rowsToParse =  Array(row.suffix(6).map({ String($0) }))
-            let yearsToParse = Array(headers.suffix(6).map({ String($0) }))
-            
-            let extraItemsInRow = rowsToParse.count - yearsToParse.count
-            
-            let figures = parse(row: rowsToParse.dropLast(extraItemsInRow), years: yearsToParse)
-            
-            values[currentIndicator] = figures
+            values[currentIndicator] = parsedRow
         }
         
         return SmartlabData(ticker: ticker, values: values)
@@ -168,25 +174,30 @@ private extension SmartlabDataService {
         
         var figures = [FinancialFigure]()
         
-        guard row.count >= years.count + 1 else {
-            Logger.log(error: "Mismatch between the rows and the years count")
+        guard row.count >= years.count else {
+            Logger.log(error: "Mismatch between the rows and the years count: years: \(years.count), rows: \(row.count)")
             return []
         }
         
         for i in 0..<row.count {
-            guard let year = Int(years[i].replacingOccurrences(of: ",", with: ".")) else {
-                Logger.log(error: "Unable to pass the year \(years[i])")
+            guard let year = Int(years[i]) else { //.replacingOccurrences(of: ",", with: ".")
+                Logger.log(error: "Unable to parse the year \(years[i])")
                 continue
             }
             
             guard let value = Double(row[i].replacingOccurrences(of: ",", with: ".")) else {
-                Logger.log(error: "Unable to pass the value \(row[i])")
+                Logger.log(error: "Unable to parse the value \(row[i])")
                 continue
             }
-            figures.append(.init(year: year, value: value))
+            figures.append(.init(year: year, value: value, currency: .Rouble))
         }
         
         return figures
+    }
+    
+    private static func indicatorIsRequired(_ indicator: String) -> Bool {
+        let indicatorsWeWantToParse = ["\"Выручка, млрд руб\"", "\"Див.выплата, млрд руб\""]
+        return indicatorsWeWantToParse.contains(indicator)
     }
 }
 

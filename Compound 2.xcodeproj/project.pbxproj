@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E106FDBD26AD9525003C6509 /* PortfolioReturnsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E106FDBC26AD9525003C6509 /* PortfolioReturnsView.swift */; };
+		E106FDBF26AD9637003C6509 /* PortfolioReturnTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E106FDBE26AD9637003C6509 /* PortfolioReturnTableView.swift */; };
 		E113987623E3000500715DB5 /* Portfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = E113987523E3000500715DB5 /* Portfolio.swift */; };
 		E113987823E3002B00715DB5 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = E113987723E3002B00715DB5 /* Position.swift */; };
 		E113987B23E302A300715DB5 /* Position_Positive_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E113987A23E302A300715DB5 /* Position_Positive_Tests.swift */; };
@@ -61,6 +63,7 @@
 		E167AD59235BCBFC00C88A9C /* GrossRevenueGrowthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E167AD58235BCBFC00C88A9C /* GrossRevenueGrowthView.swift */; };
 		E167AD5B235BCCE000C88A9C /* GrossProfitGrowthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E167AD5A235BCCE000C88A9C /* GrossProfitGrowthView.swift */; };
 		E167D6FD2306222E00CAF357 /* CompoundRootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E167D6FC2306222E00CAF357 /* CompoundRootTabBarController.swift */; };
+		E1693DB426B5713200090D91 /* PolygonAPIEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1693DB326B5713200090D91 /* PolygonAPIEntities.swift */; };
 		E16AFC5C2563BE1C0083FEF0 /* DividendCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16AFC5B2563BE1C0083FEF0 /* DividendCalendar.swift */; };
 		E16C46922644050300349BC0 /* YahooFinancialDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16C46912644050300349BC0 /* YahooFinancialDataService.swift */; };
 		E16F353A2552AECE0078A98D /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16F35392552AECE0078A98D /* PieChartView.swift */; };
@@ -68,6 +71,7 @@
 		E177FEA226498E5D00B30946 /* IdeasUpsideChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E177FEA126498E5D00B30946 /* IdeasUpsideChart.swift */; };
 		E178703A234410B3006EDED0 /* QuoteServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1787039234410B3006EDED0 /* QuoteServiceTests.swift */; };
 		E17EC93626AD73490029D117 /* PortfolioReturnCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17EC93526AD73490029D117 /* PortfolioReturnCalculator.swift */; };
+		E17EC93826AD76BE0029D117 /* PortfolioReturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17EC93726AD76BE0029D117 /* PortfolioReturn.swift */; };
 		E17FCEEF25E436DF0073AA05 /* Compound2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17FCEEE25E436DF0073AA05 /* Compound2App.swift */; };
 		E18178CF24A3B3A9004271B3 /* PortfolioPieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18178CE24A3B3A9004271B3 /* PortfolioPieChartView.swift */; };
 		E1867D0523A114840008201E /* System Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1867D0423A114840008201E /* System Extensions.swift */; };
@@ -95,7 +99,7 @@
 		E1C4A624243A882C004592E5 /* ConversationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C4A623243A882C004592E5 /* ConversationMessage.swift */; };
 		E1D2996C253C5FC5008553A5 /* DividendServiceEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D2996B253C5FC5008553A5 /* DividendServiceEntities.swift */; };
 		E1D88F092312C14C004173AB /* StockListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D88F082312C14C004173AB /* StockListCell.swift */; };
-		E1DAF45E2694E99300E8A6F9 /* PolygonAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DAF45D2694E99300E8A6F9 /* PolygonAPI.swift */; };
+		E1DAF45E2694E99300E8A6F9 /* PolygonDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DAF45D2694E99300E8A6F9 /* PolygonDataService.swift */; };
 		E1DEF7BD24A3BB0C00BA58EE /* PieChartColorGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DEF7BC24A3BB0C00BA58EE /* PieChartColorGenerator.swift */; };
 		E1E597672441E0D6004E8718 /* MarketCapitalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E597662441E0D6004E8718 /* MarketCapitalization.swift */; };
 		E1E7E9802667B5070049C2F7 /* IdeasUpsideNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E7E97F2667B5070049C2F7 /* IdeasUpsideNavigationView.swift */; };
@@ -139,6 +143,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E106FDBC26AD9525003C6509 /* PortfolioReturnsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioReturnsView.swift; sourceTree = "<group>"; };
+		E106FDBE26AD9637003C6509 /* PortfolioReturnTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioReturnTableView.swift; sourceTree = "<group>"; };
 		E113987523E3000500715DB5 /* Portfolio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Portfolio.swift; sourceTree = "<group>"; };
 		E113987723E3002B00715DB5 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		E113987A23E302A300715DB5 /* Position_Positive_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position_Positive_Tests.swift; sourceTree = "<group>"; };
@@ -193,6 +199,7 @@
 		E167AD58235BCBFC00C88A9C /* GrossRevenueGrowthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrossRevenueGrowthView.swift; sourceTree = "<group>"; };
 		E167AD5A235BCCE000C88A9C /* GrossProfitGrowthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrossProfitGrowthView.swift; sourceTree = "<group>"; };
 		E167D6FC2306222E00CAF357 /* CompoundRootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompoundRootTabBarController.swift; sourceTree = "<group>"; };
+		E1693DB326B5713200090D91 /* PolygonAPIEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolygonAPIEntities.swift; sourceTree = "<group>"; };
 		E16AFC5B2563BE1C0083FEF0 /* DividendCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividendCalendar.swift; sourceTree = "<group>"; };
 		E16C46912644050300349BC0 /* YahooFinancialDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YahooFinancialDataService.swift; sourceTree = "<group>"; };
 		E16F35392552AECE0078A98D /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
@@ -213,6 +220,7 @@
 		E177FEA126498E5D00B30946 /* IdeasUpsideChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeasUpsideChart.swift; sourceTree = "<group>"; };
 		E1787039234410B3006EDED0 /* QuoteServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteServiceTests.swift; sourceTree = "<group>"; };
 		E17EC93526AD73490029D117 /* PortfolioReturnCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioReturnCalculator.swift; sourceTree = "<group>"; };
+		E17EC93726AD76BE0029D117 /* PortfolioReturn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioReturn.swift; sourceTree = "<group>"; };
 		E17FCEEE25E436DF0073AA05 /* Compound2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compound2App.swift; sourceTree = "<group>"; };
 		E18178CE24A3B3A9004271B3 /* PortfolioPieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioPieChartView.swift; sourceTree = "<group>"; };
 		E1867D0423A114840008201E /* System Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "System Extensions.swift"; sourceTree = "<group>"; };
@@ -246,7 +254,7 @@
 		E1C4A623243A882C004592E5 /* ConversationMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationMessage.swift; sourceTree = "<group>"; };
 		E1D2996B253C5FC5008553A5 /* DividendServiceEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividendServiceEntities.swift; sourceTree = "<group>"; };
 		E1D88F082312C14C004173AB /* StockListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListCell.swift; sourceTree = "<group>"; };
-		E1DAF45D2694E99300E8A6F9 /* PolygonAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolygonAPI.swift; sourceTree = "<group>"; };
+		E1DAF45D2694E99300E8A6F9 /* PolygonDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolygonDataService.swift; sourceTree = "<group>"; };
 		E1DEF7BC24A3BB0C00BA58EE /* PieChartColorGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartColorGenerator.swift; sourceTree = "<group>"; };
 		E1E597662441E0D6004E8718 /* MarketCapitalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketCapitalization.swift; sourceTree = "<group>"; };
 		E1E7E97F2667B5070049C2F7 /* IdeasUpsideNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeasUpsideNavigationView.swift; sourceTree = "<group>"; };
@@ -297,12 +305,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E106FDBB26AD94CD003C6509 /* PortfolioReturnsView */ = {
+			isa = PBXGroup;
+			children = (
+				E106FDBC26AD9525003C6509 /* PortfolioReturnsView.swift */,
+				E106FDBE26AD9637003C6509 /* PortfolioReturnTableView.swift */,
+			);
+			path = PortfolioReturnsView;
+			sourceTree = "<group>";
+		};
 		E113987423E2FFF200715DB5 /* Portfolio */ = {
 			isa = PBXGroup;
 			children = (
+				E17EC93526AD73490029D117 /* PortfolioReturnCalculator.swift */,
 				E113987523E3000500715DB5 /* Portfolio.swift */,
 				E113987723E3002B00715DB5 /* Position.swift */,
-				E17EC93526AD73490029D117 /* PortfolioReturnCalculator.swift */,
+				E17EC93726AD76BE0029D117 /* PortfolioReturn.swift */,
 			);
 			path = Portfolio;
 			sourceTree = "<group>";
@@ -825,7 +843,8 @@
 		E1DAF45C2694E97000E8A6F9 /* Polygon API */ = {
 			isa = PBXGroup;
 			children = (
-				E1DAF45D2694E99300E8A6F9 /* PolygonAPI.swift */,
+				E1DAF45D2694E99300E8A6F9 /* PolygonDataService.swift */,
+				E1693DB326B5713200090D91 /* PolygonAPIEntities.swift */,
 			);
 			path = "Polygon API";
 			sourceTree = "<group>";
@@ -851,6 +870,7 @@
 				E16327D1262B6497001EE5D9 /* IdeasUpsideTab */,
 				E1B00F82256049D600E7A6DC /* Dividend Calendar */,
 				E125210226501261005FBF25 /* CompoundGrowthView */,
+				E106FDBB26AD94CD003C6509 /* PortfolioReturnsView */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -1091,7 +1111,7 @@
 				E16AFC5C2563BE1C0083FEF0 /* DividendCalendar.swift in Sources */,
 				E1C325B0242637D70009EF55 /* DividendCalculator.swift in Sources */,
 				E14D033F265912EF00B72265 /* CompoundGrowthChart.swift in Sources */,
-				E1DAF45E2694E99300E8A6F9 /* PolygonAPI.swift in Sources */,
+				E1DAF45E2694E99300E8A6F9 /* PolygonDataService.swift in Sources */,
 				E1E8DDBC23115941009D8BEB /* Chart.swift in Sources */,
 				E15A14DA241D4D08001AAE3D /* PositionView.swift in Sources */,
 				E12629342590F55E005BD5BE /* StartupView.swift in Sources */,
@@ -1125,6 +1145,7 @@
 				E13944C42435F983009B9C85 /* LotsView.swift in Sources */,
 				E1C325B32426496B0009EF55 /* ActivitySpinner.swift in Sources */,
 				E1C09FB926345E1F00F25363 /* YahooQuoteService.swift in Sources */,
+				E17EC93826AD76BE0029D117 /* PortfolioReturn.swift in Sources */,
 				E15E5A3823CB5C9700EA0046 /* Aliases.swift in Sources */,
 				E154D41F2470505D00EDF772 /* Ex-SmartlabParser.swift in Sources */,
 				E16327F9262B7717001EE5D9 /* IdeasUpsideTableView.swift in Sources */,
@@ -1138,10 +1159,13 @@
 				E16C46922644050300349BC0 /* YahooFinancialDataService.swift in Sources */,
 				E1332714247AED0E00D4089D /* MoexDataManager.swift in Sources */,
 				E1EAE9A32336638B00C6C139 /* User Preferences.swift in Sources */,
+				E106FDBD26AD9525003C6509 /* PortfolioReturnsView.swift in Sources */,
+				E1693DB426B5713200090D91 /* PolygonAPIEntities.swift in Sources */,
 				E12C4E76239D432D0082936A /* SegmentedCompanyInfoView.swift in Sources */,
 				E1C4A624243A882C004592E5 /* ConversationMessage.swift in Sources */,
 				E177FEA226498E5D00B30946 /* IdeasUpsideChart.swift in Sources */,
 				E1B00F8425604A9300E7A6DC /* DividendCalendarDataProvider.swift in Sources */,
+				E106FDBF26AD9637003C6509 /* PortfolioReturnTableView.swift in Sources */,
 				E1E8DDC32312BC0F009D8BEB /* DeviceType.swift in Sources */,
 				E1D88F092312C14C004173AB /* StockListCell.swift in Sources */,
 				E166D0C52474979100D1993B /* MoexDividendService.swift in Sources */,
@@ -1335,10 +1359,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Compound 2/Compound 2.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Compound 2\"/Preview\\ Content";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4PFP54TQFP;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Compound 2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1362,10 +1386,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Compound 2/Compound 2.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Compound 2\"/Preview\\ Content";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4PFP54TQFP;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Compound 2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
