@@ -49,6 +49,6 @@ extension Compound2App {
 //MARK: - Just some test stuff
 extension Compound2App {
     func testStuff() {
-        print(PolygonDataService.TimeFrame.annual.rawValue)
+        //Task { await PolygonDataService.fetchHistoricalFinancialData(for: "PBF") }
     }
 }

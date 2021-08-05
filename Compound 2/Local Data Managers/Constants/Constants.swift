@@ -53,8 +53,10 @@ extension C {
     }
 }
 
+//MARK: - Tickers
 extension C {
     struct Tickers {
+        //MARK: - Russian tickers
         private static let russianTickerSymbols: [String: String] = [
             "GMKN" : "Норильский Никель",
             "YNDX" : "Яндекс",
@@ -96,10 +98,7 @@ extension C {
             "SGZH" : "Сегежа"
         ]
         
-        //    static let companiesWithPreferredShares = allTickerSymbols().filter({ $0.suffix(1) == "P" }).filter({$0.count == 5})
-        static let companiesWithPreferredShares = ["SBERP", "RTKMP"]
-        
-        ///Returns a beautiful name of the company whose ticker symbol is provided
+        ///Returns a beautiful name of the Russian company whose ticker symbol is provided
         static func companyName(for ticker: String) -> String? {
             return russianTickerSymbols[ticker]
         }
@@ -122,6 +121,16 @@ extension C {
         
         static func preferredShareTicker(for ticker: String) -> String {
             return ticker + "P"
+        }
+        
+        //MARK: - Foreign tickers
+        private static let foreignTickerSymbols: [String: String] = [
+            "PBF" : "PBF Energy",
+            "BIDU" : "Baidu"
+        ]
+        
+        static func allForeignTickerSymbols() -> [String] {
+            return foreignTickerSymbols.map(\.key)
         }
     }
 }
@@ -169,5 +178,7 @@ extension C {
     struct PolygonAPI {
         static let key = "kATfwcnbHHRPIxQgOKRF0iFYT0hWx62i"
         static let baseURL = "https://api.polygon.io/v2/"
+        static let dataDirectory = "PolygonData/"
+        static let financialDataDirectory = dataDirectory + "FinancialData/"
     }
 }

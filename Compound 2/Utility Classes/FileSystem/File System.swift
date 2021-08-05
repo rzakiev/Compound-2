@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 //MARK: - METHODS FOR THE APPLICATION SUPPORT DIRECTORY
 extension FileManager {
     
@@ -19,7 +18,8 @@ extension FileManager {
     ///- Parameter extension: The extension under which the file will be saved. The default value is `.json`
     ///- Parameter content: The content that must be saved
     
-    static func saveFileToApplicationSupport(in subdirectory: String, name: String, format: String = ".json", content: Data) throws {
+    static func saveFileToApplicationSupport(in subdirectory: String, name: String, format: String = ".json", content: Data) {
+        
         let fileManager = FileManager.default
         if let applicationSupportDirectory = fileManager.urls(for: .applicationSupportDirectory, in: .userDomainMask).first {
             let newSubDirectoryPath = applicationSupportDirectory.appendingPathComponent(subdirectory)
@@ -38,8 +38,13 @@ extension FileManager {
             return
         }
         
-        do { try content.write(to: url) }
-        catch { Logger.log(error: "Unable to save the data to the specified URL \(url)") }
+        do {
+            try content.write(to: url)
+        }
+        catch {
+            Logger.log(error: "Unable to save the data to the specified URL \(url)")
+//            throw DataSavingError.failedToSaveFile
+        }
         
         
         Logger.log(operation: "Saved a file named \(name) with extension \(format) in directory: applicationSupport/\(subdirectory) ")

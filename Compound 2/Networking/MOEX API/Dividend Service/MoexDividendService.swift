@@ -174,7 +174,7 @@ extension MoexDividendService {
         
         var dividends = [DividendYield]()
         
-        let tickers = C.Tickers.allTickerSymbolsWithNames().map(\.ticker) + C.Tickers.companiesWithPreferredShares
+        let tickers = C.Tickers.allTickerSymbolsWithNames().map(\.ticker)
         
         for ticker in tickers {
             
