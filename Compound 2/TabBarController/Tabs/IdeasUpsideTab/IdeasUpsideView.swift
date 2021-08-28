@@ -68,21 +68,18 @@ extension IdeasUpsideView {
 
 extension IdeasUpsideView {
     var lowRiskAmericanStocks: [IdeasUpsideChart.UpsideChartValue] {
-        print(investments.ideas.values.filter({ $0.currency == .USD && $0.risk == "low" }).sorted(by: > ))
         return investments.ideas.values.filter({ $0.currency == .USD && $0.risk == "low" }).sorted(by: > ).map({
             IdeasUpsideChart.UpsideChartValue(ticker: $0.ticker, targetPrice: $0.targetPrice, upside: ($0.upside ?? 0), currency: $0.currency, risk: $0.risk)
         })
     }
     
     var mediumRiskAmericanStocks: [IdeasUpsideChart.UpsideChartValue] {
-        print(investments.ideas.values)
         return investments.ideas.values.filter({ $0.currency == .USD && $0.risk == "medium" }).sorted(by: > ).map({
             IdeasUpsideChart.UpsideChartValue(ticker: $0.ticker, targetPrice: $0.targetPrice, upside: ($0.upside ?? 0), currency: $0.currency, risk: $0.risk)
         })
     }
     
     var highRiskAmericanStocks: [IdeasUpsideChart.UpsideChartValue] {
-        print(investments.ideas.values)
         return investments.ideas.values.filter({ $0.currency == .USD && $0.risk == "high" }).sorted(by: > ).map({
             IdeasUpsideChart.UpsideChartValue(ticker: $0.ticker, targetPrice: $0.targetPrice, upside: ($0.upside ?? 0), currency: $0.currency, risk: $0.risk)
         })

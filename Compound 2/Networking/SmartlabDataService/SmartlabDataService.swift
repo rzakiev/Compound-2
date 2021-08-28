@@ -26,7 +26,7 @@ extension SmartlabDataService {
         return await fetchData(for: allTickers)
     }
     
-    ///Asynchronously fetches smartlab data for a collection of ticker symbols
+    ///Asynchronously fetches smartlab data for a specific ticker
     @discardableResult
     static func fetchData(for ticker: String, saveToLocalStorage: Bool = true) async -> SmartlabData? {
         return await fetchData(for: [ticker]).first
@@ -39,6 +39,11 @@ extension SmartlabDataService {
         var fetchedData = [SmartlabData]()
         
         for ticker in tickers {
+            
+            guard shouldDownloadSmartlabData(for: ticker) == true else {
+                Logger.log(operation: "Determined that smartlab data shouldn't be downloaded for \(ticker)")
+                continue
+            }
             
             guard let dataSourceURL = URL(string: dataDownloadURL(for: ticker)) else {
                 Logger.log(error: "Unable to instantiate an instance of URL using \(dataDownloadURL(for: ticker))")
@@ -66,6 +71,33 @@ extension SmartlabDataService {
         
         return fetchedData
     }
+    
+    ///Deterrmines if Smartlab data needs to be downloaded for this specific ticker
+    private static func shouldDownloadSmartlabData(for ticker: String) -> Bool {
+        
+        guard let smartlabDataURL = getLocalURL(for: ticker) else {
+            return true //If there's no local data, then definitely should download
+        }
+        
+        do {
+            let attributes = try FileManager.default.attributesOfItem(atPath: smartlabDataURL.path)
+            guard let modificationDate = attributes[FileAttributeKey.modificationDate] as? Date else {
+                return true
+            }
+            
+            let interval = (Date() - modificationDate)
+            
+            if interval.month != nil && interval.month! > 0 {
+                return true //If month is not nil, it means that more than one month has elapsed since the file was last updated. And one month is what we wait for to update a smartlab file
+            } else {
+                return false
+            }
+        } catch {
+            return true
+        }
+        
+//        return true
+    }
 }
 
 //MARK: - Working with the file system
@@ -84,7 +116,7 @@ extension SmartlabDataService {
     }
     
     ///Retrieving the locally stored smartlab data for a single ticker
-    private static func getLocalSmartLabData(for ticker: String) -> SmartlabData? {
+    static func getLocalSmartLabData(for ticker: String) -> SmartlabData? {
         guard let url = try? FileManager.default.url(for: .applicationSupportDirectory,
                                                         in: .userDomainMask,
                                                         appropriateFor: nil,
@@ -134,6 +166,27 @@ extension SmartlabDataService {
         do { try encodedSecuritiesInfo.write(to: url) }
         catch { Logger.log(error: "Smartlab data encoding error: \(error)") }
         Logger.log(operation: "Saved the smartlab data for \(ticker)")
+    }
+    
+    //////Returns the URLs of the Smartlab data available locally for the specified ticker
+    private static func getLocalURL(for ticker: String) -> URL? {
+        guard let url = try? FileManager.default.url(for: .applicationSupportDirectory,
+                                                        in: .userDomainMask,
+                                                        appropriateFor: nil,
+                                                        create: true).appendingPathComponent(smartlabDataDirectory + ticker + ".json") else {
+            Logger.log(warning: "Cannot find the local URL of the smartlab data for \(ticker)")
+            return nil
+        }
+        
+        return url
+    }
+    
+    ///Returns an array of URLs for the Smartlab data available locally
+    private static func getLocalDataURLs() -> [URL] {
+        let appSupportPath = FileManager.applicationSupportPath
+        let smartlabPath = appSupportPath + smartlabDataDirectory
+        
+        return FileManager.getFileURLsInMainBundle(inDirectory: smartlabPath)
     }
 }
 
@@ -189,40 +242,16 @@ private extension SmartlabDataService {
                 Logger.log(error: "Unable to parse the value \(row[i])")
                 continue
             }
-            figures.append(.init(year: year, value: value, currency: .Rouble))
+            figures.append(.init(year: year, value: value * 1_000_000_000, currency: .Rouble))
         }
         
         return figures
     }
     
     private static func indicatorIsRequired(_ indicator: String) -> Bool {
-        let indicatorsWeWantToParse = ["\"Выручка, млрд руб\"", "\"Див.выплата, млрд руб\""]
+        let indicatorsWeWantToParse = ["\"Выручка, млрд руб\"", "\"Див.выплата, млрд руб\"", "\"Чистая прибыль, млрд руб\""]
         return indicatorsWeWantToParse.contains(indicator)
     }
-}
-
-//MARK: - STRICTLY FOR LOCAL TESTS
-private extension SmartlabDataService {
-    //    private static func parseLocalData(for ticker: String) -> SmartlabData? {
-    //        guard let csvPath = Bundle.main.path(forResource: ticker, ofType: "csv",
-    //                                               inDirectory: "Corporate Resources")
-    //        else {
-    //            Logger.log(error: "No local CSV file found for \(ticker)")
-    //            return nil
-    //        }
-    //
-    //        guard let csvData = FileManager.default.contents(atPath: csvPath) else {
-    //            Logger.log(error: "Couldn't load the plist data from path: \(csvPath)")
-    //            return nil
-    //        }
-    //
-    //        guard let parsedString = String(data: csvData, encoding: .utf8) else {
-    //            Logger.log(error: "Noooooooooo")
-    //            return nil
-    //        }
-    //
-    //        return parseSmartlabCSV(string: parsedString, ticker: ticker)
-    //    }
 }
 
 //MARK: - Constants
@@ -236,7 +265,7 @@ private extension SmartlabDataService {
     private static let smartlabDataDirectory = "SmartlabData/"
     
     ///Returns the URL at which financial data can be downloaded from Smartlab for the specified ticker symbol
-    static func dataDownloadURL(for ticker: String) -> String {
+    private static func dataDownloadURL(for ticker: String) -> String {
         return downloadBaseURL + ticker + downloadEndURL
     }
 }

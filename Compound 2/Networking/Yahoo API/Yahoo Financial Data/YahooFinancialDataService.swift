@@ -64,10 +64,10 @@ extension YahooFinancialDataService {
         guard let quoteAndDividendHistory = YahooDataParser.parseYahooQuoteAndDividendHistoryJSON(jsonData) else { return nil }
         
         guard let encodedDividends = try? JSONEncoder().encode(quoteAndDividendHistory.dividends) else { return nil }
-        guard ((try? FileManager.saveFileToApplicationSupport(in: yahooDividendDirectory, name: distillTicker(ticker), content: encodedDividends)) != nil) == true else { return nil }
+        FileManager.saveFileToApplicationSupport(in: yahooDividendDirectory, name: distillTicker(ticker), content: encodedDividends)
         
         guard let encodedQuoteHistory = try? JSONEncoder().encode(quoteAndDividendHistory.historicalQuotes) else { return nil }
-        guard ((try? FileManager.saveFileToApplicationSupport(in: yahooQuoteDirectory, name: distillTicker(ticker), content: encodedQuoteHistory)) != nil) == true else { return nil }
+        FileManager.saveFileToApplicationSupport(in: yahooQuoteDirectory, name: distillTicker(ticker), content: encodedQuoteHistory)
         
         return quoteAndDividendHistory
     }
@@ -96,7 +96,7 @@ extension YahooFinancialDataService {
 }
 
 extension YahooFinancialDataService {
-    ///Removes `.ME` from tickers. So `AFKS.ME` will turn into `AFKS`
+    ///Removes `.ME` from tickers. For example, `AFKS.ME` will turn into `AFKS`
     static func distillTicker(_ ticker: String) -> String {
         if ticker.suffix(3) == ".ME" { return String(ticker.dropLast(3)) }
         else { return ticker }

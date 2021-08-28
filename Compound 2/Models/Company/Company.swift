@@ -14,7 +14,7 @@ struct Company {
     let ticker: String
     
     //Financial Indicators
-    let financialIndicators: [Indicator: [FinancialFigure]]
+    let financialData: FinancialData
 //    let revenue: [FinancialFigure]?
 //
 //    let operatingIncome: [FinancialFigure]?
@@ -50,35 +50,14 @@ extension Company {
         self.name = name.name
         self.ticker = name.ticker
         
-        guard let smartLabData = SmartlabDataService.getLocalSmartlabData(for: [ticker]).first?.values else {
-            Logger.log(error: "No smartlab data for \(name)")
-            self.financialIndicators = [:]
-            return
+        if let smartLabData = SmartlabDataService.getLocalSmartlabData(for: [ticker]).first {
+            financialData = smartLabData
+        } else if let polygonData = PolygonDataService.getPolygonDataLocally(for: ticker) {
+            financialData = polygonData
+        } else {
+            financialData = PolygonData(ticker: "N/A", values: [:])
         }
         
-        var indicators: [Indicator: [FinancialFigure]] = [:]
-        
-        for (indicator, values) in smartLabData {
-            
-            guard values.count > 0 else { continue }
-
-            switch indicator {
-            case _ where indicator.contains("Выручка") : indicators[.revenue] = values
-            case _ where indicator.contains("Див.выплата") : indicators[.dividend] = values
-            case _ where indicator.contains("FCF, млрд руб") : indicators[.freeCashFlow] = values
-            default: indicators[.custom(name: indicator)] = values
-            }
-
-            
-        }
-//
-        self.financialIndicators = indicators
-//        switch indicator {
-//        case .revenue: skipParsing = !currentIndicator.contains("Выручка")
-//        case .dividend: skipParsing = !currentIndicator.contains("Див.выплата")
-//        case .freeCashFlow: skipParsing = !currentIndicator.contains("FCF, млрд руб")
-//        default: skipParsing = true
-//        }
     }
     
 //    init(name: String) {
@@ -165,9 +144,10 @@ extension Company {
     func availableIndicators() -> [Indicator] {
         
         var availableIndicators: [Indicator] = []
-        if financialIndicators[.revenue] != nil { availableIndicators.append(.revenue) }
-        if financialIndicators[.freeCashFlow] != nil { availableIndicators.append(.freeCashFlow) }
-        if financialIndicators[.dividend] != nil { availableIndicators.append(.dividend) }
+        if financialData.getRevenue() != nil { availableIndicators.append(.revenue) }
+        if financialData.getFCF() != nil { availableIndicators.append(.freeCashFlow) }
+        if financialData.getDividend() != nil { availableIndicators.append(.dividend) }
+        if financialData.getNetIncome() != nil { availableIndicators.append(.netIncome) }
         
         return availableIndicators
     }
@@ -259,9 +239,10 @@ extension Company {
         //the financial indicator for which the growth rates are calculated
         let unwrapperIndicator: [FinancialFigure]?
         switch indicator {
-        case .revenue: unwrapperIndicator = financialIndicators[.revenue]
-        case .freeCashFlow: unwrapperIndicator = financialIndicators[.freeCashFlow]
-        case .dividend: unwrapperIndicator = financialIndicators[.dividend]
+        case .revenue: unwrapperIndicator = financialData.getRevenue()
+        case .freeCashFlow: unwrapperIndicator = financialData.getFCF()
+        case .dividend: unwrapperIndicator = financialData.getDividend()
+        case .netIncome: unwrapperIndicator = financialData.getNetIncome()
         default:
             return nil
         }
@@ -290,9 +271,10 @@ extension Company {
         //the financial indicator for which the growth rates are calculated
         let unwrapperIndicator: [FinancialFigure]?
         switch indicator {
-        case .revenue: unwrapperIndicator = financialIndicators[.revenue]
-        case .freeCashFlow: unwrapperIndicator = financialIndicators[.freeCashFlow]
-        case .dividend: unwrapperIndicator = financialIndicators[.dividend]
+        case .revenue: unwrapperIndicator = financialData.getRevenue()
+        case .freeCashFlow: unwrapperIndicator = financialData.getFCF()
+        case .dividend: unwrapperIndicator = financialData.getDividend()
+        case .netIncome: unwrapperIndicator = financialData.getNetIncome()
         default:
             return nil
         }

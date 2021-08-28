@@ -24,11 +24,12 @@ struct PositionView: View {
                 companyName
                 Spacer()
                 
-//                if profitOrLoss != nil { currentPL } //display the current P/L for the position
-//                else { withAnimation { ActivitySpinner(color: .orange) } }
             }
             
-            Spacer()
+            VStack {
+                       ProgressView(value: 0.25)
+                       ProgressView(value: 0.75)
+            }.progressViewStyle(.automatic)
             
             HStack {
                 expectedDividend

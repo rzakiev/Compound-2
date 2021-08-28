@@ -203,7 +203,7 @@
     {
         "ticker": "RASP",
         "currency": "RUB",
-        "targetPrice": 330,
+        "targetPrice": 425,
         "risk": "low"
     },
     {
@@ -270,7 +270,7 @@
         "ticker": "CVI",
         "currency": "USD",
         "targetPrice": 22,
-        "risk": "medium"
+        "risk": "high"
     },
     {
         "ticker": "MTLRP",

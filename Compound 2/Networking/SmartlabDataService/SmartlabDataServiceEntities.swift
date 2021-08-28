@@ -12,6 +12,7 @@ import Foundation
 extension SmartlabDataService {
     
     struct SmartlabData: Codable, FinancialData {
+        
         let ticker: String
         let values: [String: [FinancialFigure]]
     }
@@ -22,12 +23,20 @@ extension SmartlabDataService.SmartlabData {
         return values[indicator]
     }
     
-    func getDividends() -> [FinancialFigure]? {
+    func getDividend() -> [FinancialFigure]? {
         return values.first(where: { $0.key.contains("Див.выплата") })?.value
     }
     
     func getRevenue() -> [FinancialFigure]? {
         return values.first(where: { $0.key.contains("Выручка") })?.value
+    }
+    
+    func getNetIncome() -> [FinancialFigure]? {
+        return values.first(where: { $0.key.contains("Чистая прибыль") })?.value
+    }
+    
+    func getFCF() -> [FinancialFigure]? {
+        return nil
     }
 }
 
@@ -35,6 +44,14 @@ extension SmartlabDataService.SmartlabData {
 protocol FinancialData {
     var ticker: String { get }
     var values: [String: [FinancialFigure]] { get }
+    
+    func getRevenue() -> [FinancialFigure]?
+    
+    func getNetIncome() -> [FinancialFigure]?
+    
+    func getDividend() -> [FinancialFigure]?
+    
+    func getFCF() -> [FinancialFigure]?
 }
 
 ////MARK: - Protocol Implementations

@@ -11,13 +11,13 @@ import SwiftUI
 
 extension UserDefaults {
     
-    ///Checks if this is the very first launch of the app
+    ///Determines if this is the very first launch of the app
     static func isFirstLaunch() -> Bool {
         
         let alreadyLaunchedBefore = UserDefaults.standard.bool(forKey: "alreadyLaunchedBefore")
         
         if alreadyLaunchedBefore {
-            return false //The key is set to true -> therefore it is not first launch
+            return false //The key is set to true -> therefore it is not the first launch
         } else { //The first launch
             UserDefaults.standard.set(true, forKey: "alreadyLaunchedBefore") //setting the key to true during the first launch
             return true
@@ -39,3 +39,5 @@ extension Array {
 extension Dictionary where Value: Equatable {
     func someKey(forValue value: Value) -> Key? { first(where: { $1 == value })?.key }
 }
+
+

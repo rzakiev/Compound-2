@@ -23,7 +23,6 @@ enum CompetitionType {
 
 enum Indicator: Equatable, Hashable {
     
-    
     //MAIN ONES
     case revenue
     case freeCashFlow
@@ -34,7 +33,7 @@ enum Indicator: Equatable, Hashable {
     case debtToEBITDA
     case OIBDA
     case EBITDA
-    case netProfit
+    case netIncome
 
     case commissionIncome
     case interestIncome
@@ -44,6 +43,8 @@ enum Indicator: Equatable, Hashable {
         switch self {
         case .revenue: return "Выручка"
         case .dividend: return "Дивиденды"
+        case .netIncome: return "Чистая Прибыль"
+        case .freeCashFlow: return "FCF"
         case .custom(let name): return name
         default: return "Unknow Indicator"
         }

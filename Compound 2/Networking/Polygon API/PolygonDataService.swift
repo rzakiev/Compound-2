@@ -12,6 +12,11 @@ import Foundation
 struct PolygonDataService {
     @available(*, unavailable)
     fileprivate init() { Logger.log(error: "Initializaing an instance of \(Self.self)") }
+    
+    /*These two properties are used to track the number and date of requests made to PolygonAPI which only allows 5 requests per minute
+     on the free plan.*/
+    static var lastRequestTime: Date? = nil
+    static var requestCounter: Int = 0
 }
 
 //MARK: - Financial Data methods
@@ -40,6 +45,7 @@ extension PolygonDataService {
         }
         
         guard let polygonAPIresponse = try? JSONDecoder().decode(PolygonFinancialDataAPIResponse.self, from: rawPolygonData) else {
+            print(String(data: rawPolygonData, encoding: .utf8) ?? "Unable to convert raw Polygon data into a String for \(ticker)")
             Logger.log(error: "Unable to decode Polygon API output into an instance of PolygonFinancialDataAPIResponse")
             return nil
         }
@@ -48,7 +54,7 @@ extension PolygonDataService {
             if let castAPIResponse = polygonAPIresponse.convertToPolygonData() {
                 savePolygonDataLocally(castAPIResponse)
             } else {
-                Logger.log(error: "Unable to uncase the polygon API response for \(ticker)")
+                Logger.log(error: "Unable to uncast the polygon API response for \(ticker)")
             }
         }
         
@@ -57,12 +63,20 @@ extension PolygonDataService {
     
     @discardableResult
     static func fetchHistoricalFinancialData(for tickers: [String], saveToLocalStorage: Bool = true) async -> [PolygonData] {
-        
+        //Testing with ["AMZN", "KO", "PBF", "BIDU", "BABA", "OXY"]
         var polygonData = [PolygonData] ()
         
         for ticker in tickers {
+            if authorizedToDownloadData() == false {
+                Logger.log(warning: "Suspending the Polygon data service for 60 seconds")
+                await Task.sleep(60.inNanoSeconds)
+            }
+            
             let data = await fetchHistoricalFinancialData(for: ticker, saveToLocalStorage: saveToLocalStorage)
             if data != nil { polygonData.append(data!) }
+            
+            lastRequestTime = Date() //Registering the response time so that we can later track if more than 5 requests have been made in 1 min
+            requestCounter += 1
         }
         
         return polygonData
@@ -73,7 +87,6 @@ extension PolygonDataService {
         return await fetchHistoricalFinancialData(for: C.Tickers.allForeignTickerSymbols())
     }
     
-    
     static func savePolygonDataLocally(_ polygonData: PolygonData) {
         guard let encodedData = try? JSONEncoder().encode(polygonData) else {
             Logger.log(error: "Unable to encode polygon data")
@@ -81,6 +94,20 @@ extension PolygonDataService {
         }
         
         FileManager.saveFileToApplicationSupport(in: C.PolygonAPI.financialDataDirectory, name: polygonData.ticker, content: encodedData) 
+    }
+    
+    static func getPolygonDataLocally(for ticker: String) -> PolygonData? {
+    
+        guard let rawData = FileManager.getFileFromApplicationSupport(in: C.PolygonAPI.financialDataDirectory, name: ticker) else {
+            return nil
+        }
+        
+        guard let decodedData = try? JSONDecoder().decode(PolygonData.self, from: rawData) else {
+            Logger.log(error: "Unable to decode an instance PolygonData from local data for \(ticker)")
+            return nil
+        }
+        
+        return decodedData
     }
 }
 
@@ -110,3 +137,19 @@ extension PolygonDataService {
         return URL(string: url)
     }
 }
+
+//MARK: - Data Updating Criteria
+extension PolygonDataService {
+    static func authorizedToDownloadData() -> Bool {
+        
+        guard requestCounter >= 5 else { return true }
+        
+        guard let lastRequestDispatchTime = lastRequestTime else { return true }
+        
+        guard let sixtySecondsDidElapse = Date.more(than: 60, .second, elapsedSince: lastRequestDispatchTime) else { return false }
+        
+        return sixtySecondsDidElapse
+    }
+}
+
+

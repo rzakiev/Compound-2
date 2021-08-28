@@ -21,17 +21,10 @@ final class ChartListDataProvider: ObservableObject {
         
         self.ticker = ticker
         
-        quoteSubscriber = MoexQuoteService.shared.$allQuotes.receive(on: DispatchQueue.main).sink(receiveValue: { [unowned self] (_) in
+        quoteSubscriber = MoexQuoteService.shared.$allQuotes.receive(on: DispatchQueue.global()).sink(receiveValue: { [unowned self] (_) in
             guard let newQuote = MoexQuoteService.shared.allQuotes.first(where: { $0.ticker == ticker }) else { return }
-            marketCap = calculateMarketCap(quote: newQuote)
+            marketCap = newQuote.marketCap
         })
-    }
-
-    func calculateMarketCap(quote: SimpleQuote?) -> Double? {
-//        guard quote != nil else { return nil }
-        return quote?.marketCap
-//        return MarketCapitalization.getMarketCapitalization(for: ticker, currentQuote: quote!)
-//        return self.marketCap == nil ? "N/A" : String(self.marketCap!)
     }
 }
 

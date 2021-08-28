@@ -56,6 +56,7 @@ extension FileManager {
     ///- Parameter name: The name under which the file is stored
     ///- Parameter extension: The extension of the file. The default value is `.json`
     static func getFileFromApplicationSupport(in subdirectory: String, name: String, format: String = ".json") -> Data? {
+        
         guard let url = try? FileManager.default.url(for: .applicationSupportDirectory,
                                                         in: .userDomainMask,
                                                         appropriateFor: nil,
@@ -91,6 +92,37 @@ extension FileManager {
 }
 
 extension FileManager {
+    
+    static func getFileURLsInMainBundle(inDirectory directory: String) -> [URL] {
+        
+        let urlFromPath = URL(fileURLWithPath: Bundle.main.resourcePath! + directory)
+        
+        guard let fileURLs = try? FileManager.default.contentsOfDirectory(at: urlFromPath, includingPropertiesForKeys: nil, options: [.skipsHiddenFiles]) else {
+            Logger.log(error: "Unable to enumerate files in the following directory: \(directory)")
+            return []
+        }
+        
+        return fileURLs
+    }
+    
+    static func getFileListInMainBundle(inDirectory directory: String) -> [(name: String, format: String)] {
+        
+        guard let files = try? FileManager.default.contentsOfDirectory(atPath:  Bundle.main.resourcePath! + directory) else {
+            Logger.log(error: "Unable to enumerate files in the following directory: \(directory)")
+            return []
+        }
+        
+        var fileNames: [(name: String, format: String)] = []
+        for fileName in files {
+            let splitName = fileName.split(separator: ".")
+            let name = String(splitName[0])
+            let format = String(splitName[1])
+            fileNames.append((name, format))
+        }
+        
+        return fileNames
+    }
+    
     static func getFilesInMainBundle(inDirectory directory: String) -> [Data] {
         
         guard let files = try? FileManager.default.contentsOfDirectory(atPath:  Bundle.main.resourcePath! + directory) else {
@@ -125,6 +157,16 @@ extension FileManager {
         }
         
         return filesData
+    }
+}
+
+extension FileManager {
+    static var applicationSupportPath: String {
+        FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!.absoluteString
+    }
+    
+    static var applicationSupportURL: URL? {
+        FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first
     }
 }
 

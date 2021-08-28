@@ -86,5 +86,11 @@ extension Position {
 }
 
 extension Position {
-    
+    func depositoryFeeForPosition() -> Double? {
+        guard let depositoryFee = DepositoryReceiptFeeCalculator.fee(for: ticker) else {
+            return nil
+        }
+        
+        return Double(quantity) * depositoryFee.amount
+    }
 }

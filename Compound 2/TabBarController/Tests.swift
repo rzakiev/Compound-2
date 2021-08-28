@@ -8,13 +8,33 @@
 
 import SwiftUI
 
+protocol Hello {
+    var a: String { get }
+}
+
 struct TestsView: View {
     
+    struct Yo: Hello {
+        let a: String
+    }
     
+    struct No: Hello {
+        let a: String
+        func blabla(){}
+    }
     
     
     var body: some View {
        Text("Cool stuff")
+    }
+    
+    init() {
+        abc(param1: Yo(a: "werwer"))
+        abc(param1: No(a: "werwer"))
+    }
+    
+    func abc(param1: Hello) {
+        print(param1.a)
     }
     
 }

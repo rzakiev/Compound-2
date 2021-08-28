@@ -30,7 +30,7 @@ struct ActivitySpinner: View {
             .stroke(color, lineWidth: 4)
             .frame(width: width, height: height)
             .rotationEffect(Angle(degrees: rotateCircle ? 360 : 0))
-            .animation(Animation.linear(duration: 1).repeatForever(autoreverses: false))
+            .animation(Animation.linear(duration: 1).repeatForever(autoreverses: false), value: 1)
             .onAppear(perform: { startCircleSpin() })
     }
     

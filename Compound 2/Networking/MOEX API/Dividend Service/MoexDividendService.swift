@@ -127,7 +127,7 @@ extension MoexDividendService {
             }
         }
         
-        guard let lastDividend = SmartlabDataService.getLocalSmartlabData(for: [ticker])[safe: 0]?.getDividends()?.first(where: { $0.year == Date.lastYear })?.value //FinancialDataManager.getDividends(for: ticker)?.first(where: {$0.year == Date.lastYear})?.value
+        guard let lastDividend = SmartlabDataService.getLocalSmartlabData(for: [ticker])[safe: 0]?.getDividend()?.first(where: { $0.year == Date.lastYear })?.value //FinancialDataManager.getDividends(for: ticker)?.first(where: {$0.year == Date.lastYear})?.value
         else {
             Logger.log(error: "No plist dividend for \(ticker)")
             return nil

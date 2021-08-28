@@ -99,3 +99,9 @@ func numberWithSignAndPercentage (number: Double) -> String {
         return String(format: "%.2f", number) + "%"
     }
 }
+
+extension Int {
+    var inNanoSeconds: UInt64 {
+        UInt64(self * 1_000_000_000)
+    }
+}

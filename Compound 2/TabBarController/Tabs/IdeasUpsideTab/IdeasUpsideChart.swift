@@ -162,10 +162,8 @@ struct UpsideChartCenterView: View {
     }
     
     func properUpsideText() -> String? {
-        if ticker == "BKR" {
-            
-        }
-        if upside <= 3 {
+        
+        if upside <= 2 {
             return nil
         } else {
             return "\(upside > 0 ? "+" : "")\(upside)%"

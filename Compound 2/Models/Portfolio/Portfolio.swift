@@ -91,7 +91,7 @@ extension Portfolio {
         do {
             try PortfolioDataManager.savePortfolio(self)
         } catch {
-            Logger.log(error: "Unable to save the portfolio because \(error.localizedDescription)")
+            Logger.log(error: "Unable to save the portfolio because: \(error.localizedDescription)")
         }
     }
 }

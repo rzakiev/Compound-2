@@ -30,10 +30,6 @@ struct StockListAndDetailNavigationView: View {
     
     private let preferredCompanySortingCriteria = PreferredCompanySortingCriterion.byName
     
-    //    private let companiesSortedByIndustries:[IndustryWithCompaniesCAGR] = Statistics.companiesSortedByIndustryAndRevenueCAGR()
-    
-    //    private let companyCagrValues = Statistics.companiesSortedByRevenueCAGR()
-    
     @State private var companyList = C.Tickers.allTickerSymbolsWithNames().sorted(by: { $0.name < $1.name })
     
     @State private var userSearchInput = ""
@@ -47,7 +43,7 @@ struct StockListAndDetailNavigationView: View {
                         
                     else { companiesSortedByNameList }
                     }.navigationBarTitle("Компании", displayMode: .inline)
-                        .listStyle(GroupedListStyle())
+                    .listStyle(GroupedListStyle())
                 }
             }.navigationViewStyle(DoubleColumnNavigationViewStyle())
             //.edgesIgnoringSafeArea([.top])

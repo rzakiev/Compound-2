@@ -10,8 +10,37 @@ import Foundation
 
 ///Houses financial data for some company retrieved via API
 struct PolygonData: Codable, FinancialData {
+    
     let ticker: String
+    
     let values: [String : [FinancialFigure]]
+    
+    static func title(for indicator: Indicator) -> String {
+        switch indicator {
+        case .revenue: return "revenue"
+        case .freeCashFlow: return "freeCashFlow"
+        case .dividend: return "dividendsPerBasicCommonShare"
+        default: return indicator.title
+        }
+    }
+    
+    
+    //MARK: - Get Some Indicator
+    func getRevenue() -> [FinancialFigure]? {
+        return values[PolygonData.title(for: .revenue)]
+    }
+    
+    func getNetIncome() -> [FinancialFigure]? {
+        return values[PolygonData.title(for: .netIncome)]
+    }
+    
+    func getFCF() -> [FinancialFigure]? {
+        return values[PolygonData.title(for: .freeCashFlow)]
+    }
+    ///Returns an array containing dividend per share
+    func getDividend() -> [FinancialFigure]? {
+        return values[PolygonData.title(for: .dividend)]
+    }
 }
 
 extension PolygonDataService {
@@ -31,7 +60,7 @@ extension PolygonDataService {
 }
 
 extension PolygonDataService {
-    ///Entity that is decoded from the response of this endpoint: https://api.polygon.io/v2/reference/financials/AAPL
+    ///Entity decoded from the response of this endpoint: https://api.polygon.io/v2/reference/financials/AAPL
     struct PolygonFinancialDataAPIResponse: Codable {
         let status: String?
         let results: [PolygonFinancialResult]
@@ -58,10 +87,10 @@ extension PolygonDataService {
         func convertToPolygonData() -> PolygonData? {
             
             var financialData = [String : [FinancialFigure]]()
-            financialData["revenue"] = []
-            financialData["netIncome"] = []
-            financialData["freeCashFlow"] = []
-            financialData["dividendsPerBasicCommonShare"] = []
+            financialData[PolygonData.title(for: .revenue)] = []
+            financialData[PolygonData.title(for: .freeCashFlow)] = []
+            financialData[PolygonData.title(for: .netIncome)] = []
+            financialData[PolygonData.title(for: .dividend)] = []
             
             guard results.count > 0 else {
                 Logger.log(error: "No results in PolygonFinancialDataAPIResponse: \(self)")
@@ -79,10 +108,10 @@ extension PolygonDataService {
                     continue
                 }
                 
-                financialData["revenue"]?.append(.init(year: year, value: result.revenuesUSD, currency: .USD))
-                financialData["netIncome"]?.append(.init(year: year, value: result.netIncome, currency: .USD))
-                financialData["freeCashFlow"]?.append(.init(year: year, value: result.freeCashFlow, currency: .USD))
-                financialData["dividendsPerBasicCommonShare"]?.append(.init(year: year, value: result.dividendsPerBasicCommonShare, currency: .USD))
+                financialData[PolygonData.title(for: .revenue)]?.append(.init(year: year, value: result.revenuesUSD, currency: .USD))
+                financialData[PolygonData.title(for: .netIncome)]?.append(.init(year: year, value: result.netIncome, currency: .USD))
+                financialData[PolygonData.title(for: .freeCashFlow)]?.append(.init(year: year, value: result.freeCashFlow, currency: .USD))
+                financialData[PolygonData.title(for: .dividend)]?.append(.init(year: year, value: result.dividendsPerBasicCommonShare, currency: .USD))
             }
             
             return .init(ticker: ticker, values: financialData)

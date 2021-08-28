@@ -1364,6 +1364,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Compound 2\"/Preview\\ Content";
 				DEVELOPMENT_TEAM = 4PFP54TQFP;
 				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = "Compound 2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1391,6 +1392,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Compound 2\"/Preview\\ Content";
 				DEVELOPMENT_TEAM = 4PFP54TQFP;
 				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = "Compound 2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

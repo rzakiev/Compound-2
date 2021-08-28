@@ -39,7 +39,17 @@ final class IdeasUpsideDataProvider: ObservableObject {
             return
         }
         
-        ideas = decodedIdeas
+        let expiredIdeas: [String]
+        if fileName.name == "Malishok" {
+            expiredIdeas = ["VLO", "MPC", "MRO", "RIG", "MTLRP", "AR", "BTU", "CLR", "DVN", "ET", "HNRG", "LPI", "PHX"]
+        } else {
+            expiredIdeas = []
+        }
+        
+        //Removing expired ideas from the list
+        let filteredIdeas = decodedIdeas.values.filter({ !expiredIdeas.contains($0.ticker) })
+        
+        ideas = InvestmentIdeas(author: decodedIdeas.author, values: filteredIdeas)
         
         quoteSubscriber = YahooQuoteService.shared.$allQuotes.receive(on: DispatchQueue.main).sink(receiveValue: { [unowned self] (_) in
             for i in 0..<self.ideas.values.count {

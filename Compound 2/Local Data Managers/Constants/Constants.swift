@@ -58,44 +58,45 @@ extension C {
     struct Tickers {
         //MARK: - Russian tickers
         private static let russianTickerSymbols: [String: String] = [
-            "GMKN" : "Норильский Никель",
+//            "GMKN" : "Норильский Никель",
             "YNDX" : "Яндекс",
             "RTKM" : "Ростелеком",
-            "FIVE" : "X5 Retail Group",
+//            "FIVE" : "X5 Retail Group",
             "TCSG" : "Tinkoff",
             "LSRG" : "Группа ЛСР",
-            "VSMO" : "ВСМПО-Ависма",
-            "CHMF" : "Северсталь",
+//            "VSMO" : "ВСМПО-Ависма",
+//            "CHMF" : "Северсталь",
             "RTKMP" : "Ростелеком-п",
-            "AGRO" : "Русагро",
-            "ENRU" : "Энел",
-            "SBERP" : "Сбербанк-п",
-            "SBER" : "Сбербанк",
-            "MGNT" : "Магнит",
-            "VTBR" : "ВТБ",
+//            "AGRO" : "Русагро",
+//            "ENRU" : "Энел",
+//            "SBERP" : "Сбербанк-п",
+//            "SBER" : "Сбербанк",
+//            "MGNT" : "Магнит",
+//            "VTBR" : "ВТБ",
             "HYDR" : "Русгидро",
-            "NMTP" : "НМТП",
-            "DSKY" : "Детский Мир",
+//            "NMTP" : "НМТП",
+//            "DSKY" : "Детский Мир",
             "AFKS" : "АФК Система",
-            "NLMK" : "НЛМК",
+//            "NLMK" : "НЛМК",
             "UNAC" : "ОАК",
             "AFLT" : "Аэрофлот",
-            "RUAL" : "Русал",
-            "FEES" : "ФСК ЕЭС",
+//            "RUAL" : "Русал",
+//            "FEES" : "ФСК ЕЭС",
             "ETLN" : "Эталон",
             "MOEX" : "Московская Биржа",
-            "MAGN" : "ММК",
+//            "MAGN" : "ММК",
             "MTSS" : "МТС",
-            "FLOT" : "Совкомфлот",
+//            "FLOT" : "Совкомфлот",
             "SMLT" : "Самолёт",
-            "GLTR" : "Глобалтранс",
-            "IRAO" : "ИнтерРао",
+//            "GLTR" : "Глобалтранс",
+//            "IRAO" : "ИнтерРао",
             "BSPB" : "Банк Санкт-Петербург",
-            "LSNGP" : "Ленэнерго-п",
-            "LNTA" : "Лента",
+//            "LSNGP" : "Ленэнерго-п",
+//            "LNTA" : "Лента",
             "MDMG" : "Мать и Дитя",
-            "GAZP" : "Газпром",
-            "SGZH" : "Сегежа"
+//            "GAZP" : "Газпром",
+//            "SGZH" : "Сегежа",
+            "GEMC" : "ЕМС",
         ]
         
         ///Returns a beautiful name of the Russian company whose ticker symbol is provided
@@ -112,7 +113,7 @@ extension C {
         }
         
         static func allTickerSymbolsWithNames() -> [String:String] {
-            return russianTickerSymbols
+            return russianTickerSymbols.merging(foreignTickerSymbols, uniquingKeysWith: { (key1, key2) in key1 })
         }
         
         static func allTickerSymbolsWithNames() -> [CompanyName] {
@@ -126,7 +127,9 @@ extension C {
         //MARK: - Foreign tickers
         private static let foreignTickerSymbols: [String: String] = [
             "PBF" : "PBF Energy",
-            "BIDU" : "Baidu"
+            "BIDU" : "Baidu",
+            "KO" : "Coca-Cola",
+            "AMZN" : "Amazon"
         ]
         
         static func allForeignTickerSymbols() -> [String] {
@@ -178,7 +181,15 @@ extension C {
     struct PolygonAPI {
         static let key = "kATfwcnbHHRPIxQgOKRF0iFYT0hWx62i"
         static let baseURL = "https://api.polygon.io/v2/"
+        
+        ///The directory where Polygon data ought to be stored
         static let dataDirectory = "PolygonData/"
+        ///The sub-directory where companies' financial data ought to be stored
         static let financialDataDirectory = dataDirectory + "FinancialData/"
+    }
+    
+    struct AlphaVantageAPI {
+        ///API key that authorizes the app to use Alpha Vantage API
+        static let key = "0744SVCZC3OLQYV8"
     }
 }

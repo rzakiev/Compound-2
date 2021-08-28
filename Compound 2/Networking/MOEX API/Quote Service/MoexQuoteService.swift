@@ -17,25 +17,25 @@ final class MoexQuoteService: ObservableObject {
     
     fileprivate init() {
         Logger.log(operation: "QS: Initializing the shared instance of \(Self.self)")
-        MoexQuoteService.updateQuotes(every: .minute)
+        MoexQuoteService.updateQuotes(every: .second)
     }
     
     ///Synchronously fetch a quote for a specific company by providing its ticker symbol
     func getQuote(for ticker: String) async throws -> SimpleQuote? {
-
+        
         guard let ordinaryQuote = getMoexQuote(for: ticker) else { return nil }
-
+        
         return SimpleQuote(ticker: ticker, quote: ordinaryQuote, marketCap: nil)
     }
     
-//    ///Asynchronously fetch a quote for a specific company
-//    func getQuoteAsync(for ticker: String, completion: ((SimpleQuote?) -> Void)? = nil) {
-//
-//        guard let self = self  else { return }
-//        let quote = await self.getQuote(for: ticker)
-//        completion?(quote)
-//
-//    }
+    //    ///Asynchronously fetch a quote for a specific company
+    //    func getQuoteAsync(for ticker: String, completion: ((SimpleQuote?) -> Void)? = nil) {
+    //
+    //        guard let self = self  else { return }
+    //        let quote = await self.getQuote(for: ticker)
+    //        completion?(quote)
+    //
+    //    }
     
     ///Asyncronously fetches all quotes from the MOEX API and then stores them in the shared instance of the Quote Service
     func getAllQuotes(completion: (([SimpleQuote]) -> Void)? = nil) async {
@@ -75,29 +75,27 @@ extension MoexQuoteService {
         default: interval = 60
         }
         
-        let timer = Timer.scheduledTimer(timeInterval: interval, target: self, selector: #selector(fetchAllQuotes), userInfo: nil, repeats: true)
-
-    }
-    
-    @objc func fetchAllQuotes() async {
-        Logger.log(operation: "Updating quotes at \(Date())")
-        await MoexQuoteService.shared.getAllQuotes()
+        let _ = Timer.scheduledTimer(withTimeInterval: interval, repeats: true) { (timer) in
+            Logger.log(operation: "Updating quotes at \(Date())")
+            Task { await MoexQuoteService.shared.getAllQuotes() }
+        }
+        
     }
 }
 
 //MARK: - Fake Quotes
 extension MoexQuoteService {
     ///STRICTLY FOR TESTS
-//    static func generateFakeQuotes() {
-//        
-//        let _ = Timer.scheduledTimer(withTimeInterval: 4, repeats: true) { (timer) in
-//            var fakeQuotes = [SimpleQuote]()
-//            for ticker in ConstantTickerSymbols.allTickersWithNames() {
-//                fakeQuotes.append(.init(ticker: ticker, quote: Double.random(in: 1...1000)))
-//            }
-//            shared.allQuotes = fakeQuotes
-//        }
-//    }
+    //    static func generateFakeQuotes() {
+    //
+    //        let _ = Timer.scheduledTimer(withTimeInterval: 4, repeats: true) { (timer) in
+    //            var fakeQuotes = [SimpleQuote]()
+    //            for ticker in ConstantTickerSymbols.allTickersWithNames() {
+    //                fakeQuotes.append(.init(ticker: ticker, quote: Double.random(in: 1...1000)))
+    //            }
+    //            shared.allQuotes = fakeQuotes
+    //        }
+    //    }
 }
 
 //protocol QuoteService {

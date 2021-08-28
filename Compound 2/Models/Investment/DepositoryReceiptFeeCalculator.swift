@@ -11,7 +11,7 @@ import Foundation
 struct DepositoryReceiptFeeCalculator {
     
     @available (*, unavailable)
-    fileprivate init() {  }
+    fileprivate init() { Logger.log(error: "Initializing an instance of \(Self.self)") }
     
     static func fee(for ticker: String) -> DepositoryFee? {
         guard let fee = depositoryReceiptFees[ticker] else {
@@ -58,6 +58,8 @@ extension DepositoryReceiptFeeCalculator {
         //WARNING: Add these commissions!
 //        "OKEY" : ()
 //        "MDMG" : ()
+//        "GEMC" : ()
+//        "FIXP" : ()
     ]
 }
 

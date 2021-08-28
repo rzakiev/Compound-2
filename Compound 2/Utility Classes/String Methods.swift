@@ -9,7 +9,7 @@
 import Foundation
 
 extension String {
-    
+    ///Converts `235%` into `x2.3`
     static func beautifulGrossGrowthRateString(from growthRate: Int) -> String {
         switch growthRate {
         case 0:
@@ -23,5 +23,14 @@ extension String {
         default:
             return String("\(growthRate)")
         }
+    }
+}
+
+//MARK: - Date methods
+extension String {
+    func asDate(format: Date.Format = .ddMMyyyy) -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format.rawValue
+        return dateFormatter.date(from: self)
     }
 }

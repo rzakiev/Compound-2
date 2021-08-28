@@ -49,7 +49,7 @@ extension DividendCalendarDataProvider {
         
         for dividend in dividends {
             for payment in dividend.dividends ?? [] {
-                guard let parsedDate = Date.convertStringToDate(date: payment.registryclosedate) else {
+                guard let parsedDate =  payment.registryclosedate.asDate() else {
                     Logger.log(error: "unable to decode dividend payment date \(payment.registryclosedate)")
                     continue
                 }

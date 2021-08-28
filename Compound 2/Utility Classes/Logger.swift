@@ -12,7 +12,7 @@ struct Logger {
     
     private static let logOperations = false
     
-    private static let logWarnings = false
+    private static let logWarnings = true
     
     private static let logErrors = true
     

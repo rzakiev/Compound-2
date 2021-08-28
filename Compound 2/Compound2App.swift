@@ -36,6 +36,8 @@ extension Compound2App {
         
         MoexDataManager.updateAllLocalDataFromMoex()
         YahooQuoteService.shared.getAllQuotesAsync()
+        
+        Task { await PolygonDataService.fetchHistoricalFinancialData(for: ["AMZN", "KO", "PBF", "BIDU", "BABA", "OXY"]) }
 //        YahooFinancialDataService.fetchQuoteAndDividendHistoryForAllCompaniesAsync()
 //        YahooFinancialDataService.fetchQuoteAndDividendHistoryAsync(for: "PBF", startDate: "04/01/2010", endDate: "05/05/2021", interval: .oneMonth) {_ in }
     }
@@ -50,5 +52,9 @@ extension Compound2App {
 extension Compound2App {
     func testStuff() {
         //Task { await PolygonDataService.fetchHistoricalFinancialData(for: "PBF") }
+        print(Date() - "23/05/2021".asDate()!)
     }
 }
+
+
+

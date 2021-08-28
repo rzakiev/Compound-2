@@ -3,14 +3,8 @@
     {
         "ticker" : "ETLN",
         "currency" : "RUB",
-        "quantity" : 19358,
+        "quantity" : 30167,
         "averageOpeningPrice" : 123.63
-    },
-    {
-        "ticker" : "GAZP",
-        "currency" : "RUB",
-        "quantity" : 4740,
-        "averageOpeningPrice" : 231.76
     },
     {
         "ticker" : "PBF",

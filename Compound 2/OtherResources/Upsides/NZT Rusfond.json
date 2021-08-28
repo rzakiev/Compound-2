@@ -131,7 +131,7 @@
     {
         "ticker": "DK",
         "currency": "USD",
-        "targetPrice": 35,
+        "targetPrice": 30,
         "risk": "medium"
     },
     {
@@ -155,13 +155,13 @@
     {
         "ticker": "PBF",
         "currency": "USD",
-        "targetPrice": 30,
+        "targetPrice": 22,
         "risk": "medium"
     },
     {
         "ticker": "HFC",
         "currency": "USD",
-        "targetPrice": 51,
+        "targetPrice": 50,
         "risk": "medium"
     },
     {
@@ -263,7 +263,7 @@
     {
         "ticker": "CVI",
         "currency": "USD",
-        "targetPrice": 35,
+        "targetPrice": 27,
         "risk": "medium"
     },
     ]

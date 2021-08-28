@@ -99,15 +99,15 @@ enum Currency: String, Codable {
     
     case Rouble = "RUB"
     case USD = "USD"
+    case EUR = "EUR"
     case undefined = "undefined"
     
     init(fromString string: String) {
-        if string == "USD" {
-            self = .USD
-        } else if string == "RUB" {
-            self = .Rouble
-        } else {
-            self = .undefined
+        switch string {
+        case "USD": self = .USD
+        case "RUB": self = .Rouble
+        case "EUR": self = .EUR
+        default: self = .undefined
         }
     }
     
@@ -115,6 +115,7 @@ enum Currency: String, Codable {
         switch self {
         case .Rouble: return "₽"
         case .USD: return "$"
+        case .EUR: return "€"
         default:
             return ""
         }
