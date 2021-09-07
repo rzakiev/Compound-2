@@ -203,7 +203,7 @@
     {
         "ticker": "RASP",
         "currency": "RUB",
-        "targetPrice": 425,
+        "targetPrice": 444,
         "risk": "low"
     },
     {
@@ -245,7 +245,7 @@
     {
         "ticker": "SBER",
         "currency": "RUB",
-        "targetPrice": 360,
+        "targetPrice": 380,
         "risk": "low"
     },
     {
@@ -275,7 +275,7 @@
     {
         "ticker": "MTLRP",
         "currency": "RUB",
-        "targetPrice": 150,
+        "targetPrice": 333,
         "risk": "low"
     }
     ]
