@@ -17,7 +17,7 @@ final class MoexQuoteService: ObservableObject {
     
     fileprivate init() {
         Logger.log(operation: "QS: Initializing the shared instance of \(Self.self)")
-        MoexQuoteService.updateQuotes(every: .second)
+        Task { await MoexQuoteService.updateQuotes(every: .second) }
     }
     
     ///Synchronously fetch a quote for a specific company by providing its ticker symbol
@@ -62,7 +62,7 @@ extension MoexQuoteService {
 //MARK: - Updating quotes
 extension MoexQuoteService {
     //Sets the frequency with which quotes will be updated. This method must be called only once in the initializer
-    fileprivate static func updateQuotes(every timePeriod: TimePeriod) {
+    @MainActor fileprivate static func updateQuotes(every timePeriod: TimeUnit) {
         
         guard Date.todayIsNotWeekend else { return } //No need to update the quotes on the weekend
         

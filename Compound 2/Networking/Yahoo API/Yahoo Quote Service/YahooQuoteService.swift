@@ -82,7 +82,7 @@ extension YahooQuoteService {
 
 extension YahooQuoteService {
     ///Updates the quotes every specified time period
-    static func updateQuotes(every timePeriod: TimePeriod) {
+    static func updateQuotes(every timePeriod: TimeUnit) {
         
         guard Date.todayIsNotWeekend else { return } //No need to update the quotes on the weekend
         

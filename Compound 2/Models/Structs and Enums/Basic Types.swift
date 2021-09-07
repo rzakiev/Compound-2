@@ -200,7 +200,7 @@ struct InvestmentIdea: Codable, Hashable {
     let targetPrice: Double
     let risk: String
     
-    var upside: Int?
+    var upside: Double?
     
     ///Returns the upside from the current quote as a percentage
     mutating func updateUpside(currentQuote: SimpleQuote) {
@@ -213,7 +213,7 @@ struct InvestmentIdea: Codable, Hashable {
             return  //If it's greater than 0, the upside is realized
         }
         
-        self.upside = Int(upside * 100)
+        self.upside = upside * 100
     }
 }
 

@@ -50,22 +50,9 @@ enum Indicator: Equatable, Hashable {
         }
     }
     
-//    init(from smartlabIndicator: String) {
-//        
-//        for indicator in existingSmartlabIndicators {
-//            if smartlabIndicator.contains(indicator) {
-//                switch indicator {
-//                case "Див.выплата": self = .dividend
-//                case "Выручка": self = .revenue
-//                case "FCF, млрд руб": self = .freeCashFlow
-//                default:
-//                    self = .undefined
-//                }
-//            } else {
-//                self = .undefined
-//            }
-//        }
-//    }
+    init(from smartlabIndicator: String) {
+        self = .EBITDA
+    }
 }
 
 //
@@ -169,7 +156,7 @@ enum FileSystemError: Error {
 
 
 //MARK: - Time
-enum TimePeriod {
+enum TimeUnit {
     case second
     case minute
     case hour

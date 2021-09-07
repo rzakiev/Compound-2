@@ -3944,8 +3944,8 @@
             filePath = "Compound 2/Utility Classes/FileSystem/File System.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
             landmarkName = "getFilesInMainBundle(inDirectory:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3960,8 +3960,8 @@
             filePath = "Compound 2/Utility Classes/FileSystem/File System.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "getFilesInMainBundle(inDirectory:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3970,22 +3970,6 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "87BFD085-52D1-4FDB-868E-67B4C7BE168F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Compound 2/Utility Classes/FileSystem/File System.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
-            landmarkName = "getFilesInMainBundle(inDirectory:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9C72ED00-4371-4452-AADF-249AA5C79F7A"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -4001,15 +3985,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CF62F44E-5AC2-4EDA-BEDD-C147CDDDB996"
+            uuid = "9C72ED00-4371-4452-AADF-249AA5C79F7A"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Compound 2/Utility Classes/FileSystem/File System.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
             landmarkName = "getFilesInMainBundle(inDirectory:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -4017,7 +4001,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BEC30793-F573-49B4-B090-6BA2EC1B5DC1"
+            uuid = "CF62F44E-5AC2-4EDA-BEDD-C147CDDDB996"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -4033,6 +4017,22 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "BEC30793-F573-49B4-B090-6BA2EC1B5DC1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/Utility Classes/FileSystem/File System.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
+            landmarkName = "getFilesInMainBundle(inDirectory:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             uuid = "26E52F29-1F5E-4C6E-B931-763BBC832057"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -4040,8 +4040,8 @@
             filePath = "Compound 2/Utility Classes/FileSystem/File System.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
             landmarkName = "getFilesInMainBundle(inDirectory:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -4056,8 +4056,8 @@
             filePath = "Compound 2/Utility Classes/FileSystem/File System.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "159"
-            endingLineNumber = "159"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
             landmarkName = "getFilesInMainBundle(inDirectory:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -4328,8 +4328,8 @@
             filePath = "Compound 2/Networking/Polygon API/PolygonDataService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "savePolygonDataLocally(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -4466,7 +4466,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "2551B4E8-649D-4290-A98F-C2CF1295D234"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Compound 2/Networking/SmartlabDataService/SmartlabDataService.swift"
@@ -4610,7 +4610,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A3CC6FAD-E9F7-4C40-BEFF-3A92BCED10A1"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Compound 2/Networking/MOEX API/Quote Service/MoexQuoteService.swift"
@@ -4632,8 +4632,8 @@
             filePath = "Compound 2/Networking/Polygon API/PolygonDataService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "savePolygonDataLocally(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -4728,8 +4728,8 @@
             filePath = "Compound 2/Networking/Polygon API/PolygonDataService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
             landmarkName = "authorizedToDownloadData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -5048,8 +5048,8 @@
             filePath = "Compound 2/Networking/Polygon API/PolygonDataService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "getPolygonDataLocally(for:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -5064,8 +5064,8 @@
             filePath = "Compound 2/Networking/Polygon API/PolygonDataService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
             landmarkName = "getPolygonDataLocally(for:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -5080,8 +5080,8 @@
             filePath = "Compound 2/Networking/Polygon API/PolygonDataService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
             landmarkName = "getPolygonDataLocally(for:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -5208,8 +5208,8 @@
             filePath = "Compound 2/Networking/Polygon API/PolygonDataService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
             landmarkName = "authorizedToDownloadData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -5224,8 +5224,8 @@
             filePath = "Compound 2/Networking/Polygon API/PolygonDataService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
             landmarkName = "authorizedToDownloadData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -5320,9 +5320,25 @@
             filePath = "Compound 2/Networking/Polygon API/PolygonDataService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "fetchHistoricalFinancialData(for:saveToLocalStorage:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A83FEF1C-1ED9-43DA-8B73-79D2F6064716"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Compound 2/TabBarController/Tabs/IdeasUpsideTab/IdeasUpsideChart.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "chartHeightAndWidth(_:chartValue:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

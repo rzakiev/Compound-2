@@ -209,7 +209,7 @@
     {
         "ticker": "GAZP",
         "currency": "RUB",
-        "targetPrice": 360,
+        "targetPrice": 400,
         "risk": "low"
     },
     {

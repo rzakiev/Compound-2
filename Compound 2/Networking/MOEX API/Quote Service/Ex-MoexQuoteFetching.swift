@@ -14,7 +14,7 @@ extension MoexQuoteService {
     private static let allQuotesSourceURL = "https://iss.moex.com/iss/engines/stock/markets/shares/boards/tqbr/securities.json?iss.meta=on&iss.only=marketdata&marketdata.columns=SECID,LAST,ISSUECAPITALIZATION"
     
     ///Returns the URL of the JSON containing the quote for the specified company
-    private func moexQuoteURL(for ticker: String) -> String {
+    private static func moexQuoteURL(for ticker: String) -> String {
         return MoexQuoteService.moexBaseURL + ticker + MoexQuoteService.endOfURL
     }
 }
@@ -25,7 +25,7 @@ extension MoexQuoteService {
     ///Synchronous request
     func getMoexQuote(for ticker: String) -> Double? {
         
-        let quoteSourceURL = MoexQuoteService.shared.moexQuoteURL(for: ticker)
+        let quoteSourceURL = MoexQuoteService.moexQuoteURL(for: ticker)
         
         guard let url = URL(string: quoteSourceURL) else {
             Logger.log(error: "Unable to create a URL struct using the string: \(quoteSourceURL)")

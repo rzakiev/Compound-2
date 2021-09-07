@@ -77,7 +77,7 @@ struct IdeasUpsideChart: View {
         
         if chartValue.value <= 0 { return (0, width) }
         
-        if height <= 0 { return (0, width) }
+        if height <= 80 { return (0, width) }
         
         return (height, width)
     }
@@ -88,7 +88,7 @@ extension IdeasUpsideChart {
     struct UpsideChartValue: Comparable {
         let ticker: String
         let targetPrice: Double //actual target price in the corresponding currency
-        let upside: Int //percentage
+        let upside: Double //percentage
         let currency: Currency
         let risk: String
         
@@ -131,7 +131,7 @@ struct UpsideChartBar: View {
 //        }
     }
     
-    static func chartBarColor(growth: Int, risk: String) -> Color {
+    static func chartBarColor(growth: Double, risk: String) -> Color {
         if growth >= 0 {
             return risk == "low" ? Color.green : risk == "medium" ? Color.orange : risk == "high" ? Color.red : Color.gray
         } else {
@@ -143,7 +143,7 @@ struct UpsideChartBar: View {
 //the text displayed in the middle of a chart bar containing the financial indicator value and the growth value
 struct UpsideChartCenterView: View {
     
-    let upside: Int
+    let upside: Double
     let targetPrice: Double
     let ticker: String
     let currency: Currency
@@ -166,7 +166,7 @@ struct UpsideChartCenterView: View {
         if upside <= 2 {
             return nil
         } else {
-            return "\(upside > 0 ? "+" : "")\(upside)%"
+            return "\(upside > 0 ? "+" : "")\(Int(upside))%"
         }
     }
 }

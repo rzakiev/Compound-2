@@ -70,6 +70,7 @@ extension PolygonDataService {
             if authorizedToDownloadData() == false {
                 Logger.log(warning: "Suspending the Polygon data service for 60 seconds")
                 await Task.sleep(60.inNanoSeconds)
+                self.requestCounter = 0
             }
             
             let data = await fetchHistoricalFinancialData(for: ticker, saveToLocalStorage: saveToLocalStorage)

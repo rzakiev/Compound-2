@@ -71,6 +71,7 @@ extension FileManager {
     }
 }
 
+//MARK: - Main Bundle Methods
 extension FileManager {
     ///Returns data stored in the User Resources folder of the main bundle
     static func getFileInUserDirectory(titled title: String, withExtension format: String) -> Data? {
