@@ -52,7 +52,7 @@ extension Compound2App {
 extension Compound2App {
     func testStuff() {
         //Task { await PolygonDataService.fetchHistoricalFinancialData(for: "PBF") }
-        print(Date() - "23/05/2021".asDate()!)
+        print(Date() - "02/06/2021".asDate()!)
     }
 }
 
