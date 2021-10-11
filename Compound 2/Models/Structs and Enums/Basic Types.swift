@@ -205,6 +205,8 @@ struct InvestmentIdea: Codable, Hashable {
     ///Returns the upside from the current quote as a percentage
     mutating func updateUpside(currentQuote: SimpleQuote) {
         
+        
+        
         guard currentQuote.quote > 0 else { return }
         
         let upside = (targetPrice - currentQuote.quote) / currentQuote.quote

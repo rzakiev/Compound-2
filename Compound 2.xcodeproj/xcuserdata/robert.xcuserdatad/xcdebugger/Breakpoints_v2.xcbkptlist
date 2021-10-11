@@ -4600,8 +4600,8 @@
             filePath = "Compound 2/Networking/MOEX API/Quote Service/MoexQuoteService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "updateQuotes(every:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -4616,8 +4616,8 @@
             filePath = "Compound 2/Networking/MOEX API/Quote Service/MoexQuoteService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "updateQuotes(every:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -4930,7 +4930,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "0B9865C6-AD3C-406A-9247-628FF264CE86"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Compound 2/Compound2App.swift"

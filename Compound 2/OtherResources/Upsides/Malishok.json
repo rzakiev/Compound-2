@@ -277,6 +277,12 @@
         "currency": "RUB",
         "targetPrice": 333,
         "risk": "low"
+    },
+    {
+        "ticker": "LI",
+        "currency": "USD",
+        "targetPrice": 59,
+        "risk": "medium"
     }
     ]
 }

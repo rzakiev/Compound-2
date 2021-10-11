@@ -41,7 +41,7 @@ final class IdeasUpsideDataProvider: ObservableObject {
         
         let expiredIdeas: [String]
         if fileName.name == "Malishok" {
-            expiredIdeas = ["VLO", "MPC", "MRO", "RIG", "AR", "BTU", "CLR", "DVN", "ET", "HNRG", "LPI", "PHX", "ALRS"]
+            expiredIdeas = ["VLO", "MPC", "MRO", "RIG", "AR", "BTU", "CLR", "DVN", "ET", "HNRG", "LPI", "PHX", "ALRS", "SIBN", "ARLP", "LKOH", "MUR"]
         } else {
             expiredIdeas = []
         }

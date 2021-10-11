@@ -77,7 +77,7 @@ struct IdeasUpsideChart: View {
         
         if chartValue.value <= 0 { return (0, width) }
         
-        if height <= 80 { return (0, width) }
+        if height <= 80 { return (0, width) } //case where the height of the bar is lower than the texts in the middle (looks bad)
         
         return (height, width)
     }

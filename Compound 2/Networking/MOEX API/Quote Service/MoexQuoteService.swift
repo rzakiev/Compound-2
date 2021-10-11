@@ -49,7 +49,6 @@ final class MoexQuoteService: ObservableObject {
         self.allQuotes = newQuotes
         completion?(newQuotes)
     }
-    
 }
 
 extension MoexQuoteService {
