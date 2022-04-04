@@ -14,22 +14,14 @@ struct PositionView: View {
     
     @ObservedObject var quoteService = MoexQuoteService.shared
     
-//    var profitOrLoss: Double? { getPositionPL(quote: quoteService.getFullQuote(for: position.companyName)) }
-    
     var body: some View {
          
         VStack {
-            
             HStack {
-                companyName
+                CompanyName
                 Spacer()
-                
+                ShareCountLabel
             }
-            
-            VStack {
-                       ProgressView(value: 0.25)
-                       ProgressView(value: 0.75)
-            }.progressViewStyle(.automatic)
             
             HStack {
                 expectedDividend
@@ -49,20 +41,17 @@ extension PositionView {
 
 //MARK: - SwiftUI Titles
 extension PositionView {
-    var companyName: some View {
-        Text("\(position.companyName ?? "N/A")")
+    var CompanyName: some View {
+        Text("\(position.companyName ?? position.ticker)")
 //            .font(.title)
     }
     
-//    var currentPL: some View {
-//        let unwrappedPL = profitOrLoss ?? -1
-//        let formattedPLString = String(format: "%.2f", unwrappedPL)
-//        return Text(formattedPLString)
-//                .font(.callout)
-//    }
+    var ShareCountLabel: some View {
+        Text("\(position.quantity.beautify()) шт.")
+    }
     
     var expectedDividend: some View {
-        guard let dividends = self.position.expectedDividend else { return Text("NO DIV") }
+        guard let dividends = self.position.expectedDividend else { return Text("D: N/A") }
         return Text("Дивиденды: " + dividends.beautify() + " в год")
     }
 }

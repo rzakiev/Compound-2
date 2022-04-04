@@ -35,14 +35,14 @@ struct IdeasUpsideChart: View {
                     }.padding(.horizontal, 20)
                 }.frame(maxHeight: 500)
             }
-        //            .background(Color.blue)
-        //            .padding([.horizontal], 0)
-        //            .frame(width: geometry.size.width, height: geometry.size.height, alignment: .leading)
-        //.edgesIgnoringSafeArea([.horizontal])
-        //            .scaledToFit()
-        //            .background(Color.purple)
+            //            .background(Color.blue)
+            //            .padding([.horizontal], 0)
+            //            .frame(width: geometry.size.width, height: geometry.size.height, alignment: .leading)
+            //.edgesIgnoringSafeArea([.horizontal])
+            //            .scaledToFit()
+            //            .background(Color.purple)
+        }
     }
-}
     
     var chartTitle: some View {
         

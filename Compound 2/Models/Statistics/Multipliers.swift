@@ -48,30 +48,48 @@
 //    }
 //}
 //
-////MARK: - P/E
-//extension Multipliers {
-//    ///Synchronously calculates the price-to-earnings ratio for a company
-//    static func priceToEarnings(for company: String) -> Double? {
-//
-//        guard let currentQuote = QuoteService.shared.quote(for: company) else {
-//            return nil
-//        }
-//
-//        guard let netIncome = FinancialDataManager.getNetIncome(for: company)?.last?.value else {
-//            return nil
-//        }
-//
-//        guard netIncome > 0 else { //no need to calculate the P/E ratio for companies whose net income is negative or equal to 0
-//            return nil
-//        }
-//
-//        guard let marketCapitalization = MarketCapitalization.getMarketCapitalization(for: company, currentQuote: currentQuote) else {
-//            return nil
-//        }
-//
-//        return marketCapitalization / netIncome / 1_000_000_000
-//    }
-//
+//MARK: - P/E
+struct Multipliers {
+    ///Synchronously calculates the price-to-earnings ratio for a company
+    static func priceToEarnings(for ticker: String, quote: SimpleQuote?, netIncome: Double?) -> Double? {
+
+        guard quote != nil && netIncome != nil && netIncome! > 0 else { //no need to calculate the P/E ratio for companies whose net income is negative or equal to 0
+            return nil
+        }
+
+        guard let marketCapitalization = quote!.marketCap ?? MarketCapitalization.getMarketCapitalization(for: ticker, currentQuote: quote!) else {
+            return nil
+        }
+
+        return marketCapitalization / netIncome!
+    }
+    
+    static func priceToSales(for ticker: String, quote: SimpleQuote?, revenue: Double?) -> Double? {
+        
+        guard quote != nil && revenue != nil && revenue! > 0 else {
+            return nil
+        }
+        
+        guard let marketCapitalization = quote!.marketCap ?? MarketCapitalization.getMarketCapitalization(for: ticker, currentQuote: quote!) else {
+            return nil
+        }
+        
+        return marketCapitalization / revenue!
+    }
+    
+    static func dividendYield(for ticker: String, quote: SimpleQuote?, dividend: Double?) -> Double? {
+        guard quote != nil && dividend != nil && dividend! > 0 else {
+            return nil
+        }
+        
+        guard let marketCapitalization = quote!.marketCap ?? MarketCapitalization.getMarketCapitalization(for: ticker, currentQuote: quote!) else {
+            return nil
+        }
+        
+        return dividend! / marketCapitalization
+    }
+}
+
 ////    static func priceToEarningsAsync(for company: String, currentQuote: SimpleQuote) {
 ////        DispatchQueue.main.async {
 ////            completion(priceToEarnings(for: company, currentQuote: currentQuote))

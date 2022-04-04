@@ -3,14 +3,21 @@
     {
         "ticker" : "ETLN",
         "currency" : "RUB",
-        "quantity" : 30167,
-        "averageOpeningPrice" : 123.63
-    },
-    {
-        "ticker" : "PBF",
-        "currency" : "USD",
-        "quantity" : 4828,
-        "averageOpeningPrice" : 5.33
+        "holdingHorizon": "perpetual",
+        "lots": [
+            {
+                "quantity": 77418,
+                "openingPrice": 101.93
+            },
+            {
+                "quantity": 3459,
+                "openingPrice": 84.4
+            },
+            {
+                "quantity": 5189,
+                "openingPrice": 93.06
+            }
+        ]
     }
     ]
 }

@@ -12,15 +12,6 @@ final class StartUpViewDataManager: ObservableObject {
     @Published var allTasksAreDone = false
     
     init() {
-//        let _ = Timer.scheduledTimer(withTimeInterval: 10, repeats: false) { [weak self] _ in
-//
-//            guard let self = self else {
-//                Logger.log(error: "something fishy is going on here")
-//                return
-//            }
-//
-//            self.allTasksAreDone = true
-//        }
         Task { await downloadSmartLabData() }
     }
     

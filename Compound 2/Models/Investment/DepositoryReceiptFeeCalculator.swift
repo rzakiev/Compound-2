@@ -58,7 +58,7 @@ extension DepositoryReceiptFeeCalculator {
         //WARNING: Add these commissions!
 //        "OKEY" : ()
 //        "MDMG" : ()
-//        "GEMC" : ()
+        "GEMC" : (0.03, "3/09")
 //        "FIXP" : ()
     ]
 }

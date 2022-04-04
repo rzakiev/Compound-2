@@ -58,45 +58,50 @@ extension C {
     struct Tickers {
         //MARK: - Russian tickers
         private static let russianTickerSymbols: [String: String] = [
-//            "GMKN" : "Норильский Никель",
+            "GMKN" : "Норильский Никель",
             "YNDX" : "Яндекс",
             "RTKM" : "Ростелеком",
-//            "FIVE" : "X5 Retail Group",
+            "FIVE" : "X5 Retail Group",
             "TCSG" : "Tinkoff",
             "LSRG" : "Группа ЛСР",
-//            "VSMO" : "ВСМПО-Ависма",
-//            "CHMF" : "Северсталь",
+            "VSMO" : "ВСМПО-Ависма",
+            "CHMF" : "Северсталь",
             "RTKMP" : "Ростелеком-п",
-//            "AGRO" : "Русагро",
-//            "ENRU" : "Энел",
-//            "SBERP" : "Сбербанк-п",
-//            "SBER" : "Сбербанк",
-//            "MGNT" : "Магнит",
-//            "VTBR" : "ВТБ",
+            "ENRU" : "Энел",
+            "SBERP" : "Сбербанк-п",
+            "SBER" : "Сбербанк",
+            "MGNT" : "Магнит",
+            "VTBR" : "ВТБ",
             "HYDR" : "Русгидро",
-//            "NMTP" : "НМТП",
-//            "DSKY" : "Детский Мир",
+            "NMTP" : "НМТП",
+            "DSKY" : "Детский Мир",
             "AFKS" : "АФК Система",
-//            "NLMK" : "НЛМК",
+            "NLMK" : "НЛМК",
             "UNAC" : "ОАК",
             "AFLT" : "Аэрофлот",
-//            "RUAL" : "Русал",
-//            "FEES" : "ФСК ЕЭС",
+            "RUAL" : "Русал",
+            "FEES" : "ФСК ЕЭС",
             "ETLN" : "Эталон",
             "MOEX" : "Московская Биржа",
-//            "MAGN" : "ММК",
+            "MAGN" : "ММК",
             "MTSS" : "МТС",
-//            "FLOT" : "Совкомфлот",
+            "FLOT" : "Совкомфлот",
             "SMLT" : "Самолёт",
-//            "GLTR" : "Глобалтранс",
-//            "IRAO" : "ИнтерРао",
+            "GLTR" : "Глобалтранс",
+            "IRAO" : "ИнтерРао",
             "BSPB" : "Банк Санкт-Петербург",
-//            "LSNGP" : "Ленэнерго-п",
-//            "LNTA" : "Лента",
+            "LSNGP" : "Ленэнерго-п",
+            "LNTA" : "Лента",
             "MDMG" : "Мать и Дитя",
-//            "GAZP" : "Газпром",
-//            "SGZH" : "Сегежа",
+            "GAZP" : "Газпром",
+            "SGZH" : "Сегежа",
             "GEMC" : "ЕМС",
+            "CIAN": "Циан",
+            "HHRU": "HeadHunter",
+            "MAIL": "VK",
+            "OKEY": "Окей",
+            "OZON": "Ozon",
+            "SFTL": "Softline"
         ]
         
         ///Returns a beautiful name of the Russian company whose ticker symbol is provided
@@ -120,10 +125,6 @@ extension C {
             return allTickerSymbolsWithNames().map({ CompanyName(name: $0.value , ticker: $0.key) })
         }
         
-        static func preferredShareTicker(for ticker: String) -> String {
-            return ticker + "P"
-        }
-        
         //MARK: - Foreign tickers
         private static let foreignTickerSymbols: [String: String] = [
             "PBF" : "PBF Energy",
@@ -134,6 +135,25 @@ extension C {
         
         static func allForeignTickerSymbols() -> [String] {
             return foreignTickerSymbols.map(\.key)
+        }
+        
+        private static let tickersSortedByIndustry = [
+            "Авиалинии": ["AFLT"],
+            "Банки": ["BSPB", "VTBR", "SBER", "TCSG"],
+            "IT": ["YNDX", "MTSS", "RTKM"],
+            "Деревообработка": ["SGZH"],
+            "Нефтегаз": ["GAZP", "ROSN", "LKOH", "SIBN", "BANE"],
+            "Медицина": ["GEMC", "MDMG"],
+            "Девелопмент": ["ETLN"]
+            
+        ]
+        
+        static func securityGeography(for ticker: String) -> SecurityGeography {
+            if russianTickerSymbols[ticker] != nil { return .russia }
+            
+            if foreignTickerSymbols[ticker] != nil { return .foreign }
+            
+            return .unknown
         }
     }
 }

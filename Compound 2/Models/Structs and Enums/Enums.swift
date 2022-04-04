@@ -82,13 +82,13 @@ enum PortfolioSaveError: Error {
 enum Multiplier: CaseIterable {
     
     case priceToEarnings
-    case EVtoEBITDA
+    case priceToSales
     case dividendYield
     
     var title: String {
         switch self {
         case .priceToEarnings: return "P/E"
-        case .EVtoEBITDA: return "EV/EBITDA"
+        case .priceToSales: return "P/S"
         case .dividendYield: return "Див. Доходность"
         }
     }
@@ -140,9 +140,10 @@ enum CompetitiveAdvantage: String {
 //MARK: - Preferences
 enum CompanyInfoSegment: String, CaseIterable {
     case finances = "Финансы"
-    case production = "Производство"
-    case ecosystem = "Экосистема"
+//    case production = "Производство"
+//    case ecosystem = "Экосистема"
     case tradingView = "Trading View"
+    case multipliers = "Мультипликаторы"
 }
 
 
@@ -162,4 +163,12 @@ enum TimeUnit {
     case hour
     case day
     case undefined
+}
+
+enum SecurityGeography {
+    
+    case unknown
+    
+    case russia
+    case foreign
 }

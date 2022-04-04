@@ -12,19 +12,15 @@ struct Portfolio: Codable {
     
     let positions: [Position]
     
-//    var grossDividendFlow: Double = 0.0
-    
     ///Default initializer
     init(positions: [Position]) {
         self.positions = positions
-//        self.grossDividendFlow = self.positions.compactMap(\.expectedDividend).reduce(0, +)
     }
     
     ///Use this initializer to laod a portfolio from local storage
     init?(fromLocalStorage: Bool) {
         guard let localPortfolio = PortfolioDataManager.getManuallyAddedLocalPortfolio() else { return nil }
         self = localPortfolio
-//        self.positions.sort()
     }
 }
 
@@ -32,9 +28,7 @@ struct Portfolio: Codable {
 extension Portfolio {
     @discardableResult
     func dividendFlow() -> Double {
-        let dividendFlow = self.positions.compactMap(\.expectedDividend).reduce(0, +)
-//        self.grossDividendFlow = dividendFlow
-        return dividendFlow
+        self.positions.compactMap(\.expectedDividend).reduce(0, +)
     }
 }
 

@@ -9,31 +9,31 @@
 import Foundation
 import SwiftUI
 
-//struct Lot: Codable, Identifiable {
-//
-//    var id = UUID()
-//
-//    let numberOfShares: Int
-//
-//    let openingPrice: Double
-//
-//    var costBasis: Double { Double (numberOfShares) * openingPrice }
-//
-//    func profitAsPercentage(quote: Double) -> String {
-//        return numberWithSignAndPercentage(number: (quote - openingPrice) / openingPrice * 100)
-//    }
-//}
+struct Lot: Codable, Hashable {
+
+    let quantity: Int
+
+    let openingPrice: Double
+
+    var costBasis: Double { Double (quantity) * openingPrice }
+
+    func profitAsPercentage(quote: Double) -> String {
+        return numberWithSignAndPercentage(number: (quote - openingPrice) / openingPrice * 100)
+    }
+}
 
 ///Position in a specific security
 struct Position: Hashable, Codable {
     
-//    var id = UUID()
+    let ticker: String
     
-    //var companyName: String? = nil //the name of the company in which the position hold
+    var quantity: Int { lots.map(\.quantity).reduce(0, +) }
     
-    let ticker, currency: String
-    let quantity: Int
-    let averageOpeningPrice: Double
+    let lots: [Lot]
+    
+    let currency: Currency
+    
+    var averageOpeningPrice: Double { lots.map(\.costBasis).reduce(0, +) / Double(quantity) }
     
     var expectedDividend: Double? {
         if let fixedDividend = DividendCalculator.fixedDividend(for: self.ticker, numberOfShares: self.quantity, adjustForDividendTax: false) { return fixedDividend }
@@ -45,12 +45,20 @@ struct Position: Hashable, Codable {
 }
 //MARK: - Initializers
 extension Position {
+    
+    init(ticker: String, currency: String, lots: [Lot]) {
+        self.ticker = ticker
+        self.currency = Currency(fromString: currency)
+        self.lots = lots
+    }
+    
     init(ticker: String, quantity: Int, averageOpeningPrice: Double, currency: String) {
         self.ticker = ticker
-        self.quantity = quantity
-        self.averageOpeningPrice = averageOpeningPrice
-        self.currency = currency
+        self.currency = Currency(fromString: currency)
+        self.lots = [Lot(quantity: quantity, openingPrice: averageOpeningPrice)]
     }
+    
+    
 }
 
 //MARK: - Comparison

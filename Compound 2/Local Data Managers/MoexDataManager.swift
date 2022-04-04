@@ -236,4 +236,31 @@ extension MoexDataManager {
         
         return securitiesInfo
     }
+    
+    static func getDepositoryReceiptsTradedOnMoex() -> [String] {
+        
+        guard let securitiesInfo: SecuritiesInfo = getSecuritiesInfoFromLocalStorage() else {
+            return []
+        }
+        
+        var depositoryReceipts = [String]()
+        
+        for security in securitiesInfo.data{
+            let securityType = security[security.count-3]
+            switch securityType {
+            case .string(let type):
+                if type == "D" { //D stands for Depository Receipt
+                    print("Type D for \(security[0]); ISIN: \(security[19])")
+                    switch security[0] {
+                    case .string(let ticker): depositoryReceipts.append(ticker)
+                    default: Logger.log(error: "Unable to decode the company's ticker as String")
+                    }
+                }
+            default:
+                continue
+            }
+        }
+        
+        return depositoryReceipts
+    }
 }

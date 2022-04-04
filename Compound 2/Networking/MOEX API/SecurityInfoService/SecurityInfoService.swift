@@ -37,18 +37,6 @@ extension SecurityInfoService {
             return nil
         }
         
-//        print(securities.securities.data.map({ $0[$0.count-2] == "D" }))
-//        for security in securities.securities.data{
-//            let securityType = security[security.count-3]
-//            switch securityType {
-//            case .string(let type):
-//                if type == "D" { print("Type D for \(security[0]); ISIN: \(security[19])") }
-//            default:
-//                print("Unknown type: \(security[security.count-3])")
-//                continue
-//            }
-//        }
-        
         return securities.securities
     }
     

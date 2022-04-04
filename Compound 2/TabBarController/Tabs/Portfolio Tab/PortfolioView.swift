@@ -20,15 +20,11 @@ struct PortfolioView: View {
         NavigationView {
             List {
                 pieChartView
-//                totalDividendFlowView
                 positionList
             }.navigationBarTitle("Портфолио", displayMode: .inline)
             .navigationViewStyle(DoubleColumnNavigationViewStyle())
             .navigationBarItems(leading: EditButton(), trailing: addPositionButton)
-            //.sheet(isPresented: $displayAddPositionView) { self.addNewPositionView }
-
-
-        }//.onDisappear(perform: { self.portfolio.saveToStorage() })
+        }
     }
 }
 

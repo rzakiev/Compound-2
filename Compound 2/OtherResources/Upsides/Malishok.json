@@ -3,131 +3,29 @@
     "author": "malishok",
     "values": [
     {
-        "ticker": "PBF",
-        "currency": "USD",
-        "targetPrice": 18,
-        "risk": "high"
-    },
-    {
-    	"ticker": "AR",
-        "currency": "USD",
-        "targetPrice": 15,
-        "risk": "high"
-    },
-    {
-    	"ticker": "ARLP",
-        "currency": "USD",
-        "targetPrice": 10,
-        "risk": "high"
-    },
-    {
     	"ticker": "BABA",
-        "currency": "USD",
-        "targetPrice": 260,
-        "risk": "low"
-    },
-    {
-    	"ticker": "BIDU",
         "currency": "USD",
         "targetPrice": 240,
         "risk": "medium"
     },
     {
+    	"ticker": "BIDU",
+        "currency": "USD",
+        "targetPrice": 230,
+        "risk": "medium"
+    },
+    {
     	"ticker": "SLB",
     	"currency": "USD",
-        "targetPrice": 40,
+        "targetPrice": 50,
         "risk": "low"
     },
-    {
-    	"ticker": "BTU",
-    	"currency": "USD",
-        "targetPrice": 4,
-        "risk": "high"
-    },
-    {
-    	"ticker": "CLR",
-    	"currency": "USD",
-        "targetPrice": 35,
-        "risk": "high"
-    },
-    {
-    	"ticker": "DVN",
-    	"currency": "USD",
-        "targetPrice": 28,
-        "risk": "high"
-    },  
-    {
-    	"ticker": "EQT",
-    	"currency": "USD",
-        "targetPrice": 30,
-        "risk": "high"
-    },  
-    {
-    	"ticker": "ET",
-    	"currency": "USD",
-        "targetPrice": 10,
-        "risk": "high"
-    },   
     {
     	"ticker": "FTI",
     	"currency": "USD",
-        "targetPrice": 14,
+        "targetPrice": 12,
         "risk": "medium"
     },
-    {
-    	"ticker": "HLX",
-    	"currency": "USD",
-        "targetPrice": 8,
-        "risk": "high"
-    },  
-    {
-    	"ticker": "HNRG",
-    	"currency": "USD",
-        "targetPrice": 3,
-        "risk": "high"
-    },  
-    {
-    	"ticker": "HP",
-    	"currency": "USD",
-        "targetPrice": 40,
-        "risk": "low"
-    },         
-    {
-    	"ticker": "KOS",
-    	"currency": "USD",
-        "targetPrice": 4,
-        "risk": "high"
-    },  
-    {
-    	"ticker": "LPI",
-    	"currency": "USD",
-        "targetPrice": 50,
-        "risk": "high"
-    },  
-    {
-    	"ticker": "MRO",
-    	"currency": "USD",
-        "targetPrice": 14,
-        "risk": "medium"
-    },  
-{
-    	"ticker": "MUR",
-    	"currency": "USD",
-        "targetPrice": 28,
-        "risk": "high"
-    },  
-    {
-    	"ticker": "NOV",
-    	"currency": "USD",
-        "targetPrice": 25,
-        "risk": "medium"
-    },  
-    {
-    	"ticker": "NS",
-    	"currency": "USD",
-        "targetPrice": 22,
-        "risk": "high"
-    },  
     {
     	"ticker": "NTNX",
     	"currency": "USD",
@@ -137,152 +35,177 @@
     {
     	"ticker": "OIS",
     	"currency": "USD",
-        "targetPrice": 12,
+        "targetPrice": 8,
         "risk": "high"
-    },  
-    {
-    	"ticker": "OKE",
-    	"currency": "USD",
-        "targetPrice": 70,
-        "risk": "low"
-    },  
-    {
-    	"ticker": "OXY",
-    	"currency": "USD",
-        "targetPrice": 40,
-        "risk": "medium"
-    },  
+    },
+    
     {
     	"ticker": "PAA",
     	"currency": "USD",
         "targetPrice": 16,
         "risk": "high"
-    }, 
-    {
-    	"ticker": "PHX",
-    	"currency": "USD",
-        "targetPrice": 2.92,
-        "risk": "high"
-    },  
-    {
-    	"ticker": "RIG",
-    	"currency": "USD",
-        "targetPrice": 5,
-        "risk": "high"
-    },  
+    },
     {
     	"ticker": "SABR",
     	"currency": "USD",
-        "targetPrice": 20,
+        "targetPrice": 15,
         "risk": "high"
     },  
     {
     	"ticker": "SPR",
     	"currency": "USD",
-        "targetPrice": 65,
+        "targetPrice": 55,
         "risk": "high"
     },  
     {
     	"ticker": "SU",
     	"currency": "USD",
-        "targetPrice": 35,
-        "risk": "low"
-    },
-    {
-    	"ticker": "VLO",
-    	"currency": "USD",
-        "targetPrice": 80,
-        "risk": "medium"
-    },  
-    {
-    	"ticker": "MPC",
-    	"currency": "USD",
-        "targetPrice": 60,
-        "risk": "medium"
-    },
-    {
-        "ticker": "RASP",
-        "currency": "RUB",
-        "targetPrice": 444,
+        "targetPrice": 40,
         "risk": "low"
     },
     {
         "ticker": "GAZP",
         "currency": "RUB",
-        "targetPrice": 400,
+        "targetPrice": 277,
         "risk": "low"
     },
     {
         "ticker": "SIBN",
         "currency": "RUB",
-        "targetPrice": 480,
+        "targetPrice": 525,
         "risk": "low"
     },
     {
         "ticker": "AFLT",
         "currency": "RUB",
-        "targetPrice": 100,
+        "targetPrice": 52,
         "risk": "low"
     },
     {
         "ticker": "LNTA",
         "currency": "RUB",
-        "targetPrice": 300,
-        "risk": "low"
-    },
-    {
-        "ticker": "OGKB",
-        "currency": "RUB",
-        "targetPrice": 0.90,
+        "targetPrice": 230,
         "risk": "low"
     },
     {
         "ticker": "LKOH",
         "currency": "RUB",
-        "targetPrice": 7500,
+        "targetPrice": 6420,
         "risk": "low"
     },
     {
         "ticker": "SBER",
         "currency": "RUB",
-        "targetPrice": 380,
+        "targetPrice": 175,
         "risk": "low"
     },
     {
         "ticker": "VTBR",
         "currency": "RUB",
-        "targetPrice": 0.07,
+        "targetPrice": 0.03,
         "risk": "low"
     },
     {
         "ticker": "ALRS",
         "currency": "RUB",
-        "targetPrice": 150,
+        "targetPrice": 110,
         "risk": "low"
     },
     {
         "ticker": "GMKN",
         "currency": "RUB",
-        "targetPrice": 30000,
-        "risk": "low"
-    },
-    {
-        "ticker": "CVI",
-        "currency": "USD",
-        "targetPrice": 22,
-        "risk": "high"
-    },
-    {
-        "ticker": "MTLRP",
-        "currency": "RUB",
-        "targetPrice": 333,
+        "targetPrice": 26118,
         "risk": "low"
     },
     {
         "ticker": "LI",
         "currency": "USD",
-        "targetPrice": 59,
+        "targetPrice": 45,
         "risk": "medium"
-    }
+    },
+    {
+        "ticker": "NYMT",
+        "currency": "USD",
+        "targetPrice": 5,
+        "risk": "medium"
+    },
+    {
+        "ticker": "VRT",
+        "currency": "USD",
+        "targetPrice": 40,
+        "risk": "medium"
+    },
+    {
+        "ticker": "MTLRP",
+        "currency": "RUB",
+        "targetPrice": 230,
+        "risk": "high"
+    },
+    {
+        "ticker": "CRM",
+        "currency": "USD",
+        "targetPrice": 330,
+        "risk": "low"
+    },
+    {
+        "ticker": "TWTR",
+        "currency": "USD",
+        "targetPrice": 60,
+        "risk": "low"
+    },
+    {
+        "ticker": "MARA",
+        "currency": "USD",
+        "targetPrice": 50,
+        "risk": "medium"
+    },
+    {
+        "ticker": "S",
+        "currency": "USD",
+        "targetPrice": 63,
+        "risk": "high"
+    },
+    {
+        "ticker": "RASP",
+        "currency": "RUB",
+        "targetPrice": 550,
+        "risk": "low"
+    },
+    {
+        "ticker": "AFKS",
+        "currency": "RUB",
+        "targetPrice": 21,
+        "risk": "low"
+    },
+    {
+        "ticker": "ET",
+        "currency": "USD",
+        "targetPrice": 12,
+        "risk": "high"
+    },
+    {
+        "ticker": "CRWD",
+        "currency": "USD",
+        "targetPrice": 250,
+        "risk": "high"
+    },
+    {
+        "ticker": "COUR",
+        "currency": "USD",
+        "targetPrice": 30,
+        "risk": "medium"
+    },
+    {
+        "ticker": "PYPL",
+        "currency": "USD",
+        "targetPrice": 250,
+        "risk": "medium"
+    },
+    {
+        "ticker": "VKCO",
+        "currency": "RUB",
+        "targetPrice": 730,
+        "risk": "low"
+    },
     ]
 }

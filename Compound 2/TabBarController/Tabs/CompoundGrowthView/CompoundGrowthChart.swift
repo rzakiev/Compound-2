@@ -16,7 +16,7 @@ struct CompoundGrowthChart: View {
     private let grossGrowth: Int?
     
     var body: some View {
-        Chart(for: .custom(name: chartTitle), grossGrowth: grossGrowth, values: values)
+        Chart(for: .custom(name: chartTitle), grossGrowth: nil, values: values)
     }
     
     init(compounding capital: Double, over numberOfYears: Int, at rate: Double, chartTitle: String) {

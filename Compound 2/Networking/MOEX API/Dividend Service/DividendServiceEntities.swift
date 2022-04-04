@@ -8,4 +8,4 @@
 
 import Foundation
 
-typealias CompanyDividends = [(ticker: String, dividends: MoexDividends)]
+typealias CorporateDividends = [(ticker: String, dividends: MoexDividends)]

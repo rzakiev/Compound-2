@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E230" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CompanyDividends_" representedClassName="CompanyDividends_" syncable="YES" codeGenerationType="class">
+        <attribute name="dividendFigure" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="year" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="company" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CompanyInfo_" inverseName="dividends" inverseEntity="CompanyInfo_"/>
+    </entity>
+    <entity name="CompanyInfo_" representedClassName="CompanyInfo_" syncable="YES" codeGenerationType="class">
+        <attribute name="companyName" optional="YES" attributeType="String"/>
+        <attribute name="currency" optional="YES" attributeType="String"/>
+        <attribute name="dividendFigures" optional="YES" attributeType="Binary"/>
+        <attribute name="revenueFigures" optional="YES" attributeType="Binary"/>
+        <attribute name="ticker" optional="YES" attributeType="String"/>
+        <relationship name="dividends" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CompanyDividends_" inverseName="company" inverseEntity="CompanyDividends_"/>
+        <relationship name="revenue" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CompanyRevenue_" inverseName="company" inverseEntity="CompanyRevenue_"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="companyName"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="CompanyRevenue_" representedClassName="CompanyRevenue_" syncable="YES" codeGenerationType="class">
+        <attribute name="revenue" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="year" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="company" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CompanyInfo_" inverseName="revenue" inverseEntity="CompanyInfo_"/>
+    </entity>
+    <entity name="CurrencyItem_" representedClassName="CurrencyItem_" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="shortName" optional="YES" attributeType="String"/>
+        <attribute name="symbol" optional="YES" attributeType="String"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="name"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="StockTarget_" representedClassName="StockTarget_" syncable="YES" codeGenerationType="class">
+        <attribute name="companyName" attributeType="String"/>
+        <attribute name="currency" attributeType="String"/>
+        <attribute name="investmentThesis" optional="YES" attributeType="String"/>
+        <attribute name="openingDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="priceOnOpening" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="NO"/>
+        <attribute name="risk" optional="YES" attributeType="String"/>
+        <attribute name="targetPrice" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="ticker" attributeType="String"/>
+        <relationship name="author" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StockTargetAuthor_" inverseName="ideas" inverseEntity="StockTargetAuthor_"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="ticker"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="StockTargetAuthor_" representedClassName="StockTargetAuthor_" syncable="YES" codeGenerationType="class">
+        <attribute name="authorName" attributeType="String"/>
+        <relationship name="ideas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="StockTarget_" inverseName="author" inverseEntity="StockTarget_"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="authorName"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <elements>
+        <element name="CompanyDividends_" positionX="-269.6157836914062" positionY="38.27752685546875" width="128" height="28"/>
+        <element name="CompanyInfo_" positionX="-53.87152099609375" positionY="-80.91708374023438" width="128" height="148"/>
+        <element name="CompanyRevenue_" positionX="159.0100708007812" positionY="28.32327270507812" width="128" height="28"/>
+        <element name="CurrencyItem_" positionX="-312.0234375" positionY="-284.9508056640625" width="128" height="28"/>
+        <element name="StockTarget_" positionX="493.51220703125" positionY="-282.6442718505859" width="128" height="164"/>
+        <element name="StockTargetAuthor_" positionX="283.6517944335938" positionY="-212.1712951660156" width="128" height="59"/>
+    </elements>
+</model>

@@ -18,7 +18,7 @@ struct Chart: View {
     
     var body: some View {
         return VStack(alignment: .center) {
-            Text(indicator.title + " (" + (grossGrowth == nil ? "" : String.beautifulGrossGrowthRateString(from: grossGrowth!)) + ")")
+            Text(indicator.title + grossGrowthText())
                 .padding(.top, 10)
             
             ChartHStack(for: indicator,
@@ -45,6 +45,12 @@ extension Chart {
         self.indicator = produce
         self.grossGrowth = grossGrowth
         self.chartValues = values
+    }
+}
+
+extension Chart {
+    func grossGrowthText() -> String {
+        return grossGrowth == nil ? "" : " (" + String.beautifulGrossGrowthRateString(from: grossGrowth!) + ")"
     }
 }
 

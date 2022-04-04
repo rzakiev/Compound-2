@@ -9,8 +9,10 @@
 import Foundation
 
 struct MoexDividendService {
+    
     @available (*, unavailable)
     fileprivate init() { Logger.log(error: "Initializing an instance of \(Self.self)") }
+    
 }
 
 //MARK: - Fetching dividends
@@ -53,7 +55,7 @@ extension MoexDividendService {
     }
     
     ///Returns the dividends paid out by all companies. Asynchronous call.
-    static func fetchDividendsForSomeCompaniesAsync(tickers: [String], completion: @escaping (CompanyDividends) -> Void) {
+    static func fetchDividendsForSomeCompaniesAsync(tickers: [String], completion: @escaping (CorporateDividends) -> Void) {
         DispatchQueue.global(qos: .background).async {
             var dividends: [(ticker: String, dividends: MoexDividends)] = []
             for ticker in tickers {
@@ -65,9 +67,9 @@ extension MoexDividendService {
     }
     
     ///Returns the dividends paid out by all companies. Synchronous call.
-    static func fetchDividendsForSomeCompaniesSync(tickers: [String]) -> CompanyDividends {
+    static func fetchDividendsForSomeCompaniesSync(tickers: [String]) -> CorporateDividends {
         
-            var dividends: CompanyDividends = []
+            var dividends: CorporateDividends = []
         
             for ticker in tickers {
                 guard let dividend = fetchDividends(forTicker: ticker) else { Logger.log(error: "Couldn't fetch dividends for \(ticker)"); continue }

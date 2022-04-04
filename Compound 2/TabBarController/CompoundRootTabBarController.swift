@@ -14,32 +14,21 @@ struct CompoundRootTabBarController: View {
     @State var displayStartUpView = true//Preferences.isFirstLaunch
     
     var body: some View {
-        return TabView {
+        TabView {
             StockListAndDetailNavigationView()
                 .modifier(RootTabBarControllerModifier(backgroundImage: "Stocks Tab Bar Icons", tabName: "Компании"))
             MultipliersAndYieldsView()
                 .modifier(RootTabBarControllerModifier(backgroundImage: "Stocks Tab Bar Icons", tabName: "Мультики"))
             PortfolioView()
-                .modifier(RootTabBarControllerModifier(backgroundImage: "Portfolio  Tab Bar Icons", tabName: "Портфолио")) //test tab
-//            DividendCalendar()
-//            #if DEBUG
+                .modifier(RootTabBarControllerModifier(backgroundImage: "Portfolio  Tab Bar Icons", tabName: "Портфолио"))
             IdeasUpsideNavigationView()
                 .tabItem { Image(systemName: "arrow.up.right"); Text("Идеи") }
             PortfolioReturnsView()
                 .modifier(RootTabBarControllerModifier(backgroundImage: "", tabName: "Доходность"))
-//            TestsView()
-//                .tabItem { Image(systemName: "gearshape"); Text("Тесты") }
-//                .modifier(RootTabBarControllerModifier(backgroundImage: "Stocks Tab Bar Icons", tabName: "Тесты")) //test tab
-//            #endif
-        }//.fullScreenCover(isPresented: $displayStartUpView) { StartupView(displayStartupView: $displayStartUpView) }
-    }
-    
-    init() {
-       
+            TestsView()
+        }
     }
 }
-
-
 
 //MARK: - View Modifier for the Tab Bar Controller
 struct RootTabBarControllerModifier: ViewModifier {

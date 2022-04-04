@@ -20,7 +20,7 @@ struct PieChartView: View {
     
     var body: some View {
         ZStack {
-        ForEach(portfolio.positions.indices) { index in
+            ForEach(0..<portfolio.positions.count, id: \.self) { index in
             Circle()
                 .trim(from: trimRangesForChartSlices[index].from, to: trimRangesForChartSlices[index].to)
                 .stroke(generateStrokeColor(for: portfolio.positions[index]), lineWidth: 50)
@@ -39,6 +39,7 @@ struct PieChartView: View {
     
     //MARK: - Initializer
     init(portfolio: Portfolio) {
+        
         _portfolio = State(initialValue: portfolio)
         
         var chartSliceRanges = [(from: CGFloat, to: CGFloat)]()
@@ -48,7 +49,6 @@ struct PieChartView: View {
             chartSliceRanges.append((trimFrom, trimTo))
         }
         self.trimRangesForChartSlices = chartSliceRanges
-        print("RANGES: \(chartSliceRanges)")
     }
 }
 
@@ -100,13 +100,3 @@ extension PieChartView {
         }
     }
 }
-
-
-//struct PieChartView_Previews: PreviewProvider {
-//    
-//    @State var portfolio = Portfolio.makeSamplePortfolio()
-//    
-//    static var previews: some View {
-//        PieChartView(portfolio: $portfolio)
-//    }
-//}

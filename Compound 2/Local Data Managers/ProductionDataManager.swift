@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ProductionDataManager {
+/*struct ProductionDataManager {
     
     public static func listOfAllCompanies() -> [String] {
         var allCompanies = Bundle.main.paths(forResourcesOfType: "plist", inDirectory: productionDataDirectory)
@@ -111,4 +111,4 @@ extension ProductionDataManager {
 
 extension ProductionDataManager {
     private static let productionDataDirectory = "/ProductionFigures"
-}
+}*/

@@ -13,7 +13,7 @@ final class IdeasUpsideDataProvider: ObservableObject {
     
     let fileName: (name: String, format: String)
     
-    @Published var ideas: InvestmentIdeas
+    @Published var ideas: OldInvestmentIdeas
     
     private var quoteSubscriber: AnyCancellable?
     
@@ -33,23 +33,26 @@ final class IdeasUpsideDataProvider: ObservableObject {
             return
         }
         
-        guard let decodedIdeas = try? JSONDecoder().decode(InvestmentIdeas.self, from: localIdeasData) else {
+        guard let decodedIdeas = try? JSONDecoder().decode(OldInvestmentIdeas.self, from: localIdeasData) else {
             Logger.log(error: "Unable to decode the malishok's investment ideas file")
             ideas = .init(author: "N/A", values: [])
             return
         }
         
-        let expiredIdeas: [String]
-        if fileName.name == "Malishok" {
-            expiredIdeas = ["VLO", "MPC", "MRO", "RIG", "AR", "BTU", "CLR", "DVN", "ET", "HNRG", "LPI", "PHX", "ALRS", "SIBN", "ARLP", "LKOH", "MUR"]
-        } else {
-            expiredIdeas = []
+//        let expiredIdeas: [String]
+//        if fileName.name == "Malishok" {
+//            expiredIdeas = ["VLO", "MPC", "MRO", "RIG", "AR", "BTU", "CLR", "DVN", "ET", "HNRG", "LPI", "PHX", "ALRS", "ARLP", "MUR", "RASP", "KOS"]
+//        } else {
+//            expiredIdeas = []
+//        }
+//
+//        //Removing expired ideas from the list
+//        let filteredIdeas = decodedIdeas.values.filter({ !expiredIdeas.contains($0.ticker) })
+        
+        ideas = OldInvestmentIdeas(author: decodedIdeas.author, values: decodedIdeas.values)
+        ideas.values.filter({ $0.currency == .Rouble }).forEach { upside in
+            print(upside.ticker + ": ₽\(upside.targetPrice)")
         }
-        
-        //Removing expired ideas from the list
-        let filteredIdeas = decodedIdeas.values.filter({ !expiredIdeas.contains($0.ticker) })
-        
-        ideas = InvestmentIdeas(author: decodedIdeas.author, values: filteredIdeas)
         
         quoteSubscriber = YahooQuoteService.shared.$allQuotes.receive(on: DispatchQueue.main).sink(receiveValue: { [unowned self] (_) in
             for i in 0..<self.ideas.values.count {

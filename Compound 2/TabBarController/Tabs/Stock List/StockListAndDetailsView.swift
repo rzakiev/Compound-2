@@ -28,8 +28,6 @@ import SwiftUI
 //Navigation view for iPhones
 struct StockListAndDetailNavigationView: View {
     
-    private let preferredCompanySortingCriteria = PreferredCompanySortingCriterion.byName
-    
     @State private var companyList = C.Tickers.allTickerSymbolsWithNames().sorted(by: { $0.name < $1.name })
     
     @State private var userSearchInput = ""
@@ -40,59 +38,48 @@ struct StockListAndDetailNavigationView: View {
                 CompanyListSearchBar(text: $userSearchInput, onSearchButtonClicked: endEditing)
                 List {
                     if !userSearchInput.isEmpty { companyListForSearchMode }
-                        
-                    else { companiesSortedByNameList }
-                    }.navigationBarTitle("Компании", displayMode: .inline)
+                    
+                    else { companiesSortedByIndustryList }
+                }.navigationBarTitle("Компании", displayMode: .inline)
                     .listStyle(GroupedListStyle())
-                }
-            }.navigationViewStyle(DoubleColumnNavigationViewStyle())
-            //.edgesIgnoringSafeArea([.top])
-        }
-        
-        //Three types of lists that might be displayed depending on the user's preferences
-        //MARK:- Lists of companies sorted based on the user's preferences
-        var companiesSortedByNameList: some View {
-            //let companyList = FinancialDataManager.listOfAllCompanies().sorted(by: { $0 < $1 })
-            //If the user chose to sort companies alphabetically
-            return
-                ForEach(self.companyList.filter({
-                    userSearchInput.isEmpty ? true : $0.name.localizedCaseInsensitiveContains(userSearchInput)
-                })) { company in
-                    NavigationLink(destination: SegmentedCompanyInfoView(company: company)) {
-                        StockListCell(companyName: company.name, cagr: nil)
-                    }
             }
-        }
-        
-        var companyListForSearchMode: some View {
-            Section(header: Text("Найденные компании")) {
-                ForEach(companyList.filter({self.userSearchInput.isEmpty ? true : $0.name.localizedCaseInsensitiveContains(self.userSearchInput)})) { company in
-                    NavigationLink(destination: SegmentedCompanyInfoView(company: company)) {// SegmentedCompanyInfoView(company: company.name)
-                        StockListCell(companyName: company.name)
-                    }
-                }
+        }.navigationViewStyle(DoubleColumnNavigationViewStyle())
+        //.edgesIgnoringSafeArea([.top])
+    }
+    
+    //Three types of lists that might be displayed depending on the user's preferences
+    //MARK:- Lists of companies sorted based on the user's preferences
+    var companiesSortedByIndustryList: some View {
+
+        return ForEach(self.companyList.filter({
+            userSearchInput.isEmpty ? true : $0.name.localizedCaseInsensitiveContains(userSearchInput)
+        })) { company in
+            NavigationLink(destination: SegmentedCompanyInfoView(company: company)) {
+                StockListCell(companyName: company.name, cagr: nil)
             }
         }
     }
     
-    extension StockListAndDetailNavigationView {
-        
-        func endEditing() {
-            
-            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil)
+    var companyListForSearchMode: some View {
+        Section(header: Text("Найденные компании")) {
+            ForEach(companyList.filter({self.userSearchInput.isEmpty ? true : $0.name.localizedCaseInsensitiveContains(self.userSearchInput)})) { company in
+                NavigationLink(destination: SegmentedCompanyInfoView(company: company)) {// SegmentedCompanyInfoView(company: company.name)
+                    StockListCell(companyName: company.name)
+                }
+            }
         }
     }
+}
+
+extension StockListAndDetailNavigationView {
     
-    
-    
-    
-    
-    #if DEBUG
-    struct StockListPreview: PreviewProvider {
+    func endEditing() {
         
-        static var previews: some View {
-            StockListAndDetailNavigationView()
-        }
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil)
     }
-#endif
+}
+
+
+
+
 

@@ -35,6 +35,10 @@ extension SmartlabDataService.SmartlabData {
         return values.first(where: { $0.key.contains("Чистая прибыль") })?.value
     }
     
+    func getLastYearNetIncome() -> Double? {
+        return values.first(where: { $0.key.contains("Чистая прибыль") })?.value.last?.value
+    }
+    
     func getFCF() -> [FinancialFigure]? {
         return nil
     }
@@ -43,20 +47,16 @@ extension SmartlabDataService.SmartlabData {
 //Protocol that should implemented by structs that house companies' financial data
 protocol FinancialData {
     var ticker: String { get }
+    
     var values: [String: [FinancialFigure]] { get }
     
     func getRevenue() -> [FinancialFigure]?
     
     func getNetIncome() -> [FinancialFigure]?
     
+    func getLastYearNetIncome() -> Double?
+    
     func getDividend() -> [FinancialFigure]?
     
     func getFCF() -> [FinancialFigure]?
 }
-
-////MARK: - Protocol Implementations
-//extension SmartlabDataService: CustomStringConvertible {
-//    var description: String {
-//        return
-//    }
-//}

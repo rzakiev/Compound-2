@@ -10,14 +10,14 @@ import SwiftUI
 
 struct IdeasUpsideNavigationView: View {
     
-    let fileNames: [(name: String, format: String)]
+    let upsideFileNames: [(name: String, format: String)]
     
     var body: some View {
         return NavigationView {
             List {
-                ForEach(0..<fileNames.count, id: \.self) { i in
-                    NavigationLink(destination: IdeasUpsideView(fileName: fileNames[i])) {
-                        Text(fileNames[i].name)
+                ForEach(0..<upsideFileNames.count, id: \.self) { i in
+                    NavigationLink(destination: IdeasUpsideView(fileName: upsideFileNames[i])) {
+                        Text(upsideFileNames[i].name)
                     }
                 }
             }.navigationViewStyle(DoubleColumnNavigationViewStyle())
@@ -29,7 +29,7 @@ extension IdeasUpsideNavigationView {
     init() {
         guard let files = try? FileManager.default.contentsOfDirectory(atPath:  Bundle.main.resourcePath! + C.UpsidesVariables.upsidesDirectory) else {
             Logger.log(error: "Unable to enumerate files in the following directory: \(C.UpsidesVariables.upsidesDirectory)")
-            self.fileNames = []
+            self.upsideFileNames = []
             return
         }
         
@@ -41,7 +41,7 @@ extension IdeasUpsideNavigationView {
             names.append((name, format))
         }
         
-        self.fileNames = names
+        self.upsideFileNames = names
     }
 }
 

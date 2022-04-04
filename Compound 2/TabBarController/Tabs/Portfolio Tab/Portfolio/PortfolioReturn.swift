@@ -9,6 +9,8 @@
 import Foundation
 
 struct PortfolioReturns: Codable {
+    
+    let broker: String
     let values: [PortfolioReturn]
     
     func grossReturn() -> Double? {
@@ -27,7 +29,7 @@ struct PortfolioReturns: Codable {
                   Logger.log(error: "No initial or end value in the portfolio returns: \(values)")
                   return nil
               }
-        return Statistics.cagrFor(firstFigure: startingValue, lastFigure: endValue, numberOfYearsInBetween: values.count - 1)
+        return PortfolioReturns.cagrFor(firstFigure: startingValue, lastFigure: endValue, numberOfYearsInBetween: values.count - 1)
     }
 }
 
@@ -48,7 +50,13 @@ extension PortfolioReturns {
         
         ///Returns only those deposits that represent reinvested dividends
         func dividendDeposits() -> [PortfolioDeposit] {
-            deposits.filter({ $0.type == .dividendReinvestment })
+            deposits.filter({ deposit in
+                if case DepositType.dividendReinvestment = deposit.type {
+                    return true
+                }
+                
+                return false
+            })
         }
         
         ///Returns only those deposits that represent the investor's own contributions
@@ -65,18 +73,24 @@ extension PortfolioReturns {
         }
     }
     
+    ///Calculates the CAGR using the starting sum, the resultant sum, and the number of years it took for growth to occur
+    static func cagrFor(firstFigure: Double, lastFigure: Double, numberOfYearsInBetween: Int) -> Double {
+        return pow(lastFigure / firstFigure, 1 / Double((numberOfYearsInBetween - 1))) - 1
+    }
+    
     struct PortfolioDeposit: Codable {
-        
-        enum DepositType: String, Codable {
-            //Situtation where we're reinvesting dividends from our holdings
-            case dividendReinvestment = "dividendReinvestment"
-            //Situtation where where we're depositing our own funds
-            case ownDeposit = "ownDeposit"
-        }
         
         let date: String
         let amount: Double
         let currency: Currency
         let type: DepositType
+        let ticker: String? //for DepositType.dividendReinvestment
+    }
+    
+    enum DepositType: String, Codable, Equatable {
+        //Case where we're reinvesting dividends from our holdings
+        case dividendReinvestment = "dividendReinvestment"
+        //Case where where we're depositing our own funds
+        case ownDeposit = "ownDeposit"
     }
 }

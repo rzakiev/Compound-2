@@ -8,19 +8,9 @@
 
 import Foundation
 
-/*
- This purpose of this struct is to calculate the historical returns of a portfolio and compare them to those of indices
- */
-
 struct PortfolioReturnCalculator {
     @available(*, unavailable)
-    fileprivate init() { Logger.log(error: "Initializing an instance of \(Self.self)") }
-}
-
-extension PortfolioReturnCalculator {
-    static func calculatePortfolioReturn() {
-        
-    }
+    fileprivate init() { Logger.log(error: "Initializing an instance of \(Self.self) which only contains static methods") }
 }
 
 //MARK: - File system methods
@@ -36,8 +26,8 @@ extension PortfolioReturnCalculator {
         
         var portfolioReturns = [PortfolioReturns]()
         
-        for data in portfolioReturnData {
-            guard let portfolioReturn = try? JSONDecoder().decode(PortfolioReturns.self, from: data) else {
+        for brokerPortfolio in portfolioReturnData {
+            guard let portfolioReturn = try? JSONDecoder().decode(PortfolioReturns.self, from: brokerPortfolio) else {
                 Logger.log(error: "Unable to decode the data into an instance of PortfolioReturns")
                 continue
             }

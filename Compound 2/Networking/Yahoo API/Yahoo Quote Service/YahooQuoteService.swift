@@ -151,7 +151,7 @@ extension YahooQuoteService {
             return []
         }
         
-        var allIdeas = InvestmentIdeas(author: "", values: [])
+        var allIdeas = OldInvestmentIdeas(author: "", values: [])
         
         for fileName in files {
             
@@ -169,7 +169,7 @@ extension YahooQuoteService {
                 continue
             }
             
-            guard let decodedIdeas = try? JSONDecoder().decode(InvestmentIdeas.self, from: localIdeasData) else {
+            guard let decodedIdeas = try? JSONDecoder().decode(OldInvestmentIdeas.self, from: localIdeasData) else {
                 Logger.log(error: "Unable to decode the malishok's investment ideas file")
                 return []
             }

@@ -189,44 +189,7 @@ struct QuoteData: Codable {
      }
  }
 
-struct InvestmentIdeas: Codable {
-    let author: String
-    var values: [InvestmentIdea]
-}
 
-struct InvestmentIdea: Codable, Hashable {
-    let ticker: String
-    let currency: Currency
-    let targetPrice: Double
-    let risk: String
-    
-    var upside: Double?
-    
-    ///Returns the upside from the current quote as a percentage
-    mutating func updateUpside(currentQuote: SimpleQuote) {
-        
-        
-        
-        guard currentQuote.quote > 0 else { return }
-        
-        let upside = (targetPrice - currentQuote.quote) / currentQuote.quote
-        
-        guard upside > 0 else {
-            return  //If it's greater than 0, the upside is realized
-        }
-        
-        self.upside = upside * 100
-    }
-}
-
-extension InvestmentIdea: Comparable {
-
-    static func < (lhs: InvestmentIdea, rhs: InvestmentIdea) -> Bool {
-        if lhs.upside == nil { return true }
-        else if rhs.upside == nil { return false }
-        else { return lhs.upside! < rhs.upside! }
-    }
-}
 
 //MARK: - Dividends
 ///Use this struct whenever a dividend is necessary

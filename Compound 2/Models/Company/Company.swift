@@ -7,48 +7,24 @@
 //
 
 import Foundation
+import CoreData
 
 struct Company {
     
-    let name: String
+    let name: String?
     let ticker: String
     
     //Financial Indicators
     let financialData: FinancialData
-//    let revenue: [FinancialFigure]?
-//
-//    let operatingIncome: [FinancialFigure]?
-//    let operatingIncomeType: OperatingIncomeType?
-//
-//    let netIncome: [FinancialFigure]?
-//    let freeCashFlow: [FinancialFigure]?
-//
-//    let dividends: [FinancialFigure]?
-//
-//    let netDebt: [FinancialFigure]? //Don't use net debt; rather, use the computed var debtToEBITDA
-//
-//    let customIndicators: [String: [FinancialFigure]]? //Non-standard indicators like commission income, interest income, etc.
-//
-//    //    let quoteLink: String?
-//    //    var isPublic: Bool { quoteLink != nil }
-//
-//    //    let numberOfOrdinaryShares: Int?
-//    //    let numberOfPreferredShares: Int?
-//
-//    //Declaring a lazy property cointaining production figures
-//    lazy var productionFigures = ProductionDataManager.getProductionFigures(for: name)
-//
-//    //Local Moex Dividends
-//    var moexDividends: Dividend?
 }
 
 //MARK: - Initializers
 extension Company {
     
-    init(name: CompanyName) {
+    init(ticker: String, name: String? = nil) {
         
-        self.name = name.name
-        self.ticker = name.ticker
+        self.name = name
+        self.ticker = ticker
         
         if let smartLabData = SmartlabDataService.getLocalSmartlabData(for: [ticker]).first {
             financialData = smartLabData
@@ -59,176 +35,35 @@ extension Company {
         }
         
     }
-    
-//    init(name: String) {
-//        //Loading the company's financial data from the company's respective plist file
-//        guard let companyPlistData = try? FinancialDataManager.getCompanyData(for: name) else {
-//            self.name = "No Data"
-//            revenue = nil
-//            operatingIncome = nil
-//            operatingIncomeType = nil
-//            netIncome = nil
-//            freeCashFlow = nil
-//            dividends = nil
-//            netDebt = nil
-//            customIndicators = nil
-//            //            quoteLink = nil
-//            //            numberOfOrdinaryShares = nil
-//            //            numberOfPreferredShares = nil
-//            return
-//        }
-//
-//        self.name = name
-//
-//        revenue = companyPlistData.revenue ?? nil
-//
-//        if let EBITDA = companyPlistData.ebitda {
-//            operatingIncome = EBITDA
-//            operatingIncomeType = .EBITDA
-//        } else if let OIBDA = companyPlistData.oibda {
-//            operatingIncome = OIBDA
-//            operatingIncomeType = .OIBDA
-//        } else {
-//            operatingIncome = nil
-//            operatingIncomeType = nil
-//        }
-//
-//        netIncome = companyPlistData.netIncome
-//
-//        freeCashFlow = companyPlistData.freeCashFlow
-//
-//        dividends = companyPlistData.dividends
-//
-//        netDebt = companyPlistData.netDebt ?? nil
-//
-//        customIndicators = companyPlistData.customIndicators ?? nil
-//
-//        //assigning the smartlab quote links
-//        //        guard let smartLabLinks = try? FinancialDataManager.getSmartlabLinks(),
-//        //              let quoteLink = smartLabLinks[self.name],
-//        //              let shares = try? FinancialDataManager.numberOfSharesFor(ticker: name) else {
-//        //
-//        //                self.quoteLink = nil
-//        //                (numberOfOrdinaryShares, numberOfPreferredShares) = (nil, nil)
-//        //                return
-//        //        }
-//
-//        //        self.quoteLink = quoteLink
-//        //        (numberOfOrdinaryShares, numberOfPreferredShares) = (shares.numberOfOrdinaryShares, shares.numberOfPreferredShares)
-//
-//        guard let ticker = TickerSymbols.ticker(for: name) else { return }
-//        self.moexDividends = MoexDataManager.getDividendDataLocally(forTicker: ticker)
-//    }
 }
 
-//MARK: - Computed properties and methods for calculating various ratios
-//extension Company {
-//    var debtToEBITDA: [FinancialFigure]? {
-//
-//        if let debt = netDebt, let ebitda = operatingIncome {
-//            var debtToEBITDA = [FinancialFigure]()
-//            for i in 0..<ebitda.count {
-//                if ebitda[i].value != 0 {
-//                    debtToEBITDA.append(.init(year: ebitda[i].year, value: debt[i].value / ebitda[i].value))
-//                }
-//            }
-//            return debtToEBITDA
-//        } else {
-//            return nil
-//        }
-//    }
-//}
+extension Collection {
+    var isNotEmpty: Bool { self.isEmpty == false }
+}
 
 //MARK: - Financial Indicators
 extension Company {
     func availableIndicators() -> [Indicator] {
         
         var availableIndicators: [Indicator] = []
-        if financialData.getRevenue() != nil { availableIndicators.append(.revenue) }
-        if financialData.getFCF() != nil { availableIndicators.append(.freeCashFlow) }
-        if financialData.getDividend() != nil { availableIndicators.append(.dividend) }
-        if financialData.getNetIncome() != nil { availableIndicators.append(.netIncome) }
+        
+        if financialData.getRevenue() != nil && financialData.getRevenue()!.isNotEmpty {
+            availableIndicators.append(.revenue)
+        }
+        
+        if financialData.getFCF() != nil && financialData.getFCF()!.isNotEmpty == false {
+            availableIndicators.append(.freeCashFlow)
+        }
+        if financialData.getDividend() != nil && financialData.getDividend()!.isNotEmpty == false  {
+            availableIndicators.append(.dividend)
+        }
+        if financialData.getNetIncome() != nil && financialData.getNetIncome()!.isNotEmpty == false {
+            availableIndicators.append(.netIncome)
+        }
         
         return availableIndicators
     }
 }
-//
-//        if netIncome != nil { availableIndicators.append(.netProfit) }
-//
-//        if freeCashFlow != nil { availableIndicators.append(.freeCashFlow) }
-//
-//        if dividends != nil { availableIndicators.append(.dividend) }
-//
-//        if debtToEBITDA != nil { availableIndicators.append(.debtToEBITDA) }
-//
-//        if customIndicators != nil {
-//            for (indicator, _) in customIndicators! {
-//                switch indicator {
-//                case Indicator.commissionIncome.title: availableIndicators.append(.commissionIncome)
-//                case Indicator.interestIncome.title: availableIndicators.append(.interestIncome)
-//                default:
-//                    Logger.log(error: "Attempting to add a non-existent custom indicator: \(indicator)")
-//                }
-//            }
-//        }
-//
-//        let indicatorsAdjustedForUserSettings = Preferences.requiredFinancialChartIndicators().filter({ availableIndicators.contains($0) })
-//        return indicatorsAdjustedForUserSettings
-//    }
-//
-//    //    func values(for indicator: Indicator) -> [(year: Int, value: Double)]? {
-//    //        switch indicator {
-//    //        case .revenue:
-//    //            return revenue
-//    //        case .OIBDA, .EBITDA:
-//    //            if operatingIncome != nil { return operatingIncome }
-//    //            else { return nil}
-//    //        case .netProfit:
-//    //            if netIncome != nil { return netIncome }
-//    //            else { return nil }
-//    //        case .freeCashFlow:
-//    //            if freeCashFlow != nil { return freeCashFlow }
-//    //            else { return nil }
-//    //        case .dividend:
-//    //            if dividends != nil { return dividends }
-//    //            else { return nil }
-//    //        case .debtToEBITDA:
-//    //            if let debtToOperatingIncome = debtToEBITDA  { return debtToOperatingIncome }
-//    //            else { return nil }
-//    //        case .commissionIncome:
-//    //            if let commissionIncome = customIndicators?[Indicator.commissionIncome.asString()] { return commissionIncome }
-//    //            else { return nil }
-//    //        case .interestIncome:
-//    //            if let interestIncome = customIndicators?[Indicator.interestIncome.asString()] { return interestIncome }
-//    //            else { return nil }
-//    //        default:
-//    //            return nil
-//    //        }
-//    //    }
-//}
-
-//MARK: -  Multipliers
-//extension Company {
-//    func availableMultipliers() -> [Multiplier]? {
-//
-//        var availableIndicators: [Multiplier] = [.priceToEarnings, .dividendYield]
-//
-//        if operatingIncome != nil { availableIndicators.append(.EVtoEBITDA) }
-//
-//        return availableIndicators
-//    }
-//    /// Synchronous request
-//    //    func getpriceToEarningsRatioAsync(completion: @escaping (Double?) -> Void) {
-//    //        DispatchQueue.main.async {
-//    //            completion(Multipliers.priceToEarnings(for: self.name))
-//    //        }
-//    //    }
-//    /// Synchronous request
-//    //    func getEVEBITDA() -> Double? {
-//    //        return Multipliers.evEBITDA(for: self.name)
-//    //    }
-//
-//}
 
 //MARK: - Growth indicators
 extension Company {

@@ -33,9 +33,9 @@ struct Preferences {
     }
     
     static func requiredSegmentsInSegmentedCompanyView(for company: String) -> [CompanyInfoSegment] {
-        var requiredSegments: [CompanyInfoSegment] = [.finances]
+        let requiredSegments: [CompanyInfoSegment] = [.finances, .multipliers, .tradingView]
         
-        if ProductionDataManager.productionFiguresAreAvailable(for: company) { requiredSegments.append(.production) }
+//        if ProductionDataManager.productionFiguresAreAvailable(for: company) { requiredSegments.append(.production) }
         
         return requiredSegments
     }

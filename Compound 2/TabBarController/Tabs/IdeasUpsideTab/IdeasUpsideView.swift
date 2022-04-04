@@ -10,14 +10,11 @@ import SwiftUI
 
 struct IdeasUpsideView: View {
     
-    let fileName: (name: String, format: String)
-    
     @ObservedObject var investments: IdeasUpsideDataProvider
     
-    @State private var selectedTab = "РФ"
+    @State private var selectedTab = "USA"
     
     init(fileName: (name: String, format: String)) {
-        self.fileName = fileName
         self.investments = IdeasUpsideDataProvider(fileName: fileName)
     }
     
@@ -28,7 +25,7 @@ struct IdeasUpsideView: View {
                 Text("USA").tag("USA")
                 Text("РФ").tag("РФ")
             }.frame(maxWidth: 200)
-            .pickerStyle(SegmentedPickerStyle())
+                .pickerStyle(SegmentedPickerStyle())
             
             currentDateView
             
@@ -50,17 +47,17 @@ extension IdeasUpsideView {
     
     var americanStocksUpsideView: some View {
         VStack {
-                if investments.ideas.values.filter({ $0.risk == "low" && $0.currency == .USD }).count != 0 {
-                    IdeasUpsideChart(chartValues: lowRiskAmericanStocks).frame(minWidth: 0, maxWidth: .infinity, minHeight: 500)
-                }
-                IdeasUpsideChart(chartValues: mediumRiskAmericanStocks).frame(minWidth: 0, maxWidth: .infinity,  minHeight: 500)
-                IdeasUpsideChart(chartValues: highRiskAmericanStocks).frame(minWidth: 0, maxWidth: .infinity,  minHeight: 500)
+            if investments.ideas.values.filter({ $0.risk == "low" && $0.currency == .USD }).count != 0 {
+                IdeasUpsideChart(chartValues: lowRiskAmericanStocks).frame(minWidth: 0, maxWidth: .infinity, minHeight: 500)
             }
+            IdeasUpsideChart(chartValues: mediumRiskAmericanStocks).frame(minWidth: 0, maxWidth: .infinity,  minHeight: 500)
+            IdeasUpsideChart(chartValues: highRiskAmericanStocks).frame(minWidth: 0, maxWidth: .infinity,  minHeight: 500)
+        }
     }
     
     
     var russianStocksUpsideView: some View {
-        IdeasUpsideChart(chartValues: investments.ideas.values.filter({ $0.currency == .Rouble }).sorted(by: > ).map({
+        return IdeasUpsideChart(chartValues: investments.ideas.values.filter({ $0.currency == .Rouble }).sorted(by: > ).map({
             IdeasUpsideChart.UpsideChartValue(ticker: $0.ticker, targetPrice: $0.targetPrice, upside: ($0.upside ?? 0), currency: $0.currency, risk: $0.risk)
         })).frame(minHeight: 500)
     }
@@ -85,11 +82,3 @@ extension IdeasUpsideView {
         })
     }
 }
-
-
-
-//struct IdeasUpsideView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        IdeasUpsideView()
-//    }
-//}

@@ -13,6 +13,10 @@ final class ChartListDataProvider: ObservableObject {
     
     @Published var marketCap: Double?
     
+    @Published var quote: SimpleQuote?
+    
+    var financialFigures: Company?
+    
     let ticker: String
     
     private var quoteSubscriber: AnyCancellable?
@@ -21,10 +25,24 @@ final class ChartListDataProvider: ObservableObject {
         
         self.ticker = ticker
         
-        quoteSubscriber = MoexQuoteService.shared.$allQuotes.receive(on: DispatchQueue.global()).sink(receiveValue: { [unowned self] (_) in
+        self.financialFigures = Company(ticker: ticker)
+        
+        quoteSubscriber = MoexQuoteService.shared.$allQuotes.receive(on: DispatchQueue.main).sink(receiveValue: { [unowned self] (_) in
             guard let newQuote = MoexQuoteService.shared.allQuotes.first(where: { $0.ticker == ticker }) else { return }
-            marketCap = newQuote.marketCap
+            quote = newQuote
+            marketCap = newQuote.marketCap ?? MarketCapitalization.getMarketCapitalization(for: ticker, currentQuote: newQuote)
         })
+        
+        Task {
+            let securityGeography = C.Tickers.securityGeography(for: ticker)
+            switch securityGeography {
+            case .unknown: break
+            case .russia: await SmartlabDataService.fetchData(for: ticker, saveToLocalStorage: true)
+            case .foreign: await PolygonDataService.fetchHistoricalFinancialData(for: ticker)
+            }
+            
+            self.financialFigures = Company(ticker: ticker)
+        }
     }
 }
 
@@ -33,19 +51,18 @@ struct FinancialChartList: View {
     
     let company: CompanyName
     
-    private let financialFigures: Company?
+    
     
     @State private var marketCap: Double? //Displayed in the multipliersView and also used for calculating varios ratios
     
     private var dividends: [DividendElement]?
     
-    @ObservedObject var dataProvider: ChartListDataProvider
-    
+    @EnvironmentObject var dataProvider: ChartListDataProvider
     
     var body: some View {
         
         List {
-            if financialFigures != nil {
+            if dataProvider.financialFigures != nil {
                 financialChartList
             }
             
@@ -60,10 +77,10 @@ struct FinancialChartList: View {
     var financialChartList: some View {
         return Section(header: Text("Финансовые индикаторы")) {
             //            ScrollView(.vertical, showsIndicators: false) {
-            ForEach(self.financialFigures!.availableIndicators(), id: \.self) { indicator in
+            ForEach(dataProvider.financialFigures!.availableIndicators(), id: \.self) { indicator in
                 Chart(for: indicator,
-                      grossGrowth: financialFigures?.grossGrowthRate(for: indicator),
-                      values: self.financialFigures!.chartValues(for: indicator)!)
+                         grossGrowth: dataProvider.financialFigures?.grossGrowthRate(for: indicator),
+                      values: dataProvider.financialFigures!.chartValues(for: indicator)!)
             }
         }.edgesIgnoringSafeArea([.horizontal])
         .listRowInsets(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
@@ -108,8 +125,6 @@ extension FinancialChartList {
 //        if company.ticker != nil {
         self.dividends = MoexDataManager.getDividendDataLocally(forTicker: company.ticker)?.dividends?.reversed()
 //        }
-        self.financialFigures = Company(name: company)
-        self.dataProvider = ChartListDataProvider(ticker: company.ticker)
         
 //        quoteSubscriber = QuoteService.shared.$allQuotes.receive(on: DispatchQueue.main).sink(receiveValue: { (quotes) in
 //            guard let newQuote = quotes.first(where: { $0.ticker == company.ticker }) else { return }
@@ -137,15 +152,3 @@ extension FinancialChartList {
 //        }
     }
 }
-
-//MARK: - SwiftUI Previews
-#if DEBUG
-
-struct ChartList_Previews: PreviewProvider {
-    static var previews: some View {
-        ForEach([ColorScheme.light, .dark], id: \.self) { scheme in
-            FinancialChartList(company: .init(name: "Севка)", ticker: "CHMF")).colorScheme(scheme)//.modifier(ChartListModifier())
-        }
-    }
-}
-#endif

@@ -34,6 +34,10 @@ struct PolygonData: Codable, FinancialData {
         return values[PolygonData.title(for: .netIncome)]
     }
     
+    func getLastYearNetIncome() -> Double? {
+        return values[PolygonData.title(for: .netIncome)]?.last?.value
+    }
+    
     func getFCF() -> [FinancialFigure]? {
         return values[PolygonData.title(for: .freeCashFlow)]
     }

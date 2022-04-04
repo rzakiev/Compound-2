@@ -1,41 +1,55 @@
 {
-	"values": [
-		{
-			"year": 2019,
-			"accountValueAtStartOfYear": 1665000.0,
-			"deposits": [
-				{
-				"date" :"01/07/2019",
-				"amount" : 590000,
-				"currency": "RUB",
-				"type":"ownDeposit"			
-			    },
-			]
-		},
-		{
-			"year": 2020,
-			"accountValueAtStartOfYear": 2449000.0,
-			"deposits": [
-				{
-				"date" :"01/07/2020",
-				"amount" : 1000000,
-				"currency": "RUB",
-				"type":"ownDeposit"			
-			    },
-			]
-		},
-		{
-			"year": 2021,
-			"accountValueAtStartOfYear": 4840000.0,
-			"deposits": [
-				{
-				"date" :"01/07/2021",
-				"amount" : 800000.0,
-				"currency": "RUB",
-				"type":"ownDeposit"			
-			    },
-			]
-		},
-	]
+    "broker": "ВТБ",
+    "values": [
+        {
+            "year": 2019,
+            "accountValueAtStartOfYear": 1665000.0,
+            "deposits": [
+                {
+                "date" :"01/07/2019",
+                "amount" : 590000,
+                "currency": "RUB",
+                "type": "ownDeposit"
+                }
+            ]
+        },
+        {
+            "year": 2020,
+            "accountValueAtStartOfYear": 2449000.0,
+            "deposits": [
+                {
+                "date" :"01/07/2020",
+                "amount" : 1000000,
+                "currency": "RUB",
+                "type":"ownDeposit"
+                }
+            ]
+        },
+        {
+            "year": 2021,
+            "accountValueAtStartOfYear": 4840000.0,
+            "deposits": [
+                {
+                "date" :"31/12/2021",
+                "amount" : 1000000.0,
+                "currency": "RUB",
+                "type":"ownDeposit"
+                },
+                {
+                "date" :"22/12/2021",
+                "amount" : 296500.0,
+                "currency": "RUB",
+                "type":"dividendReinvestment",
+                "ticker": "ETLN"
+                },
+            ]
+        },
+        {
+            "year": 2022,
+            "accountValueAtStartOfYear": 6997784.0,
+            "deposits": [
+            ]
+        },
+    ]
 
 }

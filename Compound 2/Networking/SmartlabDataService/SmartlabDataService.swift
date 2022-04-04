@@ -40,10 +40,10 @@ extension SmartlabDataService {
         
         for ticker in tickers {
             
-            guard shouldDownloadSmartlabData(for: ticker) == true else {
-                Logger.log(operation: "Determined that smartlab data shouldn't be downloaded for \(ticker)")
-                continue
-            }
+//            guard shouldDownloadSmartlabData(for: ticker) == true else {
+//                Logger.log(operation: "Determined that smartlab data shouldn't be downloaded for \(ticker)")
+//                continue
+//            }
             
             guard let dataSourceURL = URL(string: dataDownloadURL(for: ticker)) else {
                 Logger.log(error: "Unable to instantiate an instance of URL using \(dataDownloadURL(for: ticker))")
@@ -238,7 +238,8 @@ private extension SmartlabDataService {
                 continue
             }
             
-            guard let value = Double(row[i].replacingOccurrences(of: ",", with: ".")) else {
+            let stringValue = row[i].replacingOccurrences(of: ",", with: ".").replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "\"", with: "")
+            guard let value = Double(stringValue) else {
                 Logger.log(error: "Unable to parse the value \(row[i])")
                 continue
             }

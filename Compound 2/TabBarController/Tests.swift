@@ -8,35 +8,16 @@
 
 import SwiftUI
 
-protocol Hello {
-    var a: String { get }
-}
+
 
 struct TestsView: View {
-    
-    struct Yo: Hello {
-        let a: String
-    }
-    
-    struct No: Hello {
-        let a: String
-        func blabla(){}
-    }
-    
-    
     var body: some View {
-       Text("Cool stuff")
+        VStack {
+            CompoundGrowthChart(compounding: 8_000_000, over: 30, at: 10, chartTitle: "10% годовых")
+            CompoundGrowthChart(compounding: 8_000_000, over: 30, at: 20, chartTitle: "20% годовых")
+            CompoundGrowthChart(compounding: 8_000_000, over: 30, at: 30, chartTitle: "30% годовых")
+        }
     }
-    
-    init() {
-        abc(param1: Yo(a: "werwer"))
-        abc(param1: No(a: "werwer"))
-    }
-    
-    func abc(param1: Hello) {
-        print(param1.a)
-    }
-    
 }
 
 #if DEBUG

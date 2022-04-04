@@ -10,8 +10,9 @@ import Foundation
 import UIKit
 import SwiftUI
 
-//Just a convenient method for converting garbage like "5221.234234234" into "5.2k"
+
 extension Double {
+    ///Converts numbers like "5221.234234234" into "5.2k"
     func beautify () -> String {
         var simplifiedString: String
         switch self {
@@ -25,11 +26,6 @@ extension Double {
             simplifiedString = String(format: "%.1f",self)
         }
         
-//        if simplifiedString.suffix(2) == ".0" {
-//            simplifiedString = String(simplifiedString.dropLast(2))
-//        }
-//
-//        return simplifiedString
         if String(simplifiedString.suffix(2)) == ".0" {
             simplifiedString = String(simplifiedString.dropLast(2))
         }
