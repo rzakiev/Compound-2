@@ -17,7 +17,7 @@
     {
     	"ticker": "SLB",
     	"currency": "USD",
-        "targetPrice": 50,
+        "targetPrice": 59,
         "risk": "low"
     },
     {
@@ -29,7 +29,7 @@
     {
     	"ticker": "NTNX",
     	"currency": "USD",
-        "targetPrice": 45,
+        "targetPrice": 50,
         "risk": "medium"
     },  
     {
@@ -66,13 +66,13 @@
     {
         "ticker": "GAZP",
         "currency": "RUB",
-        "targetPrice": 277,
+        "targetPrice": 400,
         "risk": "low"
     },
     {
         "ticker": "SIBN",
         "currency": "RUB",
-        "targetPrice": 525,
+        "targetPrice": 550,
         "risk": "low"
     },
     {
@@ -84,25 +84,25 @@
     {
         "ticker": "LNTA",
         "currency": "RUB",
-        "targetPrice": 230,
+        "targetPrice": 300,
         "risk": "low"
     },
     {
         "ticker": "LKOH",
         "currency": "RUB",
-        "targetPrice": 6420,
+        "targetPrice": 8000,
         "risk": "low"
     },
     {
         "ticker": "SBER",
         "currency": "RUB",
-        "targetPrice": 175,
+        "targetPrice": 250,
         "risk": "low"
     },
     {
         "ticker": "VTBR",
         "currency": "RUB",
-        "targetPrice": 0.03,
+        "targetPrice": 0.05,
         "risk": "low"
     },
     {
@@ -114,7 +114,7 @@
     {
         "ticker": "GMKN",
         "currency": "RUB",
-        "targetPrice": 26118,
+        "targetPrice": 30000,
         "risk": "low"
     },
     {
@@ -132,13 +132,13 @@
     {
         "ticker": "VRT",
         "currency": "USD",
-        "targetPrice": 40,
+        "targetPrice": 20,
         "risk": "medium"
     },
     {
         "ticker": "MTLRP",
         "currency": "RUB",
-        "targetPrice": 230,
+        "targetPrice": 363,
         "risk": "high"
     },
     {
@@ -168,7 +168,7 @@
     {
         "ticker": "RASP",
         "currency": "RUB",
-        "targetPrice": 550,
+        "targetPrice": 600,
         "risk": "low"
     },
     {
@@ -198,13 +198,19 @@
     {
         "ticker": "PYPL",
         "currency": "USD",
-        "targetPrice": 250,
+        "targetPrice": 170,
         "risk": "medium"
     },
     {
         "ticker": "VKCO",
         "currency": "RUB",
         "targetPrice": 730,
+        "risk": "low"
+    },
+    {
+        "ticker": "FB",
+        "currency": "USD",
+        "targetPrice": 260,
         "risk": "low"
     },
     ]
